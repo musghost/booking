@@ -1,0 +1,3432 @@
+* Generado por Herramientas de desarrollo. Es posible que ?sta no sea una representaci?n precisa del archivo de origen original */
+* {
+	MARGIN: 0px
+}
+HTML {
+	HEIGHT: 100%
+}
+BODY {
+	PADDING-BOTTOM: 0px; BACKGROUND-COLOR: #fff; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-FAMILY: Arial, Verdana, Geneva, Helvetica, sans-serif; HEIGHT: 100%; FONT-SIZE: 12px; FONT-WEIGHT: normal; TEXT-DECORATION: none; PADDING-TOP: 0px
+}
+H1 {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; TEXT-DECORATION: none; PADDING-TOP: 0px
+}
+H2 {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; TEXT-DECORATION: none; PADDING-TOP: 0px
+}
+H3 {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; TEXT-DECORATION: none; PADDING-TOP: 0px
+}
+H4 {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; TEXT-DECORATION: none; PADDING-TOP: 0px
+}
+H5 {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; TEXT-DECORATION: none; PADDING-TOP: 0px
+}
+H6 {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; TEXT-DECORATION: none; PADDING-TOP: 0px
+}
+P {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+IMG {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BORDER-TOP: 0px; BORDER-RIGHT: 0px; PADDING-TOP: 0px
+}
+FORM {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+SELECT {
+	PADDING-BOTTOM: 4px; PADDING-LEFT: 4px; PADDING-RIGHT: 4px; FONT-FAMILY: Verdana, Arial, Geneva, Helvetica, sans-serif; FONT-WEIGHT: normal; PADDING-TOP: 4px
+}
+FIELDSET {
+	BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BORDER-TOP: medium none; BORDER-RIGHT: medium none; PADDING-TOP: 0px
+}
+INPUT {
+	PADDING-BOTTOM: 4px; MARGIN: 0px; PADDING-LEFT: 4px; PADDING-RIGHT: 4px; FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 100%; FONT-WEIGHT: normal; PADDING-TOP: 4px
+}
+CAPTION {
+	DISPLAY: none
+}
+LEGEND {
+	DISPLAY: none
+}
+#skip {
+	DISPLAY: none
+}
+UL {
+	PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+OL {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+A {
+	COLOR: #152453; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #1b3360; TEXT-DECORATION: underline
+}
+A:visited {
+	COLOR: #1b3360; TEXT-DECORATION: underline
+}
+H1 {
+	PADDING-BOTTOM: 5px; LINE-HEIGHT: 120%; COLOR: #1b3360; FONT-SIZE: 24px; PADDING-TOP: 5px
+}
+H2 {
+	PADDING-BOTTOM: 2px; LINE-HEIGHT: 120%; COLOR: #1b3360; FONT-SIZE: 24px; FONT-WEIGHT: normal; PADDING-TOP: 2px
+}
+H2 A {
+
+}
+H2 A:hover {
+
+}
+H2 A:visited {
+
+}
+H2.borderBottom {
+	BORDER-BOTTOM: #fff 1px solid
+}
+.headersContent {
+	DISPLAY: block; COLOR: #152453; CLEAR: both
+}
+.short {
+	FLOAT: left; COLOR: #1b3360; FONT-SIZE: 24px; FONT-WEIGHT: normal
+}
+.hcontentRight {
+	TEXT-ALIGN: left; COLOR: #142f5f; CLEAR: both; FONT-SIZE: 10px; padding: 10px 0
+}
+.textStyle.hcontentRight {
+	FONT-STYLE: normal; FONT-FAMILY: arial
+}
+.hcontentRight A {
+	FONT-FAMILY: verdana; COLOR: #142f5f; FONT-SIZE: 10px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.hcontentRight A:hover {
+	COLOR: #142f5f; FONT-SIZE: 10px; TEXT-DECORATION: underline
+}
+.hcontentRight A:visited {
+	COLOR: #142f5f
+}
+#topNav {
+	BORDER-BOTTOM: #000 1px solid; PADDING-BOTTOM: 10px; WIDTH: 100%; MARGIN-BOTTOM: 10px; FLOAT: left; CLEAR: both
+}
+#topNav H2 {
+	MARGIN-BOTTOM: 8px
+}
+#topNavForm {
+	PADDING-BOTTOM: 0px; MARGIN-TOP: 5px; PADDING-LEFT: 0px; WIDTH: 100%; PADDING-RIGHT: 0px; MARGIN-BOTTOM: 8px; PADDING-TOP: 0px
+}
+#topNavForm .topLangForm {
+	FLOAT: right
+}
+.print {
+	LINE-HEIGHT: 16px; PADDING-LEFT: 20px; WIDTH: 30%; BACKGROUND: url(../images/print.gif) no-repeat left top; FLOAT: left; TEXT-DECORATION: none
+}
+.shoppingCart {
+	TEXT-ALIGN: right; WIDTH: 50%; FLOAT: right
+}
+.navDropdown {
+	DISPLAY:none; PADDING-BOTTOM: 5px; FONT-STYLE: normal; COLOR: #142f5f
+}
+/* ROBERTO DEANDAR */
+/* --------------- */
+/*
+.navDropdown LABEL {
+	DISPLAY: block; MARGIN-BOTTOM: 5px; FONT-SIZE: x-small; FONT-WEIGHT: normal
+}*/
+.navDropdown-lang {
+	PADDING-BOTTOM: 5px; FONT-STYLE: normal; FLOAT: right; COLOR: #142f5f; PADDING-TOP: 3px
+}
+#main-Page {
+	MARGIN: 10px auto; WIDTH: 990px; HEIGHT: auto !important
+}
+#sidebar {
+	MARGIN-LEFT: 10px; MARGIN-RIGHT: 10px
+}
+#pageContent {
+
+}
+
+#sidebar {
+	POSITION: relative; WIDTH: 250px; WORD-WRAP: break-word; FLOAT: right
+}
+#pageContent {
+	WIDTH: 700px; BACKGROUND: #ffffff; float: left
+}
+#pageHeader {
+	HEIGHT: 120px
+}
+#push {
+
+}
+#pushHeader {
+
+}
+.center {
+	POSITION: absolute; LEFT: 200px
+}
+.listContent {
+	LIST-STYLE-TYPE: disc; MARGIN-BOTTOM: 10px; MARGIN-LEFT: 25px
+}
+.findCityLink {
+	PADDING-BOTTOM: 7px; PADDING-LEFT: 0px; WIDTH: 250px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+#mainPageFrame {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 10px; WIDTH: 640px; PADDING-RIGHT: 0px; FLOAT: left; PADDING-TOP: 0px
+}
+#pageContentFrame {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; WIDTH: 100%; PADDING-RIGHT: 0px; FLOAT: left; PADDING-TOP: 0px
+}
+.topHeader {
+	BORDER-BOTTOM: #fc2f2f 3px solid; PADDING-BOTTOM: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; BACKGROUND: #ffffff; PADDING-TOP: 10px
+}
+#progressBar {
+	MARGIN: 0px auto; WIDTH: 480px; DISPLAY: none; HEIGHT: 85px
+}
+#progressBar LI {
+	BACKGROUND-IMAGE: url(https://s3.amazonaws.com/aeromexico/sprite_nav.png); TEXT-ALIGN: center; PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; WIDTH: 77px; PADDING-RIGHT: 0px; DISPLAY: block; BACKGROUND-REPEAT: no-repeat; FLOAT: left; COLOR: #999999; FONT-SIZE: 11px; PADDING-TOP: 58px
+}
+#pb1 {
+	BACKGROUND-POSITION: -408px 8px
+}
+#pb2 {
+	BACKGROUND-POSITION: -512px 8px
+}
+#pb3 {
+	BACKGROUND-POSITION: -588px 8px
+}
+#pb4 {
+	BACKGROUND-POSITION: -664px 8px
+}
+#pb5 {
+	BACKGROUND-POSITION: -767px 8px
+}
+#pb6 {
+	BACKGROUND-POSITION: -865px 8px
+}
+.selected#pb1 {
+	BACKGROUND-POSITION: 18px 0px
+}
+.selected#pb2 {
+	BACKGROUND-POSITION: -78px 0px
+}
+.selected#pb3 {
+	BACKGROUND-POSITION: -155px 0px
+}
+.selected#pb4 {
+	BACKGROUND-POSITION: -230px 0px
+}
+.selected#pb5 {
+	BACKGROUND-POSITION: -329px 0px
+}
+.navigation UL {
+	LIST-STYLE-TYPE: none; TEXT-INDENT: -0.5em; WIDTH: 139px
+}
+.navigation A:hover {
+	COLOR: #142f5f; TEXT-DECORATION: underline
+}
+.navigation A:visited {
+	COLOR: #142f5f
+}
+.pax {
+	WIDTH: 99%; PADDING-RIGHT: 1%; MARGIN-BOTTOM: 10px; FLOAT: left
+}
+.pax LABEL {
+	WIDTH: 33%; FLOAT: left
+}
+.pax LABEL SPAN {
+	DISPLAY: block
+}
+.pax-block {
+	WIDTH: 33%; FLOAT: left
+}
+.unAccMinor {
+	WIDTH: 25%; MARGIN-BOTTOM: 7px; FLOAT: left; CLEAR: left
+}
+.unAccMinor LABEL {
+	WIDTH: 25%; MARGIN-BOTTOM: 7px; FLOAT: left
+}
+.unAccMinor LABEL SPAN {
+	DISPLAY: block
+}
+.promoCode {
+	PADDING-BOTTOM: 10px; WIDTH: 100%; FLOAT: right
+}
+.promoCode LABEL {
+	MARGIN-BOTTOM: 5px; FLOAT: left; MARGIN-LEFT: 10px; PADDING-TOP: 10px
+}
+.promoCode .subLabel {
+	TEXT-ALIGN: right; PADDING-BOTTOM: 5px; FONT-STYLE: italic; FLOAT: left; FONT-SIZE: xx-small
+}
+.couponPax {
+	WIDTH: 99%; FLOAT: left; CLEAR: both
+}
+.couponPax P {
+	PADDING-LEFT: 100px; WIDTH: 65%; FLOAT: left; FONT-WEIGHT: bold
+}
+.dropControl {
+	WIDTH: 110px
+}
+#proCode {
+	DISPLAY: block
+}
+#corpID {
+	DISPLAY: block
+}
+.searchType {
+	WIDTH: 100%; MARGIN-BOTTOM: 10px; FLOAT: left; PADDING-TOP: 13px
+}
+.searchType LABEL {
+	WIDTH: 25%; FLOAT: left; MARGIN-LEFT: 24%; FONT-WEIGHT: bold
+}
+.searchType SPAN {
+	WIDTH: 132px; FLOAT: left; MARGIN-LEFT: 18px; FONT-WEIGHT: normal
+}
+.flightOptions {
+	CLEAR: left; PADDING-TOP: 6px
+}
+.noSpace.flightOptions {
+	PADDING-TOP: 0px
+}
+.selectFlight {
+	PADDING-BOTTOM: 3px; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; COLOR: #142f5f; FONT-SIZE: 11px; FONT-WEIGHT: bold; PADDING-TOP: 3px
+}
+.selectFlight P {
+	DISPLAY: inline
+}
+.selectFlight H5 {
+	DISPLAY: inline
+}
+.selectFlight A {
+	COLOR: #fff; TEXT-DECORATION: none
+}
+.selectFlight A:hover {
+	COLOR: #fff; TEXT-DECORATION: underline
+}
+.selectFlight A:visited {
+	COLOR: #fff; TEXT-DECORATION: underline
+}
+.selectFlight P {
+	FLOAT: right
+}
+.selectFlight SPAN {
+	PADDING-RIGHT: 4px; COLOR: #f1f1f1; FONT-SIZE: 14px
+}
+.selectFlight .carPrice {
+	FONT-WEIGHT: normal; MARGIN-RIGHT: 10px
+}
+.viewFare {
+	PADDING-BOTTOM: 3px; PADDING-LEFT: 3px; WIDTH: 99%; PADDING-RIGHT: 3px; MARGIN-BOTTOM: 10px; COLOR: #fff; PADDING-TOP: 3px
+}
+.viewFare H5 {
+	DISPLAY: inline; FONT-SIZE: 9px
+}
+.viewFare P {
+	DISPLAY: inline; FONT-SIZE: 9px
+}
+.viewFare .fareBasis {
+	MARGIN-LEFT: 25px
+}
+.longFares {
+	WIDTH: 250px
+}
+.srFareRule {
+	FLOAT: left
+}
+.transparent.fareBasis {
+	COLOR: #ccd6e3
+}
+.viewFare .farebyPrice {
+	FLOAT: right
+}
+.viewFare .amount {
+	FLOAT: right; COLOR: #fff; FONT-SIZE: 10px; FONT-WEIGHT: bold
+}
+.viewFare P {
+	FONT-WEIGHT: bold
+}
+.viewFare A {
+	FONT-WEIGHT: bold
+}
+.flightOptions .column {
+	DISPLAY: inline; MARGIN-BOTTOM: 5px; FLOAT: left
+}
+.flight {
+	CLEAR: left
+}
+.flightOptions .one {
+	TEXT-ALIGN: center; WIDTH: 50px
+}
+.flightOptions .two {
+	WIDTH: 80px
+}
+.flightOptions .three {
+	WIDTH: 235px
+}
+.flightOptions .four {
+	TEXT-ALIGN: right; WIDTH: 252px
+}
+.flightOptions .popthree {
+	LINE-HEIGHT: 18px; WIDTH: 250px
+}
+.flightOptions .weekDaysFour {
+	WIDTH: 200px; FLOAT: right
+}
+.flightOptions .weekDaysFive {
+	WIDTH: 200px
+}
+.flightOptions .weekDaysSix {
+	WIDTH: 120px
+}
+.flightOptions .semiFlex {
+	WIDTH: 190px
+}
+.flightOptions .semiFlexOne {
+	WIDTH: 100px; FLOAT: right
+}
+.flightOptions .fareMessenger {
+	TEXT-ALIGN: right; WIDTH: 100px; FLOAT: right
+}
+.flightOptions .fareMsgResult {
+	TEXT-ALIGN: right; WIDTH: 200px; FLOAT: right
+}
+.flightOptions .semiFlexTwo {
+	TEXT-ALIGN: center; WIDTH: 60px
+}
+.flightOptions .semiFlexThree {
+	TEXT-ALIGN: center; WIDTH: 70px
+}
+.flightOptions .semiFlexFour {
+	WIDTH: 80px
+}
+.flightOptions .popFour {
+	LINE-HEIGHT: 18px; WIDTH: 80px
+}
+.flightOptions .popFive {
+	LINE-HEIGHT: 18px; WIDTH: 200px
+}
+.semiFlexBorder {
+	BORDER-BOTTOM: #ccc 1px solid; BORDER-LEFT: #ccc 1px solid; WIDTH: 99.5%; FLOAT: left; BORDER-TOP: medium none; BORDER-RIGHT: #ccc 1px solid
+}
+.semiFlexHeaders {
+	BACKGROUND-COLOR: #eaeaea; WIDTH: 100%; FLOAT: left
+}
+.redeem {
+	BORDER-BOTTOM: #fff 1px solid; PADDING-BOTTOM: 6px; BACKGROUND-COLOR: #c0c0c0; PADDING-LEFT: 6px; PADDING-RIGHT: 6px; DISPLAY: inline; FLOAT: left; FONT-WEIGHT: bold; PADDING-TOP: 6px
+}
+.Miles {
+	COLOR: #fff
+}
+.Price {
+	BORDER-BOTTOM: #fff 1px solid; BACKGROUND-COLOR: #ccd6e3; COLOR: #0072bc
+}
+#sidebar .searchFlight {
+	COLOR: #142f5f
+}
+#sidebar .searchFlight LABEL SPAN {
+	LINE-HEIGHT: 20px; PADDING-LEFT: 1%; WIDTH: 99%; /*DISPLAY: block*/
+}
+#sidebar .searchFlight LABEL SELECT {
+	MARGIN-BOTTOM: 2px
+}
+#sidebar .searchFlight LABEL SELECT.destCity {
+	WIDTH: 120px
+}
+#sidebar .searchFlight LABEL .depCity {
+	WIDTH: 100% !important
+}
+.tripDetails .singleItin {
+	PADDING-BOTTOM: 3px
+}
+.tripDetails .singleItin .itinError {
+	TEXT-ALIGN: left !important; PADDING-BOTTOM: 0%; PADDING-LEFT: 25%; WIDTH: 70% !important; PADDING-RIGHT: 0%; FLOAT: left; COLOR: #c0c0c0; CLEAR: both; FONT-WEIGHT: bold; PADDING-TOP: 0%
+}
+.topSpace.tripDetails {
+	MARGIN-TOP: 10px
+}
+.tripDetails LABEL {
+	MARGIN-TOP: 10px; FLOAT: left; CLEAR: both
+}
+.tripDetails SPAN {
+	TEXT-ALIGN: right; WIDTH: 118px; PADDING-RIGHT: 3px; FLOAT: left
+}
+.tripDetails SPAN.findCity {
+	TEXT-ALIGN: left; MARGIN-BOTTOM: 5px; MARGIN-LEFT: 121px; FONT-WEIGHT: bold
+}
+.tripDetails .multipleDropDown {
+	PADDING-BOTTOM: 3px; LINE-HEIGHT: 18px; WIDTH: 450px; FLOAT: left
+}
+.tripDetails DIV.searchTypeOne {
+	PADDING-BOTTOM: 3px; LINE-HEIGHT: 18px; WIDTH: 450px; FLOAT: left
+}
+.tripDetails DIV.searchTypeOne SPAN {
+	MARGIN-LEFT: 0px
+}
+.tripDetails DIV.searchTypeOne LABEL {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; WIDTH: auto; PADDING-RIGHT: 0px; DISPLAY: inline; PADDING-TOP: 0px
+}
+.tripDetails SPAN.error {
+	WIDTH: 70% !important; MARGIN-LEFT: 26%
+}
+.searchOption {
+	FLOAT: left
+}
+.searchOption LABEL {
+	DISPLAY: block; MARGIN-LEFT: 120px; PADDING-TOP: 5px
+}
+#pageContent .tripType {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+#pageContent .tripType LABEL {
+
+}
+#pageContentFrame .tripType {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; WIDTH: 120px; PADDING-RIGHT: 0px; FLOAT: right; CLEAR: both; PADDING-TOP: 0px
+}
+#pageContentFrame .tripType LABEL {
+	TEXT-ALIGN: right; WIDTH: 120px; FLOAT: right; CLEAR: both
+}
+#sidebar .tripType {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; COLOR: #142f5f; PADDING-TOP: 0px
+}
+#sidebar .tripType LABEL {
+
+}
+.tripType .vertical {
+  /*	FLOAT: right */
+}
+#semiFlexOption {
+	PADDING-BOTTOM: 10px; BACKGROUND-COLOR: #ffffcc; WIDTH: 100%; FLOAT: left; PADDING-TOP: 10px
+}
+.reviewTrip {
+	PADDING-BOTTOM: 3px; BACKGROUND-COLOR: #eaeaea; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; CLEAR: both; PADDING-TOP: 3px
+}
+.reviewTrip P {
+	DISPLAY: inline; FLOAT: right; COLOR: #142f5f; FONT-WEIGHT: bold
+}
+.reviewTrip P A {
+	FONT-FAMILY: verdana; COLOR: #142f5f; FONT-SIZE: 10px; TEXT-DECORATION: none
+}
+.reviewTrip P A:hover {
+	COLOR: #142f5f; TEXT-DECORATION: underline
+}
+.reviewTrip P A:visited {
+	COLOR: #142f5f
+}
+.reviewTrip H5 {
+	DISPLAY: inline; COLOR: #142f5f; FONT-SIZE: 11px
+}
+.trip {
+	BORDER-BOTTOM: #ccc 2px dotted; PADDING-BOTTOM: 5px; WIDTH: 100%; FLOAT: left; PADDING-TOP: 10px
+}
+.tripOne {
+	MARGIN: 0px; WIDTH: 100%; FLOAT: left; PADDING-TOP: 8px
+}
+.tripReview {
+	CLEAR: left; PADDING-TOP: 6px
+}
+.tripReview .column {
+	DISPLAY: inline; MARGIN-BOTTOM: 5px; FLOAT: left
+}
+.tripReview .one {
+	WIDTH: 70px
+}
+.tripReview .two {
+	WIDTH: 150px
+}
+.tripReview .three {
+	WIDTH: 120px
+}
+.tripReview .four {
+	TEXT-ALIGN: right; WIDTH: 70px
+}
+.tripReview .five {
+	TEXT-ALIGN: right; WIDTH: 70px
+}
+.tripReview .six {
+	TEXT-ALIGN: center; WIDTH: 62px
+}
+.tripReview .seven {
+	WIDTH: 140px
+}
+#popUp {
+	PADDING-BOTTOM: 15px; MARGIN: 0px -3px 0px 0px; PADDING-LEFT: 10px; WIDTH: 630px; PADDING-RIGHT: 10px; FLOAT: left; PADDING-TOP: 10px
+}
+#pagepopUp {
+	PADDING-BOTTOM: 5px; MARGIN: 0px; PADDING-LEFT: 5px; WIDTH: 600px; PADDING-RIGHT: 5px; FLOAT: left; PADDING-TOP: 5px
+}
+#popUpSmall {
+	PADDING-BOTTOM: 15px; MARGIN: 0px; PADDING-LEFT: 10px; WIDTH: 300px; PADDING-RIGHT: 10px; FLOAT: left; PADDING-TOP: 10px
+}
+#popUpMidsize {
+	PADDING-BOTTOM: 10px; MARGIN: 0px -3px 0px 0px; PADDING-LEFT: 10px; WIDTH: 440px; PADDING-RIGHT: 10px; FLOAT: left; PADDING-TOP: 10px
+}
+#popUp H3 {
+	PADDING-BOTTOM: 10px; WIDTH: 100%; FLOAT: left; COLOR: #000; FONT-SIZE: 12px; PADDING-TOP: 10px
+}
+.subColHead {
+	PADDING-BOTTOM: 2px; BACKGROUND-COLOR: #999999; PADDING-LEFT: 0px; WIDTH: 100%; PADDING-RIGHT: 0px; FLOAT: left; FONT-WEIGHT: bold; PADDING-TOP: 2px
+}
+.subColHead P {
+	TEXT-ALIGN: center; WIDTH: 50%; FLOAT: left
+}
+.subColHead P.subDetail {
+	TEXT-ALIGN: left; PADDING-BOTTOM: 1%; BACKGROUND-COLOR: #00ffff; PADDING-LEFT: 1%; WIDTH: 99%; PADDING-RIGHT: 1%; FLOAT: left; PADDING-TOP: 1%
+}
+.subDetails {
+	TEXT-ALIGN: center; PADDING-BOTTOM: 10px; WIDTH: 50%; FLOAT: left
+}
+.subDetails P {
+	PADDING-BOTTOM: 5px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 5px
+}
+.popLbl {
+	LINE-HEIGHT: 20px; MARGIN-TOP: 7px; WIDTH: 170px; FLOAT: left
+}
+.checkOption {
+	MARGIN-TOP: 7px; WIDTH: 40px; FLOAT: left; PADDING-TOP: 4px
+}
+#weekDays OL {
+	DISPLAY: inline
+}
+#weekDays LI {
+	BORDER-BOTTOM: #000 1px solid; BORDER-LEFT: #000 1px solid; PADDING-BOTTOM: 3px; PADDING-LEFT: 4px; PADDING-RIGHT: 4px; DISPLAY: inline; FLOAT: left; COLOR: #3a6f5f; MARGIN-LEFT: 4px; BORDER-TOP: #000 1px solid; FONT-WEIGHT: bold; BORDER-RIGHT: #000 1px solid
+}
+#weekDays LI.nonAvail {
+	COLOR: #cc0000
+}
+.flightIndicate {
+	BORDER-BOTTOM: #000 1px solid; BORDER-LEFT: #000 1px solid; BACKGROUND-COLOR: #cc0000; BORDER-TOP: #000 1px solid; BORDER-RIGHT: #000 1px solid
+}
+.button {
+	PADDING-BOTTOM: 15px; WIDTH: 100%; CLEAR: both; PADDING-TOP: 15px
+}
+.button INPUT {
+	BACKGROUND-IMAGE: url(https://s3.amazonaws.com/aeromexico/bg_boton_orange.png); BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; DISPLAY: block; FLOAT: right; HEIGHT: 39px; COLOR: #ffffff; MARGIN-LEFT: 10px; FONT-SIZE: 16px; BORDER-TOP: medium none; FONT-WEIGHT: bold; MARGIN-RIGHT: 10px; BORDER-RIGHT: medium none; PADDING-TOP: 0px; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px
+}
+.button P {
+	LINE-HEIGHT: 18px; FLOAT: right
+}
+.checkBoxbutton {
+	TEXT-ALIGN: right; WIDTH: 100%; FLOAT: left; MARGIN-RIGHT: -3px
+}
+.checkBoxbutton .newButton {
+	BACKGROUND-COLOR: #838383; COLOR: #ffffff; FONT-WEIGHT: bold
+}
+.sidebarBtn {
+	MARGIN-TOP: 5px
+}
+.sidebarBtn INPUT {
+	TEXT-TRANSFORM: uppercase; FONT-FAMILY: verdana; COLOR: #000000; FONT-SIZE: 9px; FONT-WEIGHT: normal
+}
+.footerBase {
+	WIDTH: 100%; FLOAT: left; HEIGHT: 350px; CLEAR: both
+}
+.boxColumn {
+	WIDTH: 49%; MARGIN-BOTTOM: 10px; FLOAT: left
+}
+.journeyDay {
+	BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BACKGROUND-COLOR: #5f87a5; COLOR: #fff; BORDER-TOP: medium none; FONT-WEIGHT: bold; BORDER-RIGHT: medium none
+}
+.journeyPrice {
+	BACKGROUND-COLOR: #ffcc66
+}
+.disabled {
+	BORDER-BOTTOM: #666 1px solid; BORDER-LEFT: #666 1px solid; COLOR: #c4c4c4; BORDER-TOP: #666 1px solid; BORDER-RIGHT: #666 1px solid
+}
+.block {
+	BORDER-BOTTOM: #666 1px solid; BORDER-LEFT: #666 1px solid; BORDER-TOP: #666 1px solid; BORDER-RIGHT: #666 1px solid
+}
+.matrixIcon {
+	DISPLAY: block
+}
+.interstitial {
+	TEXT-ALIGN: center; MARGIN: 30px 50px 0px; CLEAR: both; FONT-SIZE: small; FONT-WEIGHT: bold
+}
+.criticalInfo {
+	WIDTH: 100%; FLOAT: left; CLEAR: both
+}
+.alert {
+	MARGIN: 5px 0px; WIDTH: 100%; FLOAT: left; COLOR: #cc0000; CLEAR: both; FONT-WEIGHT: bold
+}
+.singleLine {
+	MARGIN-TOP: 7px; WIDTH: 100%; MARGIN-BOTTOM: 5px; FLOAT: left; CLEAR: both; MARGIN-RIGHT: -3px
+}
+.paraInfo {
+	MARGIN-TOP: 10px; MARGIN-BOTTOM: 10px; CLEAR: both
+}
+.offer {
+	COLOR: #ccc; FONT-WEIGHT: bold
+}
+.singleLineLink {
+	TEXT-ALIGN: center; MARGIN-LEFT: 15px
+}
+.moreResult {
+	TEXT-ALIGN: right; PADDING-BOTTOM: 10px; WIDTH: 100%; FLOAT: left; CLEAR: both; MARGIN-RIGHT: -3px; PADDING-TOP: 10px
+}
+.flightInfo {
+	PADDING-BOTTOM: 5px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; COLOR: #333333; FONT-SIZE: 13px; FONT-WEIGHT: bold; PADDING-TOP: 5px
+}
+.semiFlexBg.flightInfo {
+	BACKGROUND-COLOR: #c0c0c0; COLOR: #fff
+}
+.connecting {
+	PADDING-BOTTOM: 10px; FONT-STYLE: italic; PADDING-LEFT: 40px; FLOAT: left; COLOR: #142f5f; CLEAR: left; FONT-SIZE: 10px; FONT-WEIGHT: normal; PADDING-TOP: 10px
+}
+.flexDate {
+	MARGIN-TOP: 5px; WIDTH: 99%; MARGIN-BOTTOM: 5px; FLOAT: left; CLEAR: both; FONT-WEIGHT: normal
+}
+.couponFlex.flexDate {
+	MARGIN: 0px 0px 0px 10px
+}
+.sidebarHead {
+	FONT-STYLE: normal; MARGIN: 15px 0px 10px 5px; COLOR: #142f5f; FONT-SIZE: 12px; FONT-WEIGHT: bold
+}
+.highlight {
+	FONT-WEIGHT: bold
+}
+.cart {
+	PADDING-BOTTOM: 0px; FONT-STYLE: normal; MARGIN: 0px; PADDING-LEFT: 0px; WIDTH: 120px; PADDING-RIGHT: 5px; COLOR: #142f5f; FONT-SIZE: xx-small; PADDING-TOP: 0px
+}
+.cart A {
+	FONT-FAMILY: verdana, arial; COLOR: #142f5f; FONT-SIZE: 10px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.cart A:hover {
+	FONT-FAMILY: verdana, arial; COLOR: #142f5f; FONT-SIZE: 10px; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+.cart A:visited {
+	FONT-FAMILY: verdana, arial; COLOR: #142f5f; FONT-SIZE: 10px; FONT-WEIGHT: bold
+}
+.mandatory {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 2px; VERTICAL-ALIGN: top; BORDER-TOP: 0px; BORDER-RIGHT: 0px; PADDING-TOP: 3px
+}
+.popLink {
+	TEXT-ALIGN: right; PADDING-BOTTOM: 5px; PADDING-LEFT: 0px; WIDTH: 100%; PADDING-RIGHT: 0px; FLOAT: left; CLEAR: both; MARGIN-RIGHT: -3px; PADDING-TOP: 0px
+}
+.vertical {
+	VERTICAL-ALIGN: middle
+}
+.vertical-left {
+	MARGIN-TOP: 5px; FLOAT: left
+}
+.hspaceTime {
+	FLOAT: left
+}
+.hspaceDate {
+	FLOAT: right; MARGIN-RIGHT: 15px
+}
+.error {
+	TEXT-ALIGN: left !important; WIDTH: 99% !important; FONT-FAMILY: Arial, Helvetica, sans-serif; FLOAT: left; COLOR: #cc0000; CLEAR: both; FONT-SIZE: 9pt; FONT-WEIGHT: bold
+}
+.errorFullWidth {
+	TEXT-ALIGN: left; MARGIN-TOP: 10px; WIDTH: 99%; MARGIN-BOTTOM: 10px; FLOAT: left;
+}
+.errorBlock {
+	TEXT-ALIGN: left; COLOR: #cc0000; FONT-WEIGHT: bold
+}
+.fareMsg {
+	WIDTH: 100%; MARGIN-BOTTOM: 8px; FLOAT: left
+}
+.fareMsg SPAN {
+	DISPLAY: block; MARGIN-BOTTOM: 4px
+}
+.fareMsg .myFare {
+	TEXT-ALIGN: right; FLOAT: right
+}
+.fareMsg .fareOption {
+	WIDTH: 60%; FLOAT: left; MARGIN-LEFT: 3%
+}
+.fareMsg .eMail.fareOption {
+	MARGIN-BOTTOM: 5px
+}
+.headersContent SPAN {
+	PADDING-RIGHT: 12%; FONT-SIZE: large
+}
+.headersContent .headerMiddle {
+	WIDTH: 60%; CLEAR: left
+}
+.hcontentRmiddle {
+	TEXT-ALIGN: right; WIDTH: 25%; PADDING-RIGHT: 0.5%; FLOAT: right; COLOR: #fff; FONT-SIZE: 11px; PADDING-TOP: 1%
+}
+.hcontentRmiddle A {
+	COLOR: #fff; FONT-SIZE: 12px; FONT-WEIGHT: bold; TEXT-DECORATION: underline
+}
+.hcontentRmiddle A:hover {
+	COLOR: #fff; FONT-SIZE: 12px; TEXT-DECORATION: underline
+}
+.hcontentRmiddle A:visited {
+	COLOR: #fff
+}
+.fareMsgSet {
+	WIDTH: 100%; MARGIN-BOTTOM: 10px; FLOAT: left
+}
+.fareMsgSet .fmDepcity {
+	WIDTH: 47%; FLOAT: left; MARGIN-LEFT: 2%
+}
+.fareMsgSet .fmDescity {
+	MARGIN-TOP: 1%; WIDTH: 47%; FLOAT: left; MARGIN-LEFT: 2%; CLEAR: left
+}
+.fareMsgSet .fareNotify {
+	WIDTH: 48%; FLOAT: left; MARGIN-RIGHT: 2%
+}
+.altcitiestest {
+	TEXT-ALIGN: right; LINE-HEIGHT: 1.3em; BACKGROUND-COLOR: #fff; ALIGN: Right
+}
+.tfMtrxMainOver {
+	BORDER-BOTTOM: #a3ac92 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #a3ac92 1px solid; PADDING-BOTTOM: 3px; BACKGROUND-COLOR: #c8c9d6; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; BORDER-TOP: #a3ac92 1px solid; BORDER-RIGHT: #a3ac92 1px solid; PADDING-TOP: 3px
+}
+.tfMtrxMain {
+	BORDER-BOTTOM: #a3ac92 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #a3ac92 1px solid; LINE-HEIGHT: 1.3em; BACKGROUND-COLOR: #fff; HEIGHT: 41px; COLOR: #888; BORDER-TOP: #a3ac92 1px solid; BORDER-RIGHT: #a3ac92 1px solid
+}
+.tfMtrxMainFare {
+	BORDER-BOTTOM: #a3ac92 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #a3ac92 1px solid; LINE-HEIGHT: 1.3em; BACKGROUND-COLOR: #8ec1e1; HEIGHT: 41px; COLOR: #e42217; BORDER-TOP: #a3ac92 1px solid; BORDER-RIGHT: #a3ac92 1px solid
+}
+.tfMtrxMainDates {
+	BORDER-BOTTOM: #a3ac92 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #a3ac92 1px solid; PADDING-BOTTOM: 3px; LINE-HEIGHT: 1.3em; BACKGROUND-COLOR: #b7bfc4; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; BORDER-TOP: #a3ac92 1px solid; BORDER-RIGHT: #a3ac92 1px solid; PADDING-TOP: 3px
+}
+.tfMtrxMain_1_1 {
+	BORDER-BOTTOM: #a3ac92 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #a3ac92 1px solid; PADDING-BOTTOM: 3px; LINE-HEIGHT: 1.3em; BACKGROUND-COLOR: #fff; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; HEIGHT: 41px; COLOR: #888; BORDER-TOP: #a3ac92 1px solid; BORDER-RIGHT: #a3ac92 1px solid; PADDING-TOP: 3px
+}
+.tfMtrxMain_1_2 {
+	BORDER-BOTTOM: #a3ac92 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #a3ac92 1px solid; PADDING-BOTTOM: 3px; LINE-HEIGHT: 1.3em; BACKGROUND-COLOR: #fff; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; HEIGHT: 41px; COLOR: #888; BORDER-TOP: #a3ac92 1px solid; BORDER-RIGHT: #a3ac92 1px solid; PADDING-TOP: 3px
+}
+.tfMtrxMain_1_3 {
+	BORDER-BOTTOM: #a3ac92 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #a3ac92 1px solid; PADDING-BOTTOM: 3px; LINE-HEIGHT: 1.3em; BACKGROUND-COLOR: #fff; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; HEIGHT: 41px; COLOR: #888; BORDER-TOP: #a3ac92 1px solid; BORDER-RIGHT: #a3ac92 1px solid; PADDING-TOP: 3px
+}
+.tfMtrxMain_1_4 {
+	BORDER-BOTTOM: #a3ac92 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #a3ac92 1px solid; PADDING-BOTTOM: 3px; LINE-HEIGHT: 1.3em; BACKGROUND-COLOR: #fff; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; HEIGHT: 41px; COLOR: #888; BORDER-TOP: #a3ac92 1px solid; BORDER-RIGHT: #a3ac92 1px solid; PADDING-TOP: 3px
+}
+.tfMtrxMain_1_5 {
+	BORDER-BOTTOM: #a3ac92 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #a3ac92 1px solid; PADDING-BOTTOM: 3px; LINE-HEIGHT: 1.3em; BACKGROUND-COLOR: #fff; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; HEIGHT: 41px; COLOR: #888; BORDER-TOP: #a3ac92 1px solid; BORDER-RIGHT: #a3ac92 1px solid; PADDING-TOP: 3px
+}
+.tfMtrxMain_1_6 {
+	BORDER-BOTTOM: #a3ac92 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #a3ac92 1px solid; PADDING-BOTTOM: 3px; LINE-HEIGHT: 1.3em; BACKGROUND-COLOR: #fff; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; HEIGHT: 41px; COLOR: #888; BORDER-TOP: #a3ac92 1px solid; BORDER-RIGHT: #a3ac92 1px solid; PADDING-TOP: 3px
+}
+.tfMtrxMain_1_7 {
+	BORDER-BOTTOM: #a3ac92 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #a3ac92 1px solid; PADDING-BOTTOM: 3px; LINE-HEIGHT: 1.3em; BACKGROUND-COLOR: #fff; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; HEIGHT: 41px; COLOR: #888; BORDER-TOP: #a3ac92 1px solid; BORDER-RIGHT: #a3ac92 1px solid; PADDING-TOP: 3px
+}
+.tfMtrxMain_2_1 {
+	BORDER-BOTTOM: #a3ac92 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #a3ac92 1px solid; PADDING-BOTTOM: 3px; LINE-HEIGHT: 1.3em; BACKGROUND-COLOR: #fff; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; HEIGHT: 41px; COLOR: #888; BORDER-TOP: #a3ac92 1px solid; BORDER-RIGHT: #a3ac92 1px solid; PADDING-TOP: 3px
+}
+.tfMtrxMain_2_2 {
+	BORDER-BOTTOM: #a3ac92 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #a3ac92 1px solid; PADDING-BOTTOM: 3px; LINE-HEIGHT: 1.3em; BACKGROUND-COLOR: #fff; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; HEIGHT: 41px; COLOR: #888; BORDER-TOP: #a3ac92 1px solid; BORDER-RIGHT: #a3ac92 1px solid; PADDING-TOP: 3px
+}
+.tfMtrxMain_2_3 {
+	BORDER-BOTTOM: #a3ac92 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #a3ac92 1px solid; PADDING-BOTTOM: 3px; LINE-HEIGHT: 1.3em; BACKGROUND-COLOR: #fff; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; HEIGHT: 41px; COLOR: #888; BORDER-TOP: #a3ac92 1px solid; BORDER-RIGHT: #a3ac92 1px solid; PADDING-TOP: 3px
+}
+.tfMtrxMain_2_4 {
+	BORDER-BOTTOM: #a3ac92 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #a3ac92 1px solid; PADDING-BOTTOM: 3px; LINE-HEIGHT: 1.3em; BACKGROUND-COLOR: #fff; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; HEIGHT: 41px; COLOR: #888; BORDER-TOP: #a3ac92 1px solid; BORDER-RIGHT: #a3ac92 1px solid; PADDING-TOP: 3px
+}
+.tfMtrxMain_2_5 {
+	BORDER-BOTTOM: #a3ac92 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #a3ac92 1px solid; PADDING-BOTTOM: 3px; LINE-HEIGHT: 1.3em; BACKGROUND-COLOR: #fff; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; HEIGHT: 41px; COLOR: #888; BORDER-TOP: #a3ac92 1px solid; BORDER-RIGHT: #a3ac92 1px solid; PADDING-TOP: 3px
+}
+.tfMtrxMain_2_6 {
+	BORDER-BOTTOM: #a3ac92 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #a3ac92 1px solid; PADDING-BOTTOM: 3px; LINE-HEIGHT: 1.3em; BACKGROUND-COLOR: #fff; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; HEIGHT: 41px; COLOR: #888; BORDER-TOP: #a3ac92 1px solid; BORDER-RIGHT: #a3ac92 1px solid; PADDING-TOP: 3px
+}
+.tfMtrxMain_2_7 {
+	BORDER-BOTTOM: #a3ac92 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #a3ac92 1px solid; PADDING-BOTTOM: 3px; LINE-HEIGHT: 1.3em; BACKGROUND-COLOR: #fff; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; HEIGHT: 41px; COLOR: #888; BORDER-TOP: #a3ac92 1px solid; BORDER-RIGHT: #a3ac92 1px solid; PADDING-TOP: 3px
+}
+.tfMtrxMain_3_1 {
+	BORDER-BOTTOM: #a3ac92 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #a3ac92 1px solid; PADDING-BOTTOM: 3px; LINE-HEIGHT: 1.3em; BACKGROUND-COLOR: #fff; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; HEIGHT: 41px; COLOR: #888; BORDER-TOP: #a3ac92 1px solid; BORDER-RIGHT: #a3ac92 1px solid; PADDING-TOP: 3px
+}
+.tfMtrxMain_3_2 {
+	BORDER-BOTTOM: #a3ac92 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #a3ac92 1px solid; PADDING-BOTTOM: 3px; LINE-HEIGHT: 1.3em; BACKGROUND-COLOR: #fff; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; HEIGHT: 41px; COLOR: #888; BORDER-TOP: #a3ac92 1px solid; BORDER-RIGHT: #a3ac92 1px solid; PADDING-TOP: 3px
+}
+.tfMtrxMain_3_3 {
+	BORDER-BOTTOM: #a3ac92 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #a3ac92 1px solid; PADDING-BOTTOM: 3px; LINE-HEIGHT: 1.3em; BACKGROUND-COLOR: #fff; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; HEIGHT: 41px; COLOR: #888; BORDER-TOP: #a3ac92 1px solid; BORDER-RIGHT: #a3ac92 1px solid; PADDING-TOP: 3px
+}
+.tfMtrxMain_3_4 {
+	BORDER-BOTTOM: #a3ac92 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #a3ac92 1px solid; PADDING-BOTTOM: 3px; LINE-HEIGHT: 1.3em; BACKGROUND-COLOR: #fff; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; HEIGHT: 41px; COLOR: #888; BORDER-TOP: #a3ac92 1px solid; BORDER-RIGHT: #a3ac92 1px solid; PADDING-TOP: 3px
+}
+.tfMtrxMain_3_5 {
+	BORDER-BOTTOM: #a3ac92 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #a3ac92 1px solid; PADDING-BOTTOM: 3px; LINE-HEIGHT: 1.3em; BACKGROUND-COLOR: #fff; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; HEIGHT: 41px; COLOR: #888; BORDER-TOP: #a3ac92 1px solid; BORDER-RIGHT: #a3ac92 1px solid; PADDING-TOP: 3px
+}
+.tfMtrxMain_3_6 {
+	BORDER-BOTTOM: #a3ac92 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #a3ac92 1px solid; PADDING-BOTTOM: 3px; LINE-HEIGHT: 1.3em; BACKGROUND-COLOR: #fff; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; HEIGHT: 41px; COLOR: #888; BORDER-TOP: #a3ac92 1px solid; BORDER-RIGHT: #a3ac92 1px solid; PADDING-TOP: 3px
+}
+.tfMtrxMain_3_7 {
+	BORDER-BOTTOM: #a3ac92 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #a3ac92 1px solid; PADDING-BOTTOM: 3px; LINE-HEIGHT: 1.3em; BACKGROUND-COLOR: #fff; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; HEIGHT: 41px; COLOR: #888; BORDER-TOP: #a3ac92 1px solid; BORDER-RIGHT: #a3ac92 1px solid; PADDING-TOP: 3px
+}
+.tfMtrxMain_4_1 {
+	BORDER-BOTTOM: #a3ac92 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #a3ac92 1px solid; PADDING-BOTTOM: 3px; LINE-HEIGHT: 1.3em; BACKGROUND-COLOR: #fff; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; HEIGHT: 41px; COLOR: #888; BORDER-TOP: #a3ac92 1px solid; BORDER-RIGHT: #a3ac92 1px solid; PADDING-TOP: 3px
+}
+.tfMtrxMain_4_2 {
+	BORDER-BOTTOM: #a3ac92 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #a3ac92 1px solid; PADDING-BOTTOM: 3px; LINE-HEIGHT: 1.3em; BACKGROUND-COLOR: #fff; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; HEIGHT: 41px; COLOR: #888; BORDER-TOP: #a3ac92 1px solid; BORDER-RIGHT: #a3ac92 1px solid; PADDING-TOP: 3px
+}
+.tfMtrxMain_4_3 {
+	BORDER-BOTTOM: #a3ac92 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #a3ac92 1px solid; PADDING-BOTTOM: 3px; LINE-HEIGHT: 1.3em; BACKGROUND-COLOR: #fff; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; HEIGHT: 41px; COLOR: #888; BORDER-TOP: #a3ac92 1px solid; BORDER-RIGHT: #a3ac92 1px solid; PADDING-TOP: 3px
+}
+.tfMtrxMain_4_4 {
+	BORDER-BOTTOM: #a3ac92 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #a3ac92 1px solid; PADDING-BOTTOM: 3px; LINE-HEIGHT: 1.3em; BACKGROUND-COLOR: #fff; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; HEIGHT: 41px; COLOR: #888; BORDER-TOP: #a3ac92 1px solid; BORDER-RIGHT: #a3ac92 1px solid; PADDING-TOP: 3px
+}
+.tfMtrxMain_4_5 {
+	BORDER-BOTTOM: #a3ac92 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #a3ac92 1px solid; PADDING-BOTTOM: 3px; LINE-HEIGHT: 1.3em; BACKGROUND-COLOR: #fff; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; HEIGHT: 41px; COLOR: #888; BORDER-TOP: #a3ac92 1px solid; BORDER-RIGHT: #a3ac92 1px solid; PADDING-TOP: 3px
+}
+.tfMtrxMain_4_6 {
+	BORDER-BOTTOM: #a3ac92 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #a3ac92 1px solid; PADDING-BOTTOM: 3px; LINE-HEIGHT: 1.3em; BACKGROUND-COLOR: #fff; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; HEIGHT: 41px; COLOR: #888; BORDER-TOP: #a3ac92 1px solid; BORDER-RIGHT: #a3ac92 1px solid; PADDING-TOP: 3px
+}
+.tfMtrxMain_4_7 {
+	BORDER-BOTTOM: #a3ac92 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #a3ac92 1px solid; PADDING-BOTTOM: 3px; LINE-HEIGHT: 1.3em; BACKGROUND-COLOR: #fff; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; HEIGHT: 41px; COLOR: #888; BORDER-TOP: #a3ac92 1px solid; BORDER-RIGHT: #a3ac92 1px solid; PADDING-TOP: 3px
+}
+.tfMtrxMain_5_1 {
+	BORDER-BOTTOM: #a3ac92 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #a3ac92 1px solid; PADDING-BOTTOM: 3px; LINE-HEIGHT: 1.3em; BACKGROUND-COLOR: #fff; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; HEIGHT: 41px; COLOR: #888; BORDER-TOP: #a3ac92 1px solid; BORDER-RIGHT: #a3ac92 1px solid; PADDING-TOP: 3px
+}
+.tfMtrxMain_5_2 {
+	BORDER-BOTTOM: #a3ac92 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #a3ac92 1px solid; PADDING-BOTTOM: 3px; LINE-HEIGHT: 1.3em; BACKGROUND-COLOR: #fff; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; HEIGHT: 41px; COLOR: #888; BORDER-TOP: #a3ac92 1px solid; BORDER-RIGHT: #a3ac92 1px solid; PADDING-TOP: 3px
+}
+.tfMtrxMain_5_3 {
+	BORDER-BOTTOM: #a3ac92 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #a3ac92 1px solid; PADDING-BOTTOM: 3px; LINE-HEIGHT: 1.3em; BACKGROUND-COLOR: #fff; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; HEIGHT: 41px; COLOR: #888; BORDER-TOP: #a3ac92 1px solid; BORDER-RIGHT: #a3ac92 1px solid; PADDING-TOP: 3px
+}
+.tfMtrxMain_5_4 {
+	BORDER-BOTTOM: #a3ac92 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #a3ac92 1px solid; PADDING-BOTTOM: 3px; LINE-HEIGHT: 1.3em; BACKGROUND-COLOR: #fff; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; HEIGHT: 41px; COLOR: #888; BORDER-TOP: #a3ac92 1px solid; BORDER-RIGHT: #a3ac92 1px solid; PADDING-TOP: 3px
+}
+.tfMtrxMain_5_5 {
+	BORDER-BOTTOM: #a3ac92 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #a3ac92 1px solid; PADDING-BOTTOM: 3px; LINE-HEIGHT: 1.3em; BACKGROUND-COLOR: #fff; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; HEIGHT: 41px; COLOR: #888; BORDER-TOP: #a3ac92 1px solid; BORDER-RIGHT: #a3ac92 1px solid; PADDING-TOP: 3px
+}
+.tfMtrxMain_5_6 {
+	BORDER-BOTTOM: #a3ac92 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #a3ac92 1px solid; PADDING-BOTTOM: 3px; LINE-HEIGHT: 1.3em; BACKGROUND-COLOR: #fff; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; HEIGHT: 41px; COLOR: #888; BORDER-TOP: #a3ac92 1px solid; BORDER-RIGHT: #a3ac92 1px solid; PADDING-TOP: 3px
+}
+.tfMtrxMain_5_7 {
+	BORDER-BOTTOM: #a3ac92 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #a3ac92 1px solid; PADDING-BOTTOM: 3px; LINE-HEIGHT: 1.3em; BACKGROUND-COLOR: #fff; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; HEIGHT: 41px; COLOR: #888; BORDER-TOP: #a3ac92 1px solid; BORDER-RIGHT: #a3ac92 1px solid; PADDING-TOP: 3px
+}
+.tfMtrxMain_6_1 {
+	BORDER-BOTTOM: #a3ac92 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #a3ac92 1px solid; PADDING-BOTTOM: 3px; LINE-HEIGHT: 1.3em; BACKGROUND-COLOR: #fff; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; HEIGHT: 41px; COLOR: #888; BORDER-TOP: #a3ac92 1px solid; BORDER-RIGHT: #a3ac92 1px solid; PADDING-TOP: 3px
+}
+.tfMtrxMain_6_2 {
+	BORDER-BOTTOM: #a3ac92 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #a3ac92 1px solid; PADDING-BOTTOM: 3px; LINE-HEIGHT: 1.3em; BACKGROUND-COLOR: #fff; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; HEIGHT: 41px; COLOR: #888; BORDER-TOP: #a3ac92 1px solid; BORDER-RIGHT: #a3ac92 1px solid; PADDING-TOP: 3px
+}
+.tfMtrxMain_6_3 {
+	BORDER-BOTTOM: #a3ac92 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #a3ac92 1px solid; PADDING-BOTTOM: 3px; LINE-HEIGHT: 1.3em; BACKGROUND-COLOR: #fff; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; HEIGHT: 41px; COLOR: #888; BORDER-TOP: #a3ac92 1px solid; BORDER-RIGHT: #a3ac92 1px solid; PADDING-TOP: 3px
+}
+.tfMtrxMain_6_4 {
+	BORDER-BOTTOM: #a3ac92 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #a3ac92 1px solid; PADDING-BOTTOM: 3px; LINE-HEIGHT: 1.3em; BACKGROUND-COLOR: #fff; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; HEIGHT: 41px; COLOR: #888; BORDER-TOP: #a3ac92 1px solid; BORDER-RIGHT: #a3ac92 1px solid; PADDING-TOP: 3px
+}
+.tfMtrxMain_6_5 {
+	BORDER-BOTTOM: #a3ac92 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #a3ac92 1px solid; PADDING-BOTTOM: 3px; LINE-HEIGHT: 1.3em; BACKGROUND-COLOR: #fff; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; HEIGHT: 41px; COLOR: #888; BORDER-TOP: #a3ac92 1px solid; BORDER-RIGHT: #a3ac92 1px solid; PADDING-TOP: 3px
+}
+.tfMtrxMain_6_6 {
+	BORDER-BOTTOM: #a3ac92 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #a3ac92 1px solid; PADDING-BOTTOM: 3px; LINE-HEIGHT: 1.3em; BACKGROUND-COLOR: #fff; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; HEIGHT: 41px; COLOR: #888; BORDER-TOP: #a3ac92 1px solid; BORDER-RIGHT: #a3ac92 1px solid; PADDING-TOP: 3px
+}
+.tfMtrxMain_6_7 {
+	BORDER-BOTTOM: #a3ac92 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #a3ac92 1px solid; PADDING-BOTTOM: 3px; LINE-HEIGHT: 1.3em; BACKGROUND-COLOR: #fff; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; HEIGHT: 41px; COLOR: #888; BORDER-TOP: #a3ac92 1px solid; BORDER-RIGHT: #a3ac92 1px solid; PADDING-TOP: 3px
+}
+.tfMtrxMain_7_1 {
+	BORDER-BOTTOM: #a3ac92 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #a3ac92 1px solid; PADDING-BOTTOM: 3px; LINE-HEIGHT: 1.3em; BACKGROUND-COLOR: #fff; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; HEIGHT: 41px; COLOR: #888; BORDER-TOP: #a3ac92 1px solid; BORDER-RIGHT: #a3ac92 1px solid; PADDING-TOP: 3px
+}
+.tfMtrxMain_7_2 {
+	BORDER-BOTTOM: #a3ac92 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #a3ac92 1px solid; PADDING-BOTTOM: 3px; LINE-HEIGHT: 1.3em; BACKGROUND-COLOR: #fff; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; HEIGHT: 41px; COLOR: #888; BORDER-TOP: #a3ac92 1px solid; BORDER-RIGHT: #a3ac92 1px solid; PADDING-TOP: 3px
+}
+.tfMtrxMain_7_3 {
+	BORDER-BOTTOM: #a3ac92 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #a3ac92 1px solid; PADDING-BOTTOM: 3px; LINE-HEIGHT: 1.3em; BACKGROUND-COLOR: #fff; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; HEIGHT: 41px; COLOR: #888; BORDER-TOP: #a3ac92 1px solid; BORDER-RIGHT: #a3ac92 1px solid; PADDING-TOP: 3px
+}
+.tfMtrxMain_7_4 {
+	BORDER-BOTTOM: #a3ac92 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #a3ac92 1px solid; PADDING-BOTTOM: 3px; LINE-HEIGHT: 1.3em; BACKGROUND-COLOR: #fff; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; HEIGHT: 41px; COLOR: #888; BORDER-TOP: #a3ac92 1px solid; BORDER-RIGHT: #a3ac92 1px solid; PADDING-TOP: 3px
+}
+.tfMtrxMain_7_5 {
+	BORDER-BOTTOM: #a3ac92 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #a3ac92 1px solid; PADDING-BOTTOM: 3px; LINE-HEIGHT: 1.3em; BACKGROUND-COLOR: #fff; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; HEIGHT: 41px; COLOR: #888; BORDER-TOP: #a3ac92 1px solid; BORDER-RIGHT: #a3ac92 1px solid; PADDING-TOP: 3px
+}
+.tfMtrxMain_7_6 {
+	BORDER-BOTTOM: #a3ac92 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #a3ac92 1px solid; PADDING-BOTTOM: 3px; LINE-HEIGHT: 1.3em; BACKGROUND-COLOR: #fff; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; HEIGHT: 41px; COLOR: #888; BORDER-TOP: #a3ac92 1px solid; BORDER-RIGHT: #a3ac92 1px solid; PADDING-TOP: 3px
+}
+.tfMtrxMain_7_7 {
+	BORDER-BOTTOM: #a3ac92 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #a3ac92 1px solid; PADDING-BOTTOM: 3px; LINE-HEIGHT: 1.3em; BACKGROUND-COLOR: #fff; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; HEIGHT: 41px; COLOR: #888; BORDER-TOP: #a3ac92 1px solid; BORDER-RIGHT: #a3ac92 1px solid; PADDING-TOP: 3px
+}
+.tfMtrxCompliment {
+	TEXT-ALIGN: center; BACKGROUND-COLOR: #b7bfc4; COLOR: #ffffff; FONT-SIZE: 12px
+}
+.tfMtrxComplimentHeader {
+	TEXT-ALIGN: center; BACKGROUND-COLOR: #ffffff; COLOR: black; FONT-SIZE: 13px; FONT-WEIGHT: bold
+}
+.tfMtrxComplimentHeaderReturning {
+	TEXT-ALIGN: center; BACKGROUND-COLOR: #ffffff; COLOR: black
+}
+.tfMtrxComplimentHeaderDepart {
+	TEXT-ALIGN: right; BACKGROUND-COLOR: #ffffff; COLOR: black
+}
+.input_button {
+	PADDING-BOTTOM: 1px; TEXT-TRANSFORM: uppercase; BACKGROUND-COLOR: #d4d0c8; PADDING-LEFT: 1px; WIDTH: auto; PADDING-RIGHT: 1px; FONT: 9px Verdana, Geneva, Arial, Helvetica, sans-serif; COLOR: #000000; CURSOR: hand; PADDING-TOP: 1px; elevation: above
+}
+.viewSeatMap .input_button {
+	BACKGROUND-IMAGE: url(https://s3.amazonaws.com/aeromexico/bg_boton_orange.png); BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; PADDING-BOTTOM: 0px; TEXT-TRANSFORM: capitalize; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; DISPLAY: block; FLOAT: right; HEIGHT: 39px; COLOR: #ffffff; MARGIN-LEFT: 10px; FONT-SIZE: 16px; BORDER-TOP: medium none; FONT-WEIGHT: bold; MARGIN-RIGHT: 10px; BORDER-RIGHT: medium none; PADDING-TOP: 0px; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px
+}
+.font_title_dark {
+	BORDER-BOTTOM-COLOR: #6633ff; BACKGROUND-COLOR: #eaeaea; PADDING-LEFT: 5px; FONT-FAMILY: Arial, Helvetica, sans-serif; HEIGHT: 24px; COLOR: #f0cd2b; FONT-SIZE: 9pt; BORDER-LEFT-COLOR: #336666; FONT-WEIGHT: bold
+}
+.viewSeatMap .font_title_dark {
+	COLOR: #333333
+}
+.font_title_light_bold {
+	TEXT-ALIGN: center; BACKGROUND-COLOR: #ccd6e3; PADDING-LEFT: 5px; COLOR: #000000; FONT-SIZE: 8pt; FONT-WEIGHT: bold
+}
+.font_title_light_bold_left {
+	TEXT-ALIGN: left; PADDING-BOTTOM: 2px; BACKGROUND-COLOR: #999999; PADDING-LEFT: 2px; PADDING-RIGHT: 2px; FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #ffffff; FONT-SIZE: 9pt; FONT-WEIGHT: bold; PADDING-TOP: 2px
+}
+.font_title_light_bold_left TD {
+	TEXT-ALIGN: left; PADDING-BOTTOM: 2px; BACKGROUND-COLOR: #999999; PADDING-LEFT: 2px; PADDING-RIGHT: 2px; FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #ffffff; FONT-SIZE: 9pt; FONT-WEIGHT: bold; PADDING-TOP: 2px
+}
+.font_default_center {
+	TEXT-ALIGN: center
+}
+.input_cal {
+	BORDER-BOTTOM: #ffffff 1px solid; BORDER-LEFT: #ffffff 1px solid; BACKGROUND-COLOR: #ffffff; OUTLINE-COLOR: #ffffff; COLOR: #000; FONT-SIZE: 11px; BORDER-TOP: #ffffff 1px solid; CURSOR: hand; BORDER-RIGHT: #ffffff 1px solid; TEXT-DECORATION: underline
+}
+.font_highlight {
+	TEXT-ALIGN: center; BACKGROUND-COLOR: #efefef; COLOR: #000000; FONT-WEIGHT: bold
+}
+TABLE IMG {
+	VERTICAL-ALIGN: bottom
+}
+.userLogin {
+	PADDING-TOP: 10px
+}
+.userLogin LABEL {
+	WIDTH: 200px; FLOAT: left
+}
+.userLogin LABEL SPAN {
+	WIDTH: 60px; FLOAT: left
+}
+.userLogin LABEL SPAN.errorLogin {
+	WIDTH: 140px; FLOAT: right; COLOR: #cc0000; FONT-WEIGHT: bold
+}
+.userLogin LABEL.checkLogin {
+	WIDTH: 130px; FLOAT: left; MARGIN-LEFT: 5px; MARGIN-RIGHT: 5px
+}
+.amountPaid {
+	BORDER-BOTTOM: #000000 2px solid; WIDTH: 30%; FLOAT: right
+}
+.spacing {
+	MARGIN-LEFT: 28px
+}
+.blank {
+	HEIGHT: 50px
+}
+A.reasons {
+	COLOR: #0072bc; FONT-SIZE: 17px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+A.reasons:hover {
+	COLOR: #000; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+A.reasons:visited {
+	COLOR: #0072bc; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.columnLink {
+	WIDTH: 177px; DISPLAY: inline; MARGIN-BOTTOM: 5px; FLOAT: left
+}
+.errorNumber {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 40px; WIDTH: 170px; PADDING-RIGHT: 20px; FLOAT: left; COLOR: #cc0000; FONT-WEIGHT: bold; PADDING-TOP: 0px
+}
+.errorPassword {
+	WIDTH: 365px; FLOAT: right; COLOR: #cc0000; FONT-WEIGHT: bold
+}
+.errorNumberOthers {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 73px; WIDTH: 170px; PADDING-RIGHT: 20px; FLOAT: left; COLOR: #cc0000; FONT-WEIGHT: bold; PADDING-TOP: 0px
+}
+.errorPasswordOthers {
+	WIDTH: 335px; FLOAT: right; COLOR: #cc0000; FONT-WEIGHT: bold
+}
+#popupSmallOne {
+	PADDING-BOTTOM: 15px; MARGIN: 0px; PADDING-LEFT: 10px; WIDTH: 380px; PADDING-RIGHT: 10px; FLOAT: left; PADDING-TOP: 10px
+}
+.textsmall {
+	FONT-FAMILY: Arial, MS Sans-Serif, sans-serif, Geneva, Helvetica; FONT-SIZE: 8pt; FONT-WEIGHT: normal
+}
+.textbold {
+	FONT-FAMILY: Arial, MS Sans-Serif, sans-serif, Geneva, Helvetica; FONT-SIZE: 8pt; FONT-WEIGHT: bold
+}
+H4.air {
+	FONT-SIZE: 12px; FONT-WEIGHT: bold
+}
+.paraPmt {
+	MARGIN-TOP: 10px; MARGIN-BOTTOM: 10px; MARGIN-LEFT: 5px; CLEAR: both
+}
+.fareRulesNone {
+	PADDING-BOTTOM: 3px; LINE-HEIGHT: 20px; BACKGROUND-COLOR: #eaeaea; PADDING-LEFT: 1%; WIDTH: 99%; COLOR: #142f5f; CLEAR: both; FONT-SIZE: 13px; FONT-WEIGHT: bold; PADDING-TOP: 3px
+}
+.billing {
+	WIDTH: 99%; FLOAT: left
+}
+.billing LABEL {
+	PADDING-BOTTOM: 3px; LINE-HEIGHT: 18px; WIDTH: 450px; FLOAT: left
+}
+.billing SPAN {
+	TEXT-ALIGN: right; WIDTH: 118px; PADDING-RIGHT: 3px; FLOAT: left
+}
+.itinReviewFltHeader.billing.button {
+	WIDTH: 100% !important
+}
+.itinReviewFltHeader.billing.button INPUT {
+	MARGIN-RIGHT: 0px !important
+}
+.billAddLeft {
+	WIDTH: 48%; FLOAT: left; PADDING-TOP: 4px
+}
+.billAddRight {
+	WIDTH: 48%; FLOAT: right; PADDING-TOP: 4px
+}
+.paymentInformation {
+	WIDTH: 100%; FLOAT: left; CLEAR: both
+}
+.paymentInformation LABEL {
+	WIDTH: 90%
+}
+.paymentInformation SPAN {
+	TEXT-ALIGN: right; WIDTH: 108px; PADDING-RIGHT: 3px
+}
+.country {
+	WIDTH: 150px
+}
+.payAddLeft {
+	WIDTH: 51%; FLOAT: left; PADDING-TOP: 4px
+}
+.payAddRight {
+	WIDTH: 48%; FLOAT: right; PADDING-TOP: 50px
+}
+.paymentDetail {
+	TEXT-ALIGN: right; PADDING-BOTTOM: 3px; BACKGROUND-COLOR: #999999; PADDING-LEFT: 3px; WIDTH: 99%; PADDING-RIGHT: 3px; MARGIN-BOTTOM: 10px; FLOAT: right; COLOR: #fff; PADDING-TOP: 3px
+}
+.errorCardHolder {
+	TEXT-ALIGN: left !important; WIDTH: 180px !important; FLOAT: left; COLOR: #cc0000; MARGIN-LEFT: 40%; FONT-WEIGHT: bold
+}
+.errorCardNumber {
+	TEXT-ALIGN: left !important; WIDTH: 180px !important; FLOAT: left; COLOR: #cc0000; MARGIN-LEFT: 19%; FONT-WEIGHT: bold
+}
+#popUpGeneric {
+	PADDING-BOTTOM: 15px; MARGIN: 0px; PADDING-LEFT: 10px; WIDTH: 200px; PADDING-RIGHT: 10px; FLOAT: left; PADDING-TOP: 10px
+}
+#popUpGeneric P {
+	PADDING-BOTTOM: 5px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 5px
+}
+.amountType {
+	FLOAT: right
+}
+.changeTickName {
+	WIDTH: 180px
+}
+.changeTickNumber {
+	TEXT-ALIGN: right; WIDTH: 118px
+}
+.changeOriginalVal {
+	TEXT-ALIGN: right; WIDTH: 218px
+}
+.flightTypeHeader {
+	WIDTH: 99%; HEIGHT: 25px
+}
+.flightTypeContent {
+	MARGIN-TOP: 10px; WIDTH: 90%; MARGIN-LEFT: 10%
+}
+.currentItinPopup {
+	MARGIN-LEFT: 200px; FONT-WEIGHT: normal
+}
+.errorItinerary {
+	MARGIN: 5px 0px 5px 10px; WIDTH: 80%; FLOAT: left; COLOR: #cc0000; CLEAR: both; FONT-WEIGHT: bold
+}
+H2.medium {
+	WIDTH: 77%; FLOAT: left
+}
+.hcontentMedium {
+	TEXT-ALIGN: right; WIDTH: 20%; FLOAT: right; COLOR: #fff; CLEAR: right; FONT-SIZE: 11px
+}
+.textStyle.hcontentMedium {
+	FONT-STYLE: italic
+}
+.errorName {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 75px; WIDTH: 300px; PADDING-RIGHT: 20px; FLOAT: left; COLOR: #cc0000; FONT-WEIGHT: bold; PADDING-TOP: 0px
+}
+.errorCity {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 122px; WIDTH: 400px; PADDING-RIGHT: 20px; FLOAT: left; COLOR: #cc0000; FONT-WEIGHT: bold; PADDING-TOP: 0px
+}
+.flightOptions .smallTwo {
+	WIDTH: 40px
+}
+.textItalic {
+	FONT-STYLE: normal
+}
+.headersSpace {
+	PADDING-BOTTOM: 0.3%; PADDING-LEFT: 0.3%; WIDTH: 99.4%; PADDING-RIGHT: 0.3%; MARGIN-BOTTOM: 10px; FLOAT: left; PADDING-TOP: 0.3%
+}
+#pageCenterCol {
+	WIDTH: 420px; MARGIN-BOTTOM: 20px; FLOAT: left; MARGIN-LEFT: 75px
+}
+.flightOptions .twoColumn {
+	WIDTH: 300px
+}
+.flightOptions .fourColumn {
+	WIDTH: 150px
+}
+.topTen {
+	MARGIN-TOP: 10px
+}
+.flightHeadDetail {
+	PADDING-LEFT: 0px; BACKGROUND: none transparent scroll repeat 0% 0%; COLOR: #000
+}
+.mainMenu {
+	TEXT-ALIGN: center; WIDTH: 100%; FLOAT: left; MARGIN-RIGHT: -3px
+}
+.mainMenu A {
+	COLOR: #ff9900; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.mainMenu A:hover {
+	COLOR: #ff9900; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.mainMenu A:visited {
+	COLOR: #ff9900; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.mainMenu .oneImage {
+	MARGIN-LEFT: 40%
+}
+.mainMenu .twoImage {
+	MARGIN-LEFT: 30%
+}
+.mainMenu .threeImage {
+	MARGIN-LEFT: 20%
+}
+.mainMenu .moreImage {
+	MARGIN-LEFT: 10%
+}
+.sideImage {
+	WIDTH: 130px; FLOAT: left
+}
+.centerImage {
+	MARGIN: 0% 3%; WIDTH: 130px; FLOAT: left
+}
+.searchTypeCurrentItin {
+	WIDTH: 100%; MARGIN-BOTTOM: 10px; FLOAT: right
+}
+.searchTypeCurrentItin LABEL {
+	TEXT-ALIGN: right; WIDTH: 41%; FLOAT: right; FONT-WEIGHT: bold
+}
+.searchTypeCurrentItin SPAN {
+	WIDTH: 132px; FLOAT: right; MARGIN-LEFT: 18px; FONT-WEIGHT: normal
+}
+.verticalTop {
+	VERTICAL-ALIGN: top
+}
+.passwordReminder {
+	PADDING-BOTTOM: 10px; WIDTH: 600px; FLOAT: left
+}
+.passwordReminder LABEL {
+	WIDTH: 99%; MARGIN-BOTTOM: 5px; FLOAT: left; MARGIN-LEFT: 10px; PADDING-TOP: 10px
+}
+.passwordReminder .answertxt {
+	WIDTH: 600px; FLOAT: left
+}
+.passwordReminder .answertxt P {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 25px; WIDTH: 250px; PADDING-RIGHT: 0px; FLOAT: left; PADDING-TOP: 12px
+}
+.passwordReminder .answertxt LABEL {
+	TEXT-ALIGN: left; WIDTH: 300px; FLOAT: left; CLEAR: both
+}
+.passwordReminder .answertxt SPAN {
+	TEXT-ALIGN: left; PADDING-BOTTOM: 0px; PADDING-LEFT: 20px; WIDTH: 50px; PADDING-RIGHT: 40px; PADDING-TOP: 0px
+}
+.passwordReminder .answertxt .errorRemindAnswer {
+	PADDING-LEFT: 108px; WIDTH: 300px; COLOR: #cc0000; FONT-WEIGHT: bold
+}
+.loginpass {
+	PADDING-BOTTOM: 10px; WIDTH: 620px; FLOAT: left
+}
+.loginpass LABEL {
+	MARGIN-BOTTOM: 5px; FLOAT: left; MARGIN-LEFT: 10px; PADDING-TOP: 20px
+}
+.loginpass .passwordPad {
+	PADDING-LEFT: 40px
+}
+.loginPassword {
+	LINE-HEIGHT: 20px; WIDTH: 100%; COLOR: #fff; CLEAR: both; FONT-SIZE: 13px
+}
+.loginPassword P {
+	PADDING-BOTTOM: 4px; BACKGROUND-COLOR: #c0c0c0; PADDING-LEFT: 5px; WIDTH: 48.3%; PADDING-RIGHT: 5px; FLOAT: left; PADDING-TOP: 3px
+}
+.loginPassword P A {
+	TEXT-ALIGN: right; FLOAT: right
+}
+.loginPassword P A:hover {
+	TEXT-ALIGN: right; FLOAT: right
+}
+.loginpass .errorLoginNumber {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 50px; WIDTH: 210px; PADDING-RIGHT: 20px; FLOAT: left; COLOR: #cc0000; FONT-WEIGHT: bold; PADDING-TOP: 0px
+}
+.loginpass .errorLoginPassword {
+	WIDTH: 333px; FLOAT: right; COLOR: #cc0000; FONT-WEIGHT: bold
+}
+#popUpMedium {
+	PADDING-BOTTOM: 15px; MARGIN: 0px; PADDING-LEFT: 10px; WIDTH: 390px; PADDING-RIGHT: 10px; FLOAT: left; PADDING-TOP: 10px
+}
+#popUpMedium SELECT {
+	MARGIN: 0px 0px 10px
+}
+#popUpMedium P.alert {
+	MARGIN: 0px 0px 20px; WIDTH: 100%; CLEAR: both
+}
+#popUpMedium UL {
+	MARGIN: 0px 0px 0px 10px; WIDTH: 70%; DISPLAY: inline; FLOAT: left; CLEAR: both
+}
+#popUpMedium UL LI {
+	TEXT-INDENT: 10px; WIDTH: 20px; DISPLAY: inline; FLOAT: left
+}
+#popUpMedium UL LI A {
+	COLOR: #000000; FONT-WEIGHT: bold; TEXT-DECORATION: underline
+}
+.cities {
+	WIDTH: 100%; CLEAR: both
+}
+.cities P {
+	PADDING-BOTTOM: 10px; WIDTH: 100%
+}
+.cities A {
+	TEXT-DECORATION: underline
+}
+.cities A.lnkBlack {
+	COLOR: #000000; TEXT-DECORATION: underline
+}
+.cities A.lnkBig {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+.refundh2 {
+	PADDING-BOTTOM: 3px; LINE-HEIGHT: 20px; BACKGROUND-COLOR: #eaeaea; WIDTH: 100%; COLOR: #142f5f; CLEAR: both; FONT-SIZE: 13px; FONT-WEIGHT: bold; PADDING-TOP: 3px
+}
+.refundh2 SPAN {
+	MARGIN-LEFT: 5px
+}
+.refundHeader {
+	PADDING-BOTTOM: 4px; BACKGROUND-COLOR: #eaeaea; MARGIN: 0px 0px 10px; PADDING-LEFT: 0px; WIDTH: 100%; PADDING-RIGHT: 0px; FLOAT: left; FONT-WEIGHT: bold; PADDING-TOP: 4px
+}
+.refundOptions {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; CLEAR: left; PADDING-TOP: 2px
+}
+.refundOptions .refundcolumn {
+	DISPLAY: inline; FLOAT: left
+}
+.refundOptions .refundone {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 5px; WIDTH: 25%; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+.refundOptions .refundtwo {
+	WIDTH: 47%
+}
+.refundOptions .refundthree {
+	TEXT-ALIGN: right; PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; WIDTH: 25%; PADDING-RIGHT: 5px; FLOAT: right; PADDING-TOP: 0px
+}
+.refund {
+	PADDING-BOTTOM: 30px; CLEAR: left
+}
+.refundPayment {
+	WIDTH: 100%; CLEAR: both
+}
+.refundPayment .paymentRow {
+	CLEAR: both
+}
+.refundPayment .refundcolOne {
+	TEXT-ALIGN: left; WIDTH: 60%; DISPLAY: inline; FLOAT: left; PADDING-TOP: 10px
+}
+.refundPayment .refundcolTwo {
+	TEXT-ALIGN: left; WIDTH: 24%; DISPLAY: inline; FLOAT: left; PADDING-TOP: 10px
+}
+.refundPayment .refundcolThree {
+	TEXT-ALIGN: right; WIDTH: 15%; DISPLAY: inline; FLOAT: left; PADDING-TOP: 10px
+}
+.borderTop {
+	PADDING-BOTTOM: 20px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BORDER-TOP: #bbb7a5 2px solid; PADDING-TOP: 0px
+}
+.refundPayment .refundSubTotal {
+	BORDER-BOTTOM: #bbb7a5 2px solid; WIDTH: 36%; FLOAT: right
+}
+.refundAlert {
+	MARGIN: 25px 0px 5px; WIDTH: 98%; FLOAT: left; COLOR: #cc0000; CLEAR: left; FONT-WEIGHT: bold
+}
+.flightOptions .flightOne {
+	PADDING-LEFT: 5px; WIDTH: 20%
+}
+.flightOptions .flightTwo {
+	WIDTH: 45%
+}
+.flightOptions .flightThree {
+	TEXT-ALIGN: right; WIDTH: 25%; PADDING-RIGHT: 5px; FLOAT: right
+}
+.personalBusiness {
+	PADDING-BOTTOM: 10px; WIDTH: 100%; FLOAT: right
+}
+.withPad {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 4px; PADDING-RIGHT: 0px; PADDING-TOP: 6px
+}
+.flightOptions .weekDaysSeven {
+	TEXT-ALIGN: center; WIDTH: 19px
+}
+.flightOptions .semiFlexSeven {
+	WIDTH: 64px
+}
+.flightOptions .semiFlexNine {
+	TEXT-ALIGN: center; WIDTH: 64px
+}
+.flightOptions .semiFlexEight {
+	WIDTH: 90px
+}
+.flightOptions .semiFlexBreak {
+	WIDTH: 170px
+}
+.flightOptions .semiFlexField {
+	WIDTH: 160px
+}
+.leftPadLess {
+	PADDING-LEFT: 40px
+}
+.requestClear {
+	WIDTH: 100%; CLEAR: left
+}
+.subHeadLeftPad {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 4px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+.errorNonBold {
+	TEXT-ALIGN: left; WIDTH: 99%; MARGIN-BOTTOM: 10px; FLOAT: left; COLOR: #cc0000
+}
+.flightOptions .flightFive {
+	WIDTH: 222px
+}
+.meetingIdErorr {
+	TEXT-ALIGN: left; MARGIN-BOTTOM: 10px; FLOAT: left; COLOR: #cc0000; MARGIN-LEFT: 50px; FONT-WEIGHT: bold
+}
+.corpIdErorr {
+	TEXT-ALIGN: left; MARGIN-BOTTOM: 10px; FLOAT: left; COLOR: #cc0000; MARGIN-LEFT: 55px; FONT-WEIGHT: bold
+}
+.promoCodeErorr {
+	TEXT-ALIGN: left; WIDTH: 70%; MARGIN-BOTTOM: 10px; FLOAT: left; COLOR: #cc0000; MARGIN-LEFT: 70px; CLEAR: both; FONT-WEIGHT: bold
+}
+.airlineErorr {
+	TEXT-ALIGN: left; WIDTH: 75px; FLOAT: left; COLOR: #ec0006; FONT-WEIGHT: bold
+}
+.popShopingCartLink {
+	TEXT-ALIGN: right; WIDTH: 100%; FLOAT: left; CLEAR: both; MARGIN-RIGHT: -3px
+}
+.blueBoxes {
+	LINE-HEIGHT: 20px; BACKGROUND-COLOR: #ccd6e3; MARGIN-TOP: 1px; PADDING-LEFT: 5px; WIDTH: 18%; FLOAT: left; FONT-WEIGHT: bold; MARGIN-RIGHT: 6px
+}
+.blueLastBoxes.blueBoxes {
+	WIDTH: 20%; MARGIN-RIGHT: 0px
+}
+.blueBoxesNoBg.blueBoxes {
+	BACKGROUND-COLOR: #ffffff; FONT-WEIGHT: normal
+}
+.blueLastBoxesNoBg.blueLastBoxes.blueBoxes {
+	TEXT-ALIGN: center; BACKGROUND-COLOR: #ffffff
+}
+.button INPUT.rightSelect {
+	MARGIN-RIGHT: 40px
+}
+.button INPUT.leftSearch {
+	FLOAT: left
+}
+.passNum {
+	LINE-HEIGHT: 20px; BACKGROUND-COLOR: #eaeaea; PADDING-LEFT: 5px; WIDTH: 99%; FLOAT: left; CLEAR: both; FONT-WEIGHT: bold
+}
+.tripDetails .inputBoxInline {
+	TEXT-ALIGN: left; MARGIN-TOP: 3px; FLOAT: left
+}
+.flightOptions .serialNo {
+	TEXT-ALIGN: left; PADDING-LEFT: 3px; WIDTH: 50px; CLEAR: both
+}
+.flightOptions .passenger {
+	TEXT-ALIGN: center; WIDTH: 111px
+}
+.flightOptions .links {
+	TEXT-ALIGN: center; /*WIDTH: 150px;*/ DISPLAY: inline; FONT-WEIGHT: bold
+}
+.flightOptions .confirmDetails {
+	TEXT-ALIGN: left; MARGIN-TOP: 10px; WIDTH: 40%; DISPLAY: inline
+}
+.passWelcomeInfo {
+	WIDTH: 100%; FLOAT: left; CLEAR: both
+}
+.welcomeRight {
+	FLOAT: right
+}
+.welcomeLarge {
+	FONT-SIZE: large
+}
+.welcomeLeft {
+	FLOAT: left; CLEAR: left
+}
+.welcomeTwoColum {
+	FLOAT: left; MARGIN-RIGHT: 20px
+}
+.button INPUT.travel {
+	MARGIN-BOTTOM: 15px; MARGIN-RIGHT: 15px
+}
+.singleLineCenter {
+	TEXT-ALIGN: center; MARGIN-TOP: 15px; WIDTH: 100%; MARGIN-BOTTOM: 15px; FLOAT: left; CLEAR: both; FONT-WEIGHT: bold
+}
+#travelContainer {
+	PADDING-LEFT: 15%; WIDTH: 70%; PADDING-RIGHT: 15%; FLOAT: left
+}
+.travelDetails {
+	BACKGROUND-COLOR: #c0c0c0; WIDTH: 100%; FLOAT: left
+}
+.travelDetails LABEL {
+	LINE-HEIGHT: 18px; WIDTH: 90%; MARGIN-BOTTOM: 1.5%; FLOAT: left; MARGIN-LEFT: 10%
+}
+.travelDetails LABEL INPUT {
+	MARGIN-LEFT: 1%
+}
+.travelDetails LABEL INPUT.searchPnr {
+	MARGIN-RIGHT: 1%
+}
+.travelDetails LABEL.check {
+	MARGIN-LEFT: 0px; FONT-WEIGHT: bold
+}
+.travelDetails LABEL SPAN {
+	TEXT-ALIGN: right; WIDTH: 30%; FLOAT: left; FONT-WEIGHT: bold
+}
+.travelHeader {
+	MARGIN-TOP: 10px; MARGIN-BOTTOM: 10px; MARGIN-LEFT: 5px; FONT-SIZE: 11px
+}
+.errorDisplay {
+	TEXT-ALIGN: left !important; WIDTH: 65% !important; FLOAT: left; COLOR: #cc0000; MARGIN-LEFT: 31%; CLEAR: both; FONT-WEIGHT: bold
+}
+.curveArea {
+	WIDTH: 99%; FLOAT: left
+}
+.curveAreaTop {
+	WIDTH: 612px; BACKGROUND: no-repeat left top; FLOAT: left; HEIGHT: 37px
+}
+.curveAreaTop H2 {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 20px; WIDTH: 592px; PADDING-RIGHT: 0px; FONT: bold 14px/37px Verdana, Arial, Helvetica, sans-serif; BACKGROUND: none transparent scroll repeat 0% 0%; COLOR: #ffffff; PADDING-TOP: 0px
+}
+.curveContentArea {
+	BORDER-LEFT: 12px solid; PADDING-LEFT: 10px; WIDTH: 590px; FLOAT: left
+}
+.curveAreaBottom {
+	WIDTH: 612px; BACKGROUND: no-repeat left top; FLOAT: left; HEIGHT: 15px
+}
+.twoBlockPage {
+	WIDTH: 100%
+}
+.twoBlockPage DIV.leftBlock {
+	WIDTH: 48%; FLOAT: left
+}
+.twoBlockPage DIV.rightBlock {
+	WIDTH: 48%; FLOAT: right
+}
+.floatNwidth {
+	WIDTH: 99%; FLOAT: left; CLEAR: both
+}
+.createProfile {
+	PADDING-BOTTOM: 15px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FLOAT: left; PADDING-TOP: 15px
+}
+.createProfile {
+	PADDING-BOTTOM: 15px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FLOAT: left; PADDING-TOP: 15px
+}
+.createProfile IMG {
+	MARGIN-LEFT: 15px; VERTICAL-ALIGN: middle
+}
+.popParaInfo {
+	MARGIN-TOP: 7px; PADDING-LEFT: 1%; WIDTH: 99%; MARGIN-BOTTOM: 7px; FLOAT: left; CLEAR: both
+}
+.fullwidth.tripDetails {
+	WIDTH: 100%
+}
+.tripDetails .biggerColum {
+	PADDING-BOTTOM: 3px; LINE-HEIGHT: 18px; WIDTH: 100%; FLOAT: left
+}
+.tripDetails .biggerColum LABEL {
+	WIDTH: auto
+}
+.tripDetails .biggerColum SPAN {
+	WIDTH: 164px
+}
+.tripDetails .biggerColum .errorSpan {
+	WIDTH: auto; COLOR: #cc0000; MARGIN-LEFT: 164px; FONT-WEIGHT: bold
+}
+.borderBot {
+	BORDER-BOTTOM: #000 1px solid; WIDTH: 100%; MARGIN-BOTTOM: 10px; FLOAT: left
+}
+H2 SPAN {
+	FONT-SIZE: large
+}
+H2 SPAN.headerNumber {
+	PADDING-RIGHT: 6%
+}
+H2 LABEL {
+	FLOAT: right; FONT-SIZE: 11px; FONT-WEIGHT: normal; MARGIN-RIGHT: 2px
+}
+H2 SPAN.requiredFields {
+	FONT-STYLE: normal; FLOAT: right; FONT-SIZE: 9px; FONT-WEIGHT: normal; MARGIN-RIGHT: 2px
+}
+H2 SPAN.alreadyMember {
+	FONT-STYLE: italic; FLOAT: right; FONT-SIZE: 11px; FONT-WEIGHT: normal; MARGIN-RIGHT: 10px
+}
+H2 SPAN.alreadyMember A {
+	COLOR: #0072bc; FONT-WEIGHT: bold
+}
+H2 SPAN.alreadyMember A:visited {
+	COLOR: #0072bc; FONT-WEIGHT: bold
+}
+.businessProfile {
+	MARGIN: 15px 0px; WIDTH: 100%; FLOAT: left; FONT-SIZE: 11px
+}
+.businessProfile LABEL {
+	MARGIN-TOP: 3px; WIDTH: 49%; FLOAT: left
+}
+.businessProfile LABEL SPAN {
+	TEXT-ALIGN: right; MARGIN-TOP: 2px; WIDTH: 120px; FLOAT: left; HEIGHT: 100%; MARGIN-RIGHT: 5px
+}
+.businessProfile LABEL.checkBox {
+	MIN-HEIGHT: 18px; WIDTH: 39%; MARGIN-LEFT: 10%
+}
+.businessProfile LABEL.threeCheckBox {
+	MIN-HEIGHT: 18px; WIDTH: 27%; MARGIN-LEFT: 5%
+}
+.businessProfile .singleLblRight {
+	MARGIN-LEFT: 49%
+}
+.businessProfile .singleLblLeft {
+	WIDTH: 100%; FLOAT: left; CLEAR: left
+}
+.businessProfile .leftField {
+	FLOAT: left; CLEAR: left
+}
+.businessProfile .oneColum {
+	WIDTH: auto
+}
+.businessProfile .withoutLabel {
+	MARGIN-LEFT: 120px
+}
+.businessProfile .leftDivMar {
+	MARGIN-BOTTOM: 4px; MARGIN-LEFT: 80px
+}
+.businessProfile SPAN.errorMsg {
+	TEXT-ALIGN: left; WIDTH: 175px; FLOAT: left; COLOR: #cc0000; MARGIN-LEFT: 125px; CLEAR: left; FONT-WEIGHT: bold
+}
+.businessProfile DIV.twoFields {
+	MARGIN-TOP: 3px; WIDTH: 49%; FLOAT: left
+}
+.businessProfile DIV.twoFields SPAN {
+	TEXT-ALIGN: right; MARGIN-TOP: 5px; WIDTH: 120px; FLOAT: left; HEIGHT: 100%; MARGIN-RIGHT: 5px
+}
+.businessProfile DIV.twoFields .jqTransformSelectWrapper SPAN {
+	MARGIN-TOP: 0px
+}
+.businessProfile DIV LABEL {
+	MARGIN: 0px; WIDTH: auto
+}
+.businessProfile DIV.singleDivRight {
+	PADDING-LEFT: 49%; WIDTH: 51%
+}
+.businessProfile DIV.twoFields .divMsg {
+	TEXT-ALIGN: left; WIDTH: 60%; FLOAT: left; MARGIN-LEFT: 120px; FONT-SIZE: 10px
+}
+.businessProfile DIV.twoFields SPAN.txtLeft {
+	TEXT-ALIGN: left
+}
+.businessProfile DIV.signleDivLeft {
+	WIDTH: 100%; FLOAT: left; CLEAR: left
+}
+.businessProfile DIV.twoFields SPAN.errorMsg {
+	TEXT-ALIGN: left; WIDTH: 175px
+}
+.businessProfile .singleLineSelects {
+	WIDTH: 100%; FLOAT: left; CLEAR: left
+}
+.businessProfile .singleLineSelects SPAN {
+	TEXT-ALIGN: right; MARGIN-TOP: 2px; WIDTH: 120px; FLOAT: left; HEIGHT: 100%; MARGIN-RIGHT: 5px
+}
+.businessProfile .time {
+	MARGIN-LEFT: 50px
+}
+.businessProfile .leftLblBig {
+	WIDTH: 55%
+}
+.businessProfile .rghtLblSmall {
+	WIDTH: 43%
+}
+.businessProfile .rghtLblSmall SPAN {
+	WIDTH: 83px
+}
+.businessProfile .rghtLblSmall SPAN.errorMsg {
+	WIDTH: 160px; MARGIN-LEFT: 88px
+}
+.memberInformation {
+	MARGIN: 10px 0px; WIDTH: 100%; FLOAT: left
+}
+.memberInformation LABEL {
+	MARGIN-TOP: 3px; MIN-HEIGHT: 35px; WIDTH: 39%; FLOAT: left; MARGIN-LEFT: 10%
+}
+.memberInformation LABEL.singleLblRight {
+	MARGIN-LEFT: 59%
+}
+.memberInformation LABEL SPAN {
+	DISPLAY: block
+}
+.memberInformation LABEL.singleColum {
+	MARGIN-TOP: 10px; WIDTH: 90%
+}
+.memberInformation SPAN.errorMsg {
+	TEXT-ALIGN: left; COLOR: #cc0000; FONT-WEIGHT: bold
+}
+.memberInformation .singleDiv {
+	MARGIN-TOP: 3px; WIDTH: 90%; MARGIN-LEFT: 10%
+}
+.memberInformation .leftFieldMI {
+	FLOAT: left; CLEAR: left
+}
+.threeColum {
+	MARGIN: 10px 0px; WIDTH: 100%; FLOAT: left
+}
+.threeColum DIV.threeColumRow {
+	WIDTH: 100%; FLOAT: left; CLEAR: left
+}
+.threeColum LABEL {
+	MARGIN-TOP: 3px; MIN-HEIGHT: 35px; WIDTH: 25%; FLOAT: left; MARGIN-LEFT: 3%
+}
+.threeColum .twoInputs {
+	MARGIN-TOP: 3px; MIN-HEIGHT: 35px; WIDTH: 25%; FLOAT: left; MARGIN-LEFT: 3%
+}
+.threeColum .firstColum {
+	WIDTH: 40%
+}
+.threeColum LABEL SPAN {
+	DISPLAY: block
+}
+.threeColum SPAN.errorMsg {
+	TEXT-ALIGN: left; COLOR: #cc0000; FONT-WEIGHT: bold
+}
+.threeColum .smlColum {
+	WIDTH: 20%
+}
+.threeColum .secondColum {
+	WIDTH: 40%; MARGIN-LEFT: 6%
+}
+.threeColum DIV.numDiv {
+	TEXT-ALIGN: center; MARGIN-TOP: 20px; MIN-HEIGHT: 15px; WIDTH: 3%; FLOAT: left
+}
+.threeColum DIV.textRow {
+	MARGIN-TOP: 3px; MIN-HEIGHT: 15px
+}
+.secondRow {
+	PADDING-BOTTOM: 5px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; MARGIN-LEFT: 66px; PADDING-TOP: 5px
+}
+.secondRow SPAN {
+	TEXT-ALIGN: left; PADDING-BOTTOM: 0px; MIN-HEIGHT: 14px; PADDING-LEFT: 4px; WIDTH: 160px; PADDING-RIGHT: 4px; FLOAT: left; BORDER-RIGHT: #ffffff 2px solid; PADDING-TOP: 0px
+}
+.leftPad {
+	PADDING-LEFT: 54px; WIDTH: auto; FLOAT: left
+}
+A.linkUnderline {
+
+}
+A.linkUnderline:hover {
+
+}
+A.linkUnderline:visited {
+
+}
+.buttonCenter {
+	TEXT-ALIGN: center; PADDING-BOTTOM: 15px; WIDTH: 100%; FLOAT: left; CLEAR: both; PADDING-TOP: 15px
+}
+.buttonCenter INPUT {
+	TEXT-TRANSFORM: uppercase; FONT-FAMILY: verdana; FLOAT: right; COLOR: #000000; MARGIN-LEFT: 5px; FONT-SIZE: 9px; FONT-WEIGHT: normal
+}
+.singleLine .gbutton {
+	TEXT-TRANSFORM: uppercase; FONT-FAMILY: verdana; FLOAT: right; COLOR: #000000; MARGIN-LEFT: 5px; FONT-SIZE: 9px; FONT-WEIGHT: normal
+}
+.singleTxtRight {
+	TEXT-ALIGN: right; WIDTH: 100%; FONT-WEIGHT: bold
+}
+.flightRight {
+	FLOAT: right; CLEAR: right
+}
+.flightBottomMar {
+	MARGIN-BOTTOM: 10px
+}
+.flightOptions .carAvail {
+	WIDTH: 340px
+}
+.topWelcome {
+	WIDTH: 100%; FLOAT: left
+}
+.topWelcome SPAN {
+	PADDING-BOTTOM: 3px; FLOAT: left; CLEAR: left
+}
+.topWelcome P {
+	PADDING-BOTTOM: 3px; FLOAT: right; CLEAR: right
+}
+.topWelcome H3 {
+	FLOAT: left; CLEAR: left; FONT-SIZE: 16px
+}
+.topWelcome H3 DIV {
+	PADDING-LEFT: 4px; DISPLAY: inline; FONT-SIZE: 70%; FONT-WEIGHT: normal
+}
+H1.hotelDesc {
+	WIDTH: auto
+}
+.topPrint {
+	FLOAT: right
+}
+.flightOptions .priceBg {
+	BACKGROUND: url(../../images/default/priceGreyBg.gif) repeat-y right 50%
+}
+.flightOptions .arriveBg {
+	BACKGROUND: url(../../images/default/arrivesGreyBg.gif) repeat-y left 50%
+}
+.flightOptions .departsBg {
+	BACKGROUND: url(../../images/default/departsGreyBg.gif) repeat-y left 50%
+}
+.flightOptions .connectingBg {
+	PADDING-BOTTOM: 0px; BACKGROUND-COLOR: #fff; FONT-STYLE: italic; PADDING-LEFT: 40px; PADDING-RIGHT: 4px; FLOAT: left; COLOR: #999; CLEAR: left; FONT-SIZE: 12px; FONT-WEIGHT: bold; PADDING-TOP: 0px
+}
+.payment {
+	WIDTH: 100%; BORDER-TOP: #bbb7a5 2px solid
+}
+.payment .colOne {
+	WIDTH: 25%; DISPLAY: inline; FLOAT: left; PADDING-TOP: 10px
+}
+.payment .colTwo {
+	TEXT-ALIGN: right; WIDTH: 55%; DISPLAY: inline; FLOAT: left; PADDING-TOP: 10px
+}
+.payment .colThree {
+	TEXT-ALIGN: right; WIDTH: 20%; DISPLAY: inline; FLOAT: right; PADDING-TOP: 10px
+}
+.subPayment {
+	WIDTH: 100%
+}
+.subPayment .colOne {
+	TEXT-ALIGN: right; WIDTH: 85%; DISPLAY: inline; FLOAT: left; PADDING-TOP: 10px
+}
+.subPayment .colTwo {
+	TEXT-ALIGN: right; WIDTH: 15%; DISPLAY: inline; FLOAT: right; PADDING-TOP: 10px
+}
+.payment .subTotal {
+	BORDER-BOTTOM: #bbb7a5 2px solid; WIDTH: 20%; FLOAT: right; CLEAR: both; PADDING-TOP: 10px
+}
+.payment .subTotalSection {
+	WIDTH: 100%; FLOAT: left; MARGIN-RIGHT: -3px
+}
+.carOptions {
+	CLEAR: left; PADDING-TOP: 6px
+}
+.carOptions .column {
+	DISPLAY: inline; MARGIN-BOTTOM: 5px; FLOAT: left
+}
+.car {
+	CLEAR: left
+}
+.carOptions .one {
+	TEXT-ALIGN: center; WIDTH: 70px
+}
+.carOptions .two {
+	TEXT-ALIGN: center; WIDTH: 360px
+}
+.carOptions .three {
+	TEXT-ALIGN: center; WIDTH: 180px
+}
+.carOptions .three {
+	TEXT-ALIGN: center; WIDTH: 180px
+}
+.carOptions .leftAlign {
+	TEXT-ALIGN: left
+}
+.agencyFee {
+	TEXT-ALIGN: right; MARGIN-BOTTOM: 5px
+}
+.hotelOptions {
+	CLEAR: left; PADDING-TOP: 6px
+}
+.hotelOptions .column {
+	DISPLAY: inline; MARGIN-BOTTOM: 5px; FLOAT: left
+}
+.hotel {
+	CLEAR: left
+}
+.hotelOptions .one {
+	TEXT-ALIGN: center; MARGIN-TOP: 10px; WIDTH: 90px
+}
+.hotelOptions .two {
+	WIDTH: 250px
+}
+.hotelOptions .three {
+	TEXT-ALIGN: left; WIDTH: 255px; PADDING-RIGHT: 5px
+}
+.rightTxt {
+	TEXT-ALIGN: right
+}
+.right {
+	FLOAT: right
+}
+.centerTxt {
+	TEXT-ALIGN: center
+}
+.impInfo {
+	MARGIN: 5px 0px; FLOAT: left; COLOR: #cc0000; CLEAR: both
+}
+.loginButton {
+	FLOAT: right; PADDING-TOP: 15px
+}
+.loginButton INPUT {
+	BACKGROUND-COLOR: #838383; DISPLAY: inline; COLOR: #ffffff; FONT-WEIGHT: bold
+}
+.loginButton P A {
+	LINE-HEIGHT: 18px; TEXT-DECORATION: underline
+}
+.loginButton P A:hover {
+	LINE-HEIGHT: 18px; TEXT-DECORATION: underline
+}
+.loginButton P A:visited {
+	LINE-HEIGHT: 18px; TEXT-DECORATION: underline
+}
+.selectFlight H3 {
+	FONT-SIZE: 11px
+}
+.milesSummary {
+	CLEAR: left; PADDING-TOP: 6px
+}
+.milesSummary .column {
+	DISPLAY: inline; MARGIN-BOTTOM: 5px; FLOAT: left
+}
+.miles {
+	CLEAR: left
+}
+.milesSummary .one {
+	TEXT-ALIGN: center; WIDTH: 49%
+}
+.milesSummary .two {
+	TEXT-ALIGN: center; WIDTH: 49%
+}
+.choice {
+	WIDTH: 20px !important; FLOAT: right !important
+}
+.ccCard {
+	FLOAT: right !important; PADDING-TOP: 5px
+}
+.buttonLeft {
+	TEXT-ALIGN: center; PADDING-BOTTOM: 15px; WIDTH: 70%; FLOAT: left; CLEAR: both; PADDING-TOP: 15px
+}
+.buttonLeft INPUT {
+	BACKGROUND-COLOR: #838383; COLOR: #ffffff; FONT-WEIGHT: bold
+}
+.buttonLeftSmall {
+	TEXT-ALIGN: center; PADDING-BOTTOM: 15px; WIDTH: 50%; FLOAT: left; CLEAR: both; PADDING-TOP: 15px
+}
+.buttonLeftSmall INPUT {
+	BACKGROUND-COLOR: #838383; COLOR: #ffffff; FONT-WEIGHT: bold
+}
+.singleLineSmall {
+	MARGIN-TOP: 4px; WIDTH: 100%; MARGIN-BOTTOM: 2px; FLOAT: left; CLEAR: both
+}
+.flightOptions .four .showSeat {
+	TEXT-ALIGN: left; PADDING-LEFT: 50px
+}
+.flightOptions .semiFlexFive {
+	TEXT-ALIGN: center; WIDTH: 45px
+}
+.flightOptions .semiFlexButton {
+	TEXT-ALIGN: center; WIDTH: 120px
+}
+.white_table_border {
+	TEXT-ALIGN: center; BACKGROUND-COLOR: #ffffff; FONT-VARIANT: normal; FONT-STYLE: normal; FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #000000; FONT-SIZE: 11px; FONT-WEIGHT: normal
+}
+TD.cal_passive {
+	BORDER-BOTTOM: #b8b8b8 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #b8b8b8 1px solid; BACKGROUND-COLOR: #f2f2f2; COLOR: #333333; FONT-SIZE: 12px; BORDER-TOP: #b8b8b8 1px solid; BORDER-RIGHT: #b8b8b8 1px solid
+}
+TD.cal_notReq {
+	BORDER-BOTTOM: #b8b8b8 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #b8b8b8 1px solid; BACKGROUND-COLOR: #d9d9d9; COLOR: #000000; FONT-SIZE: 12px; BORDER-TOP: #b8b8b8 1px solid; BORDER-RIGHT: #b8b8b8 1px solid
+}
+TD.cal_req {
+	BORDER-BOTTOM: #b8b8b8 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #b8b8b8 1px solid; BACKGROUND-COLOR: #a6a6a6; COLOR: #000000; FONT-SIZE: 12px; BORDER-TOP: #b8b8b8 1px solid; BORDER-RIGHT: #b8b8b8 1px solid
+}
+TD.cal_reqNA {
+	BORDER-BOTTOM: #b8b8b8 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #b8b8b8 1px solid; BACKGROUND-COLOR: #999999; COLOR: #000000; BORDER-TOP: #b8b8b8 1px solid; BORDER-RIGHT: #b8b8b8 1px solid
+}
+TD.cal_na {
+	BORDER-BOTTOM: #b8b8b8 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #b8b8b8 1px solid; BACKGROUND-COLOR: #c0c0c0; COLOR: #000000; FONT-SIZE: 12px; BORDER-TOP: #b8b8b8 1px solid; BORDER-RIGHT: #b8b8b8 1px solid
+}
+.dark_table_border A.white {
+	COLOR: #ffffff
+}
+.dark_table_border A.white:hover {
+	COLOR: #aaaaaa
+}
+.dark_table_border A.white:active {
+	COLOR: #ffffff
+}
+.dark_table_border A.white:visited {
+	COLOR: #ffffff
+}
+.dark_table_border {
+	BORDER-BOTTOM: #2b377f 0px solid; TEXT-ALIGN: center; BORDER-LEFT: #2b377f 0px solid; BACKGROUND-COLOR: #d3dae7; FONT-VARIANT: normal; FONT-STYLE: normal; FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #2b377f; FONT-SIZE: 8px; FONT-WEIGHT: normal
+}
+.dark_table_border {
+	TEXT-ALIGN: center; BACKGROUND-COLOR: #f5d93e; FONT-VARIANT: normal; FONT-STYLE: normal; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #284373; FONT-SIZE: 8pt; VERTICAL-ALIGN: middle; FONT-WEIGHT: bold
+}
+A.white {
+	COLOR: #ffffff; FONT-SIZE: 9pt; FONT-WEIGHT: bold; TEXT-DECORATION: underline
+}
+A.white:hover {
+	COLOR: #2b377f; FONT-SIZE: 9pt; FONT-WEIGHT: bold; TEXT-DECORATION: underline
+}
+A.white:active {
+	COLOR: #ffffff; FONT-SIZE: 9pt; FONT-WEIGHT: bold; TEXT-DECORATION: underline
+}
+A.white:visited {
+	COLOR: #ffffff; FONT-SIZE: 9pt; FONT-WEIGHT: bold; TEXT-DECORATION: underline
+}
+TD.matrix_cal_body {
+	BORDER-BOTTOM: #b8b8b8 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #b8b8b8 1px solid; BACKGROUND-COLOR: #f2f2f2; FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #000000; FONT-SIZE: 12px; BORDER-TOP: #b8b8b8 1px solid; BORDER-RIGHT: #b8b8b8 1px solid; PADDING-TOP: 3px
+}
+.previousNext {
+	MARGIN: 5px 0px; WIDTH: 100%; FLOAT: left; CLEAR: both
+}
+.previousNext .previousDay {
+	TEXT-ALIGN: left; WIDTH: 40%; FLOAT: left
+}
+.previousNext .nextDay {
+	TEXT-ALIGN: right; WIDTH: 40%; FLOAT: right
+}
+.businessProfilePage .businessProfile DIV.twoFields .rightTxt {
+	TEXT-ALIGN: left; WORD-SPACING: -1px
+}
+.requestAir #pageContent .tripType LABEL {
+	FLOAT: left; MARGIN-RIGHT: 40px; WORD-SPACING: -1px
+}
+.threeColum .oneColum {
+	MIN-HEIGHT: 25px; WIDTH: 80%; CLEAR: left
+}
+.threeColum .oneColum SPAN {
+	MARGIN-LEFT: 22px
+}
+.htlDescImgCont {
+	MARGIN-BOTTOM: 15px; FLOAT: left
+}
+.htlDescImgLinks {
+	MARGIN-TOP: 40px; FLOAT: left; MARGIN-LEFT: 10px
+}
+.flightOptions H5 A {
+	COLOR: #ffffff
+}
+.mainMenuReservation .sideImage P A {
+	BORDER-BOTTOM: #1b3360 1px solid; POSITION: relative
+}
+#paymentSection {
+	MARGIN-TOP: 0px
+}
+#paymentSection DIV.signleDivLeft SPAN {
+	WIDTH: 152px; MARGIN-RIGHT: 0px
+}
+#paymentSection LABEL SPAN {
+	WIDTH: 147px
+}
+#paymentSection .singleLblLeft SPAN {
+	WIDTH: 147px
+}
+#paymentSection .singleLblLeft .spanWthRadio {
+	TEXT-ALIGN: left; FLOAT: left
+}
+#paymentSection .signleDivLeft .spanWthRadio {
+	TEXT-ALIGN: left; FLOAT: left
+}
+.businessProfilePage .tripDetails {
+	WIDTH: 570px
+}
+.businessProfilePage .tripDetails LABEL {
+	WIDTH: 570px
+}
+.payment .colfour {
+	WIDTH: 100%; FLOAT: right; CLEAR: both; PADDING-TOP: 10px
+}
+.businessProfilePage .tripDetails LABEL {
+	WIDTH: 550px
+}
+.clear {
+	CLEAR: both
+}
+#header-logo {
+	MARGIN: 0px auto; WIDTH: 978px
+}
+#logo {
+	PADDING-BOTTOM: 0px; TEXT-INDENT: -9999px; MARGIN: 20px 0px 0px; PADDING-LEFT: 0px; WIDTH: 240px; PADDING-RIGHT: 0px; DISPLAY: block; BACKGROUND: url(https://s3.amazonaws.com/aeromexico/logo_am.png) #ffffff; FLOAT: left; HEIGHT: 37px; PADDING-TOP: 0px
+}
+.help {
+	MARGIN-TOP: 20px; min-height: 1px; FLOAT: right
+}
+.help-cont {
+	FLOAT: left; MARGIN-RIGHT: 10px
+}
+.list-help {
+	FLOAT: left
+}
+.list-help A {
+	COLOR: #152453
+}
+.navigation LI {
+	MARGIN: 0px 0px 5px; DISPLAY: block
+}
+.mainMenuReservation #progressBar {
+	DISPLAY: none
+}
+.blue-separator {
+	BORDER-BOTTOM: #005b93 40px solid; BACKGROUND-COLOR: #fc2f2f; MARGIN-TOP: 10px; HEIGHT: 3px
+}
+.headersContent {
+	MARGIN-TOP: 20px; MIN-HEIGHT: 50px; FONT-WEIGHT: normal
+}
+.bfmDirectionFltHdrDepart {
+	PADDING-BOTTOM: 10px; PADDING-LEFT: 40px; PADDING-RIGHT: 0px; BACKGROUND: url(https://s3.amazonaws.com/aeromexico/sprite_steps.png) no-repeat; PADDING-TOP: 5px
+}
+.bfmDirectionFltHdrReturn {
+	PADDING-BOTTOM: 10px; PADDING-LEFT: 40px; PADDING-RIGHT: 0px; BACKGROUND: url(https://s3.amazonaws.com/aeromexico/sprite_steps.png) no-repeat; PADDING-TOP: 5px
+}
+.bfmDirectionFltHdrReturn {
+	BACKGROUND-POSITION: 0px -90px
+}
+#footer-cont {
+	PADDING-BOTTOM: 50px; MARGIN: 30px auto 0px; WIDTH: 978px; BACKGROUND: url(https://s3.amazonaws.com/aeromexico/bg_footer_line.png) no-repeat center 25px; COLOR: #666666; FONT-SIZE: 11px; PADDING-TOP: 70px
+}
+.copyright {
+	MARGIN-TOP: 29px; FLOAT: left; FONT-SIZE: 10px
+}
+.copyright A {
+	COLOR: #666666; TEXT-DECORATION: underline
+}
+.social {
+	WIDTH: 410px; FLOAT: right; MARGIN-RIGHT: 80px
+}
+.icons-social LI {
+	FLOAT: left; MARGIN-LEFT: 10px
+}
+.icon-facebook {
+	DISPLAY: inline-block; BACKGROUND: url(https://s3.amazonaws.com/aeromexico/sprite_social.png) no-repeat; VERTICAL-ALIGN: middle
+}
+.icon-twitter {
+	DISPLAY: inline-block; BACKGROUND: url(https://s3.amazonaws.com/aeromexico/sprite_social.png) no-repeat; VERTICAL-ALIGN: middle
+}
+.icon-newsletter {
+	DISPLAY: inline-block; BACKGROUND: url(https://s3.amazonaws.com/aeromexico/sprite_social.png) no-repeat; VERTICAL-ALIGN: middle
+}
+.icon-help {
+	DISPLAY: inline-block; BACKGROUND: url(https://s3.amazonaws.com/aeromexico/sprite_social.png) no-repeat; VERTICAL-ALIGN: middle
+}
+.icon-facebook {
+	WIDTH: 39px; BACKGROUND-POSITION: 0px -4px; HEIGHT: 34px
+}
+.icon-twitter {
+	WIDTH: 35px; BACKGROUND-POSITION: -39px 0px; HEIGHT: 38px
+}
+.icon-newsletter {
+	WIDTH: 35px; BACKGROUND-POSITION: -74px -2px; HEIGHT: 36px
+}
+.icon-help {
+	WIDTH: 28px; DISPLAY: block !important; BACKGROUND-POSITION: -118px -8px; HEIGHT: 29px
+}
+.text-social {
+	TEXT-TRANSFORM: uppercase; MARGIN-TOP: 10px; FLOAT: left; FONT-SIZE: 12px; MARGIN-RIGHT: 10px
+}
+TD.altDateSel {
+	BACKGROUND-IMAGE: none; BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; PADDING-BOTTOM: 8px; BACKGROUND-COLOR: #e5e5e5 !important; MARGIN: 0px; PADDING-LEFT: 0px; WIDTH: 83px; PADDING-RIGHT: 0px; BACKGROUND-REPEAT: no-repeat; BORDER-TOP: 0px; BORDER-RIGHT: 0px; PADDING-TOP: 15px
+}
+TD.altDateNotSel {
+	BACKGROUND-IMAGE: none; BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; PADDING-BOTTOM: 8px; BACKGROUND-COLOR: #e5e5e5 !important; MARGIN: 0px; PADDING-LEFT: 0px; WIDTH: 83px; PADDING-RIGHT: 0px; BACKGROUND-REPEAT: no-repeat; BORDER-TOP: 0px; BORDER-RIGHT: 0px; PADDING-TOP: 15px
+}
+TABLE .calReq {
+	BACKGROUND-COLOR: #ffffff !important
+}
+#main-Page TABLE.altDatesIntel {
+	WIDTH: 700px !important;
+}
+	.altDates td{
+		color:#FFFFFF;
+	}
+	.altDates td a{
+		color:#FFFFFF;
+	}
+
+	.altDates td.altDateSel {color:#000000 !important;}
+
+DIV.bfmMain {
+	WIDTH: 700px !important
+}
+#main-Page TABLE.altDatesIntel {
+	background: url(https://s3.amazonaws.com/aeromexico/bg_calendar_head.png) no-repeat center -7px;
+}
+TABLE.bfm_table_body {
+	WIDTH: 700px !important
+}
+#main-Page .lowest {
+	BACKGROUND-IMAGE: none !important
+}
+.dark_table_border {
+	BACKGROUND-COLOR: transparent !important; COLOR: #7f7f7f !important; FONT-WEIGHT: normal
+}
+.dark_table_border A {
+	COLOR: #7f7f7f !important; FONT-WEIGHT: bold
+}
+TD.matrix_cal_body {
+	BORDER-BOTTOM: #e6e6e6 1px solid; BORDER-LEFT: #e6e6e6 1px solid; BACKGROUND-COLOR: transparent !important; BORDER-TOP: #e6e6e6 1px solid; BORDER-RIGHT: #e6e6e6 1px solid
+}
+/* Roberto Deandar */
+DIV.hoverTaxes {
+	COLOR: #152453; -background-color: #000000
+}
+#fareBreakDown {
+	MARGIN: 10px 0px 0px; WIDTH: 595px
+}
+.fareSummary_taxes {
+	MARGIN: 10px 0px
+}
+.bfmTblHolder {
+	WIDTH: auto !important
+}
+.bfmTbl {
+	width: 692px !important;
+	margin: 0 auto;
+}
+.bfm_item {
+	WIDTH: auto !important
+}
+.selectFlight {
+
+}
+.viewFare {
+	BACKGROUND-COLOR: #e5e5e5; COLOR: #152453 !important; BORDER-TOP: #cccccc 1px solid
+}
+.viewFare A {
+	COLOR: #152453 !important
+}
+.viewFare .amount {
+	/*COLOR: #152453 !important*/
+	display:none;
+}
+.flightOptions .four {
+	TEXT-ALIGN: right; WIDTH: 345px
+}
+.flightOptions .three {
+	WIDTH: 216px
+}
+.flightOptions .two {
+	WIDTH: 80px
+}
+.flightOptions .label {
+	MARGIN: 5px 0px
+}
+.flightOptions .date {
+	MARGIN: 5px 0px
+}
+.flightOptions .departure {
+	MARGIN: 5px 0px
+}
+.flightOptions .arrival {
+	MARGIN: 5px 0px
+}
+.flightOptions .airline {
+	MARGIN: 5px 0px
+}
+.flightOptions .flightNumber {
+	MARGIN: 5px 0px
+}
+.flightOptions .aircraft {
+	MARGIN: 5px 0px
+}
+.reviewPolicies {
+	DISPLAY: none
+}
+.sabreConnected {
+	DISPLAY: none
+}
+#fareBreakDown {
+	DISPLAY: none
+}
+.matrix_cal_body_flifo .matrix_operated_text .highlight {
+	/*DISPLAY: none !important Roberto Deandar*/
+	font-size:10px;
+}
+.cart {
+	DISPLAY: none !important
+}
+#dobRequiredId {
+	DISPLAY: none !important
+}
+.prevPageLink {
+	BACKGROUND-IMAGE: url(https://s3.amazonaws.com/aeromexico/bg_boton_gray.png); BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; PADDING-BOTTOM: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 19px; COLOR: #ffffff; FONT-SIZE: 16px; BORDER-TOP: medium none; FONT-WEIGHT: bold; MARGIN-RIGHT: 20px; BORDER-RIGHT: medium none; PADDING-TOP: 10px; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px
+}
+.cancelAir {
+	BACKGROUND-IMAGE: url(https://s3.amazonaws.com/aeromexico/bg_boton_gray.png); BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; PADDING-BOTTOM: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 19px; COLOR: #ffffff; FONT-SIZE: 16px; BORDER-TOP: medium none; FONT-WEIGHT: bold; MARGIN-RIGHT: 20px; BORDER-RIGHT: medium none; PADDING-TOP: 10px; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px
+}
+.newSearch {
+	BACKGROUND-IMAGE: url(https://s3.amazonaws.com/aeromexico/bg_boton_gray.png); BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; PADDING-BOTTOM: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 19px; COLOR: #ffffff; FONT-SIZE: 16px; BORDER-TOP: medium none; FONT-WEIGHT: bold; MARGIN-RIGHT: 20px; BORDER-RIGHT: medium none; PADDING-TOP: 10px; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px
+}
+.cancelAir {
+	DISPLAY: none
+}
+.prevPageLink A {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+.cancelAir A {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+.newSearch A {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+.businessProfile DIV.twoFields {
+	WIDTH: 100%
+}
+#Cont_Button {
+	/*DISPLAY: none !important*/
+}
+#ssr-content {
+	BORDER-BOTTOM: #cccccc 1px solid; BORDER-LEFT: #cccccc 1px solid; PADDING-BOTTOM: 40px; MARGIN-TOP: 0px !important; PADDING-LEFT: 20px; PADDING-RIGHT: 20px; BACKGROUND: #f0f0f0 0px 0px; BORDER-TOP: #cccccc 1px solid; BORDER-RIGHT: #cccccc 1px solid; PADDING-TOP: 20px
+}
+.matrix_cal_body_dep {
+	WIDTH: 80px
+}
+.matrix_cal_body_arr {
+	WIDTH: 80px
+}
+#pageContent TABLE.altDates TD.altDateNotSel {
+	TEXT-DECORATION: none !important
+}
+#pageContent TABLE.altDates TD.out {
+	PADDING-BOTTOM: 8px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 15px
+}
+#pageContent TABLE.altDates TD.lowest {
+	PADDING-BOTTOM: 8px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 15px
+}
+#pageContent TABLE .altDatesIntel TD.out {
+	PADDING-BOTTOM: 8px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 15px
+}
+#pageContent TABLE.altDatesIntel TD.lowest {
+	PADDING-BOTTOM: 8px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 15px
+}
+.userEmail {
+	MARGIN: 5px 0px 0px; DISPLAY: block
+}
+.bfm_fareHdr1 {
+	WIDTH: 75px
+}
+.bfm_fareHdr2 {
+	WIDTH: 75px
+}
+.bfm_fareHdr3 {
+	WIDTH: 75px
+}
+.bfm_fareHdr4 {
+	WIDTH: 75px
+}
+.bfm_fareHdr5 {
+	WIDTH: 75px
+}
+.bfm_fareHdr1 {
+	BACKGROUND-COLOR: #054f00 !important; COLOR: #ffffff !important
+}
+.bfm_fareHdr2 {
+	BACKGROUND-COLOR: #8f8d00 !important; COLOR: #ffffff !important
+}
+.bfm_fareHdr3 {
+	BACKGROUND-COLOR: #ffa400 !important; COLOR: #ffffff !important
+}
+.bfm_fareHdr4 {
+	BACKGROUND-COLOR: #ad2a00 !important; COLOR: #ffffff !important
+}
+.bfm_fareHdr5 {
+	BACKGROUND-COLOR: #6e0035 !important; COLOR: #ffffff !important
+}
+.bfm_fareHdr1 A {
+	COLOR: #ffffff !important
+}
+.bfm_fareHdr2 A {
+	COLOR: #ffffff !important
+}
+.bfm_fareHdr3 A {
+	COLOR: #ffffff !important
+}
+.bfm_fareHdr4 A {
+	COLOR: #ffffff !important
+}
+.bfm_fareHdr5 A {
+	COLOR: #ffffff !important
+}
+.ageTypeMargin {
+	DISPLAY: none
+}
+.contactInfoHeader {
+	MARGIN-TOP: 30px
+}
+#cardHolderRow .twoFields SPAN {
+	TEXT-ALIGN: right; MARGIN-TOP: 2px; WIDTH: 147px; FLOAT: left; MARGIN-RIGHT: 5px
+}
+.tabView {
+	BACKGROUND: none transparent scroll repeat 0% 0%
+}
+.rtop {
+	BACKGROUND: #ffffff
+}
+.rbottom {
+	BACKGROUND: #ffffff
+}
+.tabView UL LI#current {
+	BORDER-LEFT: #cccccc 1px solid; BACKGROUND: #f0f0f0; BORDER-TOP: #cccccc 1px solid; BORDER-RIGHT: #cccccc 1px solid; -webkit-border-top-left-radius: 5px; -webkit-border-top-right-radius: 5px; -moz-border-radius-topleft: 5px; -moz-border-radius-topright: 5px; border-top-left-radius: 5px; border-top-right-radius: 5px
+}
+.tabView UL LI.first {
+	BORDER-LEFT: #cccccc 1px solid; BACKGROUND: #f0f0f0; BORDER-TOP: #cccccc 1px solid; BORDER-RIGHT: #cccccc 1px solid; -webkit-border-top-left-radius: 5px; -webkit-border-top-right-radius: 5px; -moz-border-radius-topleft: 5px; -moz-border-radius-topright: 5px; border-top-left-radius: 5px; border-top-right-radius: 5px
+}
+.tabView UL LI.first {
+	BACKGROUND-COLOR: #ffffff
+}
+.tabView UL LI#current SPAN {
+	BACKGROUND: none transparent scroll repeat 0% 0%
+}
+.tabView UL LI.first A {
+	BACKGROUND: none transparent scroll repeat 0% 0%
+}
+.creditcard_commission {
+	DISPLAY: none
+}
+.specPayment{
+	overflow: auto;
+}
+.recordLocater {
+	FONT-WEIGHT: bold
+}
+.bfm_next {
+	BACKGROUND-IMAGE: none !important
+}
+.bfm_prev {
+	BACKGROUND-IMAGE: none !important
+}
+#pageContent TABLE.altDates .altDateNotSel.cal_na {
+	TEXT-ALIGN: center !important; BACKGROUND-COLOR: transparent !important
+}
+/* Roberto Deandar */
+#pageContent TABLE.altDates TD.lowest {
+	TEXT-ALIGN: center !important; BACKGROUND-COLOR: transparent !important
+}
+TD.altDateSel {
+	TEXT-ALIGN: center !important; BACKGROUND-COLOR: transparent !important
+}
+TD.altDateNotSel {
+	TEXT-ALIGN: center !important; BACKGROUND-COLOR: transparent !important
+}
+.altDateSel {
+	WIDTH: 100px !important; FONT-SIZE: 16px !important
+}
+.altDateSel .calDate {
+	WIDTH: 100px !important; FONT-SIZE: 16px !important
+}
+#main-Page .lowest {
+	FONT-STYLE: normal !important; FONT-SIZE: 11px !important
+}
+.bfm_prev {
+	WIDTH: 40px !important
+}
+.bfm_next {
+	WIDTH: 40px !important
+}
+TD.cal_na {
+	FONT-SIZE: 9px
+}
+#pageContent TABLE.altDates {
+
+}
+.holdItinButton A {
+	BACKGROUND-IMAGE: url(https://s3.amazonaws.com/aeromexico/bg_boton_orange.png); BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; PADDING-BOTTOM: 12px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; DISPLAY: block; FLOAT: right; HEIGHT: 15px; COLOR: #ffffff; MARGIN-LEFT: 10px; FONT-SIZE: 16px; BORDER-TOP: medium none; FONT-WEIGHT: bold; MARGIN-RIGHT: 10px; BORDER-RIGHT: medium none; PADDING-TOP: 12px; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px
+}
+.holdItinButton A:hover {
+	TEXT-DECORATION: none !important
+}
+.evenRow {
+	BACKGROUND: #e5e5e5
+}
+.info-table {
+	POSITION: absolute; DISPLAY: none
+}
+
+/* Roberto Deandar */
+/* Elige */
+
+/* Cambio 2 */
+.hcontentRight.textStyle {
+	padding-bottom:2%;
+	padding-top:2%;
+}
+/* Cambio 3 */
+FIELDSET.navDropdown {
+	background-color:#1e6295;
+	border-bottom:#000 1px solid;
+	padding-left:10px !important;
+	padding-right:10px !important;
+	padding-top:10px !important;
+}
+
+.navDropdown LABEL {
+	margin-bottom:5px;
+	font-size:14px;
+	font-weight:bold !important;
+	color:#FFF;
+}
+
+select[name=language] {
+	float:right;
+}
+
+.sidebarBtn{clear:both; padding-top:10px;}
+
+.sidebarBtn input {
+	background-color:transparent;
+	background-image:url(https://s3.amazonaws.com/aeromexico/bg_boton_orange.png); BORDER-BOTTOM: medium none;
+	border-left:medium none;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	border-right:medium none;
+	border-top:medium none;
+	color:#FFF;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight:bold;
+	float:right;
+	padding-bottom:10px;
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:10px;
+	text-transform:uppercase !important;
+}
+
+div[id=sidebar] p[class=sidebarHead] {
+	background-color:#1e6295;
+	color:#FFF;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	margin-left:-0px;
+	margin-top:10px;
+	padding-bottom:5px;
+	padding-left:10px;
+	padding-top:5px;
+}
+
+div[id=sidebar] div[class=payment_sidebar] p[class=highlight] {
+	background-color:#1e6295;
+	color:#FFF;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	margin-top:10px;
+	padding-bottom:5px;
+	padding-left:10px;
+	padding-top:5px;
+}
+
+/* 15 de febrero 2011 */
+
+div[class=userHomePage] div[id=pageContent] h1 {
+	display:none !important;
+}
+.bfm_flifoHdr {
+	width:70px !important;
+}
+
+/* 22 de Febrero 2011 */
+
+div[class=requestAir] div[class=requestClear] span[class=subLabel] {
+	display:none;
+}
+
+.ssrcontentleft INPUT {
+	margin-left:5px!important;
+	padding-right:15px!important;
+}
+
+.paymentDetail {
+	background-color:#e5e5e5 !important;
+	color:#152453 !important;
+	font-size:10px!important;
+}
+
+#paymentSection DIV.signleDivLeft SPAN {
+	padding-right:14px!important;
+	margin-right:-10px!important;
+	width:148px!important;
+}
+
+div[class=resItinDetailPayment] div[class=button] p[class=newSearch] {
+	display:none;
+}
+
+/* 28 de Febrero 2011 */
+
+span[class=recordLocater] {
+	color:#EA592E;
+	font-size:18px;
+	padding-left:5px;
+}
+
+.flightOptions .links {
+	width:170px;
+}
+
+div[class=viewSeatMap] #pageContent div[class=button] input {
+	background:url(https://s3.amazonaws.com/aeromexico/bg_boton_gray.png)
+}
+
+div[class=viewSeatMap] #pageContent div[class=button] input[class=newSearch] {
+	background:url(https://s3.amazonaws.com/aeromexico/bg_boton_orange.png)
+}
+
+.tabView UL LI {
+	background:none transparent scroll repeat 0% 0% !important;
+	border-left:#CCCCCC 1px solid;
+	border-right:#CCCCCC 1px solid;
+	border-top:#CCCCCC 1px solid;
+}
+
+.tabView UL LI A {
+	background:none transparent scroll repeat 0% 0% !important;
+}
+
+/*label[class=leftField] {
+	line-height:30px !important;
+}*/
+
+label[for="Passenger Information"] input[name=ACCOUNT_PAXNAME_1] {
+	margin-left:19px;
+}
+
+label[for="Passenger Information"] input[name=ACCOUNT_PAXNAME_2] {
+	margin-left:19px;
+}
+
+label[for="Passenger Information"] input[name=ACCOUNT_PAXNAME_3] {
+	margin-left:19px;
+}
+
+label[for="Passenger Information"] input[name=ACCOUNT_PAXNAME_4] {
+	margin-left:19px;
+}
+
+label[for="Passenger Information"] input[name=ACCOUNT_PAXNAME_5] {
+	margin-left:19px;
+}
+
+label[for="Passenger Information"] input[name=ACCOUNT_PAXNAME_6] {
+	margin-left:19px;
+}
+
+input[name=frequent_flyer_num1] {
+	width:145px;
+}
+
+
+/* 02 de Febrero del 2011 */
+
+p[class="popLink taxFeeLink"] {
+	text-align:left !important;
+}
+
+.popLink {
+	text-align:left;
+	padding-bottom:10px !important;
+	padding-top:10px !important;
+}
+
+label[class=leftField] {
+	padding-bottom:5px;
+	padding-top:5px;
+}
+
+p[class="popShopingCartLink taxFeeLink"] {
+	text-align:left !important;
+	padding-bottom:10px;
+	padding-top:10px;
+}
+
+div[class=twoFields] {
+	padding-bottom:5px;
+	padding-top:3px;
+
+}
+
+span[class=textItalic] {
+	color:#CCCCCC;
+}
+
+span[class=textItalic] a {
+	color:#CCCCCC;
+}
+
+
+/**/
+
+.popLink.taxFeeLink{display:none;}
+.lblRTrip .vertical, .lblOWTrip .vertical{margin-left:5px;}
+
+label.lblLNRetTime{float:left;}
+label.lblLNAdt{clear:both;}
+label.lblLNAdt, label.lblLNChd, label.lblLNInf{display:block; float:left; width:70px;}
+
+	label.lblLNAdt .matrixIcon, label.lblLNChd .matrixIcon, label.lblLNInf .matrixIcon{display:inline;}
+	label.lblLNAdt select, label.lblLNChd select, label.lblLNInf select{}
+
+label.lblLNRWay, label.lblLNOneWay{display:inline;}
+label.lblLNRWay{}
+label.lblLNOneWay{}
+
+label.lblLNRWay  .vertical, label.lblLNOneWay .vertical{float:none;}
+
+.holdItinButton a{
+    background-image: url("https://s3.amazonaws.com/aeromexico/bg_boton_gray.png");
+    border-color: -moz-use-text-color;
+    border-radius: 10px 10px 10px 10px;
+    border-style: none;
+    border-width: medium;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: bold;
+    height: 19px;
+    margin-right: 20px;
+    padding: 10px;
+}
+
+#secureTdsImagesLine{text-align:right !important;}
+
+.step-2 .popLink.taxFeeLink{display:block !important;}
+
+.paxp_CellCtry, .paxp_EvePhN, .paxp_DTCtry, .paxp_FCtry{
+    display: inline;
+    float: none !important;
+}
+
+/*Cambios 17-02-2012*/
+
+#pageContent h2{
+	margin: 20px 0 10px 0;
+}
+.searchType{
+	display: none !important;
+}
+
+h2.borderBottom{
+	display: none !important;
+}
+p.flightInfo{
+}
+.flightOptions .semiFlexButton {
+	width: 85px !important;
+}
+.newSearch{
+}
+
+.logosSection ul li{
+	display: block;
+	width:  80px;
+	margin: 0 20px 0 0;
+}
+.logosSection ul li input{
+	float: left;
+	margin-top: 10px;
+}
+.logosSection ul li label{
+	float: left;
+	clear: none;
+	margin: 0 0 0 5px
+}
+.paypalimg a{ display: block;clear: both; }
+/*** NUEVO FOOTER *************************************/
+#footer{
+  clear: both;
+  position: relative;
+  top: 20px;
+  border-top: 1px solid #cecece;
+  padding-bottom: 10px;
+  text-shadow: 1px 1px 0 rgba(255,255,255,0.7);
+  background: #e6e6e6;
+    background-image: linear-gradient(bottom, #F3F3F3 78%, #E6E6E6 100%);
+    background-image: -o-linear-gradient(bottom, #F3F3F3 78%, #E6E6E6 100%);
+    background-image: -moz-linear-gradient(bottom, #F3F3F3 78%, #E6E6E6 100%);
+    background-image: -webkit-linear-gradient(bottom, #F3F3F3 78%, #E6E6E6 100%);
+    background-image: -ms-linear-gradient(bottom, #F3F3F3 78%, #E6E6E6 100%);
+    background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.78, #F3F3F3),color-stop(1, #E6E6E6));
+}
+#footer_wrap{ width: 960px; margin: 0 auto;}
+#footer_top{height: 60px;}
+#footer_top_left{float: left;}
+#footer_top_left a{ float: left; position: relative; top: 18px; margin: 0 15px 0 0 ;}
+#footer_top_right{ float: right; width: 500px; margin: 18px 0 0 0;}
+#social_media{float: right;}
+#social_media li{float: left;}
+#social_media li a{ position: relative; top: 10px; margin: 0 10px 0 0;}
+#social_media li i{ display: block; float: left;}
+.social_media_title{
+  font:normal 1.2em arial,sans-serif;
+  text-transform: uppercase;
+  color: #777;
+  margin: 3px 10px 0 0;
+}
+.icon_dt{
+  background: url('https://www.aeromexico.com/system/modules/com.AeroMexico/resources/img/aeromexico_icons_sprite.png') no-repeat -33px -274px;
+  width: 25px;
+  height: 19px;
+}
+.icon_fb{
+  background: url('https://www.aeromexico.com/system/modules/com.AeroMexico/resources/img/aeromexico_icons_sprite.png') no-repeat  -6px -238px;
+  width: 21px;
+  height: 19px;
+}
+.icon_tw{
+  background: url('https://www.aeromexico.com/system/modules/com.AeroMexico/resources/img/aeromexico_icons_sprite.png') no-repeat -31px -237px;
+  width: 21px;
+  height: 21px;
+}
+.icon_yt{
+  background: url('https://www.aeromexico.com/system/modules/com.AeroMexico/resources/img/aeromexico_icons_sprite.png') no-repeat  -8px -273px;
+  width: 18px;
+  height: 21px;
+}
+.icon_en{
+  background: url('https://www.aeromexico.com/system/modules/com.AeroMexico/resources/img/aeromexico_icons_sprite.png') no-repeat  -8px -316px;
+  width: 23px;
+  height: 20px;
+}
+
+#footer_bottom{
+  clear: both;
+  height: 15px;
+  font:normal 0.85em arial,sans-serif;
+  color: #666;
+}
+#footer_menu{width: 650px; float: left;}
+#footer_menu ul{list-style: none}
+#footer_menu ul li{
+  float: left;
+  padding: 0 5px;
+  border-right: 1px solid #999;
+}
+#footer_menu ul li a{color: #666}
+#footer_menu ul li a:hover{color: #333;}
+
+#legal{width: 250px; float: right; text-align: right;}
+
+.vo_tarifa_row_title{font-weight: bold; text-align: left !important;padding: 0 0 10px 0;}
+#vo_tarifa table{ width: 250px;text-align: right; border: none;}
+.vo_tarifa_row_l{ width: 60%; }
+.vo_tarifa_row_r{ width: 40%;padding: 5px 0;}
+.vo_tarifa_row_final{}
+.vo_tarifa_row_final .vo_tarifa_row_l, .vo_tarifa_row_final .vo_tarifa_row_r{ padding: 10px 0 0 0; border-top: 2px solid #333 !important;}
+.vo_tarifa_row_final .vo_tarifa_row_r{font-weight: bold; font-size: 16px;}
+
+.vo_asiento_disp{color: #f15a24;clear: both;width: 98%;display: table;margin: 10px 0 0 2px;}
+.vo_asiento_num{float: left;font-size: 32px;display: block;width: 20%;}
+.vo_asiento_label{float: right;font-size: 11px;display: block;width: 80%;padding: 4px 0 0 0;}
+.bfm_depHdr,.bfm_arrHdr,.bfm_flifoHdr,.bfm_stopsHdr{
+  background: #e0e0e0 !important;
+  color: #666;
+  font-weight: bold;
+}
+.bfm_depHdr{
+  background: #e0e0e0 url('https://s3.amazonaws.com/aeromexico/pop-up.png') no-repeat  55px -533px !important;
+}
+.bfm_arrHdr{
+  background: #e0e0e0 url('https://s3.amazonaws.com/aeromexico/pop-up.png') no-repeat  60px -533px !important;
+}
+
+  #vo_clave{
+    clear: both;
+    width: 700px;
+  }
+  #vo_clave_nav{
+
+  }
+  #vo_clave_blocks{
+    border-top: 1px dashed #dfdfdf;
+    border-bottom: 1px dashed #dfdfdf;
+    border-right: 1px dashed #dfdfdf;
+    overflow: auto;
+    clear: both;
+  }
+  .vo_clave_block{
+    width: 172px;
+    padding: 10px 0;
+    float: left;
+    border-left: 1px dashed #dfdfdf;
+  }
+  .vo_clave_block h3{
+    color: #042451;
+    width: 125px;
+    font-size: 13px;
+    margin: 0 auto;
+  }
+  .vo_clave_block p{
+    color: #666;
+    font-size: 12px;
+    width: 125px;
+    margin: 10px auto;
+  }
+  .vo_clave_button{
+    display: block;
+  }
+  .vo_button_blue{
+    background: url('https://s3.amazonaws.com/aeromexico/vo_blocks_sprite.png') no-repeat -6px -33px;
+    text-align:center;
+    font-weight: bold;
+    margin: 10px auto;
+    padding: 10px 0;
+    width: 130px;
+    height: 16px;
+    color: #fff !important;
+  }
+  .vo_clave_icon{
+    display: block;
+    background: url('https://s3.amazonaws.com/aeromexico/vo_blocks_sprite.png') no-repeat;
+  }
+  .vo_clave_icon_sand{
+    background-position: -165px -92px;
+    margin: 0 auto;
+    width: 150px;
+    height: 112px;
+  }
+  .vo_clave_icon_keys{
+    background-position: 0 -208px;
+    margin: 0 auto;
+    width: 139px;
+    height: 112px;
+  }
+  .vo_clave_icon_plane{
+    background-position: -11px -91px;
+    margin: 0 auto;
+    width: 121px;
+    height: 112px;
+  }
+  .vo_clave_icon_tablet{
+    background-position: -182px -210px;
+    margin: 0 auto;
+    width: 128px;
+    height: 112px;
+  }
+  .vo_clave_icon_shop{
+    background-position: -42px 0;
+    width: 28px;
+    height: 21px;
+    float: left;
+  }
+  .vo_clave_icon_lupe{
+    background-position: -7px 0;
+    width: 28px;
+    height: 21px;
+    float: left;
+  }
+  .vo_clave_icon_print{
+    background-position: -76px 0;
+    width: 23px;
+    height: 20px;
+    float: left;
+  }
+  .vo_clave_icon_refresh{
+    background-position: -106px 0;
+    width: 20px;
+    height: 21px;
+    float: left;
+  }
+  .vo_clave_icon_label{
+    display: block;
+    float: left;
+    position: relative;
+    top: 3px;
+    padding-left: 5px;
+    color : #06367d;
+  }
+  .vo_button_white{
+      background: #fff !important;
+      border: 1px solid #042451;
+      min-width: 100px;
+      height: 20px;
+      padding: 5px 5px 2px 5px;
+      text-align: center;
+      border-radius: 2px;
+      float: left;
+      display: block;
+      margin: 20px;
+  }
+  .vo_passengers{
+    margin: 10px 0 0 50px;
+  }
+  .vo_passengers li{
+    margin: 5px 0;
+  }
+  .vo_passenger_name{
+    padding: 0 50px 0 20px;
+  }
+.logosSection ul li{
+	display: block;
+	width:  80px;
+	margin: 0 20px 0 0;
+}
+.logosSection ul li input{
+	float: left;
+	margin-top: 10px;
+}
+.logosSection ul li label{
+	float: left;
+	clear: none;
+	margin: 0 0 0 5px
+}
+.paypalimg a{ display: block;clear: both; }
+/* Cambios tarea: 47249 */
+.airAvailNon #shoppingCart {display: none;}
+
+#sideMenuArea{width:250px; float:right; margin-left:20px; text-align:left;}
+#sidebar{margin-bottom:15px; width:240px;}
+#shoppingCart{width:250px; clear:both; color:#000; background-color:#fff; }
+#shoppingCart H4 {color:#1B3360; font-size:14px;}
+#shoppingCart div[class="header"]{margin:0px;}
+#shoppingCart div[class="header"] h3{background-color: #1E6295; color: #FFFFFF; font-family: Arial,Helvetica,sans-serif; font-size: 14px; margin-left: 0; margin-top: 10px; padding-bottom: 5px; padding-left: 10px; padding-top: 5px;}
+#shoppingCart .flight .depDate {color: #000; float: right !important; font-family: Arial !important; font-size: 12px !important;}
+#shoppingCart .totalPrice {background-color:#ffffff; border-top:3px solid #808080;}
+#shoppingCart .totalPrice h2{color:#000; font-family: Arial,Helvetica,sans-serif; font-size:14px; height:17px;}
+#shoppingCart .summary .lineItem li {height:15px;}
+#paxInfoUserLoginPanel .headersContent {background-color: #1E6295!important; color:#fff; padding:5px 10px 10px 10px; min-height:20px;}
+#paxInfoUserLoginPanel p[class="hcontentRightLink"]{margin-top:4px;}
+#paxInfoUserLoginPanel p{margin-top:5px; margin-bottom:15px;}
+#forgotPasswordId{color:#fff; padding-top:5px;}
+#loginButtonId{background-color: transparent; background-image: url("https://s3.amazonaws.com/aeromexico/bg_boton_orange.png"); border-color: -moz-use-text-color; border-radius: 10px 10px 10px 10px; border-style: none; border-width: medium; color: #FFFFFF; display: block; float: right; font-size: 12px; font-weight: bold; height: 39px; margin-top: -10px; padding: 0 10px;}
+#loginMessageText{margin-top:15px!important; margin-bottom:15px;}
+#viewFareRulesId{ display:none!important;}
+.paymentHeader{background-image:none; background-color:#1E6295!important; height:37px;}
+.paymentHeaderh3{background-image:none; color:#fff; padding:7px 10px 10px 10px!important; height:20px;}
+.paymentContent{margin-left:0px; padding:10px;}
+.paymentContent [class="spacing"]{margin-left:0px;}
+DIV[class="resItinDetailPayment"] .paymentContainer, .paraPmt{width: 700px !important;}
+.pmBackground {background-color:#f9f9f9;}
+li[class="taxes"] div[class="TotaltaxLabel"]{width:65%; float:left;}
+li[class="taxes"] div[class="totalTax"]{width:30%; float:right; text-align:right;}
+.paymentContainer .paymentSelectedContent .ccfieldset .ccForm_expiration {width: 320px;}
+.paymentContainer .paymentSelectedContent .ccfieldset {margin-right: 35px;}
+.cscIcon {background: url("../../images/default/questionMark_am.gif") no-repeat scroll 0 0 transparent; height: 16px; margin-left: 2px; padding: 0 8px; width: 16px;}
+TD.matrix_cal_body {background-color:none!important;}
+
+.bfm_depHdr, .bfm_arrHdr, .bfm_flifoHdr, .bfm_stopsHdr{background-color:#e0e0e0!important; color:#646464!important; font-weight:bold;}
+#bfm_tbl_out tr td, #bfm_tbl_in tr td{vertical-align: middle;padding: 35px 2px;min-height: 150px;}
+.matrix_cal_body_fare1, .matrix_cal_body_fare2, .matrix_cal_body_fare3, .matrix_cal_body_fare4, .matrix_cal_body_fare5{vertical-align:middle !important; }
+#bfm_tbl_out tr.even, #bfm_tbl_in tr.even{background-color:#f5f5f5!important;}
+/*.matrix_cal_body_fare1, .matrix_cal_body_fare2, .matrix_cal_body_fare3, .matrix_cal_body_fare4, .matrix_cal_body_fare5{width:100px!important;}*/
+.depTimeSR a{color:#000;}
+.depTimeSR, .arrTimeSR, .destStops, .flightInfoDiv{}
+.matrix_cal_body_dep, .matrix_cal_body_arr{width:65px;}
+.matrix_cal_body_flifo{font:normal 9px verdana!important; color:#a0a0a0!important;}
+span.matrix_operated_text p[class="highlight"], div.flightInfoDiv p[class="highlight"], .matrix_flight_num{font:bold 11px verdana!important; color:#000000;}
+.depTimeSR a:first-child{font-weight:bold;}
+#shoppingCart{background:url("../../images/default/bg_shoppingcart_am.jpg") repeat-x scroll 0 26px transparent;}
+#shoppingCart .flight{background:transparent}
+.flightInfoDiv img{display:none;}
+/*#sidebar{background:url("../../images/default/bg_searchflight_am.jpg") repeat-x scroll 0 70px transparent;}*/
+#shoppingCart .summary .lineItem li .taxLabel {text-align: right; line-height:22px; width:60%;}
+#shoppingCart .totalPrice .price span{font-size:14px!important; font-weight:bold!important;}
+.totalPrice div[class="floatLeft"]{margin-left:70px;}
+.tripType{padding:10px 0 0 0!important; position: relative; top: -10px;}
+.tripType label[class="lblLNRWay"], .tripType label[class="lblLNOneWay"]{}
+label.lblLNFrom span, label.lblLNTo span{}
+#sidebar .searchFlight {padding: 0 12px;}
+#sidebar .searchFlight LABEL .depCity, #DepartTime, #returnTime{width:209px!important;}
+#To{display: block; width: 210px !important;}
+.lblLNDepDate{}
+select.depCity[id="To"]{ }
+.sidebarBtn input{}
+.sr_vert_col{background-color:#ededed! important}
+div.hoverStops td { width: auto !important;}
+.matrix_flight_equip, .matrix_airline_logo { display: block;}
+.totalSeatTaxes {
+	width: 135px;
+	display: block;
+}
+#purchaseButtonId{
+	float: left !important;
+	margin-left: 600px !important;
+}
+.ContinueWithoutAe {
+	display: none!important;
+}
+
+.vo_asiento_disp{color: #f15a24;clear: both;width: 75px !important; display: table;margin: 5px 0 0 0 !important; position: absolute; }
+.vo_asiento_num{float: left;font-size: 32px;display: block;width: 20%;}
+.vo_asiento_label{float: right;font-size: 11px;display: block;width: 75%; padding: 4px 0 0 0;}
+.photoText {display: none;}
+
+.tripType label{
+font: normal 12px verdana!important;
+color: black!important;
+margin: 0 0 0 10px !important;
+}
+
+.logosSection { width: 525px !important }
+
+.airAvailNon #shoppingCart {display: none !important;}
+
+#secureTdsImagesLine{display: none !important;}
+
+.paxp_HoldButton{}
+.paxp_HoldButton a{
+	background-image: url('https://s3.amazonaws.com/aeromexico/bg_boton_gray.png');
+	display: block;;
+	padding: 10px;
+	float: left;
+	height: 20px;
+	color: #fff;
+	margin: 0 10px;
+	font-size: 16px;
+	font-weight: bold;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+.pageBack #Children,
+.pageBack select[name="INF"],
+.pageBack select[name="CHD"],
+.pageBack label[for="Children"],
+.pageBack label[for="Infants"]{
+}
+.pageBack fieldset{
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 20px;
+}
+
+.pageBack .checkBoxbutton .newButton{
+		background-image: url(https://s3.amazonaws.com/aeromexico/bg_boton_orange.png);
+		border: none;
+		padding: 0 10px;
+		display: block;
+		float: right;
+		height: 39px;
+		color: #ffffff;
+		margin: 0 10px;
+		font-size: 16px;
+		font-weight: bold;
+		border-radius: 10px;
+		cursor: pointer;
+}
+.selectFlight h5 a{
+	color: #1b3360 !important
+}
+
+#paymentSection{
+	padding-top: 315px;
+	background: url('https://s3.amazonaws.com/aeromexico/forma_de_pago_esp_v3.jpg') no-repeat;
+}
+.pmChkboxDetail{
+	background: url("https://s3.amazonaws.com/aeromexico/pago-establecimientos.jpg") no-repeat;
+	background-position: 50% 50%;
+}
+.pmChkboxDetail img{
+	visibility: hidden;
+}
+.pmThirdParty{
+	height: 100px !important;
+}
+.remotePaymentTitle{
+	background-color:#1E6295!important;
+	color: #fff !important;
+	height: 30px !important;
+	font-size: 18px !important;
+    height: 30px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 100 !important;
+    line-height: 30px;
+}
+.remotePaymentBoxFrame{
+	margin: 0 !important;
+}
+.remotePaymentBox{
+	border: 1px solid #dcdadb !important;
+}
+/*----------------Payment page PayPal specific [Start]-------------------------------------*/
+#fancybox-overlay{background-color:#ffffff!important;}
+.pmBackground{background-color:#eaebe6;}
+.pmTextHeader{color:#2c89c1;}
+.pylcont-right a, .pplcont-right a{color:#2c89c1; font-size:12px; font-weight:bold;}
+#PP_CheckBoxHeader{padding:15px 15px 10px 15px; height:30px; text-align:left;}
+#PPDC_CheckBoxHeader{padding:10px 15px 15px 15px; height:40px; text-align:left;}
+.pylcont-left{float:left; margin-top: 7px}
+.pylcont-right{float:right;}
+.pylcont-logo-left{float:left; background-image: url("../../images/default/pmtpaypal_01.png"); background-position: 110px 0; background-repeat: no-repeat; width: 400px; height: 26px; margin-left: 16px; }
+.pplcont-left{float:left; margin-top: 7px}
+.pplcont-right{float:right;}
+.pplcont-logo-left{float:left; background-image: url('https://s3.amazonaws.com/aeromexico/pmtpaypal_02_ESP.png'); background-position: 100px 0; background-repeat: no-repeat; width: 510px; height: 44px; margin-left: 16px;}
+.pylcont-right{margin-top:4px;}
+.pplcont-right{margin-top:13px;}
+.pylcont-left-cctext, .pylcont-left-dctext{ color: #2C89C1; font-size: 12px; font-weight: bold;padding-top: 5px;}
+/*----------------Payment page paypal specific [End]-------------------------------------*/
+/*--------Hide Fax field [Begin]------*/
+div.twoFields.leftField.paxp_Fax{
+	display: none;
+}
+/*--------Hide Fax input [End]-----*/
+
+.chat{
+	float: left;
+	height: 47px;
+	border-left: 1px solid #dbdbdb;
+	border-right: 1px solid #dbdbdb;
+	margin-right: 15px;
+	padding: 3px 15px 0 10px;
+}
+.chat p{
+	display: block;
+	float: right;
+	margin-top: 7px;
+	margin-left: 8px;
+}
+.chat span{
+	display: block;
+}
+.chat a span{
+	color: #2d2d2d;
+}
+.chat a span.color{
+	color: #034a8c;
+}
+.chat .icon-chat{
+	background: url("https://s3.amazonaws.com/aeromexico/sprite_social.png");
+	background-repeat: no-repeat;
+	background-position: -148px top;
+	width: 45px;
+	height: 43px;
+	display: block;
+	float: left;
+}
+
+/* PROMO CODE */
+tr.promo-bg{
+    background: none;
+    background-color: #fafafa !important;
+    color: #6c4321 !important;
+  }
+  tr.promo-bg td{
+    background: none;
+    background-color: #fafafa !important;
+    color: #6c4321 !important;
+  }
+  tr.promo-bg td{
+    color: #4e3119 !important;
+  }
+  tr.promo-bg a{
+    color: #6c4321 !important;
+  }
+  #pageContent{
+    position: relative;
+  }
+  .popup-bg{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 170px;
+    background-color: #051f50;
+    border: 1px solid #e1e1e1;
+    border-radius: 4px;
+    padding: 10px 10px;
+    box-shadow: 0 0 3px #e0e0e0;
+    color: #fff;
+    font-size: 11px;
+    border-radius: 5px;
+  }
+  .popup-bg ul{
+    list-style: disc;
+    padding-left: 15px;
+  }
+  .popup-bg .pci{
+    background: url("http://aeromexico.com/system/modules/com.AeroMexico/resources/img/dob.png");
+    width: 20px;
+    height: 14px;
+    position: absolute;
+    left: 50%;
+    margin-left: -10px;
+    bottom: -14px;
+  }
+  /* PROMO CODE ENDS */
+
+/* Ancillaries seat-map*/
+ .seatmap-advice{
+  	position: relative; height: 0px; width: 100%;
+ }
+.seat-map-advice-content{
+  	position: absolute;
+  	width: 70px;
+  	background: #051f50;
+  	color: #fff;
+  	border-radius: 3px;
+  	padding: 7px 7px 7px 13px;
+  	top: -20px;
+  	left: 30px;
+  	font-size: 11px;
+  	text-align: left;
+  }
+#seatMapTable td.available img.selected {
+  background: url('https://cert.sabresonicweb.com/cat1/application/images/default/upperDeck.gif') !important;
+}
+#seatMapTable td.available img.selected:before{
+	content:"" !important;	
+}
+#seatMapTable td.available, #seatMapTable td.limited, #seatMapTable td.unavailable  {
+	background: #ccc !important;
+}
+#seatMapLegend{
+	overflow: hidden;
+}
+#seatMapLegend div.item div{
+	background: #fff !important;
+}
+.customPFSText, p.textbold.noguarantee{
+	color: rgb(255, 255, 255);
+	font-size: 12px;
+	font-weight: bold;
+	background: none repeat scroll 0% 0% rgb(0, 91, 149);
+	padding-top: 10px !important;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	margin: 40px 13px 10px 0px;
+	display: none;
+}
+p.textbold.noguarantee{
+	margin-top: 10px;
+}
+
+.customPFSText *{
+	padding: 0;
+	margin: 0;
+}
+input#formSubmitButton2.input_button{
+	margin-top:30px
+}
+#seatMapTable td img {
+	height:20px !important; 
+	padding-top: 5px;
+}
+#seatMapTable .aisle img{
+	background: #ccc !important;
+}
+/* Ancillaries seat-map ends*/
+.viewAirExtras input#AENext0_top.pfsButtonHeader, input#AENext0_bottom.pfsButtonHeader, input#continueAE.pfsButtonHeader {
+
+	background-image: url("https://s3.amazonaws.com/aeromexico/bg_boton_orange.png");
+	border-width: medium;
+	border-style: none;
+	border-color: -moz-use-text-color;
+	padding: 0px 10px;
+	background-color: transparent;
+	display: block;
+	float: right;
+	height: 39px;
+	color: rgb(255, 255, 255);
+	margin-left: 10px;
+	font-size: 16px;
+	margin-right: 10px;
+	font-weight: bold;
+	border-radius: 10px 10px 10px 10px;
+}
+.viewAirExtras #paxDetails .pfsButtonHeader, .m70buttonContainer .pfsButtonHeader{
+	background: url("https://s3.amazonaws.com/aeromexico/bg_boton_gray.png");
+	margin-right: 10px;
+	background-position: left top;
+	border:0;
+	padding: 9px;
+	color: rgb(255, 255, 255);
+	font-size: 16px;
+	font-weight: bold;
+	border-radius: 10px 10px 10px 10px;
+}
+
+.viewAirExtras .m70buttonContainer{
+	height: 50px;
+}
+.viewAirExtras .m70segDetails{
+	font-size: 14px; color: rgb(27, 51, 96); font-weight: bold;
+}
+.viewAirExtras .m70contentRight a{
+	cursor: pointer;
+}
+.m70roundedBox{
+	background: #fff;
+}
+.icon-es-contigo {
+	background: url("https://s3.amazonaws.com/aeromexico/icons_ssr.png") repeat scroll 0% 0% transparent;
+	display: block;
+    background-position: 0px 0px;
+    width: 109px;
+    height: 63px;
+    margin-top: 20px;
+}
+#paxDetails{
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	line-height: 15px;
+	color: rgb(51, 51, 51);
+	font-weight: 300;
+}
+#paxDetails .subtitle{
+	color:#004990;
+	font-weight: normal;
+}
+#paxDetails .rightContent{
+	padding-bottom: 0;
+}
+#paxDetails .rightContent.end-select{
+	padding-bottom: 20px;
+}
+#paxDetails .rightContent h3{
+	color:#004990;
+}
+#paxDetails .rightContent li{
+	padding: 3px 5px;
+}
+#paxDetails .rightContent p{
+	margin: 5px 0;
+}
+#paxDetails .m70contentRight{
+	margin: 0;
+}
+#paxDetails .rightContent{
+	min-height: 1px;
+}
+.viewAirExtras .ui-tabs .ui-tabs-nav li a {
+	background: #ccc;
+	border-radius: 3px 3px 0 0;
+	color: #fff;
+	border: 0 !important;
+	transition:background-color .3s ease-in;
+}
+.viewAirExtras .ui-tabs .ui-tabs-nav li a:hover{
+	text-decoration: none;
+	background: #999;
+	border: 0 !important;
+}
+.viewAirExtras .ui-tabs .ui-tabs-nav li{
+border:0 !important;
+}
+.ui-tabs-panel.ui-widget-content.ui-corner-bottom{
+	border: 1px solid #ccc;
+	border-radius: 3px;
+}
+.viewAirExtras .ui-state-active {
+border:0 !important;
+}
+.viewAirExtras .ui-state-active a{
+	border: 0 !important;
+	background: #1c75bc !important;
+}
+.m70segDetails{
+	color:#004990;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.leftContent .icon-pay{
+	background: url("https://s3.amazonaws.com/aeromexico/am-seguro.png");
+	background-position: left top;
+	display: inline-block;
+	width: 65px;
+	height: 49px;
+	float: right;
+	margin-right: 50px;
+}
+.leftContent .icon-sport{
+	background: url("https://s3.amazonaws.com/aeromexico/am-seguro.png");
+	background-position: left -51px;
+	display: inline-block;
+	width: 60px;
+	height: 56px;
+	float: right;
+	margin-right: 50px;
+}
+.icon-green{
+    background: url("https://s3.amazonaws.com/aeromexico/am-seguro.png");
+    background-position: -16px -107px;
+    display: inline-block;
+    width: 44px;
+    height: 69px;
+    margin-left: 40px;
+}

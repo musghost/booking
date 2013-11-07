@@ -1,0 +1,1 @@
+function submitPageAsLocationReplace(d,c){var b=c;for(var a=0;a<d.length;a++){if(d.elements[a].type!="button"&&d.elements[a].type!="textarea"&&d.elements[a].name!=""){b=b+d.elements[a].name+"="+d.elements[a].value+"&"}}window.location.replace(b)};

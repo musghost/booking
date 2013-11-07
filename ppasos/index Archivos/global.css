@@ -1,0 +1,2846 @@
+
+/* Classes for airAvailSemiBody_air.vm */
+.viewFareBlock{width:99%}
+.viewFareBlock .viewFareLink{width:33%;float:left}
+.viewFareBlock .viewFareSum{float: left; margin-left: 0px; font-weight: bold; font-size: 9px; text-align: left;}
+.viewFareBlock .viewFarePrice{width:33%;float:right}
+.currSymbol{display:none;}
+/* Select Flight page (airAvailFlexBody_air.vm) */
+.selectFlight  { height:3%; overflow:auto; }
+.selectFlight .selectLinkBox, .alternateDatesText, .alternateDatesLinkBox {float: left; padding: 2px; width: 17%;}
+.selectFlight .fare {float: right; text-align: right; width: 79%; padding: 2px;}
+.selectFlight .currencyCalcBox {float: right; padding: 2px;}
+.altDatePrice .altFrom {display: none;}
+.altDatePrice .altCurr {display: none;}
+.altDatePrice .altAmtCurrSel {display: none;}
+.bfmDirectionFltHdrDepart .bfmHyphen { display: none; }
+.bfmDirectionFltHdrReturn .bfmHyphen { display: none; }
+/* Fix general issue with main-page width, smaller width may cause alignment mismatch on search result page (Semi/flex) */
+#main-Page {width: 950px;}
+
+/* Shopping cart special payment section*/
+.specPayment{width:100%;}
+.specPayment .colOne{padding-top:10px;width:25%;display:inline;float:left;}
+.specPayment .colTwo{padding-top:10px;width:53% !important;display:inline;float:left;text-align:right;}
+.specPayment .colThree{padding-top:10px;width:20%;display:inline;float:right;text-align:right;}
+.specPayment .shiftleft{padding-right:14px;}
+
+/* exchange review page colors for exchanged and reused segments */
+.exchangedSegment {clear:both;float:right;width:40%;}
+.seg_exchanged_n{color: #cc0000;}
+.seg_used_n{color: Silver;}
+.seg_exchanged_legend_n{background-color:#cc0000; width:45px; float:left;}
+.seg_used_legend_n{background-color:Silver; width:45px; float:left;}
+
+/* for the .Res Password Reminder page */
+.reminderLoginPassword { background-color:#FFFFFF; float:left; padding:3px 5px 4px; }
+.reminderHighLight { width:100%; background-color:#FFFFFF; padding:3px 5px 4px; font-weight:bold; }
+.reminderOptions { width:100%; margin-bottom:5px; margin-left:10px; padding-top:20px; }
+.reminderInput { float:left; margin-right:10px }
+.reminderSubmitBlock { width:100%; float:left; margin-bottom:5px; margin-left:0px; padding-top:20px; }
+.reminderSubmitBlock .reminderSubmit { float:right; }
+.reminderQuestionBlock { float:left; margin-bottom:5px; margin-left:30px; padding-top:20px; }
+.reminderQuestionBlock .reminderQuestion { float:left; }
+.reminderQuestionBlock .reminderAnswer { float:right; }
+.special_operator {font-weight:bold;}
+
+/*Added for width of SSR dropdown on passenger info page*/
+.ssr{width:170px;}
+
+/*Added for Error message unalligned on Payment Page*/
+#paymentSection .errorFullWidth{margin-left:145px;width:50%}
+#paymentSection .errorMsg{clear:both;color:#0000;float:left;font-family:Tahoma,Verdana,Arial,Helvetica,sans-serif;font-size:100%;font-size-adjust:none;font-stretch:normal;font-style:normal;font-variant:normal;font-weight:normal;line-height:normal;text-align:left;width:99%;}
+.billing .billAddRight .paymentInformation .errorCardHolder{margin-left:108px;}
+
+.paypalimgNew{padding-left:16px; width:100%;}
+.paypalimgNew a{font-size:9px!important}
+
+/*Added for provide Space between from fields in payment section*/
+#paymentSection label{margin-top:3px;}
+#cashChequeFOP label { margin-top: 0 }
+
+.pax label{height:52px;}
+.pax label .errorBlock{text-align:right}
+
+/*Added for Tracker 25619 - Fix alignment for Unaccompanied Minor*/
+.unAccText {width:75%;display:block;float:left; text-align:right;}
+
+/*Added classes for displaying IncidentView (Intuitive Error Messages)*/
+.IncidentView {font-weight:bold;clear:both;margin-top:5px;margin-bottom:5px}
+.IncidentMessage {color:#cc0000;}
+.IncidentCode {display: none;}
+/*Added class for country code fields on updateAgent page*/
+.taAgentPhoneCtryCode {width:133px}
+/* for the ambiguous airline name selection page */
+.selectAirlineArea{ float:left; width:99% }
+.selectAirlineAreaTop{ background:left top no-repeat; height:37px; float:left; width:612px; background-color:#FFFFFF }
+.selectAirlineAreaTop h2{ font:bold 14px Verdana, Arial, Helvetica, sans-serif; color:#000000; padding:0px; padding-left:20px; line-height:37px; margin:0px; background:none; width:592px }
+.selectAirlineContentArea{ border-left:12px; padding-left:10px; float:left; width:590px }
+
+.seg_exchanged_n .column p{color: #cc0000;}
+.seg_used_n .column p{color: Silver;}
+#surchargecredittable{position:relative; width:280px ;float:right;top:-20px;}
+.ccsSurchargeFor{width:154px !important;}
+.cardName{float: left;text-align:right !important;width:120px !important;}
+.ccsLftCol{width:137px !important;background-color:#efefef;margin: 0 0 0 20px !important;padding: 0 0 5px 0px}
+.ccsRhtCol{width:100px !important;margin: 0 0 0 20px !important;padding: 0 0 5px 0px}
+.ccsTotalBorderTop{border-top:dashed 1px;}
+
+.airAvailFlex #pageContent li{clear:both;}
+.airAvailFlex #progressBar li {clear:none;float:left;}
+
+#bfmFbHdr{text-align:center}
+#fareBreakDown{float:left;width:320px;border:1px solid #dedede;padding:0px 2px 2px 2px;margin:3px 3px 3px 3px}
+/*#bfmTaxesFees{clear:both;float:left;} */
+.clearBoth{clear:both;float:left;}
+#bfmFbShow{float:left;clear:both;}
+
+.bfm_base {clear:both;float:left;width:195px;font-size:11px;padding-left:4px;font-weight:bold;}
+.bfm_base_amt {font-size:11px;float:right;width:110px;vertical-align:top;text-align:right;text-decoration:underline}
+.bfm_item{clear:left;float:left;width:195px;font-size:11px;color:;text-align:right;font-weight:normal}
+.bfm_item_amt{font-size:11px;float:right;width:110px;vertical-align:top;text-align:right;;color:;}
+.bfm_total{clear:left;float:left;width:195px;font-size:13px;font-weight:bold;padding-left:6px;color:}
+.bfm_total_amt{float:right;width:110px;vertical-align:top;;text-align:right;font-size:13px;font-weight:bold;border-bottom:1px solid ;border-top:1px solid gray;}
+#bfmFbFtr{clear:both;float:left}
+.disablePageElements{left:0px;top:0px;position:absolute;width:1000px;min-height: 100%;height: auto !important;height: 1800px;z-index:100;display:none;float:left;background:#fff;filter:alpha(opacity=1);opacity:.01;}
+
+.guestAccess{margin:15px 0px;}
+.resSearch {margin:2px 0px; float:left; width:48%; font-size:11px;}
+.resSearch label{ margin-top:3px; float:left; width:100%;}
+.resSearch span{float:left;text-align:right; width:135px; margin-right:5px; height:100%; margin-top:2px;}
+.resSearchHolder{clear:both;margin-top:20px;}
+.resSearch .errorMsg{font-weight:bold;text-align:left;color:#cc0000; margin-left:125px; clear:left; float:left;width:175px;}
+
+.flightContainer .flight {
+    height:85px;
+}
+.flightContainer{
+    clear:both;
+}
+.selectFlightLink {
+    display:inline;
+}
+.pax div.childDOB {
+    text-align: center;
+    clear: left;
+    font-size: 12px;
+    width: 100%;
+    margin: 0 auto 10px auto;
+}
+#childDOBTxt {
+    /*font-weight: bold;*/
+}
+.pax span.childDOB .spacerChildDescription {
+    height:3px;
+}
+.pax span.childDOB .spacerChildDateBirth{
+    height:1px;
+}
+
+table.altDates {
+    clear: both;
+    border-collapse: collapse;
+}
+
+td.altDateSel, td.altDateNotSel {
+    padding: 0;
+    margin: 0;
+    height: 31px;
+    width: 83px;
+    border: 0;
+    background-image: url("../../images/default/generic_tab.gif");
+    background-repeat: no-repeat;
+}
+
+div.flight_calendar_container {
+    position: absolute;
+    width: 374px;
+    visibility: hidden;
+}
+
+.foidItem {
+    display: none;
+}
+
+/* Enhanced schedule styles */
+body.schedule .extended_schedule {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-bottom: 0 none;
+}
+body.schedule .extended_schedule th {
+    padding: 2px;
+    background-color: #ddd;
+}
+body.schedule .extended_schedule td {
+    text-align: center;
+}
+body.schedule .extended_schedule tr.odd td {
+    background-color: #eed;
+}
+body.schedule .extended_schedule tr.even td {
+    background-color: #fff;
+}
+body.schedule .extended_schedule tr td,
+body.schedule .extended_schedule tr th {
+    border-bottom: 1px solid #ccc;
+    padding: 2px;
+}
+body.schedule .extended_schedule tr td.noborder {
+    border-bottom: 0px none;
+}
+body.schedule .extended_schedule tr td.day,
+body.schedule .extended_schedule tr th.day{
+    border-left: 1px solid #ccc;
+}
+
+body.schedule .extended_schedule tr.odd td.current {
+    background-color: #ccb;
+}
+body.schedule .extended_schedule tr.even td.current {
+    background-color: #ddd;
+}
+
+body.schedule .extended_schedule tr th.current{
+    border: 2px solid #000;
+}
+body.schedule p.legend {
+    padding: 7px 0 3px 0;
+    float: right;
+}
+body.schedule p.legend img {
+    vertical-align: middle;
+    padding-right: 5px;
+}
+body.schedule td.details a {
+    text-decoration: none;
+}
+body.schedule td.details img {
+    border: 0 none;
+    vertical-align: middle;
+}
+body.schedule .extended_schedule_hdr {
+    width: 100%;
+    clear: both;
+    height: 10px;
+}
+body.schedule .extended_schedule div.flifo ol {
+    list-style-type: decimal;
+    margin-left: 20px;
+}
+.hdrL {
+    float: left;
+    height: 10px;
+    width: 50%;
+    background: #ddd url(../../images/default/lc10x10.gif) top left no-repeat;
+}
+.hdrR {
+    float: right;
+    height: 10px;
+    width: 50%;
+    background: #ddd url(../../images/default/rc10x10.gif) top right no-repeat;
+}
+.extended_schedule_ftr {
+    clear: both;
+    width: 100%;
+    height: 10px;
+    background-color: #ddd;
+}
+.ftrL {
+    float: left;
+    height: 10px;
+    width: 50%;
+    background: #ddd url(../../images/default/blc10x10.gif) top left no-repeat;
+}
+.ftrR{
+    float: right;
+    height: 10px;
+    width: 50%;
+    background: #ddd url(../../images/default/brc10x10.gif) top right no-repeat;
+}
+body.schedule table.extended_schedule {
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 11px;
+}
+
+#pageContent table.altDates{border-collapse:collapse;position:relative;left:8px;text-align:center;margin-top:3px;margin-bottom:-6px}
+#pageContent table.altDates td.altDateNotSel {border:none;text-decoration:underline}
+#pageContent table.altDates td.altDateSel {border:none;font-size:11px ;font-weight:bold;text-decoration:none}
+#pageContent table.altDates .cal_na.altDateNotSel {background-color:#DCDCDC;color:#999;text-decoration:none !important;font-size:10px}
+#pageContent table.altDates .cal_notReq.altDateNotSel a {font-size:10px}
+
+#main-Page .lowest{font-size:11px;font-style:italic;background-image:url(../../images/default/generic_tab_low.gif);background-color:#FFFFC0}
+
+.bfmTblHolder{clear:both}
+.bfmTbl {margin-top:2px;border-collapse:collapse;border:4px 4px 4px 4px solid #FFFFFF;width:580px}
+.bfmTblDisclaimer{margin-top:2px;border-collapse:collapse;border:4px 4px 4px 4px solid #FFFFFF;width:580px}
+/*removed display:none to fix non-display of stops in production*/
+ .bfm_stopsHdr {background-color:#ffffff;background-image:none;color:#000000;border:none;;font-size:11px}
+.bfm_hidden {
+   background-color:#ffffff;
+   background-image:none;
+   color:#000000;
+   border:none;;
+   font-size:11px;
+   display: none !important;
+}
+ .matrix_cal_body_stops {}
+
+ .bfm_flifoHdr{background-color:#ffffff;background-image:none;color:#000000;width:50px;border:none;font-size:11px}
+ .bfm_depHdr{background-color:#ffffff;background-image:none;color:#000000;border:none;;font-size:11px}
+ .bfm_arrHdr {background-color:#ffffff;background-image:none;color:#000000;width:50px;border:none;font-size:11px}
+
+ .bfm_priceHdr {background-color:#ffffff;background-image:none;color:#000000;border:none;;font-size:11px}
+ .bfm_seatsRemainingHdr {background-color:#ffffff;background-image:none;color:#000000;border:none;;font-size:11px}
+
+.dark_table_border{border:0px }
+
+.flightInfo{background-color:white}
+
+.white_table_border{margin-top:10px}
+
+
+#bfmFbHdr{text-align:center}
+.bfmTblHolder{clear:both;width:620px;float:left;}
+#fareBreakDown{width:50%;border:1px solid #dedede;padding:0px 2px 2px 2px;margin:10px 3px 3px 1px}
+#bfmTaxesFees{display:none}
+.bfm_base {clear:both;float:left;width:150px;font-size:11px;padding-left:6px;}
+.bfm_base_amt {;font-size:11px;float:right;width:110px;vertical-align:top;text-align:right;text-decoration:underline}
+
+.bfm_item{clear:left;float:left;width:150px;font-size:11px;color:;text-align:right;font-weight:normal}
+.bfm_item_amt{font-size:11px;float:right;width:110px;vertical-align:top;text-align:right;;color:;}
+.bfm_total{clear:left;float:left;width:60px;font-size:12px;font-weight:bold;padding-left:6px;color:}
+.bfm_total_amt{float:right;width:110px;vertical-align:top;;text-align:right;font-size:12px;font-weight:bold;border-bottom:1px solid ;border-top:1px solid gray;}
+
+#bfmFbShow{float:left;width:120px}
+#main-Page .bfm_lowest {clear:both;display:block;}
+.bfm_lowest_lbl {font-size:12px;background-color:#FFFFC0;border:1px solid #F79442;margin:2px 4px 2px 4px;padding:0px 2px 0px 2px}
+.bfm_lowest_price {font-size:13px;color:green;font-weight:bold;margin:2px 2px 2px 2px }
+
+img.airlineBFMMatrixLogo {
+  width: 40px;
+  height: 40px;
+  border: 0;
+}
+
+.matrix_flight_equip, .matrix_airline_logo {
+  display: none;
+}
+.businessProfile span.errorMsgFullWidth{font-weight:bold;text-align:left;color:#cc0000; margin-left:150px; clear:left; float:left;width:450px !important;}
+#main-Page table.altDates{border-collapse:collapse;left:0;}
+#main-Page table.altDatesIntel{width:620px;}
+.bfm_prev{background:url(../../images/default/prev-arrow.gif) no-repeat;width:17px}
+.bfm_next{background:url(../../images/default/next-arrow.gif) no-repeat;width:17px}
+
+.clear{height:0px;margin:0px 0px 0px 0px}
+
+.viewFare {width:99%}
+
+div.hoverTaxes, div.bfm_marketingText {
+  display: none;
+  position: absolute;
+  background: #fff;
+  border: 2px solid #000;
+  left: 20px;
+  top: 20px;
+  padding: 5px;
+  z-index: 255;
+  color: #333;
+}
+
+div.hoverTaxes td {
+  text-align: right;
+  width: 80px;
+}
+
+div.hoverStops {
+  display: none;
+  position: absolute;
+  background: #fff;
+  border: 2px solid #000;
+  left: 20px;
+  top: 20px;
+  padding: 5px;
+  z-index: 255;
+  color: #333;
+}
+
+div.hoverStops td {
+  text-align: right;
+  width: 100px;
+}
+
+div.bfmMain {
+  width: 620px;
+}
+
+.bfm_base_amt, bfm_base, .bfm_item_amt, .bfm_item, .bfm_total_amt, .bfm_total {
+  height: 17px;
+}
+
+table.bfm_table_body {
+  width: 610px;
+}
+
+#paymentSection div.signleDivLeft span.spanWthRadio_longText {
+  width: 600px;
+}
+
+.businessProfile div.twoFields span {
+  clear: left;
+}
+
+a.brandInfoLinkActive {
+  cursor: pointer;
+}
+
+#seatMapTable {
+  border: collapse;
+}
+
+#seatMapTable, #seatMapTable td, #seatMapTable tr {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+#seatMapTable td img {
+  width: 20px;
+  height: 25px;
+  border: 0;
+}
+
+#seatMapTable td.available {
+  cursor: pointer;
+  background: #00a;
+}
+
+#seatMapTable td.limited {
+  cursor: pointer;
+   background: #0a0 !important;
+}
+#seatMapTable td.unavailable {
+  background: #c00;
+}
+
+#seatMapTable td.availupper {
+  cursor: pointer;
+  background: #aa0;
+}
+
+#seatMapTable td.availupper img.selected {
+  background: #0f6;
+}
+
+#seatMapTable td.available img.selected {
+  background: #0f0;
+}
+
+#seatMapTable td.limited img.selected {
+  background: #0f0;
+}
+
+#seatSelection {
+  width: 490px;
+  float: left;
+}
+
+#seatMapContainer {
+  width: 200px;
+  float: left;
+  padding-left: 10px;
+}
+
+div.clear_left_block {
+  clear: both;
+}
+
+#seatMapPage h1 {
+  float: none;
+}
+
+#seatMapLegend div.item {
+  width: 49%;
+  height: 35px;
+  float: left;
+  margin-top: 5px;
+  font-size: 9px;
+}
+
+#seatMapLegend div.item div {
+  background: #00a;
+  width: 20px;
+  height: 25px;
+  float: left;
+}
+
+#seatMapLegend div.item div.icon_available {
+  background: #00a;
+}
+
+#seatMapLegend div.item div.icon_unavailable {
+  background: #c00;
+}
+
+#seatMapLegend div.item div.icon_availupper {
+  background: #aa0;
+}
+
+#seatMapLegend div.item div.icon_limited {
+  background: #0a0;
+}
+
+#seatMapLegend div.even {
+  clear: left;
+}
+
+#currentSegmentPassengerList, #preselectedSegmentPassengerList {
+  width: 100%;
+  margin: 10px 0;
+}
+
+#currentSegmentPassengerList tbody tr.unactive td, #preselectedSegmentPassengerList tbody tr td {
+  background: #ffffff;
+}
+
+#currentSegmentPassengerList tbody tr.unactive td.passengerName, #preselectedSegmentPassengerList tbody tr td.passengerName {
+  background: #ffffff;
+}
+
+#currentSegmentPassengerList tbody tr.active td {
+  background: #f0f0f0;
+}
+
+#currentSegmentPassengerList tbody tr.active td.selection {
+  background: #ffffff url(../../images/default/red_arrow.gif) no-repeat center;
+  width: 20px;
+}
+#currentSegmentPassengerList tbody tr.unactive td.selection {
+  background: #ffffff;
+  width: 20px;
+}
+
+#currentSegmentPassengerList tbody tr.unactive td {
+  cursor: pointer;
+}
+
+#payForSeats .disabled_payForSeatButton {
+  background-color: #aaa;
+}
+
+#payForSeatsLimitation {
+  display: none;
+  float: right;
+  width: 50%;
+}
+
+.payment div.subSeatTaxSection p.colTwo {
+  width: 57%;
+}
+
+.payment div.subSeatTaxSection p.colThree {
+  width: 18%;
+}
+
+#pfsErrorContinueButton{
+  padding-top:80px;
+  text-align:right;
+}
+
+#insurance {
+border:1px solid #00285E;
+color:#001063;
+left:150px;
+margin-bottom:5px;
+padding-bottom:10px;
+position:relative;
+width:400px;
+}
+.insItem {
+border-bottom:1px solid #B2D5F1;
+clear:both;
+height:auto;
+margin:2px 10px;
+padding:2px;
+}
+.insOption {
+height:30px;
+}
+.insName {
+float:left;
+font-weight:bold;
+}
+.insPrice {
+float:right;
+font-size:12px;
+font-weight:bold;
+padding-top:3px;
+}
+.insSum {
+clear:both;
+font-style:italic;
+}
+.insDetail{
+ display:none;
+ background-color:#f8f9fa;
+ margin-top:4px
+}
+div.pleaseWait {
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    margin-top: 0%;
+    margin-left: 0%;
+    margin-right: 0%;
+    visibility: hidden;
+    background-color:silver;
+    top:0%;
+    left:0%;
+    padding: 20px;
+    z-index:2;
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+    filter: alpha(opacity=50);
+    opacity:0.5;
+}
+
+div.pleaseWaitBox {
+    position:absolute;
+    z-index:2;
+    top:300px;
+    left:400px;
+    text-align: center;
+    border: 2px solid #000;
+    padding: 20px;
+    z-index:3;
+    background-color:silver;
+    font-weight:bold;
+    visibility: hidden;
+}
+
+.pleaseWaitMsg {
+    font-family: Arial;
+    font-size: 20px;
+    font-weight:bold;
+    color: BLUE;
+}
+
+#userLoginPanel p.passwordReminderLink {
+  float: right;
+}
+
+#pfsExitSeatDisclaimer {
+  position: absolute;
+  top: 350px;
+  left: 100px;
+  margin: 0 auto;
+  width: 500px;
+  border: 2px solid #000;
+  background: #fff;
+  padding: 20px;
+  display: none;
+}
+
+#pfsExitSeatDisclaimerButton {
+  margin-top: 20px;
+  text-align: right;
+}
+
+div.customPFSText {
+  clear: left;
+  padding-top: 40px;
+}
+
+div.box {
+  border-style:solid;
+  border-width:1px;
+  border-color: #CFCFCF;
+  width: 100%;
+  float: left;
+}
+
+div.boxheader {
+  background: #CFCFCF;
+  margin-top : 1px;
+  margin-bottom : 1px;
+  margin-left : 1px;
+  margin-right : 1px;
+  padding-left: 5px;
+}
+
+div.boxbody {
+  padding-left: 5px;
+}
+
+.underlined {
+  text-decoration: underline;
+}
+
+.fontbold {
+  font-weight: bold;
+}
+
+.travelArrangerProfileUpdate {
+    height: 100%;
+}
+
+.claimLink {float:right;clear:both;padding-bottom: 7px;}
+#refundMsg{clear:both;padding-top:15px;}
+.refundLoginLink{float:right;clear:both;padding-top:15px;}
+
+.highlightRow{background:#dfffff;}
+.outboundTitle
+{
+ display:none;
+}
+.inboundTitle
+{
+ display:none;
+}
+.outboundTitleExch {
+display:none;
+}
+
+.inboundTitleExch {
+display:none;
+}
+
+.flightNumberLinkMsg {
+clear:both;
+}
+
+/* Classsed for SSR **/
+/* Classsed for Tab View **/
+.tabView {
+    padding-top: 20px;
+    float:left;
+    width:50%;
+    line-height:normal;
+    background: url("../../images/default/Tab_bg.gif") bottom repeat-x;
+    }
+    .tabView ul {
+        margin:0;
+        padding:0px 0px;
+        list-style:none;
+        }
+        .tabView ul li {
+            float: left;
+            background: url("../../images/default/rightTab.gif") right top no-repeat;
+            text-align: center;
+            overflow: hidden;
+            margin-left: 3px;
+            }
+            .tabView ul li a {
+                display: block;
+                background: url("../../images/default/leftTab.gif") left top no-repeat;
+                padding: 10px 15px 6px 15px;
+                font-weight: bold;
+                text-decoration: none;
+            }
+            .tabView ul li a:hover {
+                color: #990000;
+            }
+            .tabView ul li#current {
+                float: left;
+                text-align: center;
+                overflow: hidden;
+                margin-left: 5px;
+                background: url("../../images/default/rightTab_cur.gif") right top no-repeat;
+            }
+            .tabView ul li#current span {
+                display: block;
+                padding: 10px 15px 6px 15px;
+                font-weight: bold;
+                text-decoration: none;
+                background: url("../../images/default/leftTab_cur.gif") left top no-repeat;
+                }
+            .tabView ul li.first {
+                float: left;
+                text-align: center;
+                overflow: hidden;
+                margin-left: 5px;
+                background: url("../../images/default/rightTab.gif") right top no-repeat;
+            }
+            .tabView ul li.first a {
+                display: block;
+                padding: 10px 15px 6px 15px !important;;
+                font-weight: bold;
+                text-decoration: none;
+                background: url("../../images/default/leftTab.gif") left top no-repeat;
+                }
+
+#ssr-content {
+    padding: 20px;
+    border-left:1px solid #000;
+    border-right:1px solid #000;
+    border-bottom:1px solid #000;
+    background:#ccc;
+    margin-top: 0px !important; /*moz width*/
+    margin-top: -3px; /*IE width*/
+    }
+
+/* Classsed for SSR - Rounded Corners **/
+.roundedBox {background:#fff;  margin:10px 0px 0px;display:block;clear:both;}
+.roundedBoxContent{padding:10px;}
+.leftContent{float:left;width:160px;margin:0px;}
+.rightContent{margin-left:170px;padding-bottom:20px;}
+.roundedBoxContent span.capitaliz {font-weight:bold; padding:0px 5px;text-transform: capitalize;}
+.roundedBoxContent p{font-weight:bold;}
+.roundedBoxContent p.grayfont{color:#cccccc;}
+.roundedBoxContent p span{font-weight:normal;color:black;}
+.roundedBoxContent div .ssrcontentleft{float:left;margin-top:10px;margin-left:5px;width:50%;display:block;}
+.roundedBoxContent div .ssrcontentright{margin-top:10px;display:block}
+.roundedBoxContent div .ssrcontentleft input,.roundedBoxContent div span.ssrcontentright input {margin-right:8px}
+.rtop, .rbottom{
+display:block;
+background:#ccc;
+}
+.rtop *, .rbottom *{
+display: block;
+height: 1px;
+overflow: hidden;
+background:#fff;
+}
+.r1{margin: 0 5px}
+.r2{margin: 0 3px}
+.r3{margin: 0 2px}
+.r4{
+margin: 0 1px;
+height: 2px
+}
+
+.clearBoth{clear: both !important;}
+.segDetails{float:left !important;font-weight:bold;display:block;}
+div.hoverSSRDescription {
+  display: none;
+  position: absolute;
+  background: #fff;
+  border: 2px solid #000;
+  left: 20px;
+  top: 20px;
+  padding: 5px;
+  z-index: 255;
+  color: #333;
+}
+
+div.hoverSSRDescription td {
+  text-align: left;
+  width: 200px;
+}
+div.unconfirmedSSR{
+ clear: both !important;
+ margin: 10px 0px;
+}
+.paymentInformation .amexEBTADescription {
+    width:450px;
+    text-align:left;
+    padding-left:10px;
+}
+.paymentInformation .errorEBTA {
+    width:180px;
+    font-weight:bold;
+    float:left;
+    text-align:left;
+    color: #cc0000;
+    margin-left:20%;
+}
+.Continue_hide{  visibility: hidden}
+.Continue_show{  visibility: visible}
+#Hold_Continue{  visibility: visible}
+.matrix_airline_code_old_BFM { display:none; }
+
+.captchaCustomizeText {float:left;width:200px;margin-top:10px;}
+.captchaAlign {float:right;width:320px;margin-left:10px;margin-top:10px;}
+
+.payment_sidebar .subTotalSection { clear: left; padding-top: 2px; }
+.payment_sidebar .colOne { float: left; text-align: right; width: 100px; }
+.payment_sidebar .colTwo { float: right; text-align: right; width: 90px; }
+.payment_sidebar .amountPaid { border-bottom:2px solid #00285E; float:right; width:100%; margin-bottom: 4px;line-height:2px; }
+.payment_sidebar .fareSummary_header, .payment_sidebar .fareSummary_base, .payment_sidebar .fareSummary_taxes {  }
+.payment_sidebar .currenycon{display:none;}
+.payCollapse { display:block; }
+.payExpand { display:block; }
+
+.prsPleaseWait{
+    float:left;
+    position:absolute;
+    width: 100% !important;
+    margin-top: 0%;
+    margin-left: 0%;
+    margin-right: 0%;
+    background-color:silver;
+    top:0;
+    left:0;
+    padding: 50px;
+    z-index:2;
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+    filter: alpha(opacity=50);
+    opacity:0.5;
+}
+.prsSpinnerWaitBox {
+    position:absolute;
+    z-index:2;
+    top:300px;
+    left:400px;
+    text-align: center;
+    border: 2px solid #000;
+    padding: 20px;
+    z-index:3;
+    background-color:white;
+    font-weight:bold;
+}
+
+.prsSpinnerWaitMsg {
+    font-family: Arial;
+    font-size: 20px;
+    font-weight:bold;
+    color: BLUE;
+}
+
+#prsHideControls{
+    display:none;
+    float:left;
+    position:absolute;
+    width: 600px !important;
+    height: 900px !important;
+    margin: 0%;
+    background-color:silver;
+    top:0;
+    left:0;
+    padding: 50px;
+    z-index:2;filter:progid:DXImageTransform.Microsoft.Alpha(opacity=1);
+    filter: alpha(opacity=1);
+    opacity:0.01;
+}
+.prsDisclaimer {
+  position: absolute;
+  top: 350px;
+  left: 100px;
+  margin: 0 auto;
+  width: 500px;
+  border: 2px solid #000;
+  background: #fff;
+  padding: 20px;
+  display: none;
+  z-index:5;
+}
+
+.prsDisclaimerButton {
+  margin-top: 20px;
+  text-align: right;
+}
+/*PI 29340 - Safari issue **/
+.corporateAdminHomePage .businessProfile DIV.twoFields SPAN{height: auto;}
+
+.corporateAdminHomePage .businessProfile LABEL SPAN {height: auto;}
+
+#paybyredeem div#DRErrorList{text-align:left;float:left;width:100%;}
+#paybyredeem div#DRErrorList div {font-weight:bold;color:#ff0000;display:none;}
+.notApplyBut { padding-left:360px; }
+div#redeemsec div#colone p.note{padding-top:4px;padding-bottom:20px;font-weight:bold;}
+div#redeemsec div#colone span{padding-top:10px;width:35%;display:inline;float:left;text-align:left;}
+div#redeemsec div#colone span.value{padding-top:10px;width:35%;display:inline;float:left;text-align:left;font-weight:bold;}
+div#calsec span.balDue{padding-top:10px;width:50%;display:inline;float:left;text-align:left;font-weight:bold;}
+div#calsec span{padding-top:10px;width:35%;display:inline;float:left;text-align:left;}
+div#calsec hr.highlight{font-weight:bold;width:58%;}
+div#calsec p.redeemdetail{padding-top:10px;padding-bottom:15px;font-weight:bold;}
+div#redeemsec div#colone p.note{padding-top:10px;padding-bottom:20px;font-weight:bold;}
+div#calsec span.amtreduced{padding-top:10px;width:34.5%;display:inline;float:left;text-align:left;}
+div#calsec span a.link {padding-left:20px;}
+#redemptionDetails {display:none;}
+#bonussec {display:none;}
+
+div#FOP_TB_INWSDR p.tbmsg{
+                padding-top:10px;
+                padding-bottom:8px;
+                font-style:italic;
+                width:80%;
+}
+div#FOP_TB_INWSDR span{
+                width:35%;
+                display:inline;
+                float:left;
+                text-align:left;
+}
+
+div#FOP_TB_INWSDR p span#tbAppAmount{font-weight:bold;}
+div#FOP_TB_INWSDR p span#tbAppAmtDR{font-weight:bold;}
+div#FOP_TB_INWSDR p span#tbamountdr{font-weight:bold;}
+
+div#FOP_TB_INWSDR span a.link {
+                padding-left:20px;
+}
+.notenoungfunds{padding:10px 0px 15px 0px;font-style:italic;}
+.photoText{padding:10px 0px 15px 0px;}
+div#ccamountheader p span#ccRemAmount{font-weight:bold;}
+div#calsec p.paymentmessage{
+    padding-top:5px;
+    width:100%;
+    float:left;
+    text-align:left;
+    font-style:italic;
+    font-size: 10px;
+    color:#999999;
+    display:none;
+    }
+div#calsec h2.borderLength{
+height: 10px;
+padding-top: 1px;
+border-bottom: 1px solid black;
+width: 42%;}
+
+#paybypaypal div {float:left;}
+#paybypaypal div.paypalradio {padding-top:10px;padding-right:5px}
+.InsCCSection{display:none;}
+.paypalmsg{display:none;}
+
+.holdItinButton {
+    padding-top: 0px;
+}
+
+/*css for new CC section under INS section*/
+
+#ppccpaymentSection div {line-height: 21px;}
+#ppccpaymentSection div.signleDivLeft span {float:left;width: 143px;margin-right: 5px;clear:both;}
+#ppccpaymentSection label span{float:left;width: 143px;margin-right:5px;clear:both;}
+#ppccpaymentSection .singleLblLeft span{float:left;width: 143px;}
+#ppccpaymentSection .singleLblLeft .spanWthRadio{float: left;text-align: left;clear:both;}
+#ppccpaymentSection .signleDivLeft .spanWthRadio{float: left;text-align: left;clear:both;}
+
+/* Start of New CSS For Volaris PYT Page */
+.seatsContainer { width: 100%; background-color: #fff; margin-bottom: 10px; }
+/* chrome alignment */
+body:nth-of-type(1) .seatsContainer{clear:left;}
+
+.seatsContainer .seatsHeader {position:relative!important; height: 82px; margin: 0px; padding: 0px; background: #f7ebf7 url("../../images/default/ssr_header_bg.png") top right no-repeat; }
+.seatsContainer .seatsHeader h3 {
+   height: 82px;
+   background: transparent url("../../images/default/seats_header_bg_icon.png") top left no-repeat;
+   padding: 47px 10px 0px 100px;
+   font-size: 18px;
+   color: #ab50a0;
+}
+.seatsContainer .seatsHeader .seatsMoreInfo {margin-top:47px!important; position:absolute; right:0px; height: 28px; z-index:9999;}
+.seatsContainer .seatsHeader .seatsMoreInfo a {
+   padding: 2px;
+  background: url("../../images/default/ssr_expand_icon.png") top right no-repeat;
+}
+
+div.hoverSeatsMoreInfo {
+   display: none;
+   position:absolute!important;
+   left: 8px;
+   top: 77px;
+   padding: 5px;
+   width: 720px;
+   z-index:2;
+ }
+/* IE6, IE7, IE8 */
+div.hoverSeatsMoreInfo {left:6px\9; top:75px\9; }
+
+.moreInfoClose{height:53px; width:58px; text-align:center; background-color:#fff; postion:relative; margin-bottom:-2px;  float:right; border-top:2px solid #cacaca; border-right:2px solid #cacaca; border-left:2px solid #cacaca;}
+.moreInfoCont{
+    border:2px solid #cacaca;
+    background-color:#fff;
+    padding:10px;
+    -moz-box-shadow: 0px 0px 7px #ccc;
+    -webkit-box-shadow: 0px 0px 7px #ccc;
+    box-shadow: 0px 0px 7px #ccc;
+    /* For IE 8 */
+-ms-filter: progid:DXImageTransform.Microsoft.Shadow(color='#d0d0d0', Direction=45, Strength=1)
+            progid:DXImageTransform.Microsoft.Shadow(color='#d0d0d0', Direction=135, Strength=1)
+            progid:DXImageTransform.Microsoft.Shadow(color='#d0d0d0', Direction=225, Strength=1)
+            progid:DXImageTransform.Microsoft.Shadow(color='#d0d0d0', Direction=315, Strength=1);
+    /* For IE 5.5 - 7 */
+    filter: progid:DXImageTransform.Microsoft.Shadow(color='#d0d0d0', Direction=45, Strength=1)
+            progid:DXImageTransform.Microsoft.Shadow(color='#d0d0d0', Direction=135, Strength=1)
+            progid:DXImageTransform.Microsoft.Shadow(color='#d0d0d0', Direction=225, Strength=1)
+            progid:DXImageTransform.Microsoft.Shadow(color='#d0d0d0', Direction=315, Strength=1);
+}
+.seatsContainer .seatsContent { border: 1px solid #dcdadb; border-top: 0px; margin-left: 13px; padding-bottom: 10px; min-height:263px; }
+/* seats Description */
+.seatsContainer .seatsDescription { padding: 10px; margin: 0px; line-height: 16px;}
+.seatsContainer .seatsDetails {min-height:240px;}
+.seatsContainer .segmentInfo { float: left; width: 55%;}
+/* Seats Selection Form - Table */
+.seatsContainer .seatsSelection { width: 100%; }
+.seatsContainer .seatsSelection .seatsColumnHeader { padding: 0px;}
+.seatsContainer .seatsSelection th {padding: 4px 10px; margin: 0px; text-align: left;}
+.seatsContainer .seatsSelection td { padding: 8px 10px 8px; margin: 0px; text-align: left; }
+.seatsContainer .seatsSelection td.seatsPaxName span {}
+.seatsContainer .seatsSelection td.seatsSeatNbr { white-space: nowrap; }
+.seatsContainer .seatsSelection td.seatsSeatCost { white-space: nowrap; }
+.seatsContainer .seatsSelection td.seatsSeatCost .currencySymbol { text-align: right; }
+.seatsContainer .seatsSelection td.seatsSeatCost .seatAmount { text-align: left; }
+.seatsContainer .seatsSelection td.seatsSeatCost .currencyCode { display: inline; }
+.seatsContainer .seatsDetails .segmentInfo .departureFlight .flightInfo {
+   background: #f0f0f0 url("../../images/default/seats_section_dptr_header_bg.png") no-repeat;
+   line-height: 35px;
+   margin: 1px 0 1px;
+   padding-left: 40px;
+}
+.seatsContainer .seatsDetails .segmentInfo .departureFlight .flightInfoConn {
+   background: #f0f0f0 url("../../images/default/ss_dptr_conn_header_bg.png") no-repeat;
+   line-height: 35px;
+   margin: 1px 0 1px;
+   padding-left: 40px;
+}
+
+.seatsContainer .seatsDetails .segmentInfo .returnFlight .flightInfo {
+   background: #f0f0f0 url("../../images/default/seats_section_return_header_bg.png") no-repeat;
+   line-height: 35px;
+   margin: 1px 0 1px;
+   padding-left: 40px;
+}
+
+.seatsContainer .seatsDetails .segmentInfo .returnFlight .flightInfoConn {
+   background: #f0f0f0 url("../../images/default/ss_return_conn_header_bg.png") no-repeat;
+   line-height: 35px;
+   margin: 1px 0 1px;
+   padding-left: 40px;
+}
+.flightInfoConn {BACKGROUND-COLOR: #fff; MARGIN-BOTTOM: 15px; CLEAR: both;}
+.flightInfo .segmentDirection {}
+.flightInfo .boardOff {}
+.flightInfo .optionalAirport {display: none; }
+
+.flightInfoConn .boardOff {}
+.flightInfoConn .optionalAirport { display: none; }
+.opratingAirline { display: none; }
+.pytSelectSeatImg{float:right; width:42%;}
+.pytSelectSeatImgShow{width:auto; height:auto;}
+
+.seatsContainer .seatMap .selectSeatsButton {border: 1px #91548d solid; padding:5px 15px; margin-right: 20px; margin-top:27px; float:right;text-decoration:none;}
+
+#ajax_seatmap_spinner {
+   margin-left: auto;
+   position: relative;
+   top: 250px;
+   right: -125px;
+   z-index:9999;
+}
+
+.disablable { position:relative; overflow:hidden; }
+.disablable-disabled .glasspanel {
+   display:block;
+   position:absolute;
+   top:0;
+   bottom:0;
+   opacity:0.4;
+   /* IE hacks */
+   -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+   filter: alpha(opacity=50);
+   background-color: gray;
+   width:100%;
+}
+.disablable-enabled .glasspanel { display: none; }
+
+.SeatMapTitle{top:5px; right:-60px;  position: relative;}
+.seatsContainer .seatsDetails .clear { clear: both; }
+
+#pytExitSeatDisclaimer {display: none; position: relative; top: -700px; border: 1px solid; padding: 5px;}
+
+#pytExitSeatDisclaimerButton {
+  margin-top: 20px;
+  text-align: right;
+}
+
+/* SSR Container */
+.ssrContainer { width: 100%; background-color: #fff; margin-bottom: 10px;  }
+/* SSR Header */
+.ssrContainer .ssrHeader {position:relative!important; height: 82px; margin: 0px; padding: 0px; background: #f7ebf7 url("../../images/default/ssr_header_bg.png") top right no-repeat; }
+.ssrContainer .ssrHeader h3 { background: transparent url("../../images/default/ssr_header_bg_icon.png") top left no-repeat; height: 82px; padding: 47px 10px 0px 100px;}
+.ssrContainer .ssrHeader .ssrMoreInfo {margin-top:47px!important; position:absolute; right:0px; height: 28px;}
+.ssrContainer .ssrHeader .ssrMoreInfo a {background: url("../../images/default/ssr_expand_icon.png") top right no-repeat;}
+.ssrMoreinfoLink{padding:20px 50px 25px 20px!important;}
+.ssrMoreinfoLinkClick{background: url("../../images/default/ssr_close_icon.png") top right no-repeat!important; padding:25px 24px 21px 24px; position:relative; z-index:3;}
+.ssrHeader_OSBG{background: transparent url("../../images/default/ssr_header_bg_icon_minor.gif") top left no-repeat!important;}
+/* SSR Content*/
+.ssrContainer .ssrContent { border: 1px solid #dcdadb; border-top: 0px; margin-left: 13px; padding-bottom: 10px; }
+.ssrContainer .ssrContent .ssrSegment .ssrSegment {clear:both;float:left;}
+.ssrContainer .ssrContent .ssrSegment .pytSSRPrice {clear:both;float:left;padding-left: 12px;}
+/* SSR Description */
+.ssrContainer .ssrDescription { padding: 10px; margin: 0px; line-height: 16px; }
+.ssrContainer .ssrDescription span {}
+/* SSR Selection Form - Table */
+.ssrContainer .ssrSelection { width: 100%; }
+.ssrContainer .ssrSelection .ssrColumnHeader { padding: 0px;}
+.ssrContainer .ssrSelection th { padding: 4px 10px; margin: 0px; text-align: left;}
+.ssrContainer .ssrSelection td { padding: 4px 10px; margin: 0px; text-align: left; }
+.ssrContainer .ssrSelection td.ssrPaxName span {}
+.ssrContainer .ssrSelection td.ssrFlight { white-space: nowrap; }
+/* SSR Product Images */
+#ssrInsurance .ssrHeader h3 { background: transparent url("../../images/default/ssr_header_bg_iconInsurance.png") top left no-repeat; }
+#ssrLuggage .ssrHeader h3 { background: transparent url("../../images/default/ssr_header_bg_iconLuggage.png") top left no-repeat; }
+#ssrGuarantee .ssrHeader h3 { background: transparent url("../../images/default/ssr_header_bg_iconGuarantee.png") top left no-repeat; }
+#ssrShuttle .ssrHeader h3 { background: transparent url("../../images/default/ssr_header_bg_iconShuttle.png") top left no-repeat; }
+
+/* End of New CSS For Volaris PYT Page */
+
+    /* Shopping Cart CSS - Volaris */
+    #shoppingCart { width: 230px; background-color: #f0f0f0; color: #666; clear: both; }
+    #shoppingCart .header, #shoppingCart .flight, #shoppingCart .paxTypeInfo, #shoppingCart .summary { margin: 7px; }
+    #shoppingCart h3, #shoppingCart h4 { margin: 0px; color: #ab50a0; }
+    #shoppingCart h3 { font-size: 15px; padding-top: 5px;  }
+    #shoppingCart h4 { font-weight: normal; }
+    #shoppingCart .origDest { margin: 3px 0px; }
+
+    #shoppingCart .flight, #shoppingCart .paxTypeInfo, #shoppingCart .summary { padding: 5px;  background: #fff; }
+    #shoppingCart .flight .depDate, #shoppingCart .paxTypeInfo .paxNum, #shoppingCart .summary .discount { display: inline; color: #666; margin-left: 5px; }
+
+    /* Flights */
+    #shoppingCart .flight .route { margin: 0px; padding: 7px 0px; }
+    #shoppingCart .flight .route .city { list-style: none; float: left; margin-left: 10px; padding-left: 25px; min-width: 30px; background: url('../../images/default/arrow.gif') top left no-repeat;  }
+    #shoppingCart .flight .route .first {padding-left: 0px; background: none;}
+    #shoppingCart .clear { clear: both; }
+
+    /* Summary */
+    #shoppingCart .discountIcon { background: #fff url('../../images/default/icon_discount_02.gif') right -5px no-repeat; }
+    #shoppingCart .summary .discount {float: right; padding-right: 17px; color: #7fcd31; display: none; }
+    #shoppingCart .summary .showDiscount {float: right; padding-right: 17px; color: #7fcd31; display: inline; }
+    #shoppingCart .summary .lineItem { margin: 0px; padding: 7px 0px; }
+    #shoppingCart .summary .lineItem .extraRequest{ display: none }
+    #shoppingCart .summary .lineItem li { list-style: none; margin-top: 5px; }
+    #shoppingCart .summary .lineItem li .price { display: inline; float: right; padding-left: 3px; width: 30%; text-align: right;}
+    #shoppingCart .summary .lineItem li .taxLabel { display: inline; float: left; width: 65%;}
+    #shoppingCart .summary .lineItem li .discountAmtLabel { display: inline; float: left; width: 65%;}
+    #shoppingCart .summary .lineItem li .baseFare { display: inline; }
+    #shoppingCart .summary .lineItem li .taxes { display: inline; }
+    #shoppingCart .summary .paxExtras { padding-left: 16px; background: url('../../images/default/plus.gif') top left no-repeat; }
+    #shoppingCart .summary .expanded { background: url('../../images/default/minus.gif') top left no-repeat; }
+    #shoppingCart .summary .item { background: none; }
+    .noPadding { padding: 0px 0px 0px 0px !important; }
+    .reAssignWidth { width: 60% !important; }
+    .padding16 { padding-left: 16px; }
+    #shoppingCart .summary .lineItem li ul.noPadding li{padding-left:16px;}
+    #shoppingCart .paxTypeInfo .paxCollapsed { background: url('../../images/default/plus.gif') top right no-repeat; }
+    #shoppingCart .paxTypeInfo .paxExpanded { background: url('../../images/default/minus.gif') top right no-repeat; }
+    #shoppingCart .paxTypeInfo .paxCount { margin: 0px; padding: 7px 0px; display: none; }
+    #shoppingCart .paxTypeInfo .paxCount li { list-style: none; margin-top: 5px; }
+    #shoppingCart .paxTypeInfo .paxCount li .paxTypeLabel{ display: inline; float: left;  width: 70%; text-align: left; padding-left: 16px;}
+    #shoppingCart .paxTypeInfo .paxCount li .count{ display: inline; float: right; padding-left: 3px; width: 20%; text-align: right;}
+    .ssrsDetail { display:none; padding: 0px; }
+    .aesDetail { display:none; padding-left: 16px; }
+    /* Total Price */
+    #shoppingCart .totalPrice { background: #ab50a0; color: #fff; padding: 7px; }
+    #shoppingCart .totalPrice h2 { margin: 0px; font-size: 18px; height: 25px; padding: 5px;}
+    #shoppingCart .totalPrice .price { display: inline; float: right;  }
+    #shoppingCart .totalPrice .price span { font-size: 13px; font-weight: normal; }
+    .ssLbWrapperSC{ width:777px; height: 500px; overflow:auto; font-family:Arial, Helvetica, sans-serif; color:#666666; padding:17px;}
+	.floatLeft { float: left; }
+	.floatRight { float: right; }
+	.clearLeft { clear: left; }
+	.clearRight { clear: right; }
+	.clearBoth { clear: both; }
+	.padding5 { padding: 5px; }
+	.padding0 { padding: 0px; }
+	.vfrDataAvail { display: none; }
+
+    .pytSsPax{float:left; width:100%;}
+      /*Start PYT CSS for LightBox*/
+        #fancybox-loading {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 40px;
+            height: 40px;
+            margin-top: -20px;
+            margin-left: -20px;
+            cursor: pointer;
+            overflow: hidden;
+            z-index: 1104;
+            display: none;
+        }
+
+        #fancybox-loading div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 40px;
+            height: 480px;
+            background-image: url('../../images/default/fancybox/fancybox.png');
+        }
+
+        #fancybox-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1100;
+            display: none;
+        }
+
+        #fancybox-tmp {
+            padding: 0;
+            margin: 0;
+            border: 0;
+            overflow: auto;
+            display: none;
+        }
+
+        #fancybox-wrap {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 20px;
+            z-index: 1101;
+            outline: none;
+            display: none;
+        }
+
+        #fancybox-outer {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+        }
+
+        #fancybox-content {
+            width: 0;
+            height: 0;
+            padding: 0;
+            outline: none;
+            position: relative;
+            overflow: hidden;
+            z-index: 1102;
+            border: 1px solid #fff;
+        }
+
+        #fancybox-hide-sel-frame {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            z-index: 1101;
+        }
+
+        #fancybox-close {
+            position: absolute;
+            top: 7px;
+            right: 7px;
+            width: 30px;
+            height: 30px;
+            background-image:url('../../images/default/fancybox/fancy_close.png');
+            background-position:0px 0px;
+            background-repeat:no-repeat;
+            cursor: pointer;
+            z-index: 1103;
+            display: none;
+        }
+
+        #fancybox-error {
+            color: #444;
+            font: normal 12px/20px Arial;
+            padding: 14px;
+            margin: 0;
+        }
+
+        #fancybox-img {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            border: none;
+            outline: none;
+            line-height: 0;
+            vertical-align: top;
+        }
+
+        #fancybox-frame {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+
+        #fancybox-left, #fancybox-right {
+            position: absolute;
+            bottom: 0px;
+            height: 100%;
+            width: 35%;
+            cursor: pointer;
+            outline: none;
+            background: transparent url('../../images/default/fancybox/blank.gif');
+            z-index: 1102;
+            display: none;
+        }
+
+        #fancybox-left {
+            left: 0px;
+        }
+
+        #fancybox-right {
+            right: 0px;
+        }
+
+        #fancybox-left-ico, #fancybox-right-ico {
+            position: absolute;
+            top: 50%;
+            left: -9999px;
+            width: 30px;
+            height: 30px;
+            margin-top: -15px;
+            cursor: pointer;
+            z-index: 1102;
+            display: block;
+        }
+
+        #fancybox-left-ico {
+   background: url('../../images/default/fancybox/fancybox.png') -40px -30px;
+        }
+
+        #fancybox-right-ico {
+   background: url('../../images/default/fancybox/fancybox.png') -40px -60px;
+        }
+
+        #fancybox-left:hover, #fancybox-right:hover {
+            visibility: visible; /* IE6 */
+        }
+
+        #fancybox-left:hover span {
+            left: 20px;
+        }
+
+        #fancybox-right:hover span {
+            left: auto;
+            right: 20px;
+        }
+
+        .fancybox-bg {
+            position: absolute;
+            padding: 0;
+            margin: 0;
+            border: 0;
+            width: 20px;
+            height: 20px;
+            z-index: 1001;
+        }
+
+        #fancybox-bg-n {
+            top: -20px;
+            left: 0;
+            width: 100%;
+            background-image: url('../../images/default/fancybox/fancybox-x.png');
+        }
+
+        #fancybox-bg-ne {
+            top: -20px;
+            right: -20px;
+            background-image: url('../../images/default/fancybox/fancybox.png');
+            background-position: -40px -162px;
+        }
+
+        #fancybox-bg-e {
+            top: 0;
+            right: -20px;
+            height: 100%;
+            background-image: url('../../images/default/fancybox/fancybox-y.png');
+            background-position: -20px 0px;
+        }
+
+        #fancybox-bg-se {
+            bottom: -20px;
+            right: -20px;
+            background-image: url('../../images/default/fancybox/fancybox.png');
+            background-position: -40px -182px;
+        }
+
+        #fancybox-bg-s {
+            bottom: -20px;
+            left: 0;
+            width: 100%;
+            background-image: url('../../images/default/fancybox/fancybox-x.png');
+            background-position: 0px -20px;
+        }
+
+        #fancybox-bg-sw {
+            bottom: -20px;
+            left: -20px;
+            background-image: url('../../images/default/fancybox/fancybox.png');
+            background-position: -40px -142px;
+        }
+
+        #fancybox-bg-w {
+            top: 0;
+            left: -20px;
+            height: 100%;
+            background-image: url('../../images/default/fancybox/fancybox-y.png');
+        }
+
+        #fancybox-bg-nw {
+            top: -20px;
+            left: -20px;
+            background-image: url('../../images/default/fancybox/fancybox.png');
+            background-position: -40px -122px;
+        }
+
+        #fancybox-title {
+            font-family: Helvetica;
+            font-size: 12px;
+            z-index: 1102;
+        }
+
+        .fancybox-title-inside {
+            padding-bottom: 10px;
+            text-align: center;
+            color: #333;
+            background: #fff;
+            position: relative;
+        }
+
+        .fancybox-title-outside {
+            padding-top: 10px;
+            color: #fff;
+        }
+
+        .fancybox-title-over {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            color: #FFF;
+            text-align: left;
+        }
+
+        #fancybox-title-over {
+            padding: 10px;
+            background-image: url('../../images/default/fancybox/fancy_title_over.png');
+            display: block;
+        }
+
+        .fancybox-title-float {
+            position: absolute;
+            left: 0;
+            bottom: -20px;
+            height: 32px;
+        }
+
+        #fancybox-title-float-wrap {
+            border: none;
+            border-collapse: collapse;
+            width: auto;
+        }
+
+        #fancybox-title-float-wrap td {
+            border: none;
+            white-space: nowrap;
+        }
+
+        #fancybox-title-float-left {
+            padding: 0 0 0 15px;
+            background: url('../../images/default/fancybox/fancybox.png') -40px -90px no-repeat;
+        }
+
+        #fancybox-title-float-main {
+            color: #FFF;
+            line-height: 29px;
+            font-weight: bold;
+            padding: 0 0 3px 0;
+            background: url('../../images/default/fancybox/fancybox-x.png') 0px -40px;
+        }
+
+        #fancybox-title-float-right {
+            padding: 0 0 0 15px;
+            background: url('../../images/default/fancybox/fancybox.png') -55px -90px no-repeat;
+        }
+
+        /* IE6 */
+
+        .fancybox-ie6 #fancybox-close { background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='application/images/default/fancybox/fancy_close.png', sizingMethod='scale'); }
+        .fancybox-ie6 #fancybox-left-ico { background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='application/images/default/fancybox/fancy_nav_left.png', sizingMethod='scale'); }
+        .fancybox-ie6 #fancybox-right-ico { background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='application/images/default/fancybox/fancy_nav_right.png', sizingMethod='scale'); }
+        .fancybox-ie6 #fancybox-title-over { background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='application/images/default/fancybox/fancy_title_over.png', sizingMethod='scale'); zoom: 1; }
+        .fancybox-ie6 #fancybox-title-float-left { background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='application/images/default/fancybox/fancy_title_left.png', sizingMethod='scale'); }
+        .fancybox-ie6 #fancybox-title-float-main { background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='application/images/default/fancybox/fancy_title_main.png', sizingMethod='scale'); }
+        .fancybox-ie6 #fancybox-title-float-right { background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='application/images/default/fancybox/fancy_title_right.png', sizingMethod='scale'); }
+        .fancybox-ie6 #fancybox-bg-w, .fancybox-ie6 #fancybox-bg-e, .fancybox-ie6 #fancybox-left, .fancybox-ie6 #fancybox-right, #fancybox-hide-sel-frame {
+            height: expression(this.parentNode.clientHeight + "px");
+        }
+
+        #fancybox-loading.fancybox-ie6 {
+            position: absolute; margin-top: 0;
+            top: expression( (-20 + (document.documentElement.clientHeight ? document.documentElement.clientHeight/2 : document.body.clientHeight/2 ) + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop )) + 'px');
+        }
+
+        #fancybox-loading.fancybox-ie6 div  { background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='application/images/default/fancybox/fancy_loading.png', sizingMethod='scale'); }
+
+        /* IE6, IE7, IE8 */
+
+        .fancybox-ie .fancybox-bg { background: transparent !important; }
+
+        .fancybox-ie #fancybox-bg-n {filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='application/images/default/fancybox/fancy_shadow_n.png', sizingMethod='scale'); }
+        .fancybox-ie #fancybox-bg-ne {filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='application/images/default/fancybox/fancy_shadow_ne.png', sizingMethod='scale'); }
+        .fancybox-ie #fancybox-bg-e {filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='application/images/default/fancybox/fancy_shadow_e.png', sizingMethod='scale'); }
+        .fancybox-ie #fancybox-bg-se {filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='application/images/default/fancybox/fancy_shadow_se.png', sizingMethod='scale'); }
+        .fancybox-ie #fancybox-bg-s {filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='application/images/default/fancybox/fancy_shadow_s.png', sizingMethod='scale'); }
+        .fancybox-ie #fancybox-bg-sw {filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='application/images/default/fancybox/fancy_shadow_sw.png', sizingMethod='scale'); }
+        .fancybox-ie #fancybox-bg-w {filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='application/images/default/fancybox/fancy_shadow_w.png', sizingMethod='scale'); }
+        .fancybox-ie #fancybox-bg-nw {filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='application/images/default/fancybox/fancy_shadow_nw.png', sizingMethod='scale'); }
+        .clear{clear:both; height:0;font-size: 1px;line-height: 0px;}
+        .clearssTbl{clear:both; height:0;font-size: 1px;line-height: 10px;}
+
+        .ssLbWrapper{ width:710px; overflow:hidden; font-family:Arial, Helvetica, sans-serif; color:#af5ba9; padding:0px 0px 0px 0px;}
+        .ssLbwrapperLft{float:left; width:440px;  min-height:500px; padding:17px 0px 17px 17px;}
+        .ssLbWrapperRt{float:right; width:225px; border:0px; min-height:500px; padding:17px 8px 17px 17px;}
+        .ssPageHeadingCont{padding: 4px 0 6px 17px; height:30px;}
+        h1.ssPageHeading{margin: 0; padding-top:0px!important; padding-left:0px!important;}
+        h2.ssContHeading{font-size:17px; font-weight:bold; margin:5px 0px; background-color:#f0f0f0;}
+        .ssContHeadingDepart{background: #f0f0f0 url("../../images/default/seats_section_dptr_header_bg.png") no-repeat; padding-left: 40px;}
+        .ssContHeadingArrival{background: url("../../images/default/seats_section_return_header_bg.png") no-repeat; padding-left: 40px;}
+        .ssDepconnAirplaneIcon{background: #f0f0f0 url("../../images/default/ss_dptr_conn_header_bg.png") no-repeat; padding-left: 40px;}
+        .ssArrconnAirplaneIcon{background: #f0f0f0 url("../../images/default/ss_return_conn_header_bg.png") no-repeat; padding-left: 40px;}
+        h2.ssContHeading .cityCode{display:none;}
+        h3.ssSubContHeading{font-size:15px; font-weight:bold; color:#ae4da4;}
+        .ssPcontent{font-size:13px;}
+        .ssTblWrapper01{}
+        .ssTblWrapper02{}
+        .ssTbl{}
+        .ssTblRow{background-color:#efefef;}
+        .ssTblRow:hover{background-color:#ab4fa1; color:#fff;}
+        .ssTBLRowSel{background-color:#ab4fa1; color:#fff;}
+        .ssTblBlnkrow{height:5px;}
+
+        .ssTblHCell{font-size:14px; font-weight:bold; color:#ae4da4; padding:6px; height:17px; text-align:left;}
+        .ssTblCell{font-size:13px; font-weight:bold;  padding:6px; height:17px;}
+        .ssLink1{font-size:15px; color:#ab4fa1; font-weight:bold;}
+        .ssLink1:hover{font-size:15px;}
+
+        .ssDivNav{ text-align:right; padding:10px;}
+
+
+        .ssBtnAdvBtn {float: right; margin: 0; padding-top: 20px; width: auto;}
+        .ssBtn {clear: both; margin: 0; padding-bottom: 15px; padding-top: 15px; width: 100%;}
+        .ssBtn input, .ssBtnAdvBtn input {background: url("../../images/default/btn_bg.gif") repeat-x scroll 0 0 #000; border: 1px solid #000; color: #FFF; cursor: pointer; float: right; font-family: Arial; font-size: 23px; height: 40px; margin: 0 0 0 5px; padding: 2px 23px 4px 23px; text-align: center;}
+        .ssBtnAdvAncr {font-weight:bold; float: right; margin-right:20px; vertical-align:bottom; margin-top:36px;}
+        .ssBtnAdvAncrLink{text-decoration:underline!important;}
+        .paddLeftTitle { /*padding-left: 15px;*/ }
+        .onHPageHeadingCont{background-color: #F7EBF6 !important; height: 30px; padding: 4px 0 6px 17px;}
+        /* the following rules apply only to IE6 */
+        * html input{overflow: visible;}
+        /* the following rules apply only to IE7 */
+        *+html input{overflow: visible;}
+
+      /*End PYT CSS for LightBox*/
+
+      #pytseatMapTable {
+      border: collapse;
+    }
+    
+     /*Changes for AE Page CSS for Advisory lightbox*/
+          .aeBtnAdvAncr {font-weight:bold; float: right; margin-right:20px; vertical-align:bottom; margin-top:36px;} 
+          .aeBtnAdvBtn {float: right; margin: 0; padding-top: 20px; width: auto;} 
+          .aePageHeadingCont{background-color: #F7EBF6 !important; height: 30px; padding: 4px 0 6px 17px;}  
+          .aeLeftTitle { /*padding-left: 15px;*/ }
+          .aeBtn input, .aeBtnAdvBtn input {background: url("../../images/default/btn_bg.gif") repeat-x scroll 0 0 #000; border: 1px solid #000; color: #FFF; cursor: pointer; float: right; font-family: Arial; font-size: 23px; height: 40px; margin: 0 0 20 5px; padding: 2px 23px 4px 23px; text-align: center;}
+           
+#pytSeatSpinner{visibility:hidden; width:30px;min-height:500px;padding:280px 5px;float:left}
+
+    #pytseatMapTable, #pytseatMapTable td, #pytseatMapTable tr {
+      padding: 0;
+      margin: 0;
+      text-align: center;
+      color:#a950a0;
+    }
+
+    #pytseatMapTable td img {
+      width: 20px;
+      height: 20px;
+      padding:5px 0px;
+      border: 0;
+    }
+
+    #pytseatMapTable td.available {
+      cursor: pointer;
+      background: #fff;
+    }
+
+    #pytseatMapTable td.limited {
+      cursor: pointer;
+       background: #fff !important;
+    }
+    #pytseatMapTable td.unavailable {
+      background: #fff;
+    }
+
+    #pytseatMapTable td.availupper {
+      cursor: pointer;
+      background: #aa0;
+    }
+
+    #pytseatMapTable td.availupper img.selected {
+      background: #0f6;
+    }
+
+    #pytseatMapTable td.available img.selected {
+      background: #fff;
+    }
+
+    #pytseatMapTable td.limited img.selected {
+      background: #0f0;
+    }
+
+    .pytWinStdLeft {
+        background: url("../../images/default/pyt_wing_gray_left.gif") repeat-y;
+    }
+
+    .pytWinStdRight {
+        background: url("../../images/default/pyt_wing_gray_right.gif") repeat-y;
+    }
+
+    .pytWingWt {
+        background: url("../../images/default/pytSeatPixel.gif") no-repeat;
+    }
+
+    .pytWingCrossTopLeft {
+        background: url("../../images/default/pyt_wingleft.gif") no-repeat;
+    }
+
+    .pytWingPointerTopLeft {
+        background: url("../../images/default/pyt_wing_point_topleft.gif");
+    }
+
+    .pytWingPointerTopRight {
+        background: url("../../images/default/pyt_wing_point_topright.gif");
+    }
+
+    .pytWingPointerBottomLeft {
+        background: url("../../images/default/pyt_wing_point_bottomleft.gif");
+    }
+
+    .pytWingPointerBottomRight {
+        background: url("../../images/default/pyt_wing_point_bottomright.gif");
+    }
+
+    .pytWingCrossTopRight {
+        background: url("../../images/default/pyt_wingright.gif") no-repeat;
+    }
+
+    .pytWingCrossBottomLeft {
+        background: url("../../images/default/pyt_wingleft_bottom.gif") no-repeat;
+    }
+
+    .pytWingCrossBottomRight {
+        background: url("../../images/default/pyt_wingright_bottom.gif") no-repeat;
+    }
+
+
+    #pytseatMapLegend div.item div.icon_available {
+      background: #fff;
+    }
+
+    #pytseatMapLegend div.item div.icon_unavailable {
+      background: #fff;
+    }
+
+    #pytseatMapLegend div.item div.icon_availupper {
+      background: #fff;
+    }
+
+    #pytseatMapLegend{background-color:#fff; border:8px solid #cccccc; margin-bottom:25px;}
+    .pytLegendDisplay{padding:5px;}
+    .pytLegendDisplay img{padding-right:6px;}
+    /* New Look Payment Page starts */
+    /* Sprite css for CC logos */
+    .pmIcon{background-image:url('../../images/default/payment_icons.gif'); background-repeat:no-repeat; width:50px; height:30px; clear:both; float: right; }
+    .BA{ background-position:0px -30px;}
+    .VI{ background-position:0px -30px;}
+    .IK{ background-position:0px -60px;}
+    .CA{ background-position:0px -60px;}
+    .AX{background-position:0px -90px;}
+    .pmIconCirus{background-position:0px -120px;}
+    .Visae{background-position:0px -150px;}
+    .Paypal{background-position:0px -180px;}
+    .Billme{background-position:0px -210px;}
+    .We{background-position:0px -240px;}
+    .TP{background-position:0px -270px;}
+    .JB{background-position:0px -300px;}
+    .PT{background-position:0px -330px;}
+    .DC{background-position:0px -360px;}
+    .DS{background-position:0px -390px;}
+
+    /* .DC .pmIcon {background-image:url('../../images/default/payment_icon_DC.gif'); } */
+    /* .DS .pmIcon {background-image:url('../../images/default/payment_icon_DS.gif'); } */
+
+   .pmBackground {background-color:#eaebe6;}
+   .pmBackgroundTravelBank {background-color:#eaebe6;height:60px;}
+   .pmBackgroundNew {padding-bottom:10px;}
+
+    .pmChkboxHeader {
+        padding-left:15px;
+        padding-right:15px;
+        vertical-align: top;
+        padding-top: 20px;
+        float: left;
+    }
+	.pmChkboxDetail{width:520px;float:left;padding-left:16px;}
+    .pmTextHeader {
+    color:#000;
+    font-family:Arial;
+    font-size:13px;
+    font-weight:bold;
+    line-height:25px;
+    margin:0;
+    padding-left:15px;
+    }
+	.pmTextDetails {
+    color:#000;
+    font-family:Arial;
+    font-size:11px;
+    font-weight:normal;
+	height: 24px;
+	padding-top: 22px;
+    }
+
+	.pmThirdParty {
+	height:60px;
+	padding:10px 0 5px 0;
+    }
+
+    ul.checkboxgroup {
+    list-style-type:none;
+    padding:12px 0 15px;
+    }
+    ul.checkboxgroup li {
+
+    float:left;
+    margin-right:30px;
+    width: 70px;
+    height: 45px;
+
+    }
+   /* Payment Container */
+    .hidden {display:none}
+    .logosSection {width:520px;float:left;padding-left:16px}
+    .paymentContainer { width: 100%; background-color: #fff; margin-bottom: 10px; font-size: 11px; font-family: arial;  }
+	.paymentFareRuleLB{ width:580px ;overflow:auto; font-family:Arial, Helvetica, sans-serif; color:#666666; padding:17px;}
+
+    /* Payment Header */
+    .paymentHeader { height: 82px; margin: 0px; padding: 0px; background: #f7ebf7 url(../../images/default/payment_header_bg.png) top right no-repeat;  }
+    .paymentHeaderh3 { height: 82px; background:  transparent url(../../images/default/payment_header_bg_icon.png) top left no-repeat; padding: 47px 10px 0px 100px; font-size: 18px; color: #ab50a0;  }
+    .paymentMoreInfo { float: right; padding-right: 10px; height: 28px; }
+    .paymentMoreInfo a { font-family: arial; font-size: 12px; padding: 2px;font-weight: normal; color: #ab50a0; padding-right: 20px; background: url(payment_expand_icon.png) top right no-repeat; }
+
+
+    /* Payment Content*/
+    .paymentContent { border: 1px solid #dcdadb; border-top: 0px; margin-left: 13px; padding-bottom: 10px;}
+
+    /* Travel Bank Form */
+		.paymentContainer #FOP_TRAVEL_BANK fieldset legend { display: none; }
+		.paymentContainer #FOP_TRAVEL_BANK fieldset li { width: 600px; }
+		.paymentContainer #FOP_TRAVEL_BANK fieldset label { display: inline-block; text-align: right; width: 300px; margin-right: 10px;}
+		.paymentContainer #FOP_TRAVEL_BANK fieldset span, .paymentContainer #FOP_TRAVEL_BANK fieldset input { display: inline-block; }
+		.paymentContainer #FOP_TRAVEL_BANK fieldset .btForm_message span { color: #ff0000; font-weight: normal; text-align: left; text-align: left; padding-left: 313px; width: 600px;  }
+		.paymentContainer #FOP_TRAVEL_BANK fieldset span { color: #ab50a0; font-weight: bold;}
+		.paymentContainer #FOP_TRAVEL_BANK fieldset input { margin-right: 5px;}
+		.paymentContainer #FOP_TRAVEL_BANK fieldset input.btForm_submit { width: auto;}
+
+		.alertTravelBankUsage {width: 380px!important;}
+
+    /*For horizontal display add following in vm_custom.css
+    ul.fareRules li{display:inline; float:left;  padding-right: 20px; width:320px!important;}
+    ul.fareRules li textarea{width:320px!important;}
+    */
+    ul.fareRules li{display:inline; padding-right: 20px;}
+
+    /*Credit card detail section starts*/
+        .cscIcon{background:url('../../images/default/questionMark.gif') no-repeat; width:16px; height:16px;padding:0 8px; margin-left:2px}
+		.paymentContainer .paymentSelectedContent fieldset li.required label { background: 	url(../../images/default/required.gif) top right no-repeat;}
+		.paymentContainer .paymentSelectedContent  {padding-left: 25px; padding-bottom: 20px;}
+		.paymentContainer .paymentSelectedContent .ccfieldset{ float: left; padding-bottom: 20px;}
+.paymentContainer .paymentSelectedContent .addressfieldset { width: 300px; margin: 0 20px 0 0; padding:0;}
+		.paymentContainer .paymentSelectedContent .ccfieldset { margin-right: 20px; }
+		.paymentContainer .paymentSelectedContent fieldset {border: 0px;}
+		.paymentContainer .paymentSelectedContent fieldset ol { margin: 0px; padding: 0px; }
+		.paymentContainer .paymentSelectedContent fieldset ol li { list-style: none; margin-bottom: 7px; width: 300px;}
+		.paymentContainer .paymentSelectedContent .ccfieldset  li  label  { display: inline-block; width: 125px;font-size:12px }
+
+		.paymentContainer .paymentSelectedContent .addressfieldset  li label {display: inline-block; width: 95px;font-size:12px}
+		.paymentContainer .paymentSelectedContent fieldset li input { width: 145px;}
+		.paymentContainer .paymentSelectedContent fieldset input, .paymentContainer .paymentSelectedContent fieldset select { display: inline; margin-left: 0px;}
+		.paymentContainer  .paymentSelectedContent fieldset .ccForm_cardholder h5 { margin-left: 125px; font-size: 11px; color: #999; }
+        .paymentContainer  .paymentSelectedContent fieldset .ccForm_securitycode input {width: 40px;}
+        .paymentContainer  .paymentSelectedContent fieldset .ccForm_issueNumber input {width: 30px;}
+.paymentContainer  .paymentSelectedContent fieldset .ccForm_securitypin input {width: 40px;}
+		.paymentContainer  .paymentSelectedContent fieldset input.phone1 { display: inline; width: 25px;}
+		.paymentContainer .paymentSelectedContent fieldset input.phone2 { display: inline; width: 60px;}
+		.paymentContainer .paymentSelectedContent .ccfieldset .ccForm_ccnumber  { width: 300px;}
+		.paymentContainer .paymentSelectedContent .ccfieldset .ccForm_cardholder { width: 300px; }
+		.paymentContainer .paymentSelectedContent .ccfieldset .ccForm_expiration { width: 300px; }
+		.paymentContainer .paymentSelectedContent .ccfieldset .ccForm_securitycode { width: 260px; }
+        .paymentContainer .paymentSelectedContent .ccfieldset .ccForm_securitypin {width: 300px;}
+		.paymentContainer .paymentSelectedContent .ccfieldset .ccForm_telephone { width: 300px; }
+		.paymentContainer .paymentSelectedContent .ccfieldset .ccForm_email { width: 300px; }
+		.paymentContainer  .paymentSelectedContent .addressfieldset .addressForm_address1{width: 300px;}
+		.paymentContainer  .paymentSelectedContent .addressfieldset .addressForm_address2 {margin-left: 92px;width: 300px;}
+		.paymentContainer  .paymentSelectedContent .addressfieldset .addressForm_city{width: 300px;}
+		.paymentContainer .paymentSelectedContent .addressfieldset .addressForm_country span { width: 60px}
+	/*Credit card detail section ends*/
+    /* New Look Payment Page ends */
+
+/* Horizontal Layout of Pax Fields */
+.Horizontal  { margin-top: 0px; }
+.Horizontal .paxp_PTField {display: none;}
+
+.Horizontal .paxp_SPreField {margin-left: 0px;}
+
+.Horizontal .paxp_PTField, .Horizontal .paxp_PLbl, .Horizontal .paxp_FNField, .Horizontal .middleNameField, .Horizontal .paxp_LNField, .Horizontal .paxp_SSRMSField,
+.Horizontal .paxp_SPreField, .Horizontal .paxp_SSRField1, .Horizontal .paxp_SSRField2, .Horizontal div.dobFields,
+.Horizontal .paxp_DGenField, .Horizontal .paxp_FF,  .Horizontal .paxp_RNField, .Horizontal .paxp_TNField, .Horizontal .paxp_UMNRField
+{ float: left; clear: none; margin-right: 10px; width: 160px; margin-bottom: 10px; }
+
+.Horizontal .paxp_SSRField1, .Horizontal .paxp_SSRField2 { width: 230px; }
+
+.Horizontal div.dobFields  { padding-bottom: 0px;  width: 350px; }
+
+.Horizontal div.dobFields label { clear: none; margin-left: 5px; }
+
+.Horizontal div.dobFields .childDOB { float: left; }
+
+
+.Horizontal .paxp_PTField span, .Horizontal .paxp_PLbl span, .Horizontal .paxp_FNField span, .Horizontal .middleNameField span, .Horizontal .paxp_LNField span,
+.Horizontal .paxp_SSRMSField span, .Horizontal .paxp_SPreField span, .Horizontal .paxp_SSRField1 span, .Horizontal .paxp_SSRField2 span, .Horizontal div.dobFields span,
+.Horizontal .paxp_DGenField span, .Horizontal .paxp_FF paxp_FFNum, .Horizontal .paxp_RNField span, .Horizontal .paxp_TNField span, .Horizontal .paxp_UMNRField span
+{ display: block; float: none; padding-left: 0px; height: 20px; }
+
+.Horizontal .paxp_PTField select, .Horizontal .paxp_PLbl select, .Horizontal .paxp_FNField input, .Horizontal .middleNameField input,
+.Horizontal .paxp_LNField input
+{ display: block; clear: left; }
+.advisoryMsgBtns {
+	text-align: right; padding-top: 10px; width: 100%;
+}
+
+.valignMiddle{
+	vertical-align: middle;
+}
+.tripDetails{
+	float:left;
+	padding-left:20px;
+}
+.advisoryMsg{
+	float:left;
+	color: #000000;
+	padding-left:15px;
+}
+.advMsgDecor{
+	display: none;
+}
+
+.btfopMain {clear: left; padding-top: 6px; position: relative; width:240px;}
+.btfopHeading{font-size:11px; font-weight:bold;}
+.btfopCol1{width:130px; float:left;}
+.btfopCol2{width:110px; float:left; text-align:right;}
+.btfopCol1 p, .btfopCol2 p{margin-bottom:0px;}
+/*
+ *  File:         demo_table.css
+ *  CVS:          $Id$
+ *  Description:  CSS descriptions for DataTables demo pages
+ *  Author:       Allan Jardine
+ *  Created:      Tue May 12 06:47:22 BST 2009
+ *  Modified:     $Date$ by $Author$
+ *  Language:     CSS
+ *  Project:      DataTables
+ *
+ *  Copyright 2009 Allan Jardine. All Rights Reserved.
+ *
+ * ***************************************************************************
+ * DESCRIPTION
+ *
+ * The styles given here are suitable for the demos that are used with the standard DataTables
+ * distribution (see www.datatables.net). You will most likely wish to modify these styles to
+ * meet the layout requirements of your site.
+ *
+ * Common issues:
+ *   'full_numbers' pagination - I use an extra selector on the body tag to ensure that there is
+ *     no conflict between the two pagination types. If you want to use full_numbers pagination
+ *     ensure that you either have "example_alt_pagination" as a body class name, or better yet,
+ *     modify that selector.
+ *   Note that the path used for Images is relative. All images are by default located in
+ *     ../images/ - relative to this CSS file.
+ */
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * DataTables features
+ */
+
+.dataTables_wrapper {
+	position: relative;
+	/*min-height: 302px;*/
+	clear: both;
+	_height: 302px;
+	zoom: 1; /* Feeling sorry for IE */
+}
+
+.dataTables_processing {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 250px;
+	height: 30px;
+	margin-left: -125px;
+	margin-top: -15px;
+	padding: 14px 0 2px 0;
+	border: 1px solid #ddd;
+	text-align: center;
+	color: #999;
+	font-size: 14px;
+	background-color: white;
+}
+
+.dataTables_length {
+	width: 40%;
+	float: left;
+}
+
+.dataTables_filter {
+	width: 50%;
+	float: right;
+	text-align: right;
+}
+
+.dataTables_info {
+	width: 60%;
+	float: left;
+}
+
+.dataTables_paginate {
+	width: 44px;
+	* width: 50px;
+	float: right;
+	text-align: right;
+}
+
+/* Pagination nested */
+.paginate_disabled_previous, .paginate_enabled_previous, .paginate_disabled_next, .paginate_enabled_next {
+	height: 19px;
+	width: 19px;
+	margin-left: 3px;
+	float: left;
+}
+
+.paginate_disabled_previous {
+	background-image: url('../../images/default/back_disabled.jpg');
+}
+
+.paginate_enabled_previous {
+	background-image: url('../../images/default/back_enabled.jpg');
+}
+
+.paginate_disabled_next {
+	background-image: url('../../images/default/forward_disabled.jpg');
+}
+
+.paginate_enabled_next {
+	background-image: url('../../images/default/forward_enabled.jpg');
+}
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * DataTables display
+ */
+table.display {
+	margin: 0 auto;
+	clear: both;
+	width: 100%;
+
+	/* Note Firefox 3.5 and before have a bug with border-collapse
+	 * ( https://bugzilla.mozilla.org/show%5Fbug.cgi?id=155955 )
+	 * border-spacing: 0; is one possible option. Conditional-css.com is
+	 * useful for this kind of thing
+	 *
+	 * Further note IE 6/7 has problems when calculating widths with border width.
+	 * It subtracts one px relative to the other browsers from the first column, and
+	 * adds one to the end...
+	 *
+	 * If you want that effect I'd suggest setting a border-top/left on th/td's and
+	 * then filling in the gaps with other borders.
+	 */
+}
+
+table.display thead th {
+	padding: 3px 18px 3px 10px;
+	border-bottom: 1px solid black;
+	font-weight: bold;
+	cursor: pointer;
+	* cursor: hand;
+}
+
+table.display tfoot th {
+	padding: 3px 18px 3px 10px;
+	border-top: 1px solid black;
+	font-weight: bold;
+}
+
+table.display tr.heading2 td {
+	border-bottom: 1px solid #aaa;
+}
+
+table.display td {
+	padding: 3px 10px;
+}
+
+table.display td.center {
+	text-align: center;
+}
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * DataTables sorting
+ CSS TURNED OFF BY DEFAULT FOR COMMUNITY.
+ MUST BE OVERRIDDEN IN VM_CUSTOM.CSS TO SHOW UP
+
+.sorting_asc {
+	background: url('../../images/default/sort_asc.png') no-repeat center bottom;
+}
+
+.sorting_desc {
+	background: url('../../images/default/sort_desc.png') no-repeat center bottom;
+}
+
+.sorting {
+	background: url('../../images/default/sort_both.png') no-repeat center bottom;
+}
+
+.sorting_asc_disabled {
+	background: url('../../images/default/sort_asc_disabled.png') no-repeat center bottom;
+}
+
+.sorting_desc_disabled {
+	background: url('../../images/default/sort_desc_disabled.png') no-repeat center bottom;
+}
+ */
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * DataTables row classes
+
+table.display tr.odd.gradeA {
+	background-color: #ddffdd;
+}
+
+table.display tr.even.gradeA {
+	background-color: #eeffee;
+}
+
+table.display tr.odd.gradeC {
+	background-color: #ddddff;
+}
+
+table.display tr.even.gradeC {
+	background-color: #eeeeff;
+}
+
+table.display tr.odd.gradeX {
+	background-color: #ffdddd;
+}
+
+table.display tr.even.gradeX {
+	background-color: #ffeeee;
+}
+
+table.display tr.odd.gradeU {
+	background-color: #ddd;
+}
+
+table.display tr.even.gradeU {
+	background-color: #eee;
+}
+
+
+tr.odd {
+	background-color: #E2E4FF;
+}
+
+tr.even {
+	background-color: white;
+}
+*/
+
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * Misc
+ */
+.dataTables_scroll {
+	clear: both;
+}
+
+.dataTables_scrollBody {
+	*margin-top: -1px;
+}
+
+.top, .bottom {
+	padding: 15px;
+	background-color: #F5F5F5;
+	border: 1px solid #CCCCCC;
+}
+
+.top .dataTables_info {
+	float: none;
+}
+
+.clear {
+	clear: both;
+}
+
+.dataTables_empty {
+	text-align: center;
+}
+
+tfoot input {
+	margin: 0.5em 0;
+	width: 100%;
+	color: #444;
+}
+
+tfoot input.search_init {
+	color: #999;
+}
+
+td.group {
+	background-color: #d1cfd0;
+	border-bottom: 2px solid #A19B9E;
+	border-top: 2px solid #A19B9E;
+}
+
+td.details {
+	background-color: #d1cfd0;
+	border: 2px solid #A19B9E;
+}
+
+
+.example_alt_pagination div.dataTables_info {
+	width: 40%;
+}
+
+.paging_full_numbers {
+	width: 400px;
+	height: 22px;
+	line-height: 22px;
+}
+
+.paging_full_numbers span.paginate_button,
+ 	.paging_full_numbers span.paginate_active {
+	border: 1px solid #aaa;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	padding: 2px 5px;
+	margin: 0 3px;
+	cursor: pointer;
+	*cursor: hand;
+}
+
+.paging_full_numbers span.paginate_button {
+	background-color: #ddd;
+}
+
+.paging_full_numbers span.paginate_button:hover {
+	background-color: #ccc;
+}
+
+.paging_full_numbers span.paginate_active {
+	background-color: #99B3FF;
+}
+
+table.display tr.even.row_selected td {
+	background-color: #B0BED9;
+}
+
+table.display tr.odd.row_selected td {
+	background-color: #9FAFD1;
+}
+
+
+/*
+ * Sorting classes for columns
+ */
+/* Not using these
+tr.odd td.sorting_1 {
+	background-color: #D3D6FF;
+}
+
+tr.odd td.sorting_2 {
+	background-color: #DADCFF;
+}
+
+tr.odd td.sorting_3 {
+	background-color: #E0E2FF;
+}
+
+tr.even td.sorting_1 {
+	background-color: #EAEBFF;
+}
+
+tr.even td.sorting_2 {
+	background-color: #F2F3FF;
+}
+
+tr.even td.sorting_3 {
+	background-color: #F9F9FF;
+}
+*/
+
+/* For the Conditional-CSS grading rows */
+/*
+ 	Colour calculations (based off the main row colours)
+  Level 1:
+		dd > c4
+		ee > d5
+	Level 2:
+	  dd > d1
+	  ee > e2
+ */
+/* Not using these either
+tr.odd.gradeA td.sorting_1 {
+	background-color: #c4ffc4;
+}
+
+tr.odd.gradeA td.sorting_2 {
+	background-color: #d1ffd1;
+}
+
+tr.odd.gradeA td.sorting_3 {
+	background-color: #d1ffd1;
+}
+
+tr.even.gradeA td.sorting_1 {
+	background-color: #d5ffd5;
+}
+
+tr.even.gradeA td.sorting_2 {
+	background-color: #e2ffe2;
+}
+
+tr.even.gradeA td.sorting_3 {
+	background-color: #e2ffe2;
+}
+
+tr.odd.gradeC td.sorting_1 {
+	background-color: #c4c4ff;
+}
+
+tr.odd.gradeC td.sorting_2 {
+	background-color: #d1d1ff;
+}
+
+tr.odd.gradeC td.sorting_3 {
+	background-color: #d1d1ff;
+}
+
+tr.even.gradeC td.sorting_1 {
+	background-color: #d5d5ff;
+}
+
+tr.even.gradeC td.sorting_2 {
+	background-color: #e2e2ff;
+}
+
+tr.even.gradeC td.sorting_3 {
+	background-color: #e2e2ff;
+}
+
+tr.odd.gradeX td.sorting_1 {
+	background-color: #ffc4c4;
+}
+
+tr.odd.gradeX td.sorting_2 {
+	background-color: #ffd1d1;
+}
+
+tr.odd.gradeX td.sorting_3 {
+	background-color: #ffd1d1;
+}
+
+tr.even.gradeX td.sorting_1 {
+	background-color: #ffd5d5;
+}
+
+tr.even.gradeX td.sorting_2 {
+	background-color: #ffe2e2;
+}
+
+tr.even.gradeX td.sorting_3 {
+	background-color: #ffe2e2;
+}
+
+tr.odd.gradeU td.sorting_1 {
+	background-color: #c4c4c4;
+}
+
+tr.odd.gradeU td.sorting_2 {
+	background-color: #d1d1d1;
+}
+
+tr.odd.gradeU td.sorting_3 {
+	background-color: #d1d1d1;
+}
+
+tr.even.gradeU td.sorting_1 {
+	background-color: #d5d5d5;
+}
+
+tr.even.gradeU td.sorting_2 {
+	background-color: #e2e2e2;
+}
+
+tr.even.gradeU td.sorting_3 {
+	background-color: #e2e2e2;
+}
+*/
+
+/*
+ * Row highlighting example
+ */
+.ex_highlight #example tbody tr.even:hover, #example tbody tr.even td.highlighted {
+	background-color: #ECFFB3;
+}
+
+.ex_highlight #example tbody tr.odd:hover, #example tbody tr.odd td.highlighted {
+	background-color: #E6FF99;
+}
+
+.ex_highlight_row #example tr.even:hover {
+	background-color: #ECFFB3;
+}
+
+.ex_highlight_row #example tr.even:hover td.sorting_1 {
+	background-color: #DDFF75;
+}
+
+.ex_highlight_row #example tr.even:hover td.sorting_2 {
+	background-color: #E7FF9E;
+}
+
+.ex_highlight_row #example tr.even:hover td.sorting_3 {
+	background-color: #E2FF89;
+}
+
+.ex_highlight_row #example tr.odd:hover {
+	background-color: #E6FF99;
+}
+
+.ex_highlight_row #example tr.odd:hover td.sorting_1 {
+	background-color: #D6FF5C;
+}
+
+.ex_highlight_row #example tr.odd:hover td.sorting_2 {
+	background-color: #E0FF84;
+}
+
+.ex_highlight_row #example tr.odd:hover td.sorting_3 {
+	background-color: #DBFF70;
+}
+
+
+/*
+ * KeyTable
+ */
+table.KeyTable td {
+	border: 3px solid transparent;
+}
+
+table.KeyTable td.focus {
+	border: 3px solid #3366FF;
+}
+
+table.display tr.gradeA {
+	background-color: #eeffee;
+}
+
+table.display tr.gradeC {
+	background-color: #ddddff;
+}
+
+table.display tr.gradeX {
+	background-color: #ffdddd;
+}
+
+table.display tr.gradeU {
+	background-color: #ddd;
+}
+
+/* Removed from div.box - height: 100px;*/
+div.box {
+	padding: 10px;
+	overflow: auto;
+	border: 1px solid #8080FF;
+	background-color: #E5E5FF;
+}
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * END DataTables
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+/* Upsell/Recap Messages */
+.recapMessageRow {
+	padding:0px;
+}
+.recapMessageRowDiv {
+    text-align:center;
+    padding-left:1px\0/; /*for IE8*/
+}
+.holdAdvisoryMsg{color:black;}
+/*
+.recap_column{
+	background-image: url('../../images/default/bgSelectedRecapmessage_column.png');
+	background-position:center bottom;
+	background-repeat:no-repeat;
+}
+.recapMessageCloseBtn {
+   cursor: pointer;
+   float:right;
+   width:16px;
+   height:16px;
+   margin:-27px 13px 0px 0px;
+   background:url('../../images/default/btnclosessr.gif') no-repeat;
+}
+*/
+.outUpsellDrawerTopLevelArrow {
+   position: absolute;
+   z-index: 10;
+}
+/* */
+
+DIV#paxInfoUserLoginPanel H2 {
+    background-color: transparent !important;
+    color: #FFFFFF;
+    float: left;
+    font-family: arial,helvetica,sans-serif;
+    font-size: 13pt;
+    font-weight: bold;
+    width: 50%;
+}
+DIV#paxInfoUserLoginPanel H2 A {
+    color: #AB4FA1; 
+    font-size: 12px;
+    font-weight:normal;
+    text-decoration: underline;
+}
+DIV#paxInfoUserLoginPanel H2 A:hover {
+    color: #AB4FA1; 
+    font-size: 12px;
+    font-weight:normal;
+    text-decoration: underline;
+}
+DIV#paxInfoUserLoginPanel H2 A:active {
+    color: #AB4FA1; 
+    font-size: 12px;
+    font-weight:normal;
+    text-decoration: underline;
+}
+DIV#paxInfoUserLoginPanel H2 A:visited {
+    color: #AB4FA1; 
+    font-size: 12px;
+    font-weight:normal;
+    text-decoration: underline;
+}
+.hcontentRightLink {
+    clear: right;
+    float: right;
+    font-size: 12px;
+    text-align: right;
+	font-weight:normal;
+	font-style:italic;
+    width: 49%;
+}
+.hcontentRightLink a {
+    font-family: Arial,Verdana,Helvetica,sans-serif;
+    font-size: 12px;
+    text-decoration: underline;
+}
+.hcontentRightLink a:hover {
+    font-family: Arial,Verdana,Helvetica,sans-serif;
+    font-size: 12px;
+    text-decoration: underline;
+}
+.hcontentRightLink a:visited {
+    font-family: Arial,Verdana,Helvetica,sans-serif;
+    font-size: 12pt;
+    text-decoration: underline;
+}
+.paxUserLogin {
+    padding-top: 10px;
+}
+.paxUserLogin label {
+    float: left;
+    margin-right: 20px;
+    width: auto;
+}
+.paxUserLogin label span {
+    float: left;
+    width: 90px;
+    padding-left: 40px;
+    color: #666666;
+    font-family: Arial;
+    font-size: 13px;
+    font-weight: normal;
+    margin-left: 10px;
+}
+DIV.resItinDetailPAX #pageContent .paxInfoColumnLink {
+    float: right;
+    margin-top: 0;
+    margin-bottom: 10px !important;
+    text-align: right;
+    margin-right: 20px;
+}
+DIV#paxInfoUserLoginPanel DIV#enrollmentLinks A {
+    FONT-FAMILY: Arial; 
+    COLOR: #AE4D9E; 
+    FONT-SIZE: 15px; 
+    TEXT-DECORATION: underline !important;
+    font-size: 15px;
+    font-weight: bold;
+}
+DIV#paxInfoUserLoginPanel DIV#enrollmentLinks A:hover {
+    FONT-FAMILY: Arial; 
+    COLOR: #AE4D9E; 
+    FONT-SIZE: 15px; 
+    TEXT-DECORATION: underline !important;
+    font-size: 15px;
+    font-weight: bold;
+}
+DIV#paxInfoUserLoginPanel DIV#enrollmentLinks A:active {
+    FONT-FAMILY: Arial; 
+    COLOR: #AE4D9E; 
+    FONT-SIZE: 15px; 
+    TEXT-DECORATION: underline !important;
+    font-size: 15px;
+    font-weight: bold;
+}
+DIV#paxInfoUserLoginPanel DIV#enrollmentLinks A:visited {
+    FONT-FAMILY: Arial; 
+    COLOR: #AE4D9E; 
+    FONT-SIZE: 15px; 
+    TEXT-DECORATION: underline;
+    font-size: 15px;
+    font-weight: bold;
+}
+DIV#paxInfoUserLoginPanel .errorFullWidth {
+	text-align:left;
+	float:left;
+	width:99%;
+	color: #cc0000 !important;
+	font-weight:bold;
+	margin-bottom:10px;
+}
+
+.onHoldFeeDisplayArea {
+	height: 300px;
+}
+.onHoldFeePopup{
+	float:left;
+	width: 96%;
+	color: #000000;
+	padding:15px 15px 10px 15px;
+}
+
+.holdFeeConfirmationMsg {float:left}
+
+.shoppingSummaryH{height:12px;}
+.summaryH{float:left;}
+.discountH{float:right!important;}
+	
+.btFOP_container_LB{padding:0px; color: #666666; font-family: Arial,Helvetica,sans-serif; overflow-x: auto; overflow-y: auto;}
+.btFOP_content_LB{padding:17px; margin-bottom:25px; }
+.btFOP_tbl_BB{width:100%;}
+
+/*--------------------- for m70 page--------------------------- */
+
+.m70tabCol{width:50%;}
+.m70heading{}
+.m70tabcontainer{width:95%; margin:15px 12px 12px 12px;}
+.m70buttonContainer{margin:12px 0px 12px 0px; display:block; height:23px;}
+.m70buttonContainer input {margin: 0 0 0 5px; padding: 3px; cursor: pointer; float: right; text-align: left; text-transform: capitalize;}
+.m70segDetails{text-align:left; margin:10px 0px; clear:both; display: block; line-height: 20px;}
+.m70roundedBox{background: none repeat scroll 0 0 #f0f0f0; margin:10px 0px 10px 0px!important; clear: both;}
+.m70roundedBoxContent{padding: 10px;}
+.m70leftContent{float: left; margin: 0; width: 160px;}
+.m70leftContentB{font-weight:bold;}
+.m70contentRight{margin:10px 0px;}
+.m70contentRight a{}
+.rightContent{}
+.m70bagg_hdr{width:85%; float:left;}
+.m70bagg_seprator{height:1px; background-color: #aaaaaa; margin: 5px 0; line-height:1px; font-size:0px;}
+.tierInfo{width:12%; float:right; text-align:center; padding:3px; font-size:11px;}
+
+.tierInfoGold{background-color:#cca931; color:#fff; border:1px solid #826608;}
+.tierInfoPlatinum{background-color:#4d4f4e; color:#fff; border:1px solid #323333;}
+.tierInfoVIP{background-color:#000000; color:#fff; border:1px solid #323333;}
+.tierInfoRED{background-color:#ff1e00; color:#fff; border:1px solid #a31401;}
+.tierInfoSILVER{background-color:#cacaca; color:#000; border:1px solid #afafaf;}
+
+
+.ui-widget-header{}
+.ui-state-default, .ui-widget-content .ui-state-default {}
+.ui-state-default a{}
+.ui-state-default a:hover{}
+.ui-state-active, .ui-widget-content .ui-state-active {}
+.ui-state-active a{}
+.ui-state-active a:hover{}
+.ui-tabs .ui-tabs-nav li a {padding: .5em 1.5em;}
+
+
+DIV.button INPUT[disabled=disabled] {
+    background: #f5f4ea!important;
+    border-color: #c9c7ba!important;
+    color:#b9a8b6;
+    border-style: solid;
+    border-width: 1px;
+    cursor: default;
+}
+
+/*--------------------- end--------------------------- */
+
+/**************************** TipTip CSS - Version 1.2 ********************************/
+#tiptip_holder {display: none; position: absolute; top: 0; left: 0; z-index: 99999;}
+#tiptip_holder.tip_top {padding-bottom: 5px;}
+#tiptip_holder.tip_bottom {padding-top: 5px;}
+#tiptip_holder.tip_right {padding-left: 5px;}
+#tiptip_holder.tip_left {padding-right: 5px;}
+#tiptip_content {font-size: 11px; color: #fff; text-shadow: 0 0 2px #000; padding: 4px 8px;border: 1px solid rgba(255,255,255,0.25);background-color: rgb(25,25,25);background-color: rgba(25,25,25,0.92);background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(transparent), to(#000));border-radius: 3px;-webkit-border-radius: 3px;-moz-border-radius: 3px;box-shadow: 0 0 3px #555;-webkit-box-shadow: 0 0 3px #555;-moz-box-shadow: 0 0 3px #555;}
+#tiptip_arrow, #tiptip_arrow_inner {position: absolute;border-color: transparent;border-style: solid;border-width: 6px;height: 0;width: 0;}
+#tiptip_holder.tip_top #tiptip_arrow {border-top-color: #fff;border-top-color: rgba(255,255,255,0.35);}
+#tiptip_holder.tip_bottom #tiptip_arrow {border-bottom-color: #fff;border-bottom-color: rgba(255,255,255,0.35);}
+#tiptip_holder.tip_right #tiptip_arrow {border-right-color: #fff;border-right-color: rgba(255,255,255,0.35);}
+#tiptip_holder.tip_left #tiptip_arrow {border-left-color: #fff;border-left-color: rgba(255,255,255,0.35);}
+#tiptip_holder.tip_top #tiptip_arrow_inner {margin-top: -7px;margin-left: -6px;border-top-color: rgb(25,25,25);border-top-color: rgba(25,25,25,0.92);}
+#tiptip_holder.tip_bottom #tiptip_arrow_inner {margin-top: -5px;margin-left: -6px;border-bottom-color: rgb(25,25,25);border-bottom-color: rgba(25,25,25,0.92);}
+#tiptip_holder.tip_right #tiptip_arrow_inner {margin-top: -6px;margin-left: -5px;border-right-color: rgb(25,25,25);border-right-color: rgba(25,25,25,0.92);}
+#tiptip_holder.tip_left #tiptip_arrow_inner {margin-top: -6px;margin-left: -7px;border-left-color: rgb(25,25,25);border-left-color: rgba(25,25,25,0.92);}
+/* Webkit Hacks  */
+@media screen and (-webkit-min-device-pixel-ratio:0) {	
+	#tiptip_content {padding: 4px 8px 5px 8px;background-color: rgba(45,45,45,0.88);}
+	#tiptip_holder.tip_bottom #tiptip_arrow_inner {border-bottom-color: rgba(45,45,45,0.88);}
+	#tiptip_holder.tip_top #tiptip_arrow_inner {border-top-color: rgba(20,20,20,0.92);}
+}
+/**************************** END: TipTip CSS - Version 1.2 ********************************/
+.TB_hd_container{height:30px; padding:0 0 7px 0;}
+.TB_body_container{padding:15px;}
+.TB_hd_01{float:left; width:500px; padding:10px; color: #AB4FA1; font-family: Arial; font-size: 15px; font-weight:bold;}
+.TB_hd_02{float:right; width:50px; padding:10px; text-align:right;}
+
+p[class="linkBaggage"] {
+	display:none!important;
+}
+p[class="displayBaggageLink"]{
+	display:inline!important;
+}
+/* custom class for flight information error if the flight is not valid */
+.flifoerror {
+    clear: both;
+    color: #CC0000;
+    float: left;
+    font: bold 9pt arial;
+    text-align: left !important;
+    width: 99% !important;
+}
+.grayoutPage{float:left;display:none;z-index:100;left:0px;top:0px;position:absolute;width:1000px;background:#000;filter:alpha(opacity=8);opacity:.08;}
+
+.preloading{display:none;z-index:200;position:absolute;top:300px;left:300px}
+
+/*Air Extra Baggage Widget*/
+.aebags_container_01{border:1px solid #E1E1E1; min-height:150px; padding:9px;}
+.aebags_01{padding:10px; float:left; width:57%;}
+.aebags_hd_01{margin:0px; font-family:Verdana, Geneva, sans-serif; font-size:19px;}
+.aebags_txt_01{padding:15px 0px; font-family:Verdana, Geneva, sans-serif; font-size:12px;}
+.aebags_02{padding:10px; float:right; width:35%; text-align:center; background-color:#f2f2f2;}
+.aebags_hd_02{margin:0px; font-family:Verdana, Geneva, sans-serif; font-size:19px;}
+.aebags_txt_02 {text-align:left; padding:15px 0px; font-family:Verdana, Geneva, sans-serif; font-size:12px;}
+.ae_arrow_off{ background:url(images/arrow_off.gif) no-repeat; height:16px; width:16px;}
+.tc_hd {cursor:pointer; font-family:Verdana, Geneva, sans-serif; font-size:12px; color:#0e0bca; text-decoration:underline; padding:0 0 0 20px; background: url(images/arrow_off.gif) no-repeat;}
+.tc_hd_on {cursor:pointer; font-family:Verdana, Geneva, sans-serif; font-size:12px; color:#0e0bca; text-decoration:underline; padding:0 0 0 20px; background: url(images/arrow_on.gif) no-repeat;}
+.tc_content{padding:10px; font-family:Verdana, Geneva, sans-serif; font-size:12px; text-align: justify;}
+.aebags_container_02{margin: 20px 0px; border:1px solid #E1E1E1; min-height:300px; padding:9px; font-family:Verdana, Geneva, sans-serif; font-size:12px;}
+.aebags_msg{padding-bottom:20px; height: 40px;}
+.aebags_psg_header{margin:20px 0px;}
+.aebags_psg_hd, .aebags_cb_hd{font-family:Verdana, Geneva, sans-serif; font-size:12px; font-weight:bold;}
+.aebags_psg_details{margin:20px 55px;}
+.aebags_lbl, .aebags_sel{margin-top:15px;}
+.aebags_sel{width:210px; margin-right:10px;}
+.aebags_seprator{color: #e8e8e8; background-color: #e8e8e8; height: 1px; margin:5px 0px;}
+.aebags_cb_hd_01{font-family:Verdana, Geneva, sans-serif; font-size:12px; margin:10px 0px;} 
+.aebags_container_03{min-height:20px; padding:9px; text-align:right; margin:5px 0px;}
+.aebags_next_btn{}
+.clear{clear:both;}
+.rightContentBag { display: none; }
+.paxLvlCollapsed { background: url('../../images/default/plus.gif') top left no-repeat; padding-right: 15px; }
+.paxLvlExpanded { background: url('../../images/default/minus.gif') top left no-repeat; padding-right: 15px; }
+/*----------------- Unbundled fare SSR specific --------------------------------------------------------*/
+#ssrUpsellContinueButton{background: url("https://contenido.volaris.com.mx/volaris2011/Imagen/img_pix_btn/btn_continuar.gif") repeat scroll 0 0 #000000;
+    color:#fff; border-color: #000000; border-style: solid; border-width: 1px; cursor: pointer; font-family: Arial; font-size: 20px; height: 38px; padding: 1px 5px; position: relative; text-align: center;}
+.ubssLbWrapper{color: #AF5BA9; font-family: Arial,Helvetica,sans-serif; overflow: hidden; padding: 0; width: 900px;}
+.ubssr_cont{width:100%; height:565px; overflow-x: auto; overflow-y: hidden; width: 100%; white-space:nowrap;}
+.ubssr_box{vertical-align:top; margin:0 10px; width:274px; height:420px; display:inline-block; zoom: 1; *display: inline;}
+.ubssr_cnt{border:1px solid #d9d9d9; width:262px; margin:0 0 0 10px; overflow:hidden; min-height:300px;}
+.ubssr_temp_msg{margin:20px;}
+.ubssr_inst_msg{padding:10px; border-bottom: 1px solid #dcdcdc; background-color:#edebec;}
+.ubssr_inst_txt{margin:-13px 0 0 20px; white-space:normal;}
+.ubssr_msg{height:25px; white-space:normal; margin:12px; padding:0px 2px 12px 50px; font-size:13px; font-weight:bold; background:url("../../images/default/tick.gif") no-repeat scroll left top;}
+.ubssrUpsellBtn{text-align:right; margin:20px;}
+
+.ubssr_hdr{width:264px; background:#F7EBF7; margin: 0 0 0 10px; padding: 0; position: relative;}
+.ubssr_hd{height:33px; background:#F7EBF7; color:#a04f9b; font-family: Arial !important; font-size: 18px; font-weight: bold; padding: 17px 10px 17px 15px;}
+.ubssrMoreInfo{height:16px; width:16px; margin: 21px 10px 0 0; position: absolute; right: 0; background: url("../../images/default/ssr_expand_icon_02.png") no-repeat scroll right top;}
+.ubssr_hvtxt{width:262px; height:180px; border:1px solid #dcdcdc; position:relative; margin:0 0 0 10px; z-index:100; background:#ffffff; color:#000; top:-305px;}
+.ubssr_txtMsg{text-align:center;color:red;font-size:13px;font-weight:bold;}
+.ubssr_totalPrice{text-align:left;margin:10px;color:#666666;font-size:13px;font-weight:bold;}	
+*+html .ubssr_inst_txt{float:right; margin:-30px 10px 0px 5px; width:215px;} /* for IE7, fix for checkbox hiding */
+*+html .ubssr_cont {position:relative!important;} /* for IE7, overflow scroll issue */
+/* ------------------------------end------------------------------------------------------------------------*/
+.flifoForm .flightInfo {margin: 0 140px 0 140px; padding:10px 0px;}
+.cabinDetails{margin: 0 140px 0 140px; text-align:left; padding: 0 0 25px;}
+.mdt{width:33%; float:left;}
+#feesandtaxes {display: none;}
+.paraInfoText {display:none;}
+.ContinueWithoutAe{display:block!important;}
+.refundEmdLink {text-align: center;}
+.refundEmds {padding-top: 10px; width:300px}
+.refundEmdDes {display: inline-block; margin-left : 20px; width:50px;}
+
+
+
+/* -------------- Add Frequent Flyer [Start] -----------------------*/
+
+.ff-lbWrapper{ width:710px; overflow:hidden; color:#000000; padding:0px 0px 0px 0px;}
+.ff-container{width:600px; padding: 50px 50px 50px 50px;}
+.ff-pax-nodetails{margin:0px 0px 10px 0px;}
+.ff-fref-nolbl, .ff-fref-ai, .ff-fref-no, .ff-pas-name{font:normal 12px verdana; float:left; padding:5px;}
+.ff-pas-name{font-weight:bold!important;}
+.ff-pax-nodetails{height:35px;}
+.ff-fref-nolbl{width:150px;}
+.ff-fref-ai, .ff-fref-ai select{width:200px;}
+.ff-fref-no, .ff-fref-no input{width:150px;}
+.ff-frm-btn{text-align:right; padding:10px;}
+
+/* -------------- Add Frequent Flyer [End] -----------------------*/
+
+/* EMD Details during exchanges*/
+.aeDetail{margin-top:5px; margin-left:130px; clear:both;}
+.aeDetailDes{display:inline-block; width:250px; text-align:left;}
+.aeDetailAmt{display:inline-block; width:60px; text-align:left;}
+.aeDetailIndicator{display:inline-block; width:150px; text-align:left;}
+/* -------------- Poli Payment [Start] -----------------------*/
+.pmtpoli_footer {font-size: 11px;font-weight: bold;padding-left: 14px;}
+.step_poli {padding-left: 30px;}
+.poliRadio{padding-left: 0%;}
+.pmtpoli_steps {font-size: 11px;font-weight: bold;padding-left: 14px;}
+.pmtpoli_img {float: left;height: 70px;padding-top: 18px;width: 178px;}
+.pmtpoli_link {color: red;padding-bottom: 10px;padding-left: 16px;}
+.pmtpoli_link a {color: red;font-size: 11px;}
+.pmtpoli_content {float: left;font-size: 11px;font-weight: bold;padding-left: 13px;padding-top: 20px;width: 418px;}
+.pmtpoli_headers {background-color: #0C5885;float: left;margin-bottom: 5px;padding: 0.3%;margin-top:5px;width: 99.4%;}
+/* -------------- Poli Payment [End] -----------------------*/
+.wr_tripDetails_02 label input{overflow: visible\0/; padding-right: 2px\0/;}/*flight schedule IE cusror issue fix */
+div.wr_tripDetails_01 label input {overflow: visible\0/; padding-right:2px\0/;}/*flight information IE cusror issue fix */
+#paypal_loading_btn{display:none;}
+.taxSectionHeader{font-weight:bold;}
+
+.bg_hd_container{background-color: #F7EBF6; float: left;width: 688px;}
+.bg_hd_txt {color: #800080;    font: bold 16px arial;    padding: 0.6em;}
+.bg_mkt_msg {color: #800080;    font: 14px arial;    padding: 0.8em 0.6em;}
+.bg_cnt_container{padding: 0.8em 0.6em;}
+
+.bg_cnt_hd_01,.bg_cnt_hd_02 { color: #000000; font: bold 13px arial;}
+.bg_cnt_txt_02 {color: #000000; font: bold 12px arial; padding-top: 5px}
+.bg_pmt_container {border: 1px solid #DCDADB;    margin-top: 17px;    width: 688px;}

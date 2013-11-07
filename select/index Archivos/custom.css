@@ -1,0 +1,10 @@
+@import url('https://s3.amazonaws.com/aeromexico/booking/custom_es.css');
+
+#bnpl_1{
+  display: inline;
+}
+
+/*new changes */
+#ROOT #btn-search {
+	-height:auto;
+}

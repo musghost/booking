@@ -1,0 +1,2113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es"><head>
+
+<script src="index%20Archivos/ga.js" async="" type="text/javascript"></script><script src="index%20Archivos/ga.js" async="" type="text/javascript"></script><script src="index%20Archivos/gtm.js" async=""></script><script type="text/javascript">
+function wsClickTrack(obj)
+                    {  }</script>
+
+				<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="Content-Style-Type" content="text/css">
+		<meta http-equiv="Content-Script-Type" content="text/javascript">
+		   <script type="text/javascript" src="index%20Archivos/yahoo-min.js"></script>
+   <script type="text/javascript" src="index%20Archivos/event-min.js"></script>
+   <script type="text/javascript" src="index%20Archivos/dom-min.js"></script>
+   <script type="text/javascript" src="index%20Archivos/connection-min.js"></script>
+   <script type="text/javascript" src="index%20Archivos/yuiloader-min.js"></script>
+   <script type="text/javascript" src="index%20Archivos/selector-beta-min.js"></script>
+   <script type="text/javascript" src="index%20Archivos/common_helpers_002.js"></script>
+   <script type="text/javascript" src="index%20Archivos/tooltip.js"></script>
+   <script type="text/javascript" src="index%20Archivos/jquery_002.js"></script>
+   <script type="text/javascript" src="index%20Archivos/jquery_007.js"></script>
+	<script type="text/javascript" language="javascript" src="index%20Archivos/jquery_003.js"></script>
+
+    <script src="index%20Archivos/jquery_006.js"></script>
+    <script src="index%20Archivos/jquery_004.js"></script>
+    <script src="index%20Archivos/jquery_005.js"></script>
+    <script src="index%20Archivos/jquery.js"></script>
+    <script type="text/javascript">
+        var sswJQuery = jQuery.noConflict(true);
+    </script>
+<title>mapa de asientos</title>
+<link href="index%20Archivos/global.css" type="text/css" rel="stylesheet">
+		<link href="index%20Archivos/print.css" type="text/css" rel="stylesheet" media="print">
+		
+					<link rel="stylesheet" href="index%20Archivos/vm_custom.css" type="text/css">
+				<script type="text/javascript" language="javascript">
+/*******global vars*******/
+var legNum =0;
+var popUp = true;
+var numOfPassengers =0;
+
+/*scr6636*/
+var seatsAvail="";
+var arrowpos=1;
+var oldarrname='arrow1';
+var oldseattype="img_h_avail.gif"
+var textcontent=new Array();
+var filled='false'
+var arrowscroll='true'
+//var totalpass;
+/*********function changes to seated icon and assigns value of the selected seat in the text field*******/
+function getSeat(st) {
+if(!st.length) {
+	return st; 
+	} else {
+	 return st[0];
+	}
+}
+function selectSeatV(seatname){
+    var seattype = "";
+    seattype=giveFile(seatname);
+    var txtname='pax'+(arrowpos);
+    if(seattype=="v_avail.gif"  || seattype=="upperDeck.gif" || seattype=="application/images/default/v_limited.gif"){
+        var oldname = document.seatForm[txtname].value;
+        if(oldname  == ""){
+            document.seatForm[txtname].value=seatname;
+            getSeat(document[seatname]).src="application/images/default/v_seated.gif";
+        }
+        else
+
+        {
+            oldseattype="application/images/default/es/v_avail.gif";
+            document.seatForm[txtname].value=seatname;
+            getSeat(document[oldname]).src=oldseattype;
+            getSeat(document[seatname]).src="application/images/default/v_seated.gif";
+        }
+        textcontent[arrowpos]='true';
+        setCursor1(arrowpos);
+    }
+}
+
+
+/************function to assist selectSeat***************/
+
+function giveFile(seatname){
+    var seattype="";
+    seattype=getSeat(document[seatname]).src;
+    var temp=seattype.lastIndexOf('/')+1;
+    seattype = seattype.substring(temp);
+    return seattype;
+}
+
+
+/**************function to take care the arrow display******************/
+
+function setCursor(pos){
+    var arrname='arrow' + pos;
+    var txtname='pax' + pos;
+    if(arrname != oldarrname){
+        document[arrname].src="application/images/default/blue_arrow.gif";
+        arrowpos=pos;
+        document[oldarrname].src="application/images/default/noarrow.gif";
+        oldarrname=arrname;
+    }
+}
+
+/**************function to take care the seat number display******************/
+
+function setCursor1(pos) {
+    if(textcontent[pos] == 'true'){
+        if(textcontent[pos+1] != 'true' && filled=='false' ){
+            if(pos < numOfPassengers){
+                if((pos+1) == arrowpos){
+                    setCursor(pos);
+                }
+                else
+                {
+                    setCursor(pos+1);
+                }
+            }
+            else
+
+            {
+                setCursor(1);
+                filled = 'true';
+            }
+        }
+        else
+        {
+            setCursor(pos);
+            filled = 'true';
+        }
+    }
+    else
+    {
+       setCursor(pos);
+    }
+    document.seatForm['pax'+pos].blur();
+}
+
+
+/**************function to validate empty fields*************************/
+function isEmpty(targetURL,theText,theButton, seatEnable){
+/*scr6636*/
+if(theButton != '') {
+  if (numOfPassengers > seatsAvail){
+           document.seatForm.seatStatus.value="noSeatInformation";
+           document.seatForm.submit();
+           }
+           else
+           {
+    var count=0;
+    response='true';
+    for(i=0;i < numOfPassengers; i++){
+        if(document.seatForm['pax'+(i+1)].value != ""){
+            count=count+1;
+        }
+    }
+    if(count < numOfPassengers){
+	        response=confirm("Si desea seleccionar asientos, debe seleccionar los de todos los pasajeros.  ?Desea continuar seleccionando asientos?");
+        if(response == false){
+            document.seatForm.seatStatus.value="skipSeats";
+            document.seatForm.submit();
+        }
+    }
+    else
+
+    {
+
+    if (theButton.value == theText && seatEnable == 'true') {
+        document.seatForm.seatStatus.value="submitSeats";
+				        self.opener.location.href = targetURL;  
+        self.close();
+       } else {        
+        document.seatForm.seatStatus.value="submitSeats";
+        document.seatForm.submit();
+
+       }
+     }
+    }
+  }
+}
+/**********************this is to set the hidden form field when cancel button is clicked********************/
+function onCancel(){
+    response=confirm("?Desea cancelar la seleccion de asientos?");
+    if(response == true){
+        document.seatForm.seatStatus.value="skipSeats";
+        document.seatForm.submit();
+    }
+}
+
+/**********************this is to set the hidden form field when cancel button is clicked********************/
+function onCancelNoConfiration(){
+    document.seatForm.seatStatus.value="skipSeats";
+    document.seatForm.submit();
+}
+
+/*********************this to set hidden form field to when no seat infromation is available*****************/
+function onNoSeatInformation(){
+    document.seatForm.seatStatus.value="noSeatInformation";
+    document.seatForm.submit();
+	 if (popUp == true && legNum == "-1")
+    {
+		self.close();
+	}
+}
+function doRefresh(actualUrl,toaction){
+    var lang = document.forms[0].language.options[document.forms[0].language.selectedIndex].value;
+    var dt = new Date();
+    var x = dt.getTime();
+    var tempstr=actualUrl+"&language="+lang+"&action="+toaction+"&timestamp="+x;
+    window.document.location.replace(tempstr);
+}
+</script>
+	<script type="text/javascript" language="JavaScript">
+browserVer = parseInt(navigator.appVersion);
+browserName = navigator.appName;
+
+function SwapX(graphic) {
+if ((document[graphic] != null) && (browserVer >= "4") || ((browserName == "Netscape") && (browserVer == "3"))) {
+document[graphic].src=("asterisk.gif");
+}
+}
+
+function SwapY(graphic) {
+if ((document[graphic] != null) && (browserVer >= "4") || ((browserName == "Netscape") && (browserVer == "3"))) {
+document[graphic].src=("p.gif");
+}
+}
+
+function submit() {
+    document.forms[0].submit();
+}
+
+function exchangeReplace(baseurl)
+{
+    var url=baseurl ;
+    for (var j=0; j< document.forms[0].length; j++)
+    {
+        if(document.forms[0].elements[j].type=='checkbox')
+            {
+                if(document.forms[0].elements[j].checked)
+                {
+                    url = url+document.forms[0].elements[j].name + '=on&';
+                }
+            }
+        else if(document.forms[0].elements[j].type=='radio')
+            {
+                 if(document.forms[0].elements[j].checked)
+                {
+                    url = url+document.forms[0].elements[j].name + '=' + document.forms[0].elements[j].value +'&';
+                }
+            }
+        else
+            {
+                url = url+document.forms[0].elements[j].name + '=' + document.forms[0].elements[j].value +'&';
+            }
+    }
+    window.location.replace(url);
+}
+
+function doRefresh(actualUrl,toaction,pagenum,recordLocator,page){
+
+    var lang = document.forms[0].language.options[document.forms[0].language.selectedIndex].value;
+    var dt = new Date();
+    var x = dt.getTime();
+    var tempstr=actualUrl+"&language="+lang+"&action="+toaction+"&timestamp="+x+"&PageNumber="+pagenum+"&RecordLocator="+recordLocator+"&page="+page;
+
+    					window.document.location.replace(tempstr);
+				
+}
+
+var isLoaded = false;
+function loaded() {
+
+  isLoaded =true;
+}
+
+var emptyWin;
+function confirmEmpty(tempUrl) {
+	emptyWin=window.open(tempUrl+"&page=warningEmptyMessage_command&action=warningEmpty","emptyWin","toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=400,height=200,alwaysRaised=yes,dependent=yes,screenX=200,screenY=200");
+	emptyWin.focus();
+}
+
+var hDescWin;
+function openHotelDescWin (url) {
+hDescWin=window.open(url,'hotelDescriptionWin',"toolbar=no,location=no,directories=no,status=yes,menubar=no,scrollbars=yes,resizable=yes,width=670,height=480,alwaysRaised=yes,dependent=yes,screenX=200,screenY=200");
+hDescWin.focus();
+}
+
+var hRateWin;
+function openHotelRateWin (url, url2) {
+url += '&RateLevelCode='+escape(url2);
+hRateWin=window.open(url,'hotelRateRulesWin',"toolbar=no,location=no,directories=no,status=yes,menubar=no,scrollbars=yes,resizable=yes,width=670,height=300,alwaysRaised=yes,dependent=yes,screenX=200,screenY=200");
+hRateWin.focus();
+}
+
+var cRateWin;
+function openCarRateWin (url) {
+cRateWin=window.open(url,'carPolicyWin',"toolbar=no,location=no,directories=no,status=yes,menubar=no,scrollbars=yes,resizable=yes,width=670,height=300,alwaysRaised=yes,dependent=yes,screenX=200,screenY=200");
+cRateWin.focus();
+}
+
+var ageWin;
+function openAge (url) {
+ageWin=window.open(url,'age',"toolbar=no,location=no,directories=no,status=yes,menubar=no,scrollbars=no,resizable=yes,width=670,height=350,alwaysRaised=yes,dependent=yes,screenX=200,screenY=200");
+ageWin.focus();
+}
+
+var agencyInfoWin;
+function openAgencyRate (url) {
+	agencyInfoWin=window.open(url,'AgencyRateInformation',"toolbar=no,location=no,directories=no,status=yes,menubar=no,scrollbars=no,resizable=yes,width=670,height=	350,alwaysRaised=yes,dependent=yes,screenX=200,screenY=200");
+	agencyInfoWin.focus();
+}
+
+var fareRulesWin;
+function openFareRules (url) {
+	fareRulesWin=window.open(url,'FareRules',"toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=670,height=500,alwaysRaised=yes,dependent=yes,screenX=200,screenY=200");
+	fareRulesWin.focus();
+}
+
+
+function updateFreqFlyerWindow(freqFlyerWin)
+{
+if (freqFlyerWin.opener == null) freqFlyerWin.opener = self;
+freqFlyerWin.location.reload();
+freqFlyerWin.focus();
+}
+function openFreqFlyerWindow(num)
+{
+   var url='/cat1/meridia?posid=D5EE&sid=me2reA2ryy2r7-yyyv:ab49e576b185ff039c0dce0dfe18ff3f328d9741faf4e950d7387d584bb0e21a&&page=airFrequentFlyerMessage_reservation&action=airFrequentFlyer';
+   url=url + '&passengerNumber='+num;
+freqFlyerWin=window.open(url,'freqFlyerWin',"toolbar=no,location=no,directories=no,status=yes,menubar=no,scrollbars=yes,resizable=yes,width=670,height=300,alwaysRaised=yes,dependent=yes,screenX=200,screenY=200");
+	setTimeout("updateFreqFlyerWindow(freqFlyerWin)",1000);
+}
+
+
+function setFrequentFlyerValues() {
+
+		if (document.forms[0].freqflyer1) { document.forms[0].freqflyer1.options[document.forms[0].freqflyer1.selectedIndex].value = document.forms[0].freqflyer1.options[document.forms[0].freqflyer1.selectedIndex].value + document.forms[0].frequent_flyer_num1.value;}
+		if (document.forms[0].freqflyer2) document.forms[0].freqflyer2.options[document.forms[0].freqflyer2.selectedIndex].value = document.forms[0].freqflyer2.options[document.forms[0].freqflyer2.selectedIndex].value + document.forms[0].frequent_flyer_num2.value;
+		if (document.forms[0].freqflyer3) document.forms[0].freqflyer3.options[document.forms[0].freqflyer3.selectedIndex].value = document.forms[0].freqflyer3.options[document.forms[0].freqflyer3.selectedIndex].value + document.forms[0].frequent_flyer_num3.value;
+		if (document.forms[0].freqflyer4) document.forms[0].freqflyer4.options[document.forms[0].freqflyer4.selectedIndex].value = document.forms[0].freqflyer4.options[document.forms[0].freqflyer4.selectedIndex].value + document.forms[0].frequent_flyer_num4.value;
+		if (document.forms[0].freqflyer5) document.forms[0].freqflyer5.options[document.forms[0].freqflyer5.selectedIndex].value = document.forms[0].freqflyer5.options[document.forms[0].freqflyer5.selectedIndex].value + document.forms[0].frequent_flyer_num5.value;
+		if (document.forms[0].freqflyer6) document.forms[0].freqflyer6.options[document.forms[0].freqflyer6.selectedIndex].value = document.forms[0].freqflyer6.options[document.forms[0].freqflyer6.selectedIndex].value + document.forms[0].frequent_flyer_num6.value;
+		if (document.forms[0].freqflyer7) document.forms[0].freqflyer7.options[document.forms[0].freqflyer7.selectedIndex].value = document.forms[0].freqflyer7.options[document.forms[0].freqflyer7.selectedIndex].value + document.forms[0].frequent_flyer_num7.value;
+		if (document.forms[0].freqflyer8) document.forms[0].freqflyer8.options[document.forms[0].freqflyer8.selectedIndex].value = document.forms[0].freqflyer8.options[document.forms[0].freqflyer8.selectedIndex].value + document.forms[0].frequent_flyer_num8.value;
+		if (document.forms[0].freqflyer9) document.forms[0].freqflyer9.options[document.forms[0].freqflyer9.selectedIndex].value = document.forms[0].freqflyer9.options[document.forms[0].freqflyer9.selectedIndex].value + document.forms[0].frequent_flyer_num9.value;
+		if (document.forms[0].freqflyer10) document.forms[0].freqflyer10.options[document.forms[0].freqflyer10.selectedIndex].value = document.forms[0].freqflyer10.options[document.forms[0].freqflyer10.selectedIndex].value + document.forms[0].frequent_flyer_num10.value;
+		if (document.forms[0].freqflyer11) document.forms[0].freqflyer11.options[document.forms[0].freqflyer11.selectedIndex].value = document.forms[0].freqflyer11.options[document.forms[0].freqflyer11.selectedIndex].value + document.forms[0].frequent_flyer_num11.value;
+		if (document.forms[0].freqflyer12) document.forms[0].freqflyer12.options[document.forms[0].freqflyer12.selectedIndex].value = document.forms[0].freqflyer12.options[document.forms[0].freqflyer12.selectedIndex].value + document.forms[0].frequent_flyer_num12.value;
+		//alert(document.forms[0].freqflyer1.options[document.forms[0].freqflyer1.selectedIndex].value);
+		//alert(document.forms[0].freqflyer2.value);
+		return true;
+}
+
+function setPayForSeatsClicked(value){
+     if (document.forms[0].payForSeatsClicked)
+     {
+         document.forms[0].payForSeatsClicked.value = value;
+     }
+   return true;
+}
+
+
+function resetFreqFlyerDropdownValues()
+{
+/*
+	for ( var ffIndex=0; ffIndex<document.forms[0].freqflyer1.length; ffIndex++)
+	{
+		var currentOptionValue = document.forms[0].freqflyer1.options[ffIndex].value;
+		if ( currentOptionValue.length > 2 )
+		{
+			document.forms[0].freqflyer1.options[ffIndex].value = currentOptionValue.substr ( 0, 2 );
+		}
+	}
+*/
+}
+
+function setFreqFlyerDropdownValue()
+{
+/*
+	var selectedIndex = document.forms[0].freqflyer1.selectedIndex;
+	var currentOptionValue = document.forms[0].freqflyer1.options[selectedIndex].value;
+	var ffNum = document.forms[0].frequent_flyer_num.value;
+	if ( currentOptionValue.length > 2 )
+	{
+		document.forms[0].freqflyer1.options[selectedIndex].value = currentOptionValue.substr ( 0, 2 ) + ffNum;
+	}
+	else
+	{
+		document.forms[0].freqflyer1.options[selectedIndex].value = currentOptionValue + ffNum;
+	}
+*/
+}
+
+function opencurrency (amountFrom,currencyFrom) {
+	var url='/cat1/meridia?posid=D5EE&sid=me2reA2ryy2r7-yyyv:ab49e576b185ff039c0dce0dfe18ff3f328d9741faf4e950d7387d584bb0e21a&&page=requestConvertCurrencyMessage_common&action=requestCurrencyConv';
+	url=url + '&amountFrom='+amountFrom+'&currencyFrom='+currencyFrom;
+	currencyWin=window.open(url,'currencyWin',"toolbar=no,location=no,directories=no,status=yes,menubar=no,scrollbars=yes,resizable=yes,width=480,height=200,alwaysRaised=yes,dependent=yes,screenX=200,screenY=200");
+	currencyWin.focus();
+}
+
+function opentoplink () {
+var url="link_payForSeats_SeatMaps_t";
+var url_default="link_agency_SeatMaps_tdef";
+if (url == "link_payForSeats_SeatMaps_t") {
+    if (url_default != "link_agency_SeatMaps_tdef") {
+        url = url_default;
+    } else {
+        url = "";
+    }
+}
+if (url != "") {
+    bannerWin=window.open(url,'bannerWin',"toolbar=yes,location=yes,directories=yes,status=yes,menubar=yes,scrollbars=yes,resizable=yes,width=670,height=300");
+    bannerWin.focus();
+    }
+}
+function openbottomlink () {
+
+
+
+var url="link_payForSeats_SeatMaps_b";
+var url_default="link_agency_SeatMaps_bdef";
+if (url == "link_payForSeats_SeatMaps_b") {
+    if (url_default != "link_agency_SeatMaps_bdef") {
+        url = url_default;
+    } else {
+        url = "";
+    }
+}
+if (url != "") {
+    bannerWin=window.open(url,'bannerWin',"toolbar=yes,location=yes,directories=yes,status=yes,menubar=yes,scrollbars=yes,resizable=yes");
+    //bannerWin.resizeBy(-20,-20);
+    //bannerWin.moveBy(10,10);
+    bannerWin.focus();
+    }
+}
+
+
+        </script>
+        <script type="text/javascript" language="Javascript">
+
+
+function makeArray(n) {
+this.length = n;
+return this;
+}
+
+
+
+var warningWin
+function openwarning (url) {
+warningWin=window.open(url,'warningWin',"toolbar=no,location=no,directories=no,status=yes,menubar=no,scrollbars=yes,resizable=yes,width=400,height=300,alwaysRaised=yes,dependent=yes,screenX=300,screenY=300");
+warningWin.focus();
+}
+
+var flifoWin
+function openflifo (url) {
+flifoWin=window.open(url,'flifoWin',"toolbar=no,location=no,directories=no,status=yes,menubar=no,scrollbars=yes,resizable=yes,width=670,height=340,alwaysRaised=yes,dependent=yes,screenX=200,screenY=200");
+flifoWin.focus();
+}
+var rateRulesWin
+function openrateRules (url) {
+rateRulesWin=window.open(url,'rateRulesWin',"toolbar=no,location=no,directories=no,status=yes,menubar=no,scrollbars=yes,resizable=yes,width=670,height=300,alwaysRaised=yes,dependent=yes,screenX=200,screenY=200");
+rateRulesWin.focus();
+}
+
+var schedulesWin
+function openSchedules (url) {
+schedulesWin=window.open(url,'schedulesWin',"toolbar=no,location=no,directories=no,status=yes,menubar=no,scrollbars=no,resizable=yes,width=670,height=300,alwaysRaised=yes,dependent=yes,screenX=200,screenY=200");
+schedulesWin.focus();
+}
+var openTaxesFees
+function openTaxesFees(url){
+
+myTaxesFeesWin=window.open(url+"&page=requestTaxesFeesMessage_common&action=requestTaxesFees",'taxesFees',"toolbar=no,location=no,directories=no,status=yes,menubar=no,scrollbars=yes,resizable=yes,width=670,height=500,alwaysRaised=yes,dependent=yes");
+myTaxesFeesWin.focus();
+
+}
+
+
+var securityWin;
+function openSecurity (url) {
+var baseuri="/cat1/meridia?posid=D5EE&sid=me2reA2ryy2r7-yyyv:ab49e576b185ff039c0dce0dfe18ff3f328d9741faf4e950d7387d584bb0e21a&";
+
+
+var actualUrl=baseuri+"page=requestSecurityMessage_common&action=requestSecurity";
+securityWin=window.open(actualUrl,'securityWin',"toolbar=no,location=no,directories=no,status=yes,menubar=no,scrollbars=yes,resizable=yes,width=670,height=300,alwaysRaised=yes,dependent=yes,screenX=200,screenY=200");
+securityWin.focus();
+
+}
+
+var privacyWin;
+function openPrivacy (url) {
+var baseuri="/cat1/meridia?posid=D5EE&sid=me2reA2ryy2r7-yyyv:ab49e576b185ff039c0dce0dfe18ff3f328d9741faf4e950d7387d584bb0e21a&";
+
+
+var actualUrl=baseuri+"page=requestPrivacyMessage_common&action=requestPrivacy";
+privacyWin=window.open(actualUrl,'privacyWin',"toolbar=no,location=no,directories=no,status=yes,menubar=no,scrollbars=yes,resizable=yes,width=670,height=300,alwaysRaised=yes,dependent=yes,screenX=200,screenY=200");
+privacyWin.focus();
+
+}
+
+var customPrivacyWin;
+function openCustomprivacyPolicy (url) {
+var baseuri="/cat1/meridia?posid=D5EE&sid=me2reA2ryy2r7-yyyv:ab49e576b185ff039c0dce0dfe18ff3f328d9741faf4e950d7387d584bb0e21a&";
+
+
+var actualUrl=baseuri+"page=requestCustomPrivacyMessage_common&action=requestCustomPrivacy";
+customPrivacyWin=window.open(actualUrl,'customPrivacyWin',"toolbar=no,location=no,directories=no,status=yes,menubar=no,scrollbars=yes,resizable=yes,width=670,height=300,alwaysRaised=yes,dependent=yes,screenX=200,screenY=200");
+customPrivacyWin.focus();
+
+}
+
+ function showSegment(activeSeg)
+        {
+           document.getElementById("activeSeg").value =  activeSeg;
+           setSSRData();
+           submit();
+            return false;
+        }
+
+var guestLen = 0;
+var ssrData = new Array();
+var ssrCode = new Array();
+function setSSRData(){
+  for(var guest=1;guest<=guestLen;guest++){
+       for(var ssrcode=0;ssrcode<ssrCode.length;ssrcode++){
+     		var idStr= "Pax"+guest+"_"+ssrCode[ssrcode];
+     		var Obj = document.getElementById(idStr);
+     		if(Obj && Obj.checked)
+     		ssrData[ssrcode] = Obj.value;
+     		else
+     		ssrData[ssrcode] = "null";
+     	}
+
+     var id  =  "SELECTED_SSRS_FORPAX"+guest;
+     if(document.getElementById(id)){
+     document.getElementById(id).value = ssrData.join();
+     }
+
+  }
+
+}
+function setSSRData1(SegNo,RowNo){
+        for(var ssrcode=0;ssrcode<ssrCode.length;ssrcode++){
+     		var idStr= "Segment"+SegNo+"_"+"Row"+RowNo+"_"+ssrCode[ssrcode];
+     		var Obj = document.getElementById(idStr);
+     		if(Obj.checked)
+     		ssrData[ssrcode] = Obj.value;
+     		else
+     		ssrData[ssrcode] = "null";
+     	}
+
+ var id  =  "SELECTED_SSRS_FORPAX"+(RowNo+1);
+ document.getElementById(id).value = ssrData.join();
+}
+
+        function setssrClicked(value){
+                 if (document.forms[0].ssrClicked)
+                 {
+                     document.forms[0].ssrClicked.value = value;
+                 }
+               return true;
+            }
+			
+function setaeClicked(value){
+    if (document.forms[0].aeClicked){
+    	document.forms[0].aeClicked.value = value;
+		//Fix for: D-96159
+		//if(document.forms[0].reservationType && 'true' == document.forms[0].reservationType.value){
+		if(document.forms[0].reservationType){
+			document.forms[0].payForSeatAction.value = "redirectToAE";
+		}
+    }
+    return true;
+}
+
+function hold_submit() {
+	document.forms[0].action.value='resheldReservationPayment';
+        document.forms[0].page.value='ssw_Payment_Info';
+	document.forms[0].submit();
+}
+function setAction(value) {
+	if(document.forms[0].action){
+        document.forms[0].action.value=value;
+    }
+}
+</script>
+
+</head>
+<body>
+<script type="text/javascript">
+try {
+var dataLayer = [];
+dataLayer.push({'url_value': '/mx/Ancillary/'});
+
+} catch(e) { /* do nothing */ }
+</script>
+<!-- Google Tag Manager --> <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-6M3T" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-6M3T');</script> <!-- End Google Tag Manager -->
+														<div id="pageHeader">
+				<div id="header-logo">
+<h1 id="logo">Boletos Viajes</h1>
+<div class="help">
+<div class="chat">
+    <a href="https://chatventas.aeromexico.com/" onclick="var width = 390; var height = 560; var left = (screen.width - width)/2; var top = (screen.height - height)/2; var params = 'width='+width+', height='+height+', top='+top+', left='+left; window.open(this.href,'window',params);return false">
+      <i class="icon-chat"></i>
+      <p>
+        <span class="color">Chat</span>
+        <span>en línea</span>
+      </p>
+    </a>
+  </div>
+  <div class="help-cont"><span class="icon-help"></span> Contacto  </div>
+  <ul class="list-help">
+   <li> </li>
+   <li><a href="http://www.aeromexico.com/mx/LaExperienciaAeromexico/Contactanos/">Ayuda</a></li>
+<li>51 33 40 00</li>
+<li>01 (800) 021 4000</li>
+  </ul>
+</div>
+</div>
+<div class="clear"></div>
+<div class="blue-separator"></div>
+<script language="JavaScript" type="text/javascript" src="https://s3.amazonaws.com/aeromexico/external_cat_20.js"></script>
+<script type="text/javascript" src="index%20Archivos/common_helpers.js"></script>
+<script type="text/javascript" src="index%20Archivos/swfobject.js"></script>
+<script language="JavaScript" type="text/javascript" src="index%20Archivos/FingerPrintTEST.js"></script>
+        
+		</div>
+					<div id="main-Page" class="viewSeatMap">
+		<div id="pushHeader"></div>
+		<form method="post" action="/meridia?posid=D5EE&amp;sid=me2reA2ryy2r7-yyyv:ab49e576b185ff039c0dce0dfe18ff3f328d9741faf4e950d7387d584bb0e21a&amp;k=2&amp;" name="seatForm">
+           <input name="posid" value="D5EE" type="hidden">
+			<input name="page" value="payForSeatsMessage_seatMap" type="hidden">
+
+
+			<div id="sideMenuArea" class="sideBarArea;">
+    		<div id="sidebar">
+    			<div>
+    			<ul class="navigation">
+    				<li class="navLink6">    					<a href="http://www.aeromexico.com.mx/" title="http://www.aeromexico.com.mx">Inicio</a>
+    				</li>
+    				    					    					    					    						    						    						    							<script type="text/javascript" language="JavaScript">
+		//Added for the SPR# 28654
+		function openVT(language,airlineCode){
+		var lang=language;
+		var airline=airlineCode;
+		var vtoserver='http://www.cert.virtuallythere.com/';
+		var  win = window.open(vtoserver+'/new/homePage.html?pnr=&name=&language='+lang+'&host='+airline+'&pcc=&clocktype=12&error=&nosub=N','VTO','width=670,height=350,screenX=200,screenY=200,toolbar=yes,location=yes,directories=yes,status=yes,menubar=yes,scrollbars=yes,resizable=yes');
+		win.focus();
+		}
+		//change ends for SPR#28654
+	</script>
+
+															    							<li class="navLink13">
+    										    											<a id="bookingRetrievalId" wjtrackingname="bookingRetrieval" onclick="wsClickTrack(this);" href="https://cert.sabresonicweb.com/cat1/meridia?posid=D5EE&amp;sid=me2reA2ryy2r7-yyyv:ab49e576b185ff039c0dce0dfe18ff3f328d9741faf4e950d7387d584bb0e21a&amp;page=ssw_GuestItinInfoDisplayMessage&amp;action=GuestItinInfoDisplay&amp;language=es">Consulta tu reservación o compra</a>
+    										    									</li>
+    							    							    			</ul>
+    			<fieldset class="navDropdown">
+    				<legend>Select Language</legend>
+    				<label for="Language">idioma:</label>
+    									<select name="language" onchange="doRefresh('/cat1/meridia?posid=D5EE&amp;sid=me2reA2ryy2r7-yyyv:ab49e576b185ff039c0dce0dfe18ff3f328d9741faf4e950d7387d584bb0e21a&amp;','SSWPaymentInfo','1','','payForSeatsMessage_seatMap')" id="Language">
+												<option value="en">English
+					</option>
+												<option value="es" selected="selected">Español
+				</option>
+							</select>
+    			</fieldset>
+                                                    			   <script type="text/javascript" language="JavaScript">
+        function confirmRedirect(alertMsg)
+        {
+            input_box=confirm(alertMsg);
+            if (input_box==true)
+            {
+            // Output when OK is clicked
+            return true;
+            }
+            else
+            {
+                // Output when Cancel is clicked
+                return false;
+            }
+        }
+         //function added to decide whether to display alert window for frames redirect
+        function confirmFramesRedirect(alertMsg,form_input)
+        {
+            var targetObjName='linkURLTarget'+(form_input.selectedIndex +1);
+            var targetObj=document.getElementById(targetObjName);
+            if(targetObj!=null && targetObj!=undefined && targetObj.value=='NEW_WINDOW')
+            {
+              return true;
+            }
+            input_box=confirm(alertMsg);
+            if (input_box==true)
+            {
+            // Output when OK is clicked
+            return true;
+            }
+            else
+            {
+                // Output when Cancel is clicked
+                return false;
+            }
+        }
+	</script>
+						         </div>
+            <div class="clear"></div>
+    		<div></div>
+            
+    
+            </div>
+    		
+    				</div>
+
+			
+																											<div id="pageContent">
+																			    																			
+		
+    <div id="steps-image" style="display: block; width: 510px; height: 85px; margin: 0px auto 10px; background: url(&quot;https://s3.amazonaws.com/aeromexico/steps_sprite_mx_6.png&quot;) repeat scroll 0px -255px transparent;"></div>
+        <input name="payForSeatAction" value="displaySeatMap" type="hidden">
+    <input name="action" value="payForSeats" type="hidden">
+    <input name="requestid" value="payForSeats" type="hidden">
+    <input name="nextSegment" value="2" type="hidden">
+	<input name="reservationType" value="false" type="hidden">
+
+        <input name="airSegmentIndexInPNR" value="0" type="hidden">
+
+    <input name="selectedSeatSegmentIndex" value="1" type="hidden">
+
+     
+     
+            
+	<script type="text/javascript" src="index%20Archivos/pfs_helpers.js"></script>
+
+    <div id="seatMapPage">
+        <div id="tierErrors" class="seatsPageTierErrorAlert">
+                    </div>
+        <div id="seatSelection">
+						<h1>Mapa de asientos</h1>
+			<p class="textbold">Por favor, elije los asientos que deseas para tu vuelo.</p>
+            
+			
+			<div>
+    			
+				<h2 class="flightHeadDetail">Acapulco  (ACA)  to Ciudad De México (MEX)</h2>
+				<span class="textbold">Vuelo: AM 308 / Embraer RJ135 / RJ140 / RJ145</span>
+
+																	<p><span class="textbold">*Operado por:&nbsp;AEROLITORAL DBA AEROMEXICO CONNECT</span></p>
+				                                    <p class="textbold">Para solicitar un asiento, haz clic en el asiento que deseas seleccionar en el mapa de asientos.</p>
+                                            <p class="textbold noguarantee">meridia.seatmap.PFSMarketingText</p>
+                    					<table id="currentSegmentPassengerList">
+						<thead>
+							<tr>
+								<td>&nbsp;</td>
+								<td>Pasajero:</td>
+								<td>Asiento deseado:</td>
+								<td>Tarifa de asiento</td>
+								<td>&nbsp;</td>
+							</tr>
+						</thead>
+						<tbody>
+    														
+                                                                            <tr class="active" id="seatRow_1" onclick="PFS.setPassenger(1);">
+                                            <td id="selected_seat_1" class="selection">&nbsp;</td>
+                                            <td class="passengerName">Cidel/Andres</td>
+                                            <td id="seatNumberForSeat_1" class="seatNumber">No seleccionó asiento</td>
+                                            <td id="priceForSeat_1" class="price"></td>
+                                            <td id="removeSeat_1" style="display:none;"><img src="index%20Archivos/remove_icon.gif" alt="X" onclick="PFS.removeSeat('1')" style="cursor: pointer;"></td>
+
+                                            <input name="pax1" id="pax_id_1" type="hidden">
+                                        </tr>
+                                        															
+                            <script type="text/javascript">
+								YAHOO.util.Event.onDOMReady(function(){PFS.setPassenger(1)});
+							</script>
+						</tbody>
+					</table>
+    						</div>
+
+            <div id="ajax_error_msg"></div>
+
+            <div id="ajax_session_expire" style="display:none;">
+               <p class="error">Su sesión actual ha terminado. Debe reiniciar su sesión para continuar.</p>
+               <div style="padding: 0px;" class="button">
+                 <p><a href="https://cert.sabresonicweb.com/cat1/meridia?posid=D5EE&amp;page=mainMenuMessage_reservation&amp;action=requestAir&amp;ClearRequest=1" target="_self">Inicia tu compra</a></p>
+			    </div>
+             </div>
+               <input name="ssrClicked" value="false" type="hidden">
+				<input name="aeClicked" value="false" type="hidden">
+			<div class="button">
+				<script type="text/javascript">
+
+					function prepareAjaxCallParams() {
+						var reqValue = "";
+
+						var paxTemplate = new RegExp ("pax\\d+");
+    					ajx = {
+    						url: YAHOO.util.Dom.get(document.forms[0]).attributes['action'].value,
+    						params: new Array(),
+    						testSell: false
+    					};
+
+    					for(var i = 0; i < document.forms[0].elements.length; i++) {
+    						var name = document.forms[0].elements[i].name;
+    						var value = document.forms[0].elements[i].value;
+							switch(name) {
+								case 'page':
+									reqValue = 'payForSeatsTestSell';
+									break;
+								case 'action':
+									reqValue = 'payForSeatsTestSellHandler';
+									break;
+								default:
+									reqValue = document.forms[0].elements[i].value;
+							}
+							ajx.params.push(name + "=" + reqValue);
+							if ((ajx.testSell == false)
+									&& (undefined != name)
+									&& name.match(paxTemplate)
+									&& (undefined != value)
+									&& (value != "")){
+								ajx.testSell = true;
+							}
+    					}
+					}
+                </script>
+        													    
+				                 <input id="formSubmitButton" name="formSubmitButton" class="input_button" wjtrackingname="continueButton" onclick="wsClickTrack(this);setssrClicked('false');prepareAjaxCallParams();PFS.submitSeats(ajx.url, ajx.params, document.forms[0] , ajx.testSell , '/cat1/meridia?posid=D5EE&amp;sid=me2reA2ryy2r7-yyyv:ab49e576b185ff039c0dce0dfe18ff3f328d9741faf4e950d7387d584bb0e21a&amp;');" value="continuar" type="button">
+                            </div>
+				                   <div class="button" id="ae">
+                        <input style="display: block;" id="redirectToAEButton" name="redirectToAEButton" class="input_button newSearch" wjtrackingname="skipSeatSelectionButton" onclick="javascript:wsClickTrack(this);window.location.replace('/cat1/meridia?posid=D5EE&amp;sid=me2reA2ryy2r7-yyyv:ab49e576b185ff039c0dce0dfe18ff3f328d9741faf4e950d7387d584bb0e21a&amp;page=payForSeatsMessage_seatMap&amp;action=payForSeats&amp;payForSeatAction=redirectToAE&amp;aeClicked=true');" value="Saltarse la selección de asiento" type="button">
+                   </div>
+                
+				<img src="index%20Archivos/spinnerBFM.gif" alt="Espere..." id="ajax_spinner" style="display:none; float:right;" border="0">
+
+            
+
+
+			<div class="customPFSText">
+                 <p>meridia.seatmap.PFSCustomizableText</p>
+            </div>
+        </div>
+
+                             <div id="seatMapContainer">
+                <div id="seatMapLegend">
+					<h2>Leyenda del mapa de asientos</h2>
+
+					<div class="item even block_available">
+						<div class="icon_available"><img src="index%20Archivos/v_avail.gif"></div>
+						Disponible
+					</div>
+
+					<div class="item odd block_availupper">
+						<div class="icon_availupper"><img src="index%20Archivos/upperDeck.gif"></div>
+						Cubierta superior disponible
+					</div>
+
+					<div class="item even block_unavailable">
+						<div class="icon_unavailable"><img src="index%20Archivos/v_assigned.gif"></div>
+						No disponible
+					</div>
+
+					<div class="item odd block_exitleft">
+						<div class="icon_exitleft"><img src="index%20Archivos/v_exitleft.gif"></div>
+						Salida de emergencia
+					</div>
+
+					<div class="item even block_limited">
+						<div class="icon_limited"><img src="index%20Archivos/v_limited.gif"></div>
+						Reclinacion y espacio para las piernas limitados
+					</div>
+
+					<div class="item odd block_wallleft">
+						<div class="icon_wallleft"><img src="index%20Archivos/v_wallleft.gif"></div>
+						Paredes del avion
+					</div>
+
+					<div class="item even block_lavatory">
+						<div class="icon_lavatory"><img src="index%20Archivos/v_lavatory.gif"></div>
+						Lavabo
+					</div>
+
+					<div class="item odd block_wallleftwing">
+						<div class="icon_wallleftwing"><img src="index%20Archivos/v_wallleftwing.gif"></div>
+						Ala del avion
+					</div>
+
+					<div class="item even block_galley">
+						<div class="icon_galley"><img src="index%20Archivos/v_galley.gif"></div>
+						Cocina
+					</div>
+
+					<div class="item odd block_planebulkhead">
+						<div class="icon_planebulkhead"><img src="index%20Archivos/v_bulkhead.gif"></div>
+						Mamparo
+					</div>
+
+					<div class="item even block_closet">
+						<div class="icon_closet"><img src="index%20Archivos/v_closet.gif"></div>
+						Armario
+					</div>
+
+					<div class="clear_left_block"></div>
+					<p style="display:none;" id="selectedSeatImage">application/images/default/v_seated.gif</p>
+                </div>
+
+                <div id="seatMap">
+                    <table id="seatMapTable" cellspacing="0">
+                        
+                            <tbody><tr>
+    							    								<td>&nbsp;</td>
+                    				<td>&nbsp;</td>
+                    				                    				                    					                    						<td><strong>A </strong></td>
+                    					                    				                    					                    						<td>&nbsp;</td>
+                    					                    				                    					                    						<td><strong>B </strong></td>
+                    					                    				                    					                    						<td><strong>C </strong></td>
+                    					                    				                    				<td>&nbsp;</td>
+    							                            </tr>
+                        
+                            <tr>
+    							    								<td><strong> 1</strong></td>
+    								<td>
+    									    									
+    									<img alt="Salida de emergencia" src="index%20Archivos/v_exitleft.gif">
+    								</td>
+
+                                    
+                                            								    								        								
+											                							
+                							
+                                                    																				
+                                                <td class="available">
+
+
+                                                    
+                                                    <p id="tempPriceBox_2_2" style="display:none;">
+                                                                        
+                                                                        
+      $0 <span>MXN</span>
+                                                                                                                      </p>
+                                                    <img id="seatImage_1A" alt="1A" src="index%20Archivos/v_avail.gif" onclick="PFS.setSeatSelection('1A', YAHOO.util.Dom.get('tempPriceBox_2_2').innerHTML);">
+                                                </td>
+
+                                            								        								        									<td class="aisle">
+        										<img alt="Pasillo" src="index%20Archivos/v_aisle.gif">
+        									</td>
+        								    								        								    										<td>
+												<img alt="Espacio" src="index%20Archivos/v_empty.gif">
+											</td>
+        								    								        								    										<td>
+												<img alt="Espacio" src="index%20Archivos/v_empty.gif">
+											</td>
+        								    								        								    								    								<td>
+    									    									    									<img alt="Salida de emergencia" src="index%20Archivos/v_exitright.gif">
+    								</td>
+    							                            </tr>
+                        
+                            <tr>
+    							    								<td><strong> 2</strong></td>
+    								<td>
+    									    									
+    									<img alt="Salida de emergencia" src="index%20Archivos/v_exitleft.gif">
+    								</td>
+
+                                    
+                                            								    								        								
+											                							
+                							
+                                                    																				
+                                                <td class="available">
+
+
+                                                    
+                                                    <p id="tempPriceBox_3_2" style="display:none;">
+                                                                        
+                                                                        
+      $0 <span>MXN</span>
+                                                                                                                      </p>
+                                                    <img id="seatImage_2A" alt="2A" src="index%20Archivos/v_avail.gif" onclick="PFS.setSeatSelection('2A', YAHOO.util.Dom.get('tempPriceBox_3_2').innerHTML);">
+                                                </td>
+
+                                            								        								        									<td class="aisle">
+        										<img alt="Pasillo" src="index%20Archivos/v_aisle.gif">
+        									</td>
+        								    								        								    										<td>
+												<img alt="Espacio" src="index%20Archivos/v_empty.gif">
+											</td>
+        								    								        								    										<td>
+												<img alt="Espacio" src="index%20Archivos/v_empty.gif">
+											</td>
+        								    								        								    								    								<td>
+    									    									    									<img alt="Salida de emergencia" src="index%20Archivos/v_exitright.gif">
+    								</td>
+    							                            </tr>
+                        
+                            <tr>
+    							    								<td><strong> 3</strong></td>
+    								<td>
+    									    									
+    									<img alt="Paredes del avion" src="index%20Archivos/v_wallleft.gif">
+    								</td>
+
+                                    
+                                            								    								        								
+											                							
+                							
+                                                    																				
+                                                <td class="available">
+
+
+                                                    
+                                                    <p id="tempPriceBox_4_2" style="display:none;">
+                                                                        
+                                                                        
+      $0 <span>MXN</span>
+                                                                                                                      </p>
+                                                    <img id="seatImage_3A" alt="3A" src="index%20Archivos/v_avail.gif" onclick="PFS.setSeatSelection('3A', YAHOO.util.Dom.get('tempPriceBox_4_2').innerHTML);">
+                                                </td>
+
+                                            								        								        									<td class="aisle">
+        										<img alt="Pasillo" src="index%20Archivos/v_aisle.gif">
+        									</td>
+        								    								        								
+											                							
+                							
+                                                    																				
+                                                <td class="available">
+
+
+                                                    
+                                                    <p id="tempPriceBox_4_4" style="display:none;">
+                                                                        
+                                                                        
+      $0 <span>MXN</span>
+                                                                                                                      </p>
+                                                    <img id="seatImage_3B" alt="3B" src="index%20Archivos/v_avail.gif" onclick="PFS.setSeatSelection('3B', YAHOO.util.Dom.get('tempPriceBox_4_4').innerHTML);">
+                                                </td>
+
+                                            								        								
+											                							
+                							
+                                                    																				
+                                                <td class="available">
+
+
+                                                    
+                                                    <p id="tempPriceBox_4_5" style="display:none;">
+                                                                        
+                                                                        
+      $0 <span>MXN</span>
+                                                                                                                      </p>
+                                                    <img id="seatImage_3C" alt="3C" src="index%20Archivos/v_avail.gif" onclick="PFS.setSeatSelection('3C', YAHOO.util.Dom.get('tempPriceBox_4_5').innerHTML);">
+                                                </td>
+
+                                            								        								    								    								<td>
+    									    									    									<img alt="Paredes del avion" src="index%20Archivos/v_wallright.gif">
+    								</td>
+    							                            </tr>
+                        
+                            <tr>
+    							    								<td><strong> 4</strong></td>
+    								<td>
+    									    									
+    									<img alt="Paredes del avion" src="index%20Archivos/v_wallleft.gif">
+    								</td>
+
+                                    
+                                            								    								        								
+											                							
+                							
+                                                    																				
+                                                <td class="available">
+
+
+                                                    
+                                                    <p id="tempPriceBox_5_2" style="display:none;">
+                                                                        
+                                                                        
+      $0 <span>MXN</span>
+                                                                                                                      </p>
+                                                    <img id="seatImage_4A" alt="4A" src="index%20Archivos/v_avail.gif" onclick="PFS.setSeatSelection('4A', YAHOO.util.Dom.get('tempPriceBox_5_2').innerHTML);">
+                                                </td>
+
+                                            								        								        									<td class="aisle">
+        										<img alt="Pasillo" src="index%20Archivos/v_aisle.gif">
+        									</td>
+        								    								        								
+											                							
+                							
+                                                    																				
+                                                <td class="available">
+
+
+                                                    
+                                                    <p id="tempPriceBox_5_4" style="display:none;">
+                                                                        
+                                                                        
+      $0 <span>MXN</span>
+                                                                                                                      </p>
+                                                    <img id="seatImage_4B" alt="4B" src="index%20Archivos/v_avail.gif" onclick="PFS.setSeatSelection('4B', YAHOO.util.Dom.get('tempPriceBox_5_4').innerHTML);">
+                                                </td>
+
+                                            								        								
+											                							
+                							
+                                                    																				
+                                                <td class="available">
+
+
+                                                    
+                                                    <p id="tempPriceBox_5_5" style="display:none;">
+                                                                        
+                                                                        
+      $0 <span>MXN</span>
+                                                                                                                      </p>
+                                                    <img id="seatImage_4C" alt="4C" src="index%20Archivos/v_avail.gif" onclick="PFS.setSeatSelection('4C', YAHOO.util.Dom.get('tempPriceBox_5_5').innerHTML);">
+                                                </td>
+
+                                            								        								    								    								<td>
+    									    									    									<img alt="Paredes del avion" src="index%20Archivos/v_wallright.gif">
+    								</td>
+    							                            </tr>
+                        
+                            <tr>
+    							    								<td><strong> 5</strong></td>
+    								<td>
+    									    									
+    									<img alt="Paredes del avion" src="index%20Archivos/v_wallleft.gif">
+    								</td>
+
+                                    
+                                            								    								        								
+											                							
+                							
+                                                    									    										
+                                                <td class="unavailable">
+
+
+                                                    
+                                                    <p id="tempPriceBox_6_2" style="display:none;">
+                                                                        
+                                                                        
+      $0 <span>MXN</span>
+                                                                                                                      </p>
+                                                    <img id="seatImage_5A" alt="No disponible" src="index%20Archivos/v_assigned.gif">
+                                                </td>
+
+                                            								        								        									<td class="aisle">
+        										<img alt="Pasillo" src="index%20Archivos/v_aisle.gif">
+        									</td>
+        								    								        								
+											                							
+                							
+                                                    									    										
+                                                <td class="unavailable">
+
+
+                                                    
+                                                    <p id="tempPriceBox_6_4" style="display:none;">
+                                                                        
+                                                                        
+      $0 <span>MXN</span>
+                                                                                                                      </p>
+                                                    <img id="seatImage_5B" alt="No disponible" src="index%20Archivos/v_assigned.gif">
+                                                </td>
+
+                                            								        								
+											                							
+                							
+                                                    																				
+                                                <td class="available">
+
+
+                                                    
+                                                    <p id="tempPriceBox_6_5" style="display:none;">
+                                                                        
+                                                                        
+      $0 <span>MXN</span>
+                                                                                                                      </p>
+                                                    <img id="seatImage_5C" alt="5C" src="index%20Archivos/v_avail.gif" onclick="PFS.setSeatSelection('5C', YAHOO.util.Dom.get('tempPriceBox_6_5').innerHTML);">
+                                                </td>
+
+                                            								        								    								    								<td>
+    									    									    									<img alt="Paredes del avion" src="index%20Archivos/v_wallright.gif">
+    								</td>
+    							                            </tr>
+                        
+                            <tr>
+    							    								<td><strong> 6</strong></td>
+    								<td>
+    									    									
+    									<img alt="Paredes del avion" src="index%20Archivos/v_wallleft.gif">
+    								</td>
+
+                                    
+                                            								    								        								
+											                							
+                							
+                                                    																				
+                                                <td class="available">
+
+
+                                                    
+                                                    <p id="tempPriceBox_7_2" style="display:none;">
+                                                                        
+                                                                        
+      $0 <span>MXN</span>
+                                                                                                                      </p>
+                                                    <img id="seatImage_6A" alt="6A" src="index%20Archivos/v_avail.gif" onclick="PFS.setSeatSelection('6A', YAHOO.util.Dom.get('tempPriceBox_7_2').innerHTML);">
+                                                </td>
+
+                                            								        								        									<td class="aisle">
+        										<img alt="Pasillo" src="index%20Archivos/v_aisle.gif">
+        									</td>
+        								    								        								
+											                							
+                							
+                                                    																				
+                                                <td class="available">
+
+
+                                                    
+                                                    <p id="tempPriceBox_7_4" style="display:none;">
+                                                                        
+                                                                        
+      $0 <span>MXN</span>
+                                                                                                                      </p>
+                                                    <img id="seatImage_6B" alt="6B" src="index%20Archivos/v_avail.gif" onclick="PFS.setSeatSelection('6B', YAHOO.util.Dom.get('tempPriceBox_7_4').innerHTML);">
+                                                </td>
+
+                                            								        								
+											                							
+                							
+                                                    																				
+                                                <td class="available">
+
+
+                                                    
+                                                    <p id="tempPriceBox_7_5" style="display:none;">
+                                                                        
+                                                                        
+      $0 <span>MXN</span>
+                                                                                                                      </p>
+                                                    <img id="seatImage_6C" alt="6C" src="index%20Archivos/v_avail.gif" onclick="PFS.setSeatSelection('6C', YAHOO.util.Dom.get('tempPriceBox_7_5').innerHTML);">
+                                                </td>
+
+                                            								        								    								    								<td>
+    									    									    									<img alt="Paredes del avion" src="index%20Archivos/v_wallright.gif">
+    								</td>
+    							                            </tr>
+                        
+                            <tr>
+    							    								<td><strong> 7</strong></td>
+    								<td>
+    									    									
+    									<img alt="Paredes del avion" src="index%20Archivos/v_wallleft.gif">
+    								</td>
+
+                                    
+                                            								    								        								
+											                							
+                							
+                                                    																				
+                                                <td class="available">
+
+
+                                                    
+                                                    <p id="tempPriceBox_8_2" style="display:none;">
+                                                                        
+                                                                        
+      $0 <span>MXN</span>
+                                                                                                                      </p>
+                                                    <img id="seatImage_7A" alt="7A" src="index%20Archivos/v_avail.gif" onclick="PFS.setSeatSelection('7A', YAHOO.util.Dom.get('tempPriceBox_8_2').innerHTML);">
+                                                </td>
+
+                                            								        								        									<td class="aisle">
+        										<img alt="Pasillo" src="index%20Archivos/v_aisle.gif">
+        									</td>
+        								    								        								
+											                							
+                							
+                                                    																				
+                                                <td class="available">
+
+
+                                                    
+                                                    <p id="tempPriceBox_8_4" style="display:none;">
+                                                                        
+                                                                        
+      $0 <span>MXN</span>
+                                                                                                                      </p>
+                                                    <img id="seatImage_7B" alt="7B" src="index%20Archivos/v_avail.gif" onclick="PFS.setSeatSelection('7B', YAHOO.util.Dom.get('tempPriceBox_8_4').innerHTML);">
+                                                </td>
+
+                                            								        								
+											                							
+                							
+                                                    																				
+                                                <td class="available">
+
+
+                                                    
+                                                    <p id="tempPriceBox_8_5" style="display:none;">
+                                                                        
+                                                                        
+      $0 <span>MXN</span>
+                                                                                                                      </p>
+                                                    <img id="seatImage_7C" alt="7C" src="index%20Archivos/v_avail.gif" onclick="PFS.setSeatSelection('7C', YAHOO.util.Dom.get('tempPriceBox_8_5').innerHTML);">
+                                                </td>
+
+                                            								        								    								    								<td>
+    									    									    									<img alt="Paredes del avion" src="index%20Archivos/v_wallright.gif">
+    								</td>
+    							                            </tr>
+                        
+                            <tr>
+    							    								<td><strong> 8</strong></td>
+    								<td>
+    									    									
+    									<img alt="Paredes del avion" src="index%20Archivos/v_wallleft.gif">
+    								</td>
+
+                                    
+                                            								    								        								
+											                							
+                							
+                                                    																				
+                                                <td class="available">
+
+
+                                                    
+                                                    <p id="tempPriceBox_9_2" style="display:none;">
+                                                                        
+                                                                        
+      $0 <span>MXN</span>
+                                                                                                                      </p>
+                                                    <img id="seatImage_8A" alt="8A" src="index%20Archivos/v_avail.gif" onclick="PFS.setSeatSelection('8A', YAHOO.util.Dom.get('tempPriceBox_9_2').innerHTML);">
+                                                </td>
+
+                                            								        								        									<td class="aisle">
+        										<img alt="Pasillo" src="index%20Archivos/v_aisle.gif">
+        									</td>
+        								    								        								
+											                							
+                							
+                                                    																				
+                                                <td class="available">
+
+
+                                                    
+                                                    <p id="tempPriceBox_9_4" style="display:none;">
+                                                                        
+                                                                        
+      $0 <span>MXN</span>
+                                                                                                                      </p>
+                                                    <img id="seatImage_8B" alt="8B" src="index%20Archivos/v_avail.gif" onclick="PFS.setSeatSelection('8B', YAHOO.util.Dom.get('tempPriceBox_9_4').innerHTML);">
+                                                </td>
+
+                                            								        								
+											                							
+                							
+                                                    																				
+                                                <td class="available">
+
+
+                                                    
+                                                    <p id="tempPriceBox_9_5" style="display:none;">
+                                                                        
+                                                                        
+      $0 <span>MXN</span>
+                                                                                                                      </p>
+                                                    <img id="seatImage_8C" alt="8C" src="index%20Archivos/v_avail.gif" onclick="PFS.setSeatSelection('8C', YAHOO.util.Dom.get('tempPriceBox_9_5').innerHTML);">
+                                                </td>
+
+                                            								        								    								    								<td>
+    									    									    									<img alt="Paredes del avion" src="index%20Archivos/v_wallright.gif">
+    								</td>
+    							                            </tr>
+                        
+                            <tr>
+    							    								<td><strong> 9</strong></td>
+    								<td>
+    									    									
+    									<img alt="Paredes del avion" src="index%20Archivos/v_wallleft.gif">
+    								</td>
+
+                                    
+                                            								    								        								
+											                							
+                							
+                                                    																				
+                                                <td class="available">
+
+
+                                                    
+                                                    <p id="tempPriceBox_10_2" style="display:none;">
+                                                                        
+                                                                        
+      $0 <span>MXN</span>
+                                                                                                                      </p>
+                                                    <img id="seatImage_9A" alt="9A" src="index%20Archivos/v_avail.gif" onclick="PFS.setSeatSelection('9A', YAHOO.util.Dom.get('tempPriceBox_10_2').innerHTML);">
+                                                </td>
+
+                                            								        								        									<td class="aisle">
+        										<img alt="Pasillo" src="index%20Archivos/v_aisle.gif">
+        									</td>
+        								    								        								
+											                							
+                							
+                                                    																				
+                                                <td class="available">
+
+
+                                                    
+                                                    <p id="tempPriceBox_10_4" style="display:none;">
+                                                                        
+                                                                        
+      $0 <span>MXN</span>
+                                                                                                                      </p>
+                                                    <img id="seatImage_9B" alt="9B" src="index%20Archivos/v_avail.gif" onclick="PFS.setSeatSelection('9B', YAHOO.util.Dom.get('tempPriceBox_10_4').innerHTML);">
+                                                </td>
+
+                                            								        								
+											                							
+                							
+                                                    																				
+                                                <td class="available">
+
+
+                                                    
+                                                    <p id="tempPriceBox_10_5" style="display:none;">
+                                                                        
+                                                                        
+      $0 <span>MXN</span>
+                                                                                                                      </p>
+                                                    <img id="seatImage_9C" alt="9C" src="index%20Archivos/v_avail.gif" onclick="PFS.setSeatSelection('9C', YAHOO.util.Dom.get('tempPriceBox_10_5').innerHTML);">
+                                                </td>
+
+                                            								        								    								    								<td>
+    									    									    									<img alt="Paredes del avion" src="index%20Archivos/v_wallright.gif">
+    								</td>
+    							                            </tr>
+                        
+                            <tr>
+    							    								<td><strong>10</strong></td>
+    								<td>
+    									    									
+    									<img alt="Ala del avion" src="index%20Archivos/v_wallleftwing.gif">
+    								</td>
+
+                                    
+                                            								    								        								
+											                							
+                							
+                                                    																				
+                                                <td class="available">
+
+
+                                                    
+                                                    <p id="tempPriceBox_11_2" style="display:none;">
+                                                                        
+                                                                        
+      $0 <span>MXN</span>
+                                                                                                                      </p>
+                                                    <img id="seatImage_10A" alt="10A" src="index%20Archivos/v_avail.gif" onclick="PFS.setSeatSelection('10A', YAHOO.util.Dom.get('tempPriceBox_11_2').innerHTML);">
+                                                </td>
+
+                                            								        								        									<td class="aisle">
+        										<img alt="Pasillo" src="index%20Archivos/v_aisle.gif">
+        									</td>
+        								    								        								
+											                							
+                							
+                                                    																				
+                                                <td class="available">
+
+
+                                                    
+                                                    <p id="tempPriceBox_11_4" style="display:none;">
+                                                                        
+                                                                        
+      $0 <span>MXN</span>
+                                                                                                                      </p>
+                                                    <img id="seatImage_10B" alt="10B" src="index%20Archivos/v_avail.gif" onclick="PFS.setSeatSelection('10B', YAHOO.util.Dom.get('tempPriceBox_11_4').innerHTML);">
+                                                </td>
+
+                                            								        								
+											                							
+                							
+                                                    																				
+                                                <td class="available">
+
+
+                                                    
+                                                    <p id="tempPriceBox_11_5" style="display:none;">
+                                                                        
+                                                                        
+      $0 <span>MXN</span>
+                                                                                                                      </p>
+                                                    <img id="seatImage_10C" alt="10C" src="index%20Archivos/v_avail.gif" onclick="PFS.setSeatSelection('10C', YAHOO.util.Dom.get('tempPriceBox_11_5').innerHTML);">
+                                                </td>
+
+                                            								        								    								    								<td>
+    									    									    									<img alt="Ala del avion" src="index%20Archivos/v_wallrightwing.gif">
+    								</td>
+    							                            </tr>
+                        
+                            <tr>
+    							    								<td><strong>11</strong></td>
+    								<td>
+    									    									
+    									<img alt="Ala del avion" src="index%20Archivos/v_wallleftwing.gif">
+    								</td>
+
+                                    
+                                            								    								        								
+											                							
+                							
+                                                    									    										
+                                                <td class="limited">
+
+
+                                                    
+                                                    <p id="tempPriceBox_12_2" style="display:none;">
+                                                                        
+                                                                        
+      $0 <span>MXN</span>
+                                                                                                                      </p>
+                                                    <img id="seatImage_11A" alt="11A" src="index%20Archivos/v_limited.gif" onclick="PFS.setSeatSelection('11A', YAHOO.util.Dom.get('tempPriceBox_12_2').innerHTML);">
+                                                </td>
+
+                                            								        								        									<td class="aisle">
+        										<img alt="Pasillo" src="index%20Archivos/v_aisle.gif">
+        									</td>
+        								    								        								
+											                							
+                							
+                                                    									    										
+                                                <td class="limited">
+
+
+                                                    
+                                                    <p id="tempPriceBox_12_4" style="display:none;">
+                                                                        
+                                                                        
+      $0 <span>MXN</span>
+                                                                                                                      </p>
+                                                    <img id="seatImage_11B" alt="11B" src="index%20Archivos/v_limited.gif" onclick="PFS.setSeatSelection('11B', YAHOO.util.Dom.get('tempPriceBox_12_4').innerHTML);">
+                                                </td>
+
+                                            								        								
+											                							
+                							
+                                                    									    										
+                                                <td class="limited">
+
+
+                                                    
+                                                    <p id="tempPriceBox_12_5" style="display:none;">
+                                                                        
+                                                                        
+      $0 <span>MXN</span>
+                                                                                                                      </p>
+                                                    <img id="seatImage_11C" alt="11C" src="index%20Archivos/v_limited.gif" onclick="PFS.setSeatSelection('11C', YAHOO.util.Dom.get('tempPriceBox_12_5').innerHTML);">
+                                                </td>
+
+                                            								        								    								    								<td>
+    									    									    									<img alt="Ala del avion" src="index%20Archivos/v_wallrightwing.gif">
+    								</td>
+    							                            </tr>
+                        
+                            <tr>
+    							    								<td><strong>12</strong></td>
+    								<td>
+    									    									
+    									<img alt="Salida de emergencia" src="index%20Archivos/v_exitleftwing.gif">
+    								</td>
+
+                                    
+                                            								    								        								
+											                							
+                							
+                                                    																				
+                                                <td class="available">
+
+
+                                                    
+                                                    <p id="tempPriceBox_13_2" style="display:none;">
+                                                                        
+                                                                        
+      $0 <span>MXN</span>
+                                                                                                                      </p>
+                                                    <img id="seatImage_12A" alt="12A" src="index%20Archivos/v_avail.gif" onclick="PFS.setSeatSelection('12A', YAHOO.util.Dom.get('tempPriceBox_13_2').innerHTML);">
+                                                </td>
+
+                                            								        								        									<td class="aisle">
+        										<img alt="Pasillo" src="index%20Archivos/v_aisle.gif">
+        									</td>
+        								    								        								
+											                							
+                							
+                                                    																				
+                                                <td class="available">
+
+
+                                                    
+                                                    <p id="tempPriceBox_13_4" style="display:none;">
+                                                                        
+                                                                        
+      $0 <span>MXN</span>
+                                                                                                                      </p>
+                                                    <img id="seatImage_12B" alt="12B" src="index%20Archivos/v_avail.gif" onclick="PFS.setSeatSelection('12B', YAHOO.util.Dom.get('tempPriceBox_13_4').innerHTML);">
+                                                </td>
+
+                                            								        								
+											                							
+                							
+                                                    																				
+                                                <td class="available">
+
+
+                                                    
+                                                    <p id="tempPriceBox_13_5" style="display:none;">
+                                                                        
+                                                                        
+      $0 <span>MXN</span>
+                                                                                                                      </p>
+                                                    <img id="seatImage_12C" alt="12C" src="index%20Archivos/v_avail.gif" onclick="PFS.setSeatSelection('12C', YAHOO.util.Dom.get('tempPriceBox_13_5').innerHTML);">
+                                                </td>
+
+                                            								        								    								    								<td>
+    									    									    									<img alt="Salida de emergencia" src="index%20Archivos/v_exitrightwing.gif">
+    								</td>
+    							                            </tr>
+                        
+                            <tr>
+    							    								<td><strong>14</strong></td>
+    								<td>
+    									    									
+    									<img alt="Ala del avion" src="index%20Archivos/v_wallleftwing.gif">
+    								</td>
+
+                                    
+                                            								    								        								
+											                							
+                							
+                                                    																				
+                                                <td class="available">
+
+
+                                                    
+                                                    <p id="tempPriceBox_14_2" style="display:none;">
+                                                                        
+                                                                        
+      $0 <span>MXN</span>
+                                                                                                                      </p>
+                                                    <img id="seatImage_14A" alt="14A" src="index%20Archivos/v_avail.gif" onclick="PFS.setSeatSelection('14A', YAHOO.util.Dom.get('tempPriceBox_14_2').innerHTML);">
+                                                </td>
+
+                                            								        								        									<td class="aisle">
+        										<img alt="Pasillo" src="index%20Archivos/v_aisle.gif">
+        									</td>
+        								    								        								
+											                							
+                							
+                                                    																				
+                                                <td class="available">
+
+
+                                                    
+                                                    <p id="tempPriceBox_14_4" style="display:none;">
+                                                                        
+                                                                        
+      $0 <span>MXN</span>
+                                                                                                                      </p>
+                                                    <img id="seatImage_14B" alt="14B" src="index%20Archivos/v_avail.gif" onclick="PFS.setSeatSelection('14B', YAHOO.util.Dom.get('tempPriceBox_14_4').innerHTML);">
+                                                </td>
+
+                                            								        								
+											                							
+                							
+                                                    																				
+                                                <td class="available">
+
+
+                                                    
+                                                    <p id="tempPriceBox_14_5" style="display:none;">
+                                                                        
+                                                                        
+      $0 <span>MXN</span>
+                                                                                                                      </p>
+                                                    <img id="seatImage_14C" alt="14C" src="index%20Archivos/v_avail.gif" onclick="PFS.setSeatSelection('14C', YAHOO.util.Dom.get('tempPriceBox_14_5').innerHTML);">
+                                                </td>
+
+                                            								        								    								    								<td>
+    									    									    									<img alt="Ala del avion" src="index%20Archivos/v_wallrightwing.gif">
+    								</td>
+    							                            </tr>
+                        
+                            <tr>
+    							    								<td><strong>15</strong></td>
+    								<td>
+    									    									
+    									<img alt="Ala del avion" src="index%20Archivos/v_wallleftwing.gif">
+    								</td>
+
+                                    
+                                            								    								        								
+											                							
+                							
+                                                    																				
+                                                <td class="available">
+
+
+                                                    
+                                                    <p id="tempPriceBox_15_2" style="display:none;">
+                                                                        
+                                                                        
+      $0 <span>MXN</span>
+                                                                                                                      </p>
+                                                    <img id="seatImage_15A" alt="15A" src="index%20Archivos/v_avail.gif" onclick="PFS.setSeatSelection('15A', YAHOO.util.Dom.get('tempPriceBox_15_2').innerHTML);">
+                                                </td>
+
+                                            								        								        									<td class="aisle">
+        										<img alt="Pasillo" src="index%20Archivos/v_aisle.gif">
+        									</td>
+        								    								        								
+											                							
+                							
+                                                    																				
+                                                <td class="available">
+
+
+                                                    
+                                                    <p id="tempPriceBox_15_4" style="display:none;">
+                                                                        
+                                                                        
+      $0 <span>MXN</span>
+                                                                                                                      </p>
+                                                    <img id="seatImage_15B" alt="15B" src="index%20Archivos/v_avail.gif" onclick="PFS.setSeatSelection('15B', YAHOO.util.Dom.get('tempPriceBox_15_4').innerHTML);">
+                                                </td>
+
+                                            								        								
+											                							
+                							
+                                                    																				
+                                                <td class="available">
+
+
+                                                    
+                                                    <p id="tempPriceBox_15_5" style="display:none;">
+                                                                        
+                                                                        
+      $0 <span>MXN</span>
+                                                                                                                      </p>
+                                                    <img id="seatImage_15C" alt="15C" src="index%20Archivos/v_avail.gif" onclick="PFS.setSeatSelection('15C', YAHOO.util.Dom.get('tempPriceBox_15_5').innerHTML);">
+                                                </td>
+
+                                            								        								    								    								<td>
+    									    									    									<img alt="Ala del avion" src="index%20Archivos/v_wallrightwing.gif">
+    								</td>
+    							                            </tr>
+                        
+                            <tr>
+    							    								<td><strong>16</strong></td>
+    								<td>
+    									    									
+    									<img alt="Ala del avion" src="index%20Archivos/v_wallleftwing.gif">
+    								</td>
+
+                                    
+                                            								    								        								
+											                							
+                							
+                                                    																				
+                                                <td class="available">
+
+
+                                                    
+                                                    <p id="tempPriceBox_16_2" style="display:none;">
+                                                                        
+                                                                        
+      $0 <span>MXN</span>
+                                                                                                                      </p>
+                                                    <img id="seatImage_16A" alt="16A" src="index%20Archivos/v_avail.gif" onclick="PFS.setSeatSelection('16A', YAHOO.util.Dom.get('tempPriceBox_16_2').innerHTML);">
+                                                </td>
+
+                                            								        								        									<td class="aisle">
+        										<img alt="Pasillo" src="index%20Archivos/v_aisle.gif">
+        									</td>
+        								    								        								
+											                							
+                							
+                                                    																				
+                                                <td class="available">
+
+
+                                                    
+                                                    <p id="tempPriceBox_16_4" style="display:none;">
+                                                                        
+                                                                        
+      $0 <span>MXN</span>
+                                                                                                                      </p>
+                                                    <img id="seatImage_16B" alt="16B" src="index%20Archivos/v_avail.gif" onclick="PFS.setSeatSelection('16B', YAHOO.util.Dom.get('tempPriceBox_16_4').innerHTML);">
+                                                </td>
+
+                                            								        								
+											                							
+                							
+                                                    																				
+                                                <td class="available">
+
+
+                                                    
+                                                    <p id="tempPriceBox_16_5" style="display:none;">
+                                                                        
+                                                                        
+      $0 <span>MXN</span>
+                                                                                                                      </p>
+                                                    <img id="seatImage_16C" alt="16C" src="index%20Archivos/v_avail.gif" onclick="PFS.setSeatSelection('16C', YAHOO.util.Dom.get('tempPriceBox_16_5').innerHTML);">
+                                                </td>
+
+                                            								        								    								    								<td>
+    									    									    									<img alt="Ala del avion" src="index%20Archivos/v_wallrightwing.gif">
+    								</td>
+    							                            </tr>
+                        
+                            <tr>
+    							    								<td><strong>17</strong></td>
+    								<td>
+    									    									
+    									<img alt="Paredes del avion" src="index%20Archivos/v_wallleft.gif">
+    								</td>
+
+                                    
+                                            								    								        								
+											                							
+                							
+                                                    																				
+                                                <td class="available">
+
+
+                                                    
+                                                    <p id="tempPriceBox_17_2" style="display:none;">
+                                                                        
+                                                                        
+      $0 <span>MXN</span>
+                                                                                                                      </p>
+                                                    <img id="seatImage_17A" alt="17A" src="index%20Archivos/v_avail.gif" onclick="PFS.setSeatSelection('17A', YAHOO.util.Dom.get('tempPriceBox_17_2').innerHTML);">
+                                                </td>
+
+                                            								        								        									<td class="aisle">
+        										<img alt="Pasillo" src="index%20Archivos/v_aisle.gif">
+        									</td>
+        								    								        								
+											                							
+                							
+                                                    																				
+                                                <td class="available">
+
+
+                                                    
+                                                    <p id="tempPriceBox_17_4" style="display:none;">
+                                                                        
+                                                                        
+      $0 <span>MXN</span>
+                                                                                                                      </p>
+                                                    <img id="seatImage_17B" alt="17B" src="index%20Archivos/v_avail.gif" onclick="PFS.setSeatSelection('17B', YAHOO.util.Dom.get('tempPriceBox_17_4').innerHTML);">
+                                                </td>
+
+                                            								        								
+											                							
+                							
+                                                    																				
+                                                <td class="available">
+
+
+                                                    
+                                                    <p id="tempPriceBox_17_5" style="display:none;">
+                                                                        
+                                                                        
+      $0 <span>MXN</span>
+                                                                                                                      </p>
+                                                    <img id="seatImage_17C" alt="17C" src="index%20Archivos/v_avail.gif" onclick="PFS.setSeatSelection('17C', YAHOO.util.Dom.get('tempPriceBox_17_5').innerHTML);">
+                                                </td>
+
+                                            								        								    								    								<td>
+    									    									    									<img alt="Paredes del avion" src="index%20Archivos/v_wallright.gif">
+    								</td>
+    							                            </tr>
+                        
+                            <tr>
+    							    								<td><strong>18</strong></td>
+    								<td>
+    									    									
+    									<img alt="Paredes del avion" src="index%20Archivos/v_wallleft.gif">
+    								</td>
+
+                                    
+                                            								    								        								
+											                							
+                							
+                                                    																				
+                                                <td class="available">
+
+
+                                                    
+                                                    <p id="tempPriceBox_18_2" style="display:none;">
+                                                                        
+                                                                        
+      $0 <span>MXN</span>
+                                                                                                                      </p>
+                                                    <img id="seatImage_18A" alt="18A" src="index%20Archivos/v_avail.gif" onclick="PFS.setSeatSelection('18A', YAHOO.util.Dom.get('tempPriceBox_18_2').innerHTML);">
+                                                </td>
+
+                                            								        								        									<td class="aisle">
+        										<img alt="Pasillo" src="index%20Archivos/v_aisle.gif">
+        									</td>
+        								    								        								
+											                							
+                							
+                                                    																				
+                                                <td class="available">
+
+
+                                                    
+                                                    <p id="tempPriceBox_18_4" style="display:none;">
+                                                                        
+                                                                        
+      $0 <span>MXN</span>
+                                                                                                                      </p>
+                                                    <img id="seatImage_18B" alt="18B" src="index%20Archivos/v_avail.gif" onclick="PFS.setSeatSelection('18B', YAHOO.util.Dom.get('tempPriceBox_18_4').innerHTML);">
+                                                </td>
+
+                                            								        								
+											                							
+                							
+                                                    																				
+                                                <td class="available">
+
+
+                                                    
+                                                    <p id="tempPriceBox_18_5" style="display:none;">
+                                                                        
+                                                                        
+      $0 <span>MXN</span>
+                                                                                                                      </p>
+                                                    <img id="seatImage_18C" alt="18C" src="index%20Archivos/v_avail.gif" onclick="PFS.setSeatSelection('18C', YAHOO.util.Dom.get('tempPriceBox_18_5').innerHTML);">
+                                                </td>
+
+                                            								        								    								    								<td>
+    									    									    									<img alt="Paredes del avion" src="index%20Archivos/v_wallright.gif">
+    								</td>
+    							                            </tr>
+                        
+                            <tr>
+    							    								<td><strong>19</strong></td>
+    								<td>
+    									    									
+    									<img alt="Paredes del avion" src="index%20Archivos/v_wallleft.gif">
+    								</td>
+
+                                    
+                                            								    								        								
+											                							
+                							
+                                                    																				
+                                                <td class="available">
+
+
+                                                    
+                                                    <p id="tempPriceBox_19_2" style="display:none;">
+                                                                        
+                                                                        
+      $0 <span>MXN</span>
+                                                                                                                      </p>
+                                                    <img id="seatImage_19A" alt="19A" src="index%20Archivos/v_avail.gif" onclick="PFS.setSeatSelection('19A', YAHOO.util.Dom.get('tempPriceBox_19_2').innerHTML);">
+                                                </td>
+
+                                            								        								        									<td class="aisle">
+        										<img alt="Pasillo" src="index%20Archivos/v_aisle.gif">
+        									</td>
+        								    								        								
+											                							
+                							
+                                                    																				
+                                                <td class="available">
+
+
+                                                    
+                                                    <p id="tempPriceBox_19_4" style="display:none;">
+                                                                        
+                                                                        
+      $0 <span>MXN</span>
+                                                                                                                      </p>
+                                                    <img id="seatImage_19B" alt="19B" src="index%20Archivos/v_avail.gif" onclick="PFS.setSeatSelection('19B', YAHOO.util.Dom.get('tempPriceBox_19_4').innerHTML);">
+                                                </td>
+
+                                            								        								
+											                							
+                							
+                                                    																				
+                                                <td class="available">
+
+
+                                                    
+                                                    <p id="tempPriceBox_19_5" style="display:none;">
+                                                                        
+                                                                        
+      $0 <span>MXN</span>
+                                                                                                                      </p>
+                                                    <img id="seatImage_19C" alt="19C" src="index%20Archivos/v_avail.gif" onclick="PFS.setSeatSelection('19C', YAHOO.util.Dom.get('tempPriceBox_19_5').innerHTML);">
+                                                </td>
+
+                                            								        								    								    								<td>
+    									    									    									<img alt="Paredes del avion" src="index%20Archivos/v_wallright.gif">
+    								</td>
+    							                            </tr>
+                        
+                            <tr>
+    							    								<td>&nbsp;</td>
+                    				<td>&nbsp;</td>
+                    				                    				                    					                    						<td><strong>A </strong></td>
+                    					                    				                    					                    						<td>&nbsp;</td>
+                    					                    				                    					                    						<td><strong>B </strong></td>
+                    					                    				                    					                    						<td><strong>C </strong></td>
+                    					                    				                    				<td>&nbsp;</td>
+    							                            </tr>
+                                            </tbody></table>
+                </div>
+            </div>
+    		<div class="clear_left_block"></div>
+		    </div>
+										
+																																					</div>
+</form>
+<div id="push"></div>
+</div><script type="text/javascript">var str="\/mx\/Ancillary\/",pattern="((19|20)\\d\\d[- /.](0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])/(19|20)\\d\\d[- /.](0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])/$)|((19|20)\\d\\d[- /.](0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])/(19|20)\\d\\d[- /.](0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])/0/)$",patt=RegExp(pattern,"g"),newUri=str.replace(patt,""),_gaq=_gaq||[];_gaq.push(["_setAccount","UA-8747974-1"]);_gaq.push(["_setDomainName","aeromexico.com"]);_gaq.push(["_trackPageview",newUri]);
+(function(){var a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)})();</script>
+	
+<div id="footerContainer">
+	
+
+        <div id="footerBanner">
+							        			</div>
+			<div id="footerNav">
+
+            <p class="reviewPolicies">
+				
+                <a wjtrackingname="securityPolicy" onclick="wsClickTrack(this);" href="javascript:openSecurity('/cat1/meridia?posid=D5EE&amp;sid=me2reA2ryy2r7-yyyv:ab49e576b185ff039c0dce0dfe18ff3f328d9741faf4e950d7387d584bb0e21a&amp;page=mainMenuMessage_reservation')" title="" id="mainMenuMiscSecurityPolicyHeader"></a> |
+                <a wjtrackingname="privacyPolicy" onclick="wsClickTrack(this);" href="javascript:openPrivacy('/cat1/meridia?posid=D5EE&amp;sid=me2reA2ryy2r7-yyyv:ab49e576b185ff039c0dce0dfe18ff3f328d9741faf4e950d7387d584bb0e21a&amp;page=mainMenuMessage_reservation')" title="" id="mainMenuMiscPrivacyPolicyHeader"></a>
+
+		    </p>
+			<p class="sabreConnected">
+								<img src="index%20Archivos/sabreLogo.gif" border="0" height="34" width="65">
+				
+			</p>
+            				<p></p><div id="footer">
+  <div id="footer_wrap">
+    <div id="footer_top">
+      <div id="footer_top_left">
+        <a href="http://www.aeromexico.com/system/galleries/externallinks/links/esr" target="_blank"><img src="index%20Archivos/aeromexico_esr.png"></a>
+        <a href="http://www.aeromexico.com/system/galleries/externallinks/enlaces/amipici" target="_blank"><img src="index%20Archivos/aeromexico_amipci.png"></a>
+        <a href="http://www.aeromexico.com/system/galleries/externallinks/enlaces/MasterCard" target="_blank"><img src="index%20Archivos/aeromexico_mastercard_securecode.png"></a>
+        <a href="http://www.aeromexico.com/system/galleries/externallinks/enlaces/verified" target="_blank"><img src="index%20Archivos/aeromexico_verifiedvisa.png"></a>
+        </div>
+      <div id="footer_top_right">
+        <ul id="social_media">
+          <li class="social_media_title">Únete:</li>
+        <li><a href="http://www.aeromexico.com/system/galleries/externallinks/enlaces/facebook" target="_blank"><i class="icon_fb"></i><span class="screen-reader-text"></span></a></li>
+          <li><a href="http://www.aeromexico.com/system/galleries/externallinks/enlaces/twitter" target="_blank"><i class="icon_tw"></i><span class="screen-reader-text"></span></a></li>
+          <li><a href="http://www.aeromexico.com/system/galleries/externallinks/enlaces/YouTube" target="_blank"><i class="icon_yt"></i><span class="screen-reader-text"></span></a></li>
+          <li><a href="http://www.aeromexico.com/system/galleries/externallinks/enlaces/destinos" target="_blank"><i class="icon_dt"></i><span class="screen-reader-text"></span></a></li>
+          <li><a href="http://www.aeromexico.com/system/galleries/externallinks/enlaces/Newsletter" target="_blank"><i class="icon_en"></i><span class="screen-reader-text"></span></a></li>
+          </ul>
+      </div>
+    </div>
+    <div id="footer_bottom">
+      <div id="footer_menu">
+        <ul>
+          <li><a href="http://www.aeromexico.com/mx/terminos-y-condiciones-am.html" target="_blank">Términos y condiciones</a></li>
+          <li><a href="http://www.aeromexico.com/mx/aviso-de-privacidad.html" target="_blank">Aviso de privacidad</a></li>
+          <li><a href="http://www.aeromexico.com/mx/SobreTuVuelo/AntesDeComprar/ReglamentosYPoliticas/Plan-de-contingencia.html" target="_blank">Plan por demoras prolongadas </a></li>
+          <li><a href="http://www.aeromexico.com/mx/SobreTuVuelo/AntesDeComprar/ReglamentosYPoliticas/Plan-de-servicio-al-pasajero.html" target="_blank">Plan de servicio al pasajero</a></li>
+          <li><a href="http://www.aeromexico.com/mx/SobreTuVuelo/AntesDeComprar/ReglamentosYPoliticas/Contrato-de-transporte.html" target="_blank">Contrato de transporte</a></li>
+          </ul>
+      </div>
+      <div id="legal">©2012 Aeroméxico. Todos los derechos Reservados.</div>
+    </div>
+  </div>
+</div>
+<script language="javascript" src="index%20Archivos/st.js"></script>
+<script language="javascript">
+var ef_event_type="pageview";
+var ef_pageview_properties = "";
+/*
+ * Do not modify below this line
+ */
+var ef_segment = "9177";
+var ef_search_segment = "9169";
+var ef_userid="3999";
+var ef_pixel_host="pixel.everesttech.net";
+var ef_fb_is_app = 0;
+var ef_allow_3rd_party_pixels = 1;
+effp();
+</script>
+<noscript><img src="http://pixel.everesttech.net/3999/v?" width="1" height="1"/></noscript><p></p>
+            	       </div></div>
+           
+               <span id="verInfo" style="display:none">vmver:2009.22.00,javaver:2009.22.00</span>
+		
+         <div id="fancybox-tmp"></div><div id="fancybox-loading"><div></div></div><div id="fancybox-overlay"></div><div id="fancybox-wrap"><div id="fancybox-outer"><div class="fancybox-bg" id="fancybox-bg-n"></div><div class="fancybox-bg" id="fancybox-bg-ne"></div><div class="fancybox-bg" id="fancybox-bg-e"></div><div class="fancybox-bg" id="fancybox-bg-se"></div><div class="fancybox-bg" id="fancybox-bg-s"></div><div class="fancybox-bg" id="fancybox-bg-sw"></div><div class="fancybox-bg" id="fancybox-bg-w"></div><div class="fancybox-bg" id="fancybox-bg-nw"></div><div id="fancybox-content"></div><a id="fancybox-close"></a><div id="fancybox-title"></div><a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a><a href="javascript:;" id="fancybox-right"><span class="fancy-ico" id="fancybox-right-ico"></span></a></div></div></body></html>

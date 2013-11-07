@@ -1,0 +1,3 @@
+#sidebar, #pageHeader, #footerContainer, div.billing, #progressBar, p.popShopingCartLink, #pushHeader, #push {
+  display: none;
+}

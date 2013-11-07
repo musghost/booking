@@ -1,0 +1,1827 @@
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 12px;
+    line-height: 20px;
+    color: rgb(51, 51, 51);
+    background: #fff !important;
+}
+#ROOT #cnt_0_0_2_4, #ROOT #cnt_1 {
+    position: static !important;
+}
+.container{
+    width: 940px;
+    margin: 0px auto;
+}
+header .bar {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+
+  background: #00377b; }
+
+header .bar + .container{
+    margin-top: 25px;  
+}
+header .row{
+    min-height: 1px; overflow: hidden;
+}
+header .span3{
+    float: left; width: 240px;
+}
+header .span9{
+    float: left;
+}
+header .contact {
+  color: #d5d5d5;
+  font-size: 12px; }
+  header .contact i.chat {
+    background: url("http://aeromexico.com/system/modules/com.AeroMexico/resources/img/home/chat.png");
+    width: 19px;
+    height: 19px;
+    display: inline-block;
+    float: left;
+    margin-right: 4px; }
+  header .contact i.contact {
+    background: url("http://aeromexico.com/system/modules/com.AeroMexico/resources/img/home/email.png");
+    width: 19px;
+    height: 19px;
+    display: inline-block;
+    float: left;
+    margin-right: 4px; }
+  header .contact a {
+    color: #d5d5d5;
+    font-weight: 200;
+    line-height: 19px; }
+  header .contact ul.contact-nums {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    float: right; }
+    header .contact ul.contact-nums li {
+      padding: 5px 15px;
+      display: inline-block;
+      font-weight: bold;
+      float: left; }
+    header .contact ul.contact-nums li span{
+      font-weight: 100;
+    }
+header .aeromexico {
+  margin-top: 24px;
+  position: relative;
+  overflow: visible; }
+  header .aeromexico img {
+    position: absolute;
+    top: 0; }
+  header .aeromexico .logo {
+    width: 229px;
+    max-width: none;
+    top: -10px;
+    left: -6px; }
+  header .aeromexico .sky {
+    right: -12px; }
+header .menu {
+  margin: 24px 0 0 0;
+  list-style: none;
+  padding: 0;
+  font-size: 12px;
+  text-transform: uppercase;
+  position: relative; 
+  z-index: 4;}
+  header .menu li {
+    float: left;
+    padding-bottom: 14px;
+    margin-left: -1px;
+    transition: background .2s;
+    -webkit-transition: background .2s; }
+    header .menu li:hover .submenu {
+      display: block;
+      opacity: 1; }
+    header .menu li a {
+      margin: 0;
+      padding: 12px 13px;
+      display: inline-block;
+      line-height: 10px;
+      color: #797979;
+      border-right: 1px solid #797979;
+      transition: color .4s;
+      -webkit-transition: color .5s; }
+      header .menu li a:hover {
+        text-decoration: none; }
+    header .menu li:hover {
+      background: #005ea0; }
+      header .menu li:hover a {
+        color: #fff; }
+    header .menu li.form:hover {
+      background: transparent; }
+  header .menu .submenu {
+    position: absolute;
+    z-index: 4;
+    background: #005ea0;
+    width: 732px;
+    text-transform: none;
+    display: none;
+    left: 0;
+    top: 48px;
+    opacity: 0;
+    transition: opacity .5s;
+    -webkit-transition: opacity .5s; }
+    header .menu .submenu:hover {
+      display: block;
+      opacity: 1; }
+    header .menu .submenu ul {
+      list-style: none;
+      padding: 0;
+      float: left; }
+      header .menu .submenu ul li {
+        display: block;
+        width: 183px;
+        clear: both;
+        padding: 0;
+        margin-left: 0; }
+        header .menu .submenu ul li + li a {
+          border-top: 1px solid #2db8e6; }
+      header .menu .submenu ul a {
+        color: #fff;
+        border-right: 0;
+        width: 130px;
+        font-size: 11px;
+        padding: 12px 0;
+        line-height: 15px;
+        margin-left: 30px;
+        font-weight: 200;
+        -webkit-transition: font-weight 0.2s linear;
+        transition: font-weight 0.2s linear; }
+        header .menu .submenu ul a:hover {
+          /* text-transform: uppercase; */
+          font-weight: bold;
+          text-shadow: 1px 1px #005189; }
+  header .menu .input-text {
+    width: 130px;
+    height: 29px;
+    padding: 0 0 0 11px;
+    float: left;
+    margin-left: 15px;
+    border: 1px solid #bfbfbf;
+    border-radius: 3px;
+    box-shadow: 0 0 1px #bfbfbf;
+    font-size: 11px; }
+  header .menu .button {
+    float: left;
+    width: 25px;
+    height: 34px;
+    margin-left: 5px;
+    background: url("http://aeromexico.com/system/modules/com.AeroMexico/resources/img/home/lupa.png");
+    background-repeat: no-repeat;
+    text-indent: -99999px;
+    border: 0;
+    margin-top: 3px;
+    border: 0px none;
+    box-shadow: none;
+    margin-left: 5px; }
+
+footer {
+    font-size: 10px;
+    color: rgb(139, 139, 139);
+}
+footer .logos {
+    overflow: auto;
+    margin: 10px 0px;
+}
+footer ul {
+    padding: 0px;
+    margin: 0px;
+    width: 110%;
+    position: relative;
+    left: -10px;
+    list-style: none outside none;
+}
+footer li {
+    display: inline-block;
+}
+footer li + li a {
+    line-height: 10px;
+    padding: 0px 1px 0px 2px;
+    border-left: 1px solid rgb(139, 139, 139);
+    display: inline-block;
+    text-align: center;
+}
+footer a {
+    color: rgb(139, 139, 139);
+}
+.logos .iz {
+    float: left;
+}
+.logos .dr {
+    float: right;
+}
+/*  ::::::STEPS::::: */
+#booking-process.active .process-bar li.stepPast.firstStep.one {
+  background-position: 0px -46px;
+}
+#booking-process.active .process-bar li.stepCurrent.prevPast.two {
+  background-position: -15px -138px;
+}
+#booking-process.active .process-bar li.stepFuture.prevCurrent.one{
+  background-position: -15px -276px;
+}
+#booking-process.active .process-bar li.stepFuture.prevFuture.two{
+  background-position: -15px -322px;
+}
+#booking-process.active .process-bar li.stepFuture.prevFuture.one{
+  background-position: -15px -184px;
+}
+#booking-process.active .process-bar li.stepFuture.firstStep.one{
+  background-position: 0px -46px;
+}
+#booking-process.active .process-bar li.stepCurrent.prevFuture.one{
+ background-position: -15px -92px; 
+}
+#booking-process.active .process-bar li.stepCurrent.lastStep a {
+  background: url("https://s3.amazonaws.com/aeromexico/booking/brand-new.png") no-repeat scroll right 0px transparent;
+  height: 34px;
+}
+#booking-process.active .process-bar li.stepFuture.prevCurrent.two {
+  background-position: -15px -230px;
+}
+#ROOT #booking-process.active .process-bar li.stepFuture.prevFuture.lastStep a{
+  background: none !important;
+}
+#booking-process.active .process-bar li.lastStep a {
+  padding-right: 10px;
+}
+
+#trip-type h3{
+  color: rgb(51, 51, 51);
+  font-weight: 300;
+  margin-right: 15px;
+}
+#promo_code{
+  border-radius: 3px;
+  box-shadow: 0px 0px 4px rgb(207, 207, 207);
+}
+
+#ROOT #search-flights{
+    border:0;
+    width: 690px;
+
+}
+#ROOT #trip-type{
+    background: #fff;
+    color: rgb(51, 51, 51);
+}
+#ROOT #trip-type li{
+    padding: 0;
+    height: auto;
+    background: none;
+    letter-spacing:.5px;
+    float: left;
+}
+#ROOT #trip-type label{
+    font-weight: 300;
+}
+#ROOT #trip-type #search-flights label{
+    font-weight: 300;
+}
+#ROOT #search-flights .search-flights {
+    width: 100%;
+}
+#ROOT #airports-dates-container .column {
+    width: 100%;
+    padding: 0;
+}
+#ROOT #airports-dates-container label {
+    
+}
+#ROOT #departure-datetime{
+    width: 49%;
+    float: left;
+}
+#ROOT #return-datetime{
+    width: 50%;
+    float: left;
+}
+#airports-dates-container legend{
+    display: none;
+}
+#ROOT .field.select-airport{
+  position: relative;
+}
+#ROOT div.field.select-airport{
+    width: 48%;
+    /*border:1px solid rgb(207, 207, 207);
+    border-radius: 2px;*/
+
+}
+#ROOT #search-flights .select-airport input{
+  border: 1px solid rgb(207, 207, 207);
+  border-radius: 2px;
+  padding-left: 20px;
+  height: 25px;
+  box-shadow: 0px 0px 4px rgb(207, 207, 207);
+}
+#search-flights legend{
+    display: none;
+}
+#ROOT .search-passengers .field {
+    clear: left;
+    overflow: visible;
+    padding-top: 5px;
+}
+#ROOT .search-passengers .field{
+    display: inline-block;
+    margin: 0;
+}
+#ROOT .search-passengers .field label{
+    margin: 0px;
+    width: auto;
+}
+#ROOT #search-flights .field label, #search-flights .field label span{
+    color: #00377b;
+}
+#ROOT #btn-search{
+    display: inline-block;
+    width: 126px;
+    height: 33px;
+    text-align: center;
+    background: none repeat scroll 0% 0% rgb(245, 113, 46);
+    border: 0px none;
+    border-radius: 2px 2px 2px 2px;
+    margin: 10px 0px 0px;
+    transition: background-color 0.3s ease-in 0s;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    vertical-align: middle;
+    padding:0px 0px 3px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    text-transform: capitalize;
+    font-weight: 300;
+}
+#ROOT #origin_airport0, #ROOT #destination_airport0{
+  width: 280px;
+  border: 0;
+}
+#ROOT #btn-search:hover{
+    background: none repeat scroll 0% 0% rgb(239, 70, 35);
+}
+#ROOT .button{
+    background: none;
+}
+
+#ROOT #booking-process.active .process-bar li {
+    background-image: url("https://s3.amazonaws.com/aeromexico/booking/brand-new.png");
+    height: 46px;
+}
+#ROOT #booking-process.active .process-bar .stepCurrent {
+    background-color: rgb(0, 141, 204);
+}
+#ROOT #booking-process.active .process-bar li {
+    background-color: rgb(231, 230, 229);
+    text-transform: capitalize;
+    font-weight: 300;
+}
+#ROOT #booking-process.active .process-bar li.stepFuture.lastStep a {
+    background: url("https://s3.amazonaws.com/aeromexico/booking/brand-new.png") no-repeat scroll right -46px transparent;
+}
+#ROOT #booking-process.active .stepCurrent.prevPast.stepCurrent_prevPast.one{
+  background-position: -10px -92px;
+}
+#ROOT #booking-process.active .stepPast.prevPast.stepPast_prevPast.two{
+  background-position: -10px -322px;
+}
+#ROOT .stepFuture.prevFuture.stepFuture_prevFuture.two + .stepCurrent.lastStep.prevFuture.stepCurrent_prevFuture.stepCurrent_lastStep.one a{
+  background-position: -10px -93px;
+}
+#ROOT .stepPast.prevPast.stepPast_prevPast.two + .stepPast.prevPast.stepPast_prevPast.one{
+  background-position: -10px -184px;
+}
+.yui-panel-container.show-scrollbars{
+  max-height: 300px;
+  padding: 0px 2px;
+  font: 12px Helvetica,Arial,Verdana,Tahoma;
+  background: none;
+  border: 0;
+  box-shadow: none;
+}
+.yui-panel-container.show-scrollbars .table-container td{
+  display: block;
+  padding: 0;
+}
+.yui-panel-container.show-scrollbars td span{
+  color: rgb(102, 102, 102);
+  font-size: 11px;
+}
+.yui-panel-container.show-scrollbars td span:hover{
+  background-color: rgb(255, 255, 255) !important;
+  color: rgb(0, 73, 144) !important;
+  text-shadow: none !important;
+}
+.airportsList .table-container{
+  max-height: 290px;
+  margin: 0;
+  padding: 5px;
+}
+.yui-module.yui-overlay.yui-panel{
+  background: none repeat scroll 0% 0% rgb(255, 255, 255);
+  padding: 0px;
+  margin-top: 0px;
+  margin-left: 0;
+  box-shadow: 0px 0px 4px 2px rgb(209, 209, 209);
+  border: 1px solid rgb(173, 173, 173);
+}
+#ROOT .airport-trigger{
+    width: 7px;
+  height: 14px;
+  display: inline-block;
+  background: url("http://aeromexico.com/system/modules/com.AeroMexico/resources/img/home/button.png") no-repeat scroll 0% 0% transparent;
+  padding:2px;
+  position: absolute;
+  left: 7px;
+  bottom: 7px;
+}
+
+#ROOT .flight-options .field{
+  position: relative;
+  height: 45px;
+}
+#ROOT .flight-options .field + .field{
+  margin-left: 10px;
+}
+#ROOT .flight-options .field select{
+  float: left;
+  width: 100px;
+  box-shadow: 0px 0px 4px rgb(207, 207, 207);
+  border-radius: 3px;
+}
+#ROOT .flight-options .field label{
+  position: absolute;
+  font-size: 11px;
+  font-weight: 300;
+  top: 30px;
+  color:rgb(153, 153, 153) !important;
+  text-align: center;
+  width: 100%;
+  line-height: 13px;
+}
+#airports-dates-container .field.clear-left{
+  height: 0;
+}
+#airports-dates-container{
+  min-height: 140px;
+}
+#ROOT #search-multistop .search-passengers{
+  padding: 0;
+  width: 340px;
+  padding-top: 10px;
+}
+#ROOT #search-multistop .search-promo{
+  padding: 0;
+  width: 120px;
+}
+#ROOT #search-multistop .search-promo label{
+  top: 40px;
+}
+#ROOT #search-multistop .search-fares{
+  width: 115px;
+}
+#ROOT .selectbox-additional-info{
+  position: absolute;
+  font-size: 11px;
+  color: rgb(153, 153, 153);
+  width: 100px;
+  bottom: -10px;
+  left: 0;
+  text-align: center;
+}
+#ROOT #promo_code{
+  width: 100px;
+  margin-top: 15px;
+}
+#ROOT .flight-datetime input{
+  padding-left: 20px;
+  background: url("http://aeromexico.com/system/modules/com.AeroMexico/resources/img/home/button.png");
+  width: 280px;
+  height: 25px;
+  border-radius: 2px;
+  background-position: 7px 50%;
+  background-repeat: no-repeat;
+  box-shadow: 0px 0px 4px rgb(207, 207, 207);
+}
+#ROOT #search-flights{
+  background: #fff;
+}
+#ROOT #cnt_3{
+  display: none;
+}
+#ROOT .bd.calendar-container{
+  width: 430px;
+}
+#ROOT .component-section{
+  border:0;
+}
+.yui-calendar .calnavleft{
+  background: url("http://aeromexico.com/export/system/modules/com.AeroMexico/resources/img/home/aeromexico_arrows.png");
+  width: 20px;
+  height: 20px;
+  top: 3px;
+}
+.yui-calendar .calnavright {
+  background: url("http://aeromexico.com/export/system/modules/com.AeroMexico/resources/img/home/aeromexico_arrows.png");
+  width: 20px;
+  height: 20px;
+  background-position: 0 -88px;
+  top: 3px;
+}
+.yui-calendar .calheader {
+  background: rgb(0,50,99);
+  color: #fff;
+  font-weight: normal;
+  height: 25px;
+  line-height: 25px;
+}
+.yui-calendar .calweekdayrow th {
+  background: #fff;
+  color: rgb(102,102, 102);
+  text-transform: capitalize;
+}
+.yui-calendar td.calcell {
+  font-size: 12px;
+  border: 0;
+}
+.yui-calendar td.calcellhover a, .yui-calendar td.calcellhover, .yui-calendar td.highlight1{
+  background-color: #e4e4e4 !important;
+}
+.yui-calendar td.calcell.selectable {
+  border:0;
+}
+.yui-calendar td.calcell a{
+  color: #000;
+}
+.yui-calendar td.calcell.today{
+  background-color: #fff !important;
+  font-weight: bold;
+
+}
+.yui-calendar td.calcell.today a {
+  color: rgb(0, 60, 118);
+}
+.yui-panel-container .container-close {
+  display: none;
+}
+
+/*
+=================================================================
+:;;:::::::::::::::::::::::::PASO 2:::::::::::::::::::::::::;::;:;
+*/
+#ROOT .bagfee-component-overlay, #ROOT .bagfee-component-initialized {
+  border: 0;
+}
+#ROOT .component.bagfee{
+  width: 100%;
+  color: #bbb;
+}
+#ROOT .component.bagfee a{
+  color: #bbb;
+}
+.flight-info .step{
+  display: block;
+  float: left;
+  font-size: 54px;
+  color: rgb(30, 79, 124);
+  height: 45px;
+  line-height: 40px;
+  font-weight: 300;
+  width: 45px;
+}
+#ROOT .flight-info h2{
+  color: #424242;
+  font-size: 22px;
+  font-weight: 300;
+  padding: 0 0 5px 0;
+  margin: 0;
+}
+#ROOT .flight-info dl{
+  color: #424242; 
+}
+#ROOT .flight-info p{
+  display: none;
+}
+#ROOT .dates-prev .prev-next-label, #ROOT .dates-next .prev-next-label{
+  text-indent: -9999px;
+  display: inline-block;
+  width: 8px;
+  height: 16px;
+  background: url("https://s3.amazonaws.com/aeromexico/booking/pin.png") repeat scroll 0% 0% transparent;
+  top: 50%;
+  margin-top: -8px;
+}
+#ROOT .dates-next .prev-next-label{
+  background-position: right top;
+}
+#ROOT .dates-prev, #ROOT .dates-next{
+  background: none;
+  height: 30px !important;
+}
+#ROOT .menu-dates li .date{
+  background: none;
+  color: #424242;
+  font-size: 10px;
+}
+#ROOT .menu-dates li {
+  padding: 0px;
+  margin: 0px;
+  border: 0px none;
+}
+#ROOT .menu-dates li a{
+  height: auto;
+  vertical-align: top;
+  border:0;
+  width: auto;
+  padding: 10px 10px;
+}
+#ROOT .menu-dates li .date{
+  background: none repeat scroll 0% 0% transparent;
+  color: rgb(66, 66, 66);
+  font-size: 10px;
+  line-height: 14px;
+  padding: 0px;
+}
+#ROOT .menu-dates li .price{
+  display: block;
+  line-height: 14px;
+  font-weight: bold;
+}
+
+#ROOT .menu-dates li.active {
+  width: 130px;
+  background: none;
+}
+#ROOT .menu-dates li.active a{
+  width: auto;
+  border-color: rgb(60, 158, 247);
+  border-width: 0px 2px;
+  border-style: solid;
+}
+#ROOT .menu-dates li.active .date {
+  font-size: 20px;
+  color: rgb(60, 158, 247);
+  line-height: 14px;
+  font-weight: 300;
+}
+#ROOT .menu-dates li.active .price {
+  color: rgb(60, 158, 247);
+}
+#ROOT .flight-list-section.filter-options-container{
+  display: none;
+}
+#ROOT .flight-list-section thead th{
+  background: #fff;
+}
+#ROOT #outbounds-BG, #ROOT #inbounds-BG{
+  background: #3199f7;
+  color: #fff;
+}
+#ROOT #outbounds-SL, #ROOT #inbounds-SL{
+  background: #632691;
+  color: #fff;
+}
+#ROOT #outbounds-AP, #ROOT #inbounds-AP{
+  background: #f15116;
+  color: #fff;
+}
+#ROOT #outbounds-PM, #ROOT #inbounds-PM{
+  background: #fdb506;
+  color: #fff;
+}
+#ROOT #outbounds-PP, #ROOT #inbounds-PP{
+  background: #cadb1f;
+  color: #fff;
+}
+#dtcontainer-outbounds th, #dtcontainer-inbounds th{
+  display: table-cell;
+}
+#dtcontainer-outbounds th + th, #dtcontainer-inbounds th + th{
+  display: none;
+}
+#dtcontainer-outbounds th + th + th, #dtcontainer-inbounds th + th + th{
+  display: table-cell;
+}
+#dtcontainer-outbounds td, #dtcontainer-inbounds td{
+  display: table-cell;
+}
+#dtcontainer-outbounds td + td, #dtcontainer-inbounds td + td{
+  display: none;
+}
+#dtcontainer-outbounds td + td + td, #dtcontainer-inbounds td + td + td{
+  display: table-cell;
+}
+
+#ROOT .seats-remaining {
+    color: red;
+    line-height: 13px;
+    font-weight: bold;
+}
+#ROOT .flight-list table td.price input{
+  width: 20px;
+  margin-bottom: 4px;
+}
+#ROOT .flight-list tbody td.fare-family-group-2 {
+  background: #f2f2f2;
+  color: #424242;
+}
+#ROOT .flight-list tbody td.fare-family-group-1 {
+  background: #e6e6e6;
+  color: #424242;
+}
+#ROOT .flight-list tbody td.fare-family-group-0 {
+  background: #e6e6e6;
+  color: #424242;
+}
+#ROOT .flight-list tbody td, .flight-list tbody th {
+  border-color: #fff;
+  vertical-align: top;
+}
+#ROOT .flight-list tbody td{
+  padding: 15px 0 4px;
+  text-align: center;
+}
+#ROOT .flight-list table tr td:first-child {
+  border-left: none;
+}
+#ROOT #customhtmlDisclosure{
+      color: #5b5b5b;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+#cart-component .price-details {
+  background: #1e4f7c;
+  color: #fff;
+  font-weight: 300;
+}
+#cart-component .total-bottom {
+  background: #1e4f7c;
+  margin: 0 8px;
+}
+#cart-component .price-details .price-type {
+  font-weight: 300;
+  font-size: 12px;
+  padding: 0 10px;
+}
+#cart-component .prices-alternative {
+  font-size: 12px;
+  font-style: normal;
+}
+#cart-component .component-top {
+  background: #fff;
+  box-shadow: 0px 0px 4px 2px rgb(209, 209, 209);
+}
+
+.fare-details .modal-content {
+  border: 0;
+}
+.fare-details h4{
+  color: #fff;
+  background: rgb(0, 55, 123);
+  font-weight: 300;
+  font-size: 17px;
+}
+.marketingOverlayContent{
+  font-weight:300 !important;
+  font-family: "Helvetica";
+}
+
+.flight-info-sidebar{
+  box-shadow: 0px 0px 4px 2px rgb(209, 209, 209);
+  width: 220px;
+  padding-bottom: 10px;
+}
+.flight-info-sidebar .head{
+  background: url("http://aeromexico.com/export/system/modules/com.AeroMexico/resources/img/home/gradient_sprite.png");
+  height: 62px;
+}
+#ROOT .flight-info-sidebar .head h2{
+  color: #fff;
+  font-size: 15px;
+  text-align: center;
+  margin: 15px 0px 0px 0px;
+  display: inline-block;
+  width: 100%;
+}
+.flight-info-sidebar .head h2 i{
+  background: url("http://aeromexico.com/export/system/modules/com.AeroMexico/resources/img/home/fly.png") no-repeat scroll 0px 1px transparent;
+  display: inline-block;
+  width: 45px;
+  height: 21px;
+}
+#ROOT .flight-info-sidebar .body{
+  position: relative;
+}
+#ROOT .flight-info-sidebar .body h3{
+  font-size: 18px;
+  color: #333;
+  font-weight: 300;
+  padding: 10px;
+  margin: 0;
+}
+#ROOT .flight-info-sidebar .body h3 .modify{
+  float: right;
+  padding: 5px;
+  background: #3c9ef7;
+  font-size: 10px;
+  color: #fff;
+  line-height: 12px;
+  border-radius: 1.5px;
+  letter-spacing: .3px;
+}
+#ROOT .flight-info-sidebar .body h3.date{
+  margin: 10px;
+  background: #f2f2f2;
+  text-align: center;
+}
+#ROOT .flight-info-sidebar .body ul.airp{
+  list-style: none;
+  margin: 0px 10px;
+  overflow: hidden;
+}
+#ROOT .flight-info-sidebar .body ul.airp li{
+  float: left;
+  width: 60px;
+  background: #f2f2f2;
+  padding: 3px 10px;
+}
+#ROOT .flight-info-sidebar .body ul.airp li.middle{
+  width: 29px;
+  min-height: 1px;
+  background: none;
+  text-align: center;
+  padding: 0;
+}
+#ROOT .flight-info-sidebar .body ul.airp li.middle i{
+  background: url("https://s3.amazonaws.com/aeromexico/booking/pin.png") repeat scroll right 0% transparent;
+  width: 8px;
+  height: 16px;
+  vertical-align: middle;
+  display: inline-block;
+  margin-top: 14px;
+}
+#ROOT .flight-info-sidebar .body ul.airp li span{
+  width: 100%;
+  display: block;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #424242;
+  line-height: 21px;
+}
+#ROOT .flight-info-sidebar .body ul.airp li span + span{
+  font-size: 12px;
+  line-height: 14px;
+}
+#ROOT .flight-info-sidebar .body h3.scale{
+  margin: 10px 20px;
+  padding: 0;
+  text-transform: uppercase;
+}
+#ROOT .flight-info-sidebar .body h3.passenger{
+  margin: 10px;
+  background: #f2f2f2;
+  text-align: center;
+}
+#ROOT .flight-info-sidebar ul.info{
+  width: 45px;
+  background: #f5712e;
+  color: #fff;
+  position: absolute;
+  top:10px;
+  right: -45px;
+  list-style: none;
+  text-align: center;
+  padding: 10px 0 15px;
+}
+#ROOT .flight-info-sidebar ul.info li + li{
+  margin-top: 16px;
+}
+#ROOT .flight-info-sidebar ul.info i{
+  background: url("https://s3.amazonaws.com/aeromexico/booking/last-sprite.png");
+  display: inline-block;
+}
+#ROOT .flight-info-sidebar ul.info i.mercury{
+  background-position: left -237px;
+  width: 12px;
+  height: 25px;
+}
+#ROOT .flight-info-sidebar ul.info i.wind{
+  background-position: left -264px;
+  width: 29px;
+  height: 13px;
+}
+#ROOT .flight-info-sidebar ul.info i.water{
+  background-position: left -279px;
+  width: 27px;
+  height: 22px;
+}
+#ROOT .flight-info-sidebar ul.info span{
+  display: block;
+  width: 100%;
+  line-height: 10px;
+  font-size: 17px;
+  font-weight: 300;
+}
+#ROOT .flight-info-sidebar ul.info sub{
+  font-size: 10px;
+}
+.total-price ul{
+  list-style: none;
+  color: #fff;
+  background: #1e4f7c;
+  padding: 10px 8px;
+  margin: 0 10px;
+  line-height: 15px;
+  line-height: 22px;
+  font-weight: 300;
+}
+.total-price ul li > span + span{
+  float: right;
+}
+
+#ROOT .flight-list ul.airp{
+  list-style: none;
+  margin: 0px;
+  overflow: hidden;
+  width: 190px;
+  text-align: left;
+}
+#ROOT .flight-list ul.airp li{
+  float: left;
+  width: 60px;
+  padding: 3px 0px;
+}
+#ROOT .flight-list ul.airp li + li + li{
+  margin-left: 10px;
+}
+#ROOT .flight-list ul.airp li.middle{
+  width: 29px;
+  min-height: 1px;
+  background: none;
+  text-align: center;
+  padding: 0;
+}
+#ROOT .flight-list ul.airp li.middle i{
+  background: url("https://s3.amazonaws.com/aeromexico/booking/pin.png") repeat scroll right 0% transparent;
+  width: 8px;
+  height: 16px;
+  vertical-align: middle;
+  display: inline-block;
+  margin-top: 14px;
+}
+#ROOT .flight-list ul.airp li span{
+  width: 100%;
+  display: block;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #424242;
+  line-height: 21px;
+}
+#ROOT .flight-list ul.airp li span + span{
+  font-size: 12px;
+  line-height: 14px;
+}
+#ROOT .flight-list h3.scale{
+  margin: 5px 0 0 0;
+  padding: 0;
+  text-transform: uppercase;
+  font-size: 18px;
+  color: rgb(51, 51, 51);
+  font-weight: 300;
+  text-align: left;
+}
+#ROOT .flight-list{
+  vertical-align: top;
+}
+.flight-list thead th{
+  padding: 5px 0 15px;
+}
+table .prices-amount{
+  font-size: 26px;
+  display: block;
+  font-weight: 300;
+}
+table .prices-amount span{
+  font-size: 15px;
+}
+table .prices-currency{
+  font-size: 16px;
+}
+.flight-list-container + .flight-list-container{
+  margin-top: 60px;
+}
+#customhtmlDisclosure i{
+  width: 31px;
+  height: 27px;
+  display: block;
+  float: left;
+  background: url("https://s3.amazonaws.com/aeromexico/booking/last-sprite.png");
+  background-position: 0px -102px;
+  margin-right: 5px;
+}
+.info-plus{
+  cursor: pointer;
+  color: rgb(51, 51, 51);
+  text-align: left;
+  width: 100%;
+  display: block;
+  margin-top: 4px;
+  line-height: 13px;
+  font-size: 11px;
+}
+.info-plus:hover{
+  color: rgb(51, 51, 51);
+}
+.info-plus i{
+  width: 13px;
+  height: 13px;
+  display: inline-block;
+  background: url("https://s3.amazonaws.com/aeromexico/booking/last-sprite.png");
+  background-position: -1px -162px;
+  margin-right: 5px;
+  float: left;
+}
+/*
+=================================================================
+:;;:::::::::::::::::::::::::PASO 3:::::::::::::::::::::::::;::;:;
+*/
+.info.icon{
+  width: 28px;
+  height: 28px;
+  display: inline-block;
+  background: url("https://s3.amazonaws.com/aeromexico/booking/last-sprite.png");
+  background-position: 0px -207px;
+  margin-right: 10px;
+}
+#ROOT .capture{
+  font-size: 20px;
+  font-weight: 300;
+  color: #5b5b5b;
+  padding: 0;
+  margin: 0 0 7px 0;
+}
+#ROOT .capture i{
+  width: 26px;
+  height: 31px;
+  display: inline-block;
+  background: url("https://s3.amazonaws.com/aeromexico/booking/last-sprite.png");
+  background-position: 0px -175px;
+  margin-right: 10px;
+}
+#passenger-accordion h2 {
+  background: none repeat scroll 0% 0% rgb(242, 242, 242);
+  margin: 0;
+  padding-left: 22px;
+  line-height: 31px;
+  font-size: 18px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+#passenger-accordion .passenger-item.current{
+  background: none;
+}
+#passenger-accordion .passenger-item.current .passenger-wrapper {
+  background: none;
+}
+#passenger-accordion .passenger-item.current .passenger {
+    background: none;
+}
+#passenger-accordion .passenger-info .field {
+  display: block;
+  width: 100%;
+}
+#passenger-accordion .passenger-info label {
+  font-weight: 300;
+  padding-bottom: 2px;
+  font-size: 13px;
+  width: 160px;
+  padding-left: 40px;
+  display: block;
+  float: left;
+  text-align: left;
+  color: #606060;
+}
+#passenger-accordion .passenger-info .field .passengers-prefix-container{
+  width: 300px;
+  float: left;
+}
+.passenger-info input, .passenger-info select , #passenger-accordion .passenger-info .middle-name input {
+  width: 115px;
+}
+#passenger-accordion .passenger-info .last-name input {
+    width: 115px;
+}
+#passenger-accordion .details-wrapper {
+  border:0;
+  background-color: transparent;
+}
+#passenger-accordion .more-details .details-wrapper div.dob{
+  width: 100%;
+}
+#passenger-accordion .more-details .details-content {
+  padding: 0;
+}
+#passenger-accordion .more-details label {
+  width: 160px;
+  padding-left: 40px;
+  margin: 0px;
+  text-align: left;
+  padding-right: 0px;
+  color: #606060;
+  font-weight: 300;
+  font-size: 13px;
+}
+#passenger-accordion .details-wrapper .date-box {
+  width: 300px;
+  float: left;
+}
+#passenger-accordion .details-wrapper .date-box select{
+  width: 80px;
+  border-radius: 3px;
+}
+#passenger-accordion .details-wrapper .date-box select + select{
+  margin-left: 19px;
+}
+#passenger-accordion .more-details .details-wrapper div.gender{
+  width: 100%;
+}
+.field-required-legend {
+  font-size: 11px;
+  color: #a2a2a2;
+}
+.component h2{
+  font-size: 20px;
+  font-weight: 300;
+  color: #5b5b5b;
+}
+#contact-info .info-wrapper{
+  background: none;
+  margin: 0;
+}
+#contact-info .form-info {
+  background: none;
+}
+#contact-info .info-content{
+  background: none;
+}
+#contact-info .info-content .component-section {
+  border:0;
+}
+#contact-info .info-content .phone-fields{
+  width: 100%;
+}
+#contact-info .info-content .column h4{
+  display: none;
+}
+#contact-info .info-content .email-fields{
+  width: 100%;
+}
+#contact-info .info-content label {
+  float: left;
+  font-size: 12px;
+  width: 160px;
+  text-align: left;
+  padding-left: 40px;
+  font-weight: 300;
+}
+#contact-info .field.email{
+  overflow: hidden;
+}
+#contact-info .info-content .textfield{
+  border-radius: 3px;
+}
+
+#passenger-accordion .passenger-list .textfield, .passenger-info select, #passenger-accordion .details-wrapper .date-box select {
+  border-radius: 3px;
+  box-shadow: 0px 0px 1px rgb(185, 184, 184);
+}
+label.translate.column.wasTranslated{
+  width: 160px;
+}
+#passenger-accordion .details-wrapper .date-box {
+  margin-left: 15px;
+}
+#passenger-accordion label.column.inline{
+  padding-left: 16px;
+}
+.component.flomes p{
+  font-size: 12px;
+  color: rgb(162, 162, 162);
+  margin-bottom: 15px;
+}
+/*
+=================================================================
+:;;:::::::::::::::::::::::::PASO 4:::::::::::::::::::::::::;::;:;
+*/
+.ancillary-component{
+  display: table;
+}
+.ancillary-component .ancillary-item{
+  display: table-cell;
+  width: 227px;
+  position: relative;
+  padding-bottom: 130px;
+}
+#ROOT .ancillary-image{
+  background: url("https://s3.amazonaws.com/aeromexico/booking/seguros.png");
+  width: 220px;
+  height: 117px;
+  margin: 3px;
+}
+#ROOT .ancillary-image.ancillary-image-AMC{
+  background-position: left top;
+}
+#ROOT .ancillary-image.ancillary-image-DPM{
+  background-position: left -120px;
+}
+#ROOT .ancillary-image.ancillary-image-BG_PCS{
+  background-position: left -240px;
+}
+#ROOT .ancillary-component .ancillary-name {
+  color: #113a5c;
+  text-align: center;
+  font-size: 15px;
+}
+#ROOT .ancillary-component .ancillary-content{
+  
+}
+.ancillary-icon{
+  text-align: center;
+}
+.ancillary-icon i{
+  display: inline-block;
+  width: 48px;
+  background: url("https://s3.amazonaws.com/aeromexico/booking/pass-icons.png");
+}
+.ancillary-icon.ancillary-icon-AMC i{
+  height: 41px;
+  background-position: left top;
+}
+.ancillary-icon.ancillary-icon-DPM i{
+  height: 41px;
+  background-position: left -42px;
+}
+.ancillary-icon.ancillary-icon-BG_PCS i{
+  height: 37px;
+  background-position: left -89px;
+}
+.ancillary-content ul{
+  padding-left: 35px;
+  padding-right: 15px;
+}
+.ancillary-content li{
+  line-height: 18px;
+}
+.ancillary-amount{
+  margin-top: 15px;
+}
+.ancillary-currency{
+  margin-bottom: 15px;
+}
+.ancillary-amount, .ancillary-currency{
+  text-align: center;
+  font-size: 18px;
+  color: #113a5c;
+}
+.ancillary-amount .prices-amount{
+  font-size: 30px;
+  font-weight: bold;
+}
+.ancillary-body{
+  width: 230px;
+  text-align: center;
+  position: absolute;
+  bottom: 60px;
+
+}
+#ROOT .ancillary-component .ancillary-price-button {
+  text-align: center;
+}
+.ancillary-btn-info{
+  line-height: 10px;
+  font-size: 10px;
+  padding: 5px 0;
+  width: 105px;
+  background: #999;
+  color: #fff;
+  border: 0;
+  border-radius: 1px;
+}
+#ROOT .ancillary-price-input.ancillary-button-add{
+  line-height: 10px;
+  font-size: 10px;
+  padding: 5px 0px;
+  width: 105px;
+  background: none repeat scroll 0% 0% rgb(248, 110, 59);
+  color: rgb(255, 255, 255);
+  border: 0px none;
+  border-radius: 1px;
+  font-family: Helvetica;
+  text-transform: capitalize;
+  height: auto;
+  margin: 0px 0px 10px 0px;
+}
+/*
+=================================================================
+:;;:::::::::::::::::::::::::PASO 4.5:::::::::::::::::::::::::;::;:;
+*/
+#ROOT .seat-map-header h2{
+  background: url("https://s3.amazonaws.com/aeromexico/booking/title-seat.png");
+  background-repeat: no-repeat;
+  background-position: left 50%;
+  margin-left: 0;
+  padding-left: 30px;
+  padding-top: 8px;
+}
+#ROOT .seat-map-content {
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  background: none;
+}
+#ROOT .seat-map-seat-selectable-exit b,
+#ROOT .seat-map-seat-selectable b{
+  background: url("https://s3.amazonaws.com/aeromexico/ancillaries/new_v_avail.png");
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+}
+#ROOT .seat-map-standard.unavailable b{
+  background: url("https://s3.amazonaws.com/aeromexico/ancillaries/new_v_assigned.png");
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+}
+#ROOT .seat-map-plane-left_side b{
+  background: url("https://s3.amazonaws.com/aeromexico/ancillaries/new_v_wallleft.png");
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px; 
+  display: inline-block;
+}
+/*#ROOT .seat-map-plane-wing-left_side.seat-map-plane-wing-wing_begin b{
+  background: url("https://s3.amazonaws.com/aeromexico/ancillaries/new_v_wallleft_w.png");
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px; 
+  display: inline-block;
+}*/
+#ROOT .seat-map-plane-wing.seat-map-plane-wing-left_side,
+#ROOT .seat-map-plane-wing-left_side.seat-map-plane-wing-wing_end b {
+  background: url("https://s3.amazonaws.com/aeromexico/ancillaries/new_v_wallleft_w.png");
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px; 
+  display: inline-block;
+}
+#ROOT .seat-map-plane-right_side b{
+  background: url("https://s3.amazonaws.com/aeromexico/ancillaries/new_v_wallright.png");
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px; 
+  display: inline-block;
+}
+#ROOT .seat-map-plane-wing.seat-map-plane-wing-right_side b,
+#ROOT .seat-map-plane-wing-right_side.seat-map-plane-wing-wing_begin b {
+  background: url("https://s3.amazonaws.com/aeromexico/ancillaries/new_v_walllright_w.png");
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px; 
+  display: inline-block;
+  float: left;
+  margin: 0;
+}
+#ROOT .seat-map-plane-left_side,
+#ROOT thead .seat-map-plane-left_side,
+#ROOT .seat-map-plane-wing-left_side.seat-map-plane-wing-wing_begin b,
+#ROOT .seat-map-plane-wing-left_side.seat-map-plane-wing-wing_end b,
+#ROOT .seat-map-plane-right_side
+{
+  background: none;
+}
+#ROOT .seat-map-plane-wing-wing_end {
+  vertical-align: top;
+}
+#ROOT .seat-map-planemap .seat-map-legend b {
+  margin: 0;
+}
+#ROOT .seat-map-legend b {
+  width: 20px;
+  height: 20px;
+}
+/*
+=================================================================
+:;;:::::::::::::::::::::::::PASO 5:::::::::::::::::::::::::;::;:;
+*/
+#bnpl_1{
+  display: none;
+}
+.payc-integrated #payment #payment-wrapper {
+    background: none;
+}
+.payc-integrated #payment{
+  background: none;
+}
+#payment .radio-view h4 {
+  font-size: 21px;
+  color: rgb(161, 161, 161);
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  margin: 0px 0px 20px;
+  padding: 0px 0px 0px 36px;
+  height: 33px;
+  background: url("https://s3.amazonaws.com/aeromexico/booking/pay-sprite.png") no-repeat scroll left -32px transparent;
+  line-height: 30px;
+}
+#ROOT .fop-tab-creditCardTypes label{
+  padding-left: 40px;
+  height: 25px;
+  display: inline-block;
+  background: url("https://s3.amazonaws.com/aeromexico/booking/pay-sprite.png") no-repeat scroll left -66px transparent;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #003263;
+  font-weight: 500;
+}
+#ROOT .fop-tab-paypal label{
+  padding-left: 40px;
+  height: 25px;
+  display: inline-block;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #003263;
+  font-weight: 500;
+}
+#payment .radio-view .fop-item-select {
+    width: 400px;
+}
+#payment .payment-type {
+  margin: 0;
+  background: #f2f2f2;
+}
+#ROOT .multi-fop-section h4{
+  background: none;
+}
+.modern #payment .payment-type h4 {
+    width: 100%;
+}
+#payment .radio-view .payment-type .billing-data {
+    background-color: #f2f2f2;
+}
+.payment-details {
+  background: none;
+}
+#farerules_2 .heading-farerules {
+    margin: 0px;
+    height: 30px;
+    background: url("https://s3.amazonaws.com/aeromexico/booking/pay-sprite.png") no-repeat scroll left 3px transparent;
+    padding-left: 30px;
+    line-height: 50px;
+    color: rgb(90, 90, 90);
+} 
+pre{
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 11px;
+}
+.farerules-wrapper {
+  background: none;
+}
+.farerules-content {
+  background: none;
+}
+.fareruleA {
+  background: none;
+}
+#farerules_2 .fare-rules-container .yui-content {
+    height: 100px;
+    border: 1px solid #9b9b9b;
+    border-radius: 2px;
+}
+.PURCHASE_PAGE #terms_and_conditions .confirm-payment{
+  width: 100%;
+}
+#terms_and_conditions .confirm-payment input{
+  float: left;
+}
+.PURCHASE_PAGE .tcc {
+  width: 100%;
+}
+.PURCHASE_PAGE div.sbmt{
+  bottom: -40px;
+}
+.yui-navset-top > .yui-nav li{
+  background: none;
+}
+.yui-navset li.selected {
+  background: none repeat scroll 0% 0% rgb(191, 191, 191);
+  color: rgb(255, 255, 255) !important;
+  border-radius: 2px 2px 0 0;
+}
+.yui-navset li.selected a {
+  background: none;
+}
+.yui-navset .yui-nav li{
+  background: none repeat scroll 0% 0% rgb(191, 191, 191);
+  color: rgb(255, 255, 255) !important;
+  border-radius: 2px 2px 0 0;
+}
+.yui-navset .yui-nav li a, .yui-navset-top .yui-nav li a{
+  background: none;
+  color: #fff !important;
+}
+.yui-navset .yui-nav li a em, .yui-navset-top .yui-nav li a em{
+  color: #fff;
+}
+.yui-navset .yui-nav li a em, .yui-navset-top .yui-nav li a em{
+  color: #fff;
+}
+#booking-process .process-bar li.stepFuture a {
+  color: #333;
+  }
+  #booking-process .process-bar .stepCurrent a {
+    font-weight: 300;
+  }
+
+/*
+=================================================================
+:;;:::::::::::::::::::::::::PASO 2:::::::::::::::::::::::::;::;:;
+*/
+.flow-message-info {
+  border: 0px none;
+  background: none;
+  color: rgb(77, 77, 77);
+}
+.flow-message-info .flow-message-title {
+    color: rgb(77, 77, 77);
+  font-weight: 300;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 18px;
+  background: url("https://s3.amazonaws.com/aeromexico/booking/last-sprite.png");
+  background-repeat: no-repeat;
+  background-position: left -132px;
+  height: 29px;
+  margin-left: -40px;
+  padding-left: 40px;
+}
+p.thanks{
+  font-size: 12px;
+}
+p.thanks .code{
+  font-size: 20px;
+  color: #06377b;
+}
+/*
+.pnr-wrapper {
+  background: none;
+}
+.pnr-info {
+  background: none;
+}
+.pnr-content {
+  background: none;
+}
+.itinerary-wrapper {
+  background: none;
+}
+.itinerary-info{
+  background: none;
+}
+.itinerary-wrapper {
+    width: 332px;
+    background: none repeat scroll 0% 0% transparent;
+    margin: 0px 0px 15px;
+    float: left;
+}
+.itinerary-content .flight-summary-1 {
+    background-color: #fff;
+}
+.itinerary-content .flight-airport, .itinerary-content .flight-location, .flight-summary .flight-type, .flight-summary .flight-date {
+    background-color: #fff;
+}
+#vic-flights dt {
+    font-size: 20px;
+    font-weight: 300;
+    color: rgb(13, 13, 13);
+    margin-left: 10px;
+}
+#vic-flights dd {
+    font-weight: bold;
+    font-size: 12px !important;
+    color: #0d0d0d;
+    font-weight: 400;
+    margin-left: 20px;
+  }
+#vic-flights .flight-summary{
+  width: 100%;
+}
+.itinerary-content .flight-summary-1 dl{
+  width: 100%;
+}
+.itinerary-content .flight-summary-1 .flight-origin{
+  width: auto;
+  font-size: 12px;
+  margin-left: 25px;
+}
+.itinerary-content .flight-origin .flight-location {
+  font-size: 12px;
+  font-weight: 400;
+  margin-right: 0px;
+}
+.itinerary-content .flight-summary-1 .flight-destination{
+  width: auto;
+  display: inline-block;
+  margin: 0px;
+}
+.itinerary-content .flight-location{
+  font-size: 12px !important;
+  padding: 0px;
+  margin: 0px;
+  font-weight: 400 !important;
+}
+.flight-summary-2 .flight-summary{
+  display: none;
+}
+.flight-summary-2 .flight-origin.departure-time{
+  width: auto;
+  position: absolute;
+  top: 57px;
+  right: 0;
+}
+.flight-summary-2 .flight-origin.departure-time dt{
+  display: none;
+}
+.flight-summary-2 .flight-origin.departure-time dt.flight-time{
+  background: none;
+  padding: 0;
+}
+.itinerary-content .flight-particulars {
+  display: none;
+}*/
+
+.row{
+  min-height: 1px;
+  overflow: auto;
+}
+.column{
+  float: left;
+  width: 50%;
+}
+.column h3{
+  font-size: 22px;
+  color: #0d0d0d;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 0;
+}
+.column h4{
+  color: #0d0d0d;
+  font-size: 18px;
+  font-weight: 300;
+  margin-left: 15px;
+  margin-top: 12px;
+}
+.column p{
+  margin: 0 25px;
+  overflow: auto;
+  line-height: 16px;
+}
+.column p span{
+  float: left;
+}
+.column p span + span{
+  float: right;
+  padding-right: 20px;
+  background: url("https://s3.amazonaws.com/aeromexico/booking/last-sprite.png") no-repeat scroll 53px -162px transparent;
+  display: inline-block;
+  line-height: 13px;
+}
+.row .price{
+  float: right;
+  width: 230px;
+  margin: 45px 0 35px 0;
+}
+.row .price ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+p.imp{
+  padding-left: 30px;
+  position: relative;
+  font-size: 12px;
+  line-height: 14px;
+}
+p.imp i{
+  display: block;
+  width: 31px;
+  height: 27px;
+  background: url("https://s3.amazonaws.com/aeromexico/booking/last-sprite.png") no-repeat scroll -2px -103px transparent;
+  position: absolute;
+  left: 0;
+  top: 0;
+
+}
+.row .price li{
+  background: url("https://s3.amazonaws.com/aeromexico/booking/last-sprite.png") no-repeat scroll 215px 0px transparent;
+  height: 18px;
+  overflow: hidden;
+  padding-right: 20px;
+}
+.row .price li + li{
+  margin-top: 10px;
+}
+.row .price li > span + span{
+  float: right;
+}
+
+.row .tcolumn{
+  width: 30%;
+  float: left;
+  text-align: center;
+}
+.row .tcolumn + .tcolumn{
+  margin-left: 30px;
+}
+.row .tcolumn h3{
+  font-size: 18px;
+  font-weight: 300;
+  color: #606060;
+  line-height: 30px;
+}
+.row .tcolumn p{
+  color: #606060;
+  line-height: 18px;
+}
+.row .tcolumn p.link{
+  margin-top: 5px;
+}
+.row .tcolumn p.link a{
+  color: #3c9ef7;
+  font-weight: bold;
+}
+.row.grayback{
+  background: #f2f2f2;
+  padding: 5px 0;
+  margin: 20px 0;
+}
+.row.grayback a{
+  font-size: 18px;
+  color: #606060;
+  font-weight: 300;
+}
+.row.grayback a span{
+  margin-left: 5px;
+}
+.row.grayback i.imp{
+  display: inline-block;
+  width: 29px;
+  height: 29px;
+  background: url("https://s3.amazonaws.com/aeromexico/booking/last-sprite.png") no-repeat scroll 0px -19px transparent;
+}
+.row.grayback i.search{
+  display: inline-block;
+  width: 27px;
+  height: 27px;
+  background: url("https://s3.amazonaws.com/aeromexico/booking/last-sprite.png") no-repeat scroll 0px -47px transparent;
+}
+.row.grayback i.checkin{
+  display: inline-block;
+  width: 30px;
+  height: 28px;
+  background: url("https://s3.amazonaws.com/aeromexico/booking/last-sprite.png") no-repeat scroll -2px -75px transparent;
+}
+div.links{
+  margin-top: 30px;
+  text-align: center;
+}
+div.link + div.link{
+  margin-top: 20px;
+}
+div.link div.print{
+  width: 145px;
+  height: 145px;
+  background: url("https://s3.amazonaws.com/aeromexico/booking/sidebar-images.png") no-repeat scroll 0px 0px transparent;
+  display: inline-block;
+}
+div.link div.policy{
+  width: 145px;
+  height: 145px;
+  background: url("https://s3.amazonaws.com/aeromexico/booking/sidebar-images.png") no-repeat scroll 0px -146px transparent;
+  display: inline-block;
+}
+div.link p{
+  font-size: 18px;
+  font-weight: 300;
+  color: #606060;
+  margin-top: 5px;
+}
+
+
+}
