@@ -1987,6 +1987,7 @@ Aeromexico US
 .flight-form .type li i.vacations{
   background-position: -43px 0;
 }
+
 .radios.radios-vacation{
   padding: 10px 0;
 }
@@ -2000,4 +2001,12 @@ Aeromexico US
 .radios-vacation span{
   color: rgb(100, 100, 100);
   font-size: 12px;
+}
+
+/*Contigo*/
+.flight-form .type li i.contigo{
+  background-position: -86px 0;
+}
+.flight-form .type.contigo-ul li + li {
+    margin-left: 15px !important;
 }

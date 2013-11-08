@@ -30,6 +30,80 @@ var modalRegions = [
 	}
 ];
 //Códigos y nombres de aeropuertos
+var airportsCTG = [
+  {
+    "key": "GDL",
+    "label": "Guadalajara (GDL)",
+    "country": "México",
+    "countryCode": "MX",
+    "region": 1,
+    "partner": 0,
+    "depart": Array('SMF', 'ONT', 'LAX', 'ORD', 'TIJ', 'FAT', 'CUL')
+  },
+  {
+    "key": "FAT",
+    "label": "Fresno (FAT)",
+    "country": "Estados Unidos",
+    "countryCode": "US",
+    "region": 2,
+    "partner": 0,
+    "depart": Array('GDL')
+  },
+  {
+    "key": "CUL",
+    "label": "Culiacán (CUL)",
+    "country": "México",
+    "countryCode": "MX",
+    "region": 1,
+    "partner": 0,
+    "depart": Array('TIJ', 'GDL')
+  },
+  {
+    "key": "SMF",
+    "label": "Sacramento (SMF)",
+    "country": "Estados Unidos",
+    "countryCode": "US",
+    "region": 2,
+    "partner": 0,
+    "depart": Array('GDL')
+  },
+  {
+    "key": "ONT",
+    "label": "Ontario (ONT)",
+    "country": "Estados Unidos",
+    "countryCode": "US",
+    "region": 2,
+    "partner": 0,
+    "depart": Array('GDL')
+  },
+  {
+    "key": "LAX",
+    "label": "Los Ángeles (LAX)",
+    "country": "Estados Unidos",
+    "countryCode": "US",
+    "region": 2,
+    "partner": 0,
+    "depart": Array('GDL')
+  },
+  {
+    "key": "ORD",
+    "label": "Chicago - O'Hare (ORD)",
+    "country": "Estados Unidos",
+    "countryCode": "US",
+    "region": 2,
+    "partner": 0,
+    "depart": Array('GDL')
+  },
+  {
+    "key": "TIJ",
+    "label": "Tijuana (TIJ)",
+    "country": "México",
+    "countryCode": "MX",
+    "region": 1,
+    "partner": 0,
+    "depart": Array('GDL', 'CUL')
+  }
+];
 var airports = [
   {
   "key": "FRA",
