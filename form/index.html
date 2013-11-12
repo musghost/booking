@@ -2211,6 +2211,12 @@ AM315
             $(this).addClass(((a + 1) % 2 === 0) ? "two" : "one");
         });
         $(".component.flomes").append("<p>* Indica campos obligatorios</p>");
+
+        $(".phone-fields .phone-number.field").each(function(){
+            var selVal = $(this).find("select").first().val();
+            $(this).find(".requiredIndicatorLabel").html(selVal);
+        });
+        
     })();
 
 
