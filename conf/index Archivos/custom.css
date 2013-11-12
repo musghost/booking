@@ -1442,7 +1442,9 @@ label.translate.column.wasTranslated{
   text-decoration: none;
   border-radius: 2px;
   padding: 0;
+  float: right;
 }
+#ROOT .flight-controls a
 .seat-map-plane .flight-controls {
   overflow: auto;
     height: 50px;
@@ -1452,7 +1454,7 @@ label.translate.column.wasTranslated{
     margin-left: -35px;
 }
 .list{
-  width: 250px;
+  width: 230px;
   float: right;
 }
 .list li{
@@ -1464,6 +1466,116 @@ label.translate.column.wasTranslated{
 }
 .list li span{
   line-height: 24px;
+}
+.seat-map-legend b {
+  padding: 0;
+}
+.seat-map-planemap{
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+.seat-map-planemap td{
+  height: 20px;
+  line-height: 10px;
+}
+.seat-map-planemap .seat-map-legend b{
+  line-height: 15px;
+}
+
+.seat-box{
+  margin-top: 50px;
+}
+#ROOT .seat-box h2{
+  background: none;
+  padding: 0;
+  font-size: 18px;
+  font-weight: normal;
+  width: 100%;
+  float: none;
+}
+#ROOT .seat-box h3{
+  width: 100%;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  font-weight: 400;
+  line-height: 15px;
+  font-size: 12px;
+}
+#ROOT .seat-box a.info{
+  color: #5b5b5b !important;
+  text-decoration: none;
+}
+#ROOT .seat-box a.info i{
+  width: 13px;
+  height: 13px;
+  background: url("https://s3.amazonaws.com/aeromexico/booking/last-sprite.png");
+  background-repeat: no-repeat;
+  background-position: -1px -162px;
+  display: inline-block;
+  margin-top: 3px;
+  float: left;
+  margin-right: 5px;
+}
+#ROOT .seat-box a:hover{
+  text-decoration: underline;
+}
+#ROOT .seat-box h1{
+  background: #f2f2f2;
+  line-height: 36px;
+  padding-left: 24px;
+  font-weight: 300;
+  color: #5e5e5e;
+  letter-spacing: 1px;
+  margin-top: 15px;
+}
+#ROOT .seat-box .seat-info{
+  margin-top: 15px;
+  overflow: hidden;
+}
+#ROOT .seat-box .seat-info li {
+  float: left;
+  display: block;
+  text-align: center;
+  margin-left: 41px;
+}
+#ROOT .seat-box .seat-info .title{
+  display: block;
+  font-size: 19px;
+  font-weight: 300;
+}
+#ROOT .seat-box .seat-info .number{
+  font-size: 50px;
+  line-height: 50px;
+  font-weight: 300;
+  color: #0d3579;
+}
+#ROOT .seat-box .seat-info p{
+  font-size: 20px;
+  margin-top: 5px;
+  color: #5e5e5e;
+}
+#ROOT .seat-box .seat-info .currency{
+  letter-spacing: -1px;
+  font-size: 15px;
+}
+#ROOT .seat-box .seat-info .mn{
+  font-size: 18px;
+  color: #5e5e5e; 
+}
+#ROOT .columns{
+  float: left;
+  width: 440px;
+}
+#ROOT .columns + .columns{
+  width: 250px;
+}
+#ROOT .seat-map-segment .flight-controls{
+  width: 400px;
+  margin-left: -90px;
+}
+#ROOT .seat-map-segment .flight-controls .nextFlight {
+  margin-right: 20px;
 }
 /*
 =================================================================

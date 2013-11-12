@@ -325,55 +325,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 	        </div>
 
-
-<ul class="list">
-    <li>
-        <img src="https://s3.amazonaws.com/aeromexico/ancillaries/new_v_avail.png">
-        <span>Disponible</span>
-    </li>
-    <li>
-        <img src="https://s3.amazonaws.com/aeromexico/ancillaries/new_v_assigned_n.png">
-        <span>No disponible</span>
-    </li>
-    <li>
-        <img src="https://s3.amazonaws.com/aeromexico/ancillaries/new_upperDeck.png">
-        <span>Cubierta Superior Disponible</span>
-    </li>
-    <li>
-        <img src="https://s3.amazonaws.com/aeromexico/ancillaries/new_v_limited.png">
-        <span>Reclinación y espacio limitado</span>
-    </li>
-    <li>
-        <img src="https://s3.amazonaws.com/aeromexico/ancillaries/new_v_exitleft.png">
-        <span>Sala de emergencia</span>
-    </li>
-    <li>
-        <img src="https://s3.amazonaws.com/aeromexico/ancillaries/new_v_wallleft.png">
-        <span>Pared</span>
-    </li>
-    <li>
-        <img src="https://s3.amazonaws.com/aeromexico/ancillaries/new_v_wallleft_w.png">
-        <span>Ala</span>
-    </li>
-    <li>
-        <img src="https://s3.amazonaws.com/aeromexico/ancillaries/new_v_bulkhead.png">
-        <span>Mampara</span>
-    </li>
-    <li>
-        <img src="https://s3.amazonaws.com/aeromexico/ancillaries/new_v_closet.png">
-        <span>Armario</span>
-    </li>
-    <li>
-        <img src="https://s3.amazonaws.com/aeromexico/ancillaries/new_v_galley.png">
-        <span>Cocina</span>
-    </li>
-    <li>
-        <img src="https://s3.amazonaws.com/aeromexico/ancillaries/new_v_lavatory.png">
-        <span>Lavabo</span>
-    </li>
-</ul>
-
-
+<!--GOOD TIMES -->
 
 
 	    </div>
@@ -2662,6 +2614,53 @@ AM315
     $("#booking-process li").each(function(a){
         $(this).addClass(((a + 1) % 2 === 0) ? "two" : "one");
     });
+    (function(){
+        var newDiv = $("<div class='columns'>"),
+            seatMap = '<div class="columns"><ul class="list"><li><img src="https://s3.amazonaws.com/aeromexico/ancillaries/new_v_avail.png"><span>Disponible</span></li><li><img src="https://s3.amazonaws.com/aeromexico/ancillaries/new_v_assigned_n.png"><span>No disponible</span></li><li><img src="https://s3.amazonaws.com/aeromexico/ancillaries/new_upperDeck.png"><span>Cubierta Superior Disponible</span></li><li><img src="https://s3.amazonaws.com/aeromexico/ancillaries/new_v_limited.png"><span>Reclinación y espacio limitado</span></li><li><img src="https://s3.amazonaws.com/aeromexico/ancillaries/new_v_exitleft.png"><span>Sala de emergencia</span></li><li><img src="https://s3.amazonaws.com/aeromexico/ancillaries/new_v_wallleft.png"><span>Pared</span></li><li><img src="https://s3.amazonaws.com/aeromexico/ancillaries/new_v_wallleft_w.png"><span>Ala</span></li><li><img src="https://s3.amazonaws.com/aeromexico/ancillaries/new_v_bulkhead.png"><span>Mampara</span></li><li><img src="https://s3.amazonaws.com/aeromexico/ancillaries/new_v_closet.png"><span>Armario</span></li><li><img src="https://s3.amazonaws.com/aeromexico/ancillaries/new_v_galley.png"><span>Cocina</span></li><li><img src="https://s3.amazonaws.com/aeromexico/ancillaries/new_v_lavatory.png"><span>Lavabo</span></li></ul></div>',
+            content = $('<div class="seat-box">');
+        $(".seat-map-flights-expanded").each(function(a){
+            var dateTime = $(this).find(".seat-map-segment").first(),
+                flyDate = dateTime.find(".seat-map-flights-date").first().html(),
+                airports = "";
+            dateTime.find(".seat-map-flights-segment span").each(function(){
+                airports += $.trim($(this).html()) + " ";
+            });
+
+            newDiv.append(
+                "<h2>" + airports + "</h2>",
+                "<h3>" + flyDate + "</h3>",
+                '<a href="#" class="info"><i></i>Más información de este vuelo</a>'
+                );
+
+            if(!$(this).hasClass("seat-map-flights-collapsed")){
+                $(this).find(".seat-map-flights-pax").each(function(){
+                    var name = $(this).find(".seat-map-flights-pax-name").first().html(),
+                        numberSeat = $(this).find(".seat-map-flights-place-no").first().html(),
+                        html = '<h1>' + name + '</h1><ul class="seat-info"><li><span class="title">Asiento</span><span class="number">' + numberSeat + '</span></li><li><span class="title">Tarifa de asiento</span><p><span class="currency">$</span><span class="amount">0</span></p><span>MXN</span></li></ul>';
+                    newDiv.append(html);
+                });
+            }
+        });
+        content.append(newDiv, seatMap);
+        $(".seat-map-header-links").first().after(content);
+        $(".marketing-text1, .seat-map-infobox, .seat-map-segment-info-top, .seat-map-segment-info-bottom, .seat-map-footer-links").hide();
+        $(".flight-controls").first().hide();
+        $(".seat-map-plane").first().after($(".seat-map-header-links").first());
+
+        /*MAP*/
+        $(".seat-map-planemap tr").each(function(a){
+            $(this).find("td").each(function(b){
+                var bTag = $(this).find("b").first();
+                if(bTag.children().length > 0){
+                    if(b === 0){
+                        bTag.html("<img src='https://s3.amazonaws.com/aeromexico/ancillaries/new_v_exitleft.png'>");
+                    } else{
+                        bTag.html("<img src='https://s3.amazonaws.com/aeromexico/ancillaries/new_v_exitright.png'>");
+                    }
+                }
+            });
+        });
+    })();
     (function(){
         var itineratiesA = [],
             itineratiesB = [],
