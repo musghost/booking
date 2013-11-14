@@ -1658,6 +1658,7 @@ label.translate.column.wasTranslated{
 }
 #ROOT .seat-map-flights li div {
   background: none;
+  color: #fff;
 }
 #ROOT .seat-map-flights-date{
   display: block;
@@ -1665,6 +1666,7 @@ label.translate.column.wasTranslated{
 #ROOT .seat-map-flights li div > span {
   font-size: 18px;
   font-weight: 300;
+  color: #6b6b6b;
 }
 #ROOT .seat-map-flights-segment{
   margin-left: 15px;
