@@ -1,88 +1,29 @@
-//Dropdowns
-(function(){
-	$(".select span").click(function(a){
-		a.stopPropagation();
-		var list = $(this).next();
-		if(!list.hasClass("active")){
-			$(".select ul").removeClass("active");
-			list.addClass("active");
-		} else{
-			list.removeClass("active");
-		}
-	});
-	$(".select li").click(function(a){
-		var content = $(this).html(),
-			val = $(this).data("val");
-		$(this).parent().prev().html(content);
-		$(this).parent().next().val(val);
-		numCupons = addCupons();
-	});
-	$("body, html").click(function(){
-		$(".select ul").removeClass("active");
-		$(".countries ul").removeClass("active");
-	});
-	$(".countries a").first().click(function(a){
-		a.preventDefault();
-		a.stopPropagation();
-		var ul = $(".countries ul");
-		if(!ul.hasClass("active")) ul.addClass("active");
-		else ul.removeClass("active");
-	});
-	$(".countries ul li").mouseover(function(){
-		$(this).prepend("<i></i>");
-	});
-	$(".countries ul li").mouseout(function(){
-		$(this).find("i").remove();
-	});
-})();
-
-
-//Carousel
-(function(){
-	var left = $(".carousel .left"),
-		right = $(".carousel .right"),
-		items = $(".carousel .item"),
-		count = items.length,
-		current = 0;
-
-	left.click(function(a){
-		a.preventDefault();
-		var next = 0;
-
-		if(current - 1 < 0) next = count - 1;
-		else next = current - 1;
-
-		items.eq(current).animate({
-			opacity: .3
-		}, 500, function(){
-			$(this).removeClass("visible");
-			items.eq(next).css('opacity', '.4');
-			items.eq(next).addClass("visible");
-			items.eq(next).animate({
-				opacity: 1
-			}, 500, function(){
-				current = next;
-			});
-		});
-	});
-	right.click(function(a){
-		a.preventDefault();
-		var next = 0;
-
-		if(current + 1 >= count) next = 0;
-		else next = current + 1;
-
-		items.eq(current).animate({
-			opacity: .3
-		}, 500, function(){
-			$(this).removeClass("visible");
-			items.eq(next).css('opacity', '.4');
-			items.eq(next).addClass("visible");
-			items.eq(next).animate({
-				opacity: 1
-			}, 500, function(){
-				current = next;
-			});
-		});	
-	});
-})();
+(function(){if(navigator.appName=="Microsoft Internet Explorer"){var c=navigator.userAgent;var d=new RegExp("MSIE ([0-9]{1,}[.0-9]{0,})");if(d.exec(c)!=null){rv=parseFloat(RegExp.$1);
+}else{rv="";}if(rv<=9){$("input[type='text']").each(function(){$(this).focus(function(){if($(this).val()===$(this).attr("placeholder")){$(this).val("");
+}});$(this).blur(function(){if($(this).val()==""){$(this).val($(this).attr("placeholder"));}}).blur();});}if(rv==7){$("#ft-code").click(function(){$(".flight-form .select .input").hide();
+$("#icon_close").click(function(){$(".flight-form .select .input").show();});});}}else{if((navigator.userAgent.match(/(iPad|iPhone|iPod)/g)?true:false)){$(".flight-form .field input").css("width","160px");
+}}var d=new RegExp("</?\\w+((\\s+\\w+(\\s*=\\s*(?:\".*?\"|'.*?'|[^'\">s]+))?)+s*|s*)/?>|;|/|\\(.+?\\)","g"),b=$("#search_form"),a=$("#search_input");b.submit(function(){a.val(a.val().replace(d," "));
+});})();(function(){var a=function(){var e=$("#ft-adult"),b=$("#ft-child"),c=$("#ft-baby"),f=e.val(),d=b.val(),h=c.val(),g=8-f;b.prev().find("li").each(function(k){if(k>g){$(this).css("display","none");
+}else{$(this).removeAttr("style");}});if(d>g){b.val(0);var i=b.prev().prev(),j=b.prev().find("li").first();i.html(j.html());}c.prev().find("li").each(function(k){if(k>g||k>f||k>8-(parseInt(f)+parseInt(d))){$(this).css("display","none");
+}else{$(this).removeAttr("style");}});if(h>g||h>f||h>8-(parseInt(f)+parseInt(d))){c.val(0);var i=c.prev().prev(),j=c.prev().find("li").first();i.html(j.html());
+}};a();$(".select span").click(function(b){b.stopPropagation();var c=$(this).next();if(!c.hasClass("active")){$(".select ul").removeClass("active");c.addClass("active");
+}else{c.removeClass("active");}});$(".select .latin").click(function(b){b.stopPropagation();var c=$(this).parent().parent().find("ul").first();if(!c.hasClass("active")){$(".select ul").removeClass("active");
+c.addClass("active");}else{c.removeClass("active");}});$(".select li").click(function(c){var d=$(this).html(),e=$(this).data("val"),b=$(this).parent().parent().parent();
+if(b.hasClass("latam")){d+="<span class='latin'></span>";}$(this).parent().prev().html(d);$(this).parent().next().val(e);a();numCupons=addCupons();});$("body, html").click(function(){$(".select ul").removeClass("active");
+$(".countries ul").removeClass("active");});$(".countries a").first().click(function(b){b.preventDefault();b.stopPropagation();var c=$(".countries ul");
+if(!c.hasClass("active")){c.addClass("active");}else{c.removeClass("active");}});$(".countries ul li").mouseover(function(){$(this).prepend("<i></i>");
+});$(".countries ul li").mouseout(function(){$(this).find("i").remove();});})();(function(){var c=$(".carousel .left"),j=$(".carousel .right"),i=$(".carousel .item"),a=$(".slide_contador"),h=a.length,e=i.length,f=0,d=7000;
+var b=function(){var k=0;if(f+1>=e){k=0;}else{k=f+1;}i.eq(f).css({left:"0"});i.eq(f).animate({left:"-100%"},500,function(){$(this).removeClass("visible").attr("style","");
+});i.eq(k).css("left","100%");i.eq(k).addClass("visible");i.eq(k).animate({left:"0"},500,function(){f=k;slider=setTimeout(function(){b();},d);});},g=function(){var k=0;
+if(f-1<0){k=e-1;}else{k=f-1;}i.eq(f).css({left:"0"});i.eq(f).animate({left:"-100%"},500,function(){$(this).removeClass("visible").attr("style","");});i.eq(k).css("left","100%");
+i.eq(k).addClass("visible");i.eq(k).animate({left:"0"},500,function(){f=k;slider=setTimeout(function(){b();},d);});};slider=setTimeout(function(){b();},d);
+c.click(function(k){k.preventDefault();clearTimeout(slider);g(k);});j.click(function(k){k.preventDefault();clearTimeout(slider);b(k);});if(h>0){$(".buttons").remove();
+}})();$(".offer_terms").click(function(b){b.stopPropagation();});$(document).on("click",".autocomplete-option a",function(b){b.preventDefault();b.stopPropagation();
+});$(document).on("click",".ui-datepicker-prev, .ui-datepicker-next",function(b){b.preventDefault();});(function(){var a=window.location.pathname.split("/"),b=function(){var j="<div class='serv-shadow'></div>",f="<div class='modal-serv'><div class='content'><h4><i></i></h4><span class='close-mod'>x</span><form action=''></form></div></div>",e={element:"invoice",inputs:["<input type='text' placeholder='Ingresa tu código de reservación'>","<input type='text' placeholder='Escribe tus apellidos'>"],button:"<input class='buy' type='submit' value='Consultar'>",height:"130px"},h={element:"flight",inputs:["<input type='text' placeholder='Ingresa tu código de reservación'>","<div class='style-select'><select><option value='0' selected>14 de octubre 2013</option></select></div>"],button:"<input class='buy' type='submit' value='Consultar'>",height:"130px"},c={element:"check-in",inputs:["<input type='text' placeholder='Escribe tus apellidos'>","<div class='style-select'><select><option value='0' selected>Ciudad de origen</option></select></div>","<div class='option'><input type='radio' name='group1' value='clave'><span>Clave de reservación</span></div>","<div class='option'><input type='radio' name='group1' value='club'><span>Número de Club Premier</span></div>","<input type='text' placeholder='Introduce tu número'>"],button:"<input class='buy' type='submit' value='Check-In'>",height:"200px"},i={element:"changes",inputs:["<input type='text' placeholder='Ingresa tu clave de reservación'>","<input type='text' placeholder='Escribe tus apellidos'>"],button:"<input class='buy' type='submit' value='Consultar'>",height:"130px"},d={element:"reserv",inputs:["<input type='text' placeholder='Ingresa tu código de reservación'>","<input type='text' placeholder='Escribe tus apellidos'>"],button:"<input class='buy' type='submit' value='Consultar'>",height:"130px"},k=[e,h,c,i,d];
+$(".services h4 a").on("click",function(q){q.preventDefault();var l,u=$(this).parent().text(),r=$(this).parent().attr("class"),m=$("body"),v,o,n=k.length;
+(window.innerHeight===undefined)?(l=document.documentElement.clientWidth/4):(l=(window.innerHeight/3)+20);m.append(j);m.append(f);$(".modal-serv .content h4").append(u);
+v=$(".modal-serv");o=$(".serv-shadow");while(n--){var p=k[n];if(p.element===r){$(".modal-serv .content h4 i").addClass(p.element);for(var t=0,s=p.inputs.length;
+t<s;t++){$(".modal-serv .content form").append(p.inputs[t]);}$(".modal-serv .content form").append(p.button);v.css("height",p.height);}}if((navigator.appVersion.indexOf("MSIE 8.")!=-1)||(navigator.appVersion.indexOf("MSIE 9.")!=-1)){$("input[placeholder]").each(function(){var w=$(this);
+$(w).val(w.attr("placeholder"));$(w).focus(function(){if(w.val()==w.attr("placeholder")){w.val("");}});$(w).blur(function(){if(w.val()==""||w.val()==w.attr("placeholder")){w.val(w.attr("placeholder"));
+}});});}v.css("top",$(window).scrollTop()+l);o.fadeIn();v.fadeIn();g(v,o);});function g(l,m){$(".modal-serv span.close-mod").on("click",function(){l.fadeOut(400,function(){$(this).remove();
+});m.fadeOut(400,function(){$(this).remove();});});}};if(a[1]==="mx"){b();}})();

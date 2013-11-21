@@ -302,7 +302,7 @@ footer a {
     float: left;
 }
 #airports-dates-container legend{
-    display: none;
+    /*display: none;*/
 }
 #ROOT .field.select-airport{
   position: relative;
@@ -321,7 +321,7 @@ footer a {
   box-shadow: 0px 0px 4px rgb(207, 207, 207);
 }
 #search-flights legend{
-    display: none;
+    /*display: none;*/
 }
 #ROOT .search-passengers .field {
     clear: left;
@@ -512,7 +512,7 @@ footer a {
   background: #fff;
 }
 #ROOT #cnt_3{
-  display: none;
+  /*display: none;*/
 }
 #ROOT .bd.calendar-container{
   width: 430px;
@@ -567,7 +567,7 @@ footer a {
   color: rgb(0, 60, 118);
 }
 .yui-panel-container .container-close {
-  display: none;
+  /*display: none;*/
 }
 
 /*
@@ -605,7 +605,7 @@ footer a {
   color: #424242; 
 }
 #ROOT .flight-info p{
-  display: none;
+  /*display: none;*/
 }
 #ROOT .dates-prev .prev-next-label, #ROOT .dates-next .prev-next-label{
   text-indent: -9999px;
@@ -673,7 +673,7 @@ footer a {
   color: rgb(60, 158, 247);
 }
 #ROOT .flight-list-section.filter-options-container{
-  display: none;
+  /*display: none;*/
 }
 #ROOT .flight-list-section thead th{
   background: #fff;
@@ -1178,7 +1178,7 @@ table .prices-currency{
   width: 100%;
 }
 #contact-info .info-content .column h4{
-  display: none;
+  /*display: none;*/
 }
 #contact-info .info-content .email-fields{
   width: 100%;
@@ -1720,7 +1720,7 @@ label.translate.column.wasTranslated{
 :;;:::::::::::::::::::::::::PASO 5:::::::::::::::::::::::::;::;:;
 */
 #bnpl_1{
-  display: none;
+  /*display: none;*/
 }
 .payc-integrated #payment #payment-wrapper {
     background: none;
