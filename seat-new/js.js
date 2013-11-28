@@ -164,20 +164,20 @@ window.onload = function(){
                     '<a href="#" class="info"><i></i>Más información de este vuelo</a>'
                     );
 
-                if(!$(this).hasClass("seat-map-flights-collapsed")){
+                //if(!$(this).hasClass("seat-map-flights-collapsed")){
                     $(this).find(".seat-map-flights-pax").each(function(){
                         var name = $(this).find(".seat-map-flights-pax-name").first().html(),
                             numberSeat = $(this).find(".seat-map-flights-place-no").first().html(),
                             numberSeatObject = $(this).find(".seat-map-flights-place-no").first(),
                             price = $(this).find(".prices-amount").first().html(),
                             currency = $(this).find(".prices-currency").first().html();
-                        price = (price === null) ? "0" : price;
-                        currency = (currency === null) ? "" : currency;
+                        price = (typeof price === "object") ? "0" : price;
+                        currency = (typeof currency === "object") ? "" : currency;
                         var html = '<h1>' + name + '</h1><ul class="seat-info"><li><span class="title">Asiento</span><span class="number">' + numberSeat + '</span></li><li><span class="title">Tarifa de asiento</span><p><span class="currency">$</span><span class="amount">' + price + '</span></p><span>' + currency + '</span></li></ul>';
                         numberSeatObject.prepend("<i class='bait'></i>");
                         newDiv.append(html);
                     });
-                }
+                //}
             });
             content.append(newDiv, seatMap);
             $(".seat-map-header").first().append(content);
@@ -189,6 +189,8 @@ window.onload = function(){
 
     timerConstructor = setTimeout(function(){
         structure();
+        $(".marketing-text1, .seat-map-infobox, .seat-map-segment-info-top, .seat-map-segment-info-bottom, .seat-map-footer-links").hide();
+        $(".flight-controls").first().hide();
     }, 300);
 })();
 
