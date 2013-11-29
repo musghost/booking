@@ -1,37 +1,11 @@
 window.onload = function(){
-	(function(){
-		var keys = $(".seat-map-keys").first(),
-			text = $(".seat-map-invocation").first(),
-			links = $(".seat-map-footer-links").first(),
-			infoBox = $("#flight-list-infobox");
-		text.after(keys);
-		infoBox.append(links);
+	$("#booking-process").addClass("active");
+    $("#booking-process li").each(function(a){
+        $(this).addClass(((a + 1) % 2 === 0) ? "two" : "one");
+    });
 
-		$("#booking-process").addClass("active");
-	    $("#booking-process li").each(function(a){
-	        $(this).addClass(((a + 1) % 2 === 0) ? "two" : "one");
-	    });
-
-		$(".seat-map-flights-list").each(function(){
-			$(this).html("<span class='seat-map-text-info'>M&aacute;s informaci&oacute;n de este vuelo</span>");
-		});
-		$(".seat-map-flights-pax-name").after("<div class='seat-labels'><span class='num-seat-label'>Asiento</span><span class='price-seat-label'>Tarifa de asiento</span></div>");
-		$(".seat-map-header-links").hide();
-		$(".seat-map-planemap tr").each(function(a){
-	        $(this).find("td").each(function(b){
-	            var bTag = $(this).find("strong").first();
-	            if(bTag.children().length > 0){
-	                if(b === 0){
-	                    bTag.html("<img src='https://s3.amazonaws.com/aeromexico/ancillaries/new_v_exitleft.png'>");
-	                } else{
-	                    bTag.html("<img src='https://s3.amazonaws.com/aeromexico/ancillaries/new_v_exitright.png'>");
-	                }
-	            }
-	        });
-	    });
-
-		var buildInfoBox = function(){
-	        var itineratiesA = [],
+    var buildInfoBox = function(){
+    	var itineratiesA = [],
 	            itineratiesB = [],
 	            pass = $(".cart-pax span").eq(1).html(),
 	            date = function(a){
@@ -148,17 +122,23 @@ window.onload = function(){
 	        });
 
 	        ul.append("<li><span>" + $("#total-price-label").html() + "</span><span>" + price + "</span></li>");
-	    },
-	    structure = function(){
-	    	if($(".flight-info-sidebar").length < 1)
-				buildInfoBox();
-			timerConstructor = setTimeout(function(){
-				structure();
-			}, 100);			
-	    }
-
-		var timerConstructor = setTimeout(function(){
-			structure();
-		}, 100);
-	})();
+    },
+    structure = function(){
+    	var lastLi = $("#booking-process li").last();
+    	if(!lastLi.hasClass("one") && !lastLi.hasClass("two")){
+            var lItems = $("#booking-process li");
+            lItems.removeClass("one two");
+            lItems.each(function(a){
+                $(this).addClass(((a + 1) % 2 === 0) ? "two" : "one");
+            });
+        }
+        if($(".flight-info-sidebar").length < 1) buildInfoBox();
+        timerConstructor = setTimeout(function(){
+	    	structure();
+	    }, 300); 
+    },
+    timerConstructor = setTimeout(function(){
+    	structure();
+    }, 300);
+ 
 }

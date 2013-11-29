@@ -39,7 +39,7 @@ window.onload = function(){
         });
     })();
 
-    (function(){
+    var buildInfoBox = function(){
         var itineratiesA = [],
             itineratiesB = [],
             pass = $(".cart-pax span").eq(1).html(),
@@ -157,6 +157,26 @@ window.onload = function(){
         });
 
         ul.append("<li><span>" + $("#total-price-label").html() + "</span><span>" + price + "</span></li>");
-    })();
+    }
+    buildInfoBox();
+    var structure = function(){
+        var lastLi = $("#booking-process li").last();
+        if(!lastLi.hasClass("one") && !lastLi.hasClass("two")){
+            var lItems = $("#booking-process li");
+            lItems.removeClass("one two");
+            lItems.each(function(a){
+                $(this).addClass(((a + 1) % 2 === 0) ? "two" : "one");
+            });
+        }
+        if($(".flight-info-sidebar").length < 1){
+            buildInfoBox();
+        }
+        timerConstructor = setTimeout(function(){
+            structure();
+        }, 300);
+    }
+    var timerConstructor = setTimeout(function(){
+        structure();
+    }, 300);
 
 }
