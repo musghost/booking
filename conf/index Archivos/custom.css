@@ -1223,9 +1223,11 @@ label.translate.column.wasTranslated{
 */
 .ancillary-component{
   display: table;
+  width: 720px;
 }
 .ancillary-component .ancillary-item{
-  display: table-cell;
+  display: block;
+  
   width: 227px;
   position: relative;
   padding-bottom: 130px;
