@@ -129,11 +129,13 @@ window.onload = function(){
         });
 
         $("#cart-total-price .prices-alternative > span").each(function(a){
-            if(a == 1) return false;
-            price += $(this).html();
+            if(a == 1) 
+                price += "<span class='amount'>" + $(this).html() + "</span>";
+            if(a == 0)
+                price += "<span class='currency'>" + $(this).html() + "</span>";
         });
 
         ul.append("<li><span>" + $("#total-price-label").html() + "</span><span>" + price + "</span></li>");
-
+        $("#cart-component .flight-info-sidebar").append($("#fare-rules-anchor"));
     })();
 }

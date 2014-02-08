@@ -57,11 +57,8 @@ window.onload = function(){
 	        var body = $("<div class='body'>"),
 	            today = new Date(),
 	            yr = today.getFullYear(),
-	            newSearch = $("#modify-search-trigger").clone(),
-	            h3 = $("<h3>");
-	        $("#modify-search-trigger").remove();
-	        newSearch.addClass("modify");
-	        h3.append("Voy", newSearch);
+	            h3 = $("<h3 id='title-search'>");
+	        h3.append("Voy");
 
 
 	        body.append(h3);
@@ -117,11 +114,15 @@ window.onload = function(){
 	        });
 
 	        $("#cart-total-price .prices-alternative > span").each(function(a){
-	            if(a == 1) return false;
-	            price += $(this).html();
+	            if(a == 1) 
+	                price += "<span class='amount'>" + $(this).html() + "</span>";
+	            if(a == 0)
+	                price += "<span class='currency'>" + $(this).html() + "</span>";
 	        });
 
 	        ul.append("<li><span>" + $("#total-price-label").html() + "</span><span>" + price + "</span></li>");
+	        $("#cart-component .flight-info-sidebar").append($("#fare-rules-anchor"));
+	        $("#modify-search-trigger").addClass("modify");
     },
     structure = function(){
     	var lastLi = $("#booking-process li").last();
@@ -132,7 +133,11 @@ window.onload = function(){
                 $(this).addClass(((a + 1) % 2 === 0) ? "two" : "one");
             });
         }
-        if($(".flight-info-sidebar").length < 1) buildInfoBox();
+        if($(".flight-info-sidebar").length < 1) {
+        	$("#cart-component .component-top").append($("#modify-search-trigger"));
+        	buildInfoBox();
+        	$("#title-search").append($("#modify-search-trigger"));
+        }
         timerConstructor = setTimeout(function(){
 	    	structure();
 	    }, 300); 

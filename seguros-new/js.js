@@ -15,8 +15,8 @@ window.onload = function(){
                 currency = $(this).find(".prices-currency").first().clone(),
                 currencyDiv = $("<div class='ancillary-currency'>"),
                 button = $(this).find(".ancillary-price-button-add").first().clone(),
-                bigDiv = $("<div class='ancillary-body'>"),
-                buttonInfo = $("<button class='ancillary-btn-info' type='button'>M&aacute;s informaci&oacute;n</button>");
+                bigDiv = $("<div class='ancillary-body'>");
+                /*buttonInfo = $("<button class='ancillary-btn-info' type='button'>M&aacute;s informaci&oacute;n</button>");*/
             $(this).css("padding-bottom", "130px");
             $(this).find(".ancillary-image").after("<div class='ancillary-icon ancillary-icon-" + id + "'><i></i></div>");
             switch(id){
@@ -28,12 +28,20 @@ window.onload = function(){
                 break;
                 case 'BG_PCS':
                     list = '<div class="ancillary-text"><ul><li>S&oacute;lo Aerom&eacute;xico te permite viajar con tu mascota a bordo.</li><li>Lleva a tu perro de viaje.</li><li>Disfruta de tus vacaciones a lado de tu mejor amigo.</li></ul></div>';
+                break
+                case 'AMK':
+                    list = '<div class="ancillary-text"><ul><li>Una experiencia &uacute;nica al alcance de todos, s&oacute;lo con una llamada consigue servicios exclusivos en el destino al que te dirijas.</li></ul></div>';
                 break;
+                case 'CO2':
+                    list = '<div class="ancillary-text"><ul><li>Participa, tu donación contribuye a conservar la Selva Maya.</li></ul></div>';
+                break;
+                default:
+                    list = '<div class="ancillary-text"><ul></ul></div>';
             }
             $(this).find(".ancillary-name").after(list);
             amountDiv.append("<span>$</span>", amount);
             currencyDiv.append(currency);
-            bigDiv.append(amountDiv, currencyDiv, button, buttonInfo);
+            bigDiv.append(amountDiv, currencyDiv, button);/*, buttonInfo);*/
             $(this).find(".ancillary-text").after(bigDiv);
             $(".ancillary-price-widget").css("display", "none");
         });
@@ -92,11 +100,8 @@ window.onload = function(){
         var body = $("<div class='body'>"),
             today = new Date(),
             yr = today.getFullYear(),
-            newSearch = $("#modify-search-trigger").clone(),
-            h3 = $("<h3>");
-        $("#modify-search-trigger").remove();
-        newSearch.addClass("modify");
-        h3.append("Voy", newSearch);
+            h3 = $("<h3 id='title-search'>");
+        h3.append("Voy");
 
 
         body.append(h3);
@@ -152,13 +157,20 @@ window.onload = function(){
         });
 
         $("#cart-total-price .prices-alternative > span").each(function(a){
-            if(a == 1) return false;
-            price += $(this).html();
+            if(a == 1) 
+                price += "<span class='amount'>" + $(this).html() + "</span>";
+            if(a == 0)
+                price += "<span class='currency'>" + $(this).html() + "</span>";
         });
 
         ul.append("<li><span>" + $("#total-price-label").html() + "</span><span>" + price + "</span></li>");
+        $("#cart-component .flight-info-sidebar").append($("#fare-rules-anchor"));
+        $("#modify-search-trigger").addClass("modify");
     }
+    $("#cart-component .component-top").append($("#modify-search-trigger"));
     buildInfoBox();
+    $("#title-search").append($("#modify-search-trigger"));
+
     var structure = function(){
         var lastLi = $("#booking-process li").last();
         if(!lastLi.hasClass("one") && !lastLi.hasClass("two")){
@@ -169,7 +181,9 @@ window.onload = function(){
             });
         }
         if($(".flight-info-sidebar").length < 1){
+            $("#cart-component .component-top").append($("#modify-search-trigger"));
             buildInfoBox();
+            $("#title-search").append($("#modify-search-trigger"));
         }
         timerConstructor = setTimeout(function(){
             structure();
