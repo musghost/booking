@@ -36,7 +36,7 @@
 <link type="text/css" rel="stylesheet" media="screen" href="../static/8/D5EE/93.TestUserB/css/ie7.css"/><![endif]-->
 <!--[if lte IE 6]>
 <link type="text/css" rel="stylesheet" media="screen" href="../static/8/D5EE/93.TestUserB/css/ie6.css"/><![endif]-->
-<link type="text/css" rel="stylesheet" media="screen" href="../conf/index%20Archivos/custom.css">
+<link type="text/css" rel="stylesheet" media="screen" href="index%20Archivos/custom.css">
 <link type="text/css" rel="stylesheet" media="print" href="index%20Archivos/custom_print.css">
 
     <script type="text/javascript" src="index%20Archivos/prime.js"></script>
@@ -319,8 +319,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 
-<input class="ancillaryItemCodeHolder" value="AMC" type="hidden">
-<input class="ancillaryItemTypeHolder" value="DEFAULT" type="hidden">
+<input class="ancillaryItemCodeHolder" type="hidden" value="AMC">
+<input class="ancillaryItemTypeHolder" type="hidden" value="DEFAULT">
 
 
 
@@ -333,9 +333,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="ancillary-price ancillary-price-widget ancillary-price-before-add ">
 <div class="ancillary-price-widget-default">
             <div class="ancillary-price-widget-default-price-perPax">
-                <span class="translate wasTranslated" wl:fallbacktranslate="label.ancillary.price.prefix.default" wl:translate="label.ancillary.price.prefix.AMC">tan baja como</span>
+            <dl>
+                <dd>
+                    <span class="translate wasTranslated" wl:fallbacktranslate="label.ancillary.price.prefix.default" wl:translate="label.ancillary.price.prefix.AMC">tan baja como</span>
     <span class="prices-all prices-alternatives"><span class="prices-alternative"><span class="prices-amount">77</span>&nbsp;<span class="translate currency prices-currency" wl:translate="MXN">MXN</span></span></span>
-                <span class="translate wasTranslated" wl:fallbacktranslate="label.ancillary.price.suffix.default" wl:translate="label.ancillary.price.suffix.AMC">&nbsp;</span>
+                    <span class="translate wasTranslated" wl:fallbacktranslate="label.ancillary.price.suffix.default" wl:translate="label.ancillary.price.suffix.AMC">&nbsp;</span>
+                </dd>
+            </dl>
         </div>
         <div class="ancillary-price-widget-default-tax-perPax">
                 <span class="translate wasTranslated" wl:translate="label.ancillary.tax.plus">más</span>
@@ -346,7 +350,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>    <div class="ancillary-price-perpax-perflight  type translate wasTranslated" wl:translate="label.ancillary.perPassenger.perFlight">Por pasajero y vuelo</div>
     <div class="ancillary-price-action">
         <div class="button button-smaller ancillary-price-button ancillary-price-button-add">
-            <input id="AncillaryItemButtonAdd-AMC" class="ancillary-price-input ancillary-button-add translate wasTranslated" value="Añadir" wl:translate="label.ancillary.add.AMC" wl:fallbacktranslate="label.ancillary.add" type="button">
+            <input id="AncillaryItemButtonAdd-AMC" class="ancillary-price-input ancillary-button-add translate wasTranslated" type="button" value="Añadir" wl:translate="label.ancillary.add.AMC" wl:fallbacktranslate="label.ancillary.add">
         </div>
     </div>
 </div>
@@ -354,9 +358,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <div class="ancillary-price-added translate wasTranslated" wl:translate="label.ancillary.added">Añadido</div>
 <div class="ancillary-price-widget-default">
             <div class="ancillary-price-widget-default-price-perPax">
-                <span class="translate wasTranslated" wl:fallbacktranslate="label.ancillary.price.prefix.default" wl:translate="label.ancillary.price.prefix.AMC">tan baja como</span>
+            <dl>
+                <dd>
+                    <span class="translate wasTranslated" wl:fallbacktranslate="label.ancillary.price.prefix.default" wl:translate="label.ancillary.price.prefix.AMC">tan baja como</span>
     <span class="prices-all prices-alternatives"><span class="prices-alternative"><span class="prices-amount">77</span>&nbsp;<span class="translate currency prices-currency" wl:translate="MXN">MXN</span></span></span>
-                <span class="translate wasTranslated" wl:fallbacktranslate="label.ancillary.price.suffix.default" wl:translate="label.ancillary.price.suffix.AMC">&nbsp;</span>
+                    <span class="translate wasTranslated" wl:fallbacktranslate="label.ancillary.price.suffix.default" wl:translate="label.ancillary.price.suffix.AMC">&nbsp;</span>
+                </dd>
+            </dl>
         </div>
         <div class="ancillary-price-widget-default-tax-perPax">
                 <span class="translate wasTranslated" wl:translate="label.ancillary.tax.plus">más</span>
@@ -371,13 +379,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <span class="translate wasTranslated" wl:translate="label.ancillary.total">Total</span>
     </div>
     <div class="ancillary-price-totalTax hidden">
-        <span wl:translate="label.ancillary.plus.tax" class="type translate wasTranslated">Impuestos Adicionales</span>
+        <span wl:translate="label.ancillary.tax.plus" class="type translate wasTranslated">más</span>
         <span class="totalTax"></span>
         <span wl:translate="label.ancillary.tax" class="type translate wasTranslated">impuesto</span>
     </div>
     <div class="ancillary-price-action ">
             <div class="button button-smaller ancillary-price-button ancillary-price-button-remove">
-                <input id="AncillaryItemButtonRemove-AMC" class="ancillary-price-input ancillary-button-remove translate wasTranslated" value="Eliminar" wl:translate="label.ancillary.remove" type="button">
+                <input id="AncillaryItemButtonRemove-AMC" class="ancillary-price-input ancillary-button-remove translate wasTranslated" type="button" value="Eliminar" wl:translate="label.ancillary.remove">
             </div>
         <div class="ancillary-price-modify hidden">
             <a class="ancillary-button-modify translate wasTranslated" href="#" wl:translate="label.ancillary.modify">Modificar</a>
@@ -401,90 +409,179 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         <p class="translate wasTranslated" wl:translate="label.ancillary.details.description">Seleccione el pasajero o pasajeros que desea que se añadan al paquete:</p>
     </div>
-
-        <div class="ancillary-leg ancillary-leg-depart">
-            <h5>
-                <span><span class="translate wasTranslated" wl:translate="Airport.ACA">Acapulco</span> (ACA)</span>
-                <span> - </span>
-                <span><span class="translate wasTranslated" wl:translate="Airport.MEX">Ciudad de Mexico</span> (MEX)</span>
-            </h5>
+            <div class="ancillary-leg ancillary-itinerary">
+                <h5>&nbsp;</h5>
 
     <fieldset>
     <ul class="checkboxgroup">     
-            <input class="paxCountMoreThanStockHolderAMC" name="paxCountMoreThanStockAMC" value="false" type="hidden">
-            <input class="availableStockHolderAMC" name="availableStockAMC" value="0" type="hidden">
-<li class="connection ACA-MEX">
-    <span><span class="translate wasTranslated" wl:translate="Airport.ACA">Acapulco</span> (ACA)</span>
-    <span>&nbsp;-&nbsp;</span>
-    <span><span class="translate wasTranslated" wl:translate="Airport.MEX">Ciudad de Mexico</span> (MEX)</span>
-</li>                    <li class="allPassengersLine">
+            <input type="hidden" class="paxCountMoreThanStockHolderAMC" name="paxCountMoreThanStockAMC" value="false">
+            <input type="hidden" class="availableStockHolderAMC" name="availableStockAMC" value="0">
+                    <li class="allPassengersLine">
                         <label>
-                            <input id="AncillaryAllPassengers-0-AMC" class="allPassengers ugc-d516c325cnhktcvepwjfypf0c-all" checked="checked" name="ancillary" type="checkbox">
+                            <input id="AncillaryAllPassengers-0-AMC" class="allPassengers ugc-9sqx6kgiv5dxed1ivn8jaw47n-all" type="checkbox" checked="checked" name="ancillary">
                             <span class="name translate wasTranslated" wl:translate="label.ancillary.allPassengers.AMC" wl:fallbacktranslate="label.ancillary.allPassengers">Todos los pasajeros</span>
                         </label>
                     </li>
                 <li class="singlePassengerLine last">
                         <label>
-                                <input id="AMC-ACA_MEX-AMC-1-pax" class="passengerCheckbox ugc-d516c325cnhktcvepwjfypf0c-pax-1" value="1" name="ancillary" checked="checked" type="checkbox">
+                                <input id="AMC-ACA_MEX-AMC-1-pax" class="passengerCheckbox ugc-9sqx6kgiv5dxed1ivn8jaw47n-pax-1" type="checkbox" value="1" name="ancillary" checked="checked">
                                 <span class="name">Andres Cidel</span>
                         </label>
-                      	<p class="ancillary-out-of-stock-message hidden">
-                      	<br>
+                        <p class="ancillary-out-of-stock-message hidden">
+                        <br>
                                 <span class="translate wasTranslated" wl:fallbacktranslate="Ancillary.name.default|AMC" wl:translate="Ancillary.name.AMC">Seguro Contigo</span>
                                 <span class="translate wasTranslated" wl:translate="label.ancillary.outOfStock">sin existencias</span>
-                       	</p>
+                        </p>
                 </li>
-            <input class="ancillaryTripOriginHolder" value="ACA" type="hidden">
-            <input class="ancillaryTripDestinationHolder" value="MEX" type="hidden">
-            <input class="ancillaryDepartureFormatedHolder" value="12/31/13 12:40 PM" type="hidden">
-            <input class="ancillaryTripPartTypeHolder" value="ITINERARY_PART" type="hidden">
+            <input class="ancillaryTripOriginHolder" type="hidden" value="ACA">
+            <input class="ancillaryTripDestinationHolder" type="hidden" value="MEX">
+            <input class="ancillaryDepartureFormatedHolder" type="hidden" value="3/12/14 12:05 PM">
+            <input class="ancillaryTripPartTypeHolder" type="hidden" value="ITINERARY">
     </ul>
 </fieldset>
+                <input class="ancillaryCodeHolder" type="hidden" name="ancillary[0].code" value="AMC">
+            </div>
 
-            <input class="ancillaryCodeHolder" name="ancillary[0].code" value="AMC" type="hidden">
+    <div class="ancillary-details-footer">
+        <div class="ancillary-details-footer-price">
+                <span class="total">
+                    <span class="label translate wasTranslated" wl:translate="label.ancillary.total">Total</span>
+                    <p class="type translate ancillary-details-footer-paxcnt wasTranslated" wl:translate="label.ancillary.total.forPassengers|&lt;span&gt;1&lt;/span&gt;">para <span>1</span> pasajero(s)</p>
+                </span>
+            <span class="footerTotal">    <span class="prices-all prices-alternatives"><span class="prices-alternative"><span class="prices-amount">0</span>&nbsp;<span class="translate currency prices-currency" wl:translate="MXN">MXN</span></span></span>
+</span>
         </div>
+    </div>
+</div>
 
-        <div class="ancillary-leg ancillary-leg-return">
-            <h5>
-                <span><span class="translate wasTranslated" wl:translate="Airport.MEX">Ciudad de Mexico</span> (MEX)</span>
-                <span> - </span>
-                <span><span class="translate wasTranslated" wl:translate="Airport.ACA">Acapulco</span> (ACA)</span>
-            </h5>
+        </div>
+        <div id="AMK" class="ancillary-item ancillary-item-AMK">
+
+
+
+
+<input class="ancillaryItemCodeHolder" type="hidden" value="AMK">
+<input class="ancillaryItemTypeHolder" type="hidden" value="DEFAULT">
+
+
+
+<div class="ancillary-content ancillary-content-AMK     
+    
+" id="yui_3_1_2_1_1392247597970872">
+    <div class="ancillary-image ancillary-image-AMK"></div>
+    <h4 class="ancillary-name translate wasTranslated" wl:fallbacktranslate="Ancillary.name.default|AMK" wl:translate="Ancillary.name.AMK" id="yui_3_1_2_1_1392247597970868">Aeromexico Concierge</h4>
+
+<div class="ancillary-price ancillary-price-widget ancillary-price-before-add " id="yui_3_1_2_1_1392247597970867">
+<div class="ancillary-price-widget-default">
+            <div class="ancillary-price-widget-default-price-perPax">
+            <dl>
+                <dd>
+                    <span class="translate wasTranslated" wl:fallbacktranslate="label.ancillary.price.prefix.default" wl:translate="label.ancillary.price.prefix.AMK">tan baja como</span>
+    <span class="prices-all prices-alternatives"><span class="prices-alternative"><span class="prices-amount">120</span>&nbsp;<span class="translate currency prices-currency" wl:translate="MXN">MXN</span></span></span>
+                    <span class="translate wasTranslated" wl:fallbacktranslate="label.ancillary.price.suffix.default" wl:translate="label.ancillary.price.suffix.AMK">&nbsp;</span>
+                </dd>
+            </dl>
+        </div>
+        <div class="ancillary-price-widget-default-tax-perPax">
+                <span class="translate wasTranslated" wl:translate="label.ancillary.tax.plus">más</span>
+                <span>    <span class="prices-all prices-alternatives"><span class="prices-alternative"><span class="prices-amount">20</span>&nbsp;<span class="translate currency prices-currency" wl:translate="MXN">MXN</span></span></span>
+</span>
+                <span class="translate wasTranslated" wl:translate="label.ancillary.tax">impuesto</span>
+        </div>
+</div>    <div class="ancillary-price-perpax-perflight  type translate wasTranslated" wl:translate="label.ancillary.perPassenger.perFlight">Por pasajero y vuelo</div>
+    <div class="ancillary-price-action">
+        <div class="button button-smaller ancillary-price-button ancillary-price-button-add">
+            <input id="AncillaryItemButtonAdd-AMK" class="ancillary-price-input ancillary-button-add translate wasTranslated" type="button" value="Añadir" wl:translate="label.ancillary.add.AMK" wl:fallbacktranslate="label.ancillary.add">
+        </div>
+    </div>
+</div>
+<div class="ancillary-price ancillary-price-after-add hidden">
+        <div class="ancillary-price-added translate wasTranslated" wl:translate="label.ancillary.added">Añadido</div>
+<div class="ancillary-price-widget-default">
+            <div class="ancillary-price-widget-default-price-perPax">
+            <dl>
+                <dd>
+                    <span class="translate wasTranslated" wl:fallbacktranslate="label.ancillary.price.prefix.default" wl:translate="label.ancillary.price.prefix.AMK">tan baja como</span>
+    <span class="prices-all prices-alternatives"><span class="prices-alternative"><span class="prices-amount">120</span>&nbsp;<span class="translate currency prices-currency" wl:translate="MXN">MXN</span></span></span>
+                    <span class="translate wasTranslated" wl:fallbacktranslate="label.ancillary.price.suffix.default" wl:translate="label.ancillary.price.suffix.AMK">&nbsp;</span>
+                </dd>
+            </dl>
+        </div>
+        <div class="ancillary-price-widget-default-tax-perPax">
+                <span class="translate wasTranslated" wl:translate="label.ancillary.tax.plus">más</span>
+                <span>    <span class="prices-all prices-alternatives"><span class="prices-alternative"><span class="prices-amount">20</span>&nbsp;<span class="translate currency prices-currency" wl:translate="MXN">MXN</span></span></span>
+</span>
+                <span class="translate wasTranslated" wl:translate="label.ancillary.tax">impuesto</span>
+        </div>
+</div>    <div class="ancillary-price-perpax-perflight  type translate wasTranslated" wl:translate="label.ancillary.perPassenger.perFlight">Por pasajero y vuelo</div>
+    <div class="ancillary-price-totalPax">
+        <span class="totalPrice">    <span class="prices-all prices-alternatives"><span class="prices-alternative"><span class="prices-amount">0</span>&nbsp;<span class="translate currency prices-currency" wl:translate="MXN">MXN</span></span></span>
+</span>
+        <span class="translate wasTranslated" wl:translate="label.ancillary.total">Total</span>
+    </div>
+    <div class="ancillary-price-totalTax hidden">
+        <span wl:translate="label.ancillary.tax.plus" class="type translate wasTranslated">más</span>
+        <span class="totalTax"></span>
+        <span wl:translate="label.ancillary.tax" class="type translate wasTranslated">impuesto</span>
+    </div>
+    <div class="ancillary-price-action ">
+            <div class="button button-smaller ancillary-price-button ancillary-price-button-remove">
+                <input id="AncillaryItemButtonRemove-AMK" class="ancillary-price-input ancillary-button-remove translate wasTranslated" type="button" value="Eliminar" wl:translate="label.ancillary.remove">
+            </div>
+        <div class="ancillary-price-modify hidden">
+            <a class="ancillary-button-modify translate wasTranslated" href="#" wl:translate="label.ancillary.modify">Modificar</a>
+        </div>
+    </div>
+</div>    <div class="ancillary-description translate wasTranslated" wl:fallbacktranslate="Ancillary.description.default|AMK" wl:translate="Ancillary.description.AMK">&nbsp;</div>
+
+
+
+
+</div>
+
+
+<div class="ancillary-details hidden     
+    
+     
+    
+">
+    <div class="ancillary-details-header">
+        <a href="#" class="ancillary-button-close-details translate wasTranslated" wl:translate="label.ancillary.details.close">cerrar</a>
+
+        <p class="translate wasTranslated" wl:translate="label.ancillary.details.description">Seleccione el pasajero o pasajeros que desea que se añadan al paquete:</p>
+    </div>
+            <div class="ancillary-leg ancillary-itinerary">
+                <h5>&nbsp;</h5>
 
     <fieldset>
     <ul class="checkboxgroup">     
-            <input class="paxCountMoreThanStockHolderAMC" name="paxCountMoreThanStockAMC" value="false" type="hidden">
-            <input class="availableStockHolderAMC" name="availableStockAMC" value="0" type="hidden">
-<li class="connection MEX-ACA">
-    <span><span class="translate wasTranslated" wl:translate="Airport.MEX">Ciudad de Mexico</span> (MEX)</span>
-    <span>&nbsp;-&nbsp;</span>
-    <span><span class="translate wasTranslated" wl:translate="Airport.ACA">Acapulco</span> (ACA)</span>
-</li>                    <li class="allPassengersLine">
+            <input type="hidden" class="paxCountMoreThanStockHolderAMK" name="paxCountMoreThanStockAMK" value="false">
+            <input type="hidden" class="availableStockHolderAMK" name="availableStockAMK" value="0">
+                    <li class="allPassengersLine">
                         <label>
-                            <input id="AncillaryAllPassengers-1-AMC" class="allPassengers ugc-94eafylwtrntjcngy8sradasi-all" checked="checked" name="ancillary" type="checkbox">
-                            <span class="name translate wasTranslated" wl:translate="label.ancillary.allPassengers.AMC" wl:fallbacktranslate="label.ancillary.allPassengers">Todos los pasajeros</span>
+                            <input id="AncillaryAllPassengers-0-AMK" class="allPassengers ugc-9sqx6kgiv5dxed1ivn8jaw47n-all" type="checkbox" name="ancillary">
+                            <span class="name translate wasTranslated" wl:translate="label.ancillary.allPassengers.AMK" wl:fallbacktranslate="label.ancillary.allPassengers">Todos los pasajeros</span>
                         </label>
                     </li>
                 <li class="singlePassengerLine last">
                         <label>
-                                <input id="AMC-MEX_ACA-AMC-1-pax" class="passengerCheckbox ugc-94eafylwtrntjcngy8sradasi-pax-1" value="1" name="ancillary" checked="checked" type="checkbox">
+                                <input id="AMK-ACA_MEX-AMK-1-pax" class="passengerCheckbox ugc-9sqx6kgiv5dxed1ivn8jaw47n-pax-1" type="checkbox" value="1" name="ancillary">
                                 <span class="name">Andres Cidel</span>
                         </label>
-                      	<p class="ancillary-out-of-stock-message hidden">
-                      	<br>
-                                <span class="translate wasTranslated" wl:fallbacktranslate="Ancillary.name.default|AMC" wl:translate="Ancillary.name.AMC">Seguro Contigo</span>
+                        <p class="ancillary-out-of-stock-message hidden">
+                        <br>
+                                <span class="translate wasTranslated" wl:fallbacktranslate="Ancillary.name.default|AMK" wl:translate="Ancillary.name.AMK">Aeromexico Concierge</span>
                                 <span class="translate wasTranslated" wl:translate="label.ancillary.outOfStock">sin existencias</span>
-                       	</p>
+                        </p>
                 </li>
-            <input class="ancillaryTripOriginHolder" value="MEX" type="hidden">
-            <input class="ancillaryTripDestinationHolder" value="ACA" type="hidden">
-            <input class="ancillaryDepartureFormatedHolder" value="1/2/14 3:15 PM" type="hidden">
-            <input class="ancillaryTripPartTypeHolder" value="ITINERARY_PART" type="hidden">
+            <input class="ancillaryTripOriginHolder" type="hidden" value="ACA">
+            <input class="ancillaryTripDestinationHolder" type="hidden" value="MEX">
+            <input class="ancillaryDepartureFormatedHolder" type="hidden" value="3/12/14 12:05 PM">
+            <input class="ancillaryTripPartTypeHolder" type="hidden" value="ITINERARY">
     </ul>
 </fieldset>
-
-            <input class="ancillaryCodeHolder" name="ancillary[0].code" value="AMC" type="hidden">
-        </div>
+                <input class="ancillaryCodeHolder" type="hidden" name="ancillary[1].code" value="AMK">
+            </div>
 
     <div class="ancillary-details-footer">
         <div class="ancillary-details-footer-price">
@@ -504,8 +601,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 
-<input class="ancillaryItemCodeHolder" value="DPM" type="hidden">
-<input class="ancillaryItemTypeHolder" value="DEFAULT" type="hidden">
+<input class="ancillaryItemCodeHolder" type="hidden" value="DPM">
+<input class="ancillaryItemTypeHolder" type="hidden" value="DEFAULT">
 
 
 
@@ -513,14 +610,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     
 ">
     <div class="ancillary-image ancillary-image-DPM"></div>
-    <h4 class="ancillary-name translate wasTranslated" wl:fallbacktranslate="Ancillary.name.default|DPM" wl:translate="Ancillary.name.DPM">Discount Pass MEX</h4>
+    <h4 class="ancillary-name translate wasTranslated" wl:fallbacktranslate="Ancillary.name.default|DPM" wl:translate="Ancillary.name.DPM" id="yui_3_1_2_1_1392247597970869">Discount Pass MEX</h4>
 
 <div class="ancillary-price ancillary-price-widget ancillary-price-before-add ">
 <div class="ancillary-price-widget-default">
             <div class="ancillary-price-widget-default-price-perPax">
-                <span class="translate wasTranslated" wl:fallbacktranslate="label.ancillary.price.prefix.default" wl:translate="label.ancillary.price.prefix.DPM">tan baja como</span>
+            <dl>
+                <dd>
+                    <span class="translate wasTranslated" wl:fallbacktranslate="label.ancillary.price.prefix.default" wl:translate="label.ancillary.price.prefix.DPM">tan baja como</span>
     <span class="prices-all prices-alternatives"><span class="prices-alternative"><span class="prices-amount">89</span>&nbsp;<span class="translate currency prices-currency" wl:translate="MXN">MXN</span></span></span>
-                <span class="translate wasTranslated" wl:fallbacktranslate="label.ancillary.price.suffix.default" wl:translate="label.ancillary.price.suffix.DPM">&nbsp;</span>
+                    <span class="translate wasTranslated" wl:fallbacktranslate="label.ancillary.price.suffix.default" wl:translate="label.ancillary.price.suffix.DPM">&nbsp;</span>
+                </dd>
+            </dl>
         </div>
         <div class="ancillary-price-widget-default-tax-perPax">
                 <span class="translate wasTranslated" wl:translate="label.ancillary.tax.plus">más</span>
@@ -531,7 +632,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>    <div class="ancillary-price-perpax-perflight  type translate wasTranslated" wl:translate="label.ancillary.perPassenger.perFlight">Por pasajero y vuelo</div>
     <div class="ancillary-price-action">
         <div class="button button-smaller ancillary-price-button ancillary-price-button-add">
-            <input id="AncillaryItemButtonAdd-DPM" class="ancillary-price-input ancillary-button-add translate wasTranslated" value="Añadir" wl:translate="label.ancillary.add.DPM" wl:fallbacktranslate="label.ancillary.add" type="button">
+            <input id="AncillaryItemButtonAdd-DPM" class="ancillary-price-input ancillary-button-add translate wasTranslated" type="button" value="Añadir" wl:translate="label.ancillary.add.DPM" wl:fallbacktranslate="label.ancillary.add">
         </div>
     </div>
 </div>
@@ -539,9 +640,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <div class="ancillary-price-added translate wasTranslated" wl:translate="label.ancillary.added">Añadido</div>
 <div class="ancillary-price-widget-default">
             <div class="ancillary-price-widget-default-price-perPax">
-                <span class="translate wasTranslated" wl:fallbacktranslate="label.ancillary.price.prefix.default" wl:translate="label.ancillary.price.prefix.DPM">tan baja como</span>
+            <dl>
+                <dd>
+                    <span class="translate wasTranslated" wl:fallbacktranslate="label.ancillary.price.prefix.default" wl:translate="label.ancillary.price.prefix.DPM">tan baja como</span>
     <span class="prices-all prices-alternatives"><span class="prices-alternative"><span class="prices-amount">89</span>&nbsp;<span class="translate currency prices-currency" wl:translate="MXN">MXN</span></span></span>
-                <span class="translate wasTranslated" wl:fallbacktranslate="label.ancillary.price.suffix.default" wl:translate="label.ancillary.price.suffix.DPM">&nbsp;</span>
+                    <span class="translate wasTranslated" wl:fallbacktranslate="label.ancillary.price.suffix.default" wl:translate="label.ancillary.price.suffix.DPM">&nbsp;</span>
+                </dd>
+            </dl>
         </div>
         <div class="ancillary-price-widget-default-tax-perPax">
                 <span class="translate wasTranslated" wl:translate="label.ancillary.tax.plus">más</span>
@@ -556,13 +661,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <span class="translate wasTranslated" wl:translate="label.ancillary.total">Total</span>
     </div>
     <div class="ancillary-price-totalTax hidden">
-        <span wl:translate="label.ancillary.plus.tax" class="type translate wasTranslated">Impuestos Adicionales</span>
+        <span wl:translate="label.ancillary.tax.plus" class="type translate wasTranslated">más</span>
         <span class="totalTax"></span>
         <span wl:translate="label.ancillary.tax" class="type translate wasTranslated">impuesto</span>
     </div>
     <div class="ancillary-price-action ">
             <div class="button button-smaller ancillary-price-button ancillary-price-button-remove">
-                <input id="AncillaryItemButtonRemove-DPM" class="ancillary-price-input ancillary-button-remove translate wasTranslated" value="Eliminar" wl:translate="label.ancillary.remove" type="button">
+                <input id="AncillaryItemButtonRemove-DPM" class="ancillary-price-input ancillary-button-remove translate wasTranslated" type="button" value="Eliminar" wl:translate="label.ancillary.remove">
             </div>
         <div class="ancillary-price-modify hidden">
             <a class="ancillary-button-modify translate wasTranslated" href="#" wl:translate="label.ancillary.modify">Modificar</a>
@@ -586,90 +691,171 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         <p class="translate wasTranslated" wl:translate="label.ancillary.details.description">Seleccione el pasajero o pasajeros que desea que se añadan al paquete:</p>
     </div>
-
-        <div class="ancillary-leg ancillary-leg-depart">
-            <h5>
-                <span><span class="translate wasTranslated" wl:translate="Airport.ACA">Acapulco</span> (ACA)</span>
-                <span> - </span>
-                <span><span class="translate wasTranslated" wl:translate="Airport.MEX">Ciudad de Mexico</span> (MEX)</span>
-            </h5>
+            <div class="ancillary-leg ancillary-itinerary">
+                <h5>&nbsp;</h5>
 
     <fieldset>
     <ul class="checkboxgroup">     
-            <input class="paxCountMoreThanStockHolderDPM" name="paxCountMoreThanStockDPM" value="false" type="hidden">
-            <input class="availableStockHolderDPM" name="availableStockDPM" value="0" type="hidden">
-<li class="connection ACA-MEX">
-    <span><span class="translate wasTranslated" wl:translate="Airport.ACA">Acapulco</span> (ACA)</span>
-    <span>&nbsp;-&nbsp;</span>
-    <span><span class="translate wasTranslated" wl:translate="Airport.MEX">Ciudad de Mexico</span> (MEX)</span>
-</li>                    <li class="allPassengersLine">
+            <input type="hidden" class="paxCountMoreThanStockHolderDPM" name="paxCountMoreThanStockDPM" value="false">
+            <input type="hidden" class="availableStockHolderDPM" name="availableStockDPM" value="0">
+                    <li class="allPassengersLine">
                         <label>
-                            <input id="AncillaryAllPassengers-0-DPM" class="allPassengers ugc-1p5y3inbp0x8hc7qz12cncd7z-all" name="ancillary" type="checkbox">
+                            <input id="AncillaryAllPassengers-0-DPM" class="allPassengers ugc-9sqx6kgiv5dxed1ivn8jaw47n-all" type="checkbox" name="ancillary">
                             <span class="name translate wasTranslated" wl:translate="label.ancillary.allPassengers.DPM" wl:fallbacktranslate="label.ancillary.allPassengers">Todos los pasajeros</span>
                         </label>
                     </li>
                 <li class="singlePassengerLine last">
                         <label>
-                                <input id="DPM-ACA_MEX-DPM-1-pax" class="passengerCheckbox ugc-1p5y3inbp0x8hc7qz12cncd7z-pax-1" value="1" name="ancillary" type="checkbox">
+                                <input id="DPM-ACA_MEX-DPM-1-pax" class="passengerCheckbox ugc-9sqx6kgiv5dxed1ivn8jaw47n-pax-1" type="checkbox" value="1" name="ancillary">
                                 <span class="name">Andres Cidel</span>
                         </label>
-                      	<p class="ancillary-out-of-stock-message hidden">
-                      	<br>
+                        <p class="ancillary-out-of-stock-message hidden">
+                        <br>
                                 <span class="translate wasTranslated" wl:fallbacktranslate="Ancillary.name.default|DPM" wl:translate="Ancillary.name.DPM">Discount Pass MEX</span>
                                 <span class="translate wasTranslated" wl:translate="label.ancillary.outOfStock">sin existencias</span>
-                       	</p>
+                        </p>
                 </li>
-            <input class="ancillaryTripOriginHolder" value="ACA" type="hidden">
-            <input class="ancillaryTripDestinationHolder" value="MEX" type="hidden">
-            <input class="ancillaryDepartureFormatedHolder" value="12/31/13 12:40 PM" type="hidden">
-            <input class="ancillaryTripPartTypeHolder" value="SEGMENT" type="hidden">
+            <input class="ancillaryTripOriginHolder" type="hidden" value="ACA">
+            <input class="ancillaryTripDestinationHolder" type="hidden" value="MEX">
+            <input class="ancillaryDepartureFormatedHolder" type="hidden" value="3/12/14 12:05 PM">
+            <input class="ancillaryTripPartTypeHolder" type="hidden" value="ITINERARY">
     </ul>
 </fieldset>
+                <input class="ancillaryCodeHolder" type="hidden" name="ancillary[2].code" value="DPM">
+            </div>
 
-            <input class="ancillaryCodeHolder" name="ancillary[1].code" value="DPM" type="hidden">
+    <div class="ancillary-details-footer">
+        <div class="ancillary-details-footer-price">
+                <span class="total">
+                    <span class="label translate wasTranslated" wl:translate="label.ancillary.total">Total</span>
+                    <p class="type translate ancillary-details-footer-paxcnt wasTranslated" wl:translate="label.ancillary.total.forPassengers|&lt;span&gt;1&lt;/span&gt;">para <span>1</span> pasajero(s)</p>
+                </span>
+            <span class="footerTotal">    <span class="prices-all prices-alternatives"><span class="prices-alternative"><span class="prices-amount">0</span>&nbsp;<span class="translate currency prices-currency" wl:translate="MXN">MXN</span></span></span>
+</span>
         </div>
+    </div>
+</div>
 
-        <div class="ancillary-leg ancillary-leg-return">
-            <h5>
-                <span><span class="translate wasTranslated" wl:translate="Airport.MEX">Ciudad de Mexico</span> (MEX)</span>
-                <span> - </span>
-                <span><span class="translate wasTranslated" wl:translate="Airport.ACA">Acapulco</span> (ACA)</span>
-            </h5>
+        </div>
+        <div id="CO2" class="ancillary-item ancillary-item-CO2">
+
+
+
+
+<input class="ancillaryItemCodeHolder" type="hidden" value="CO2">
+<input class="ancillaryItemTypeHolder" type="hidden" value="DEFAULT">
+
+
+
+<div class="ancillary-content ancillary-content-CO2     
+    
+">
+    <div class="ancillary-image ancillary-image-CO2"></div>
+    <h4 class="ancillary-name translate wasTranslated" wl:fallbacktranslate="Ancillary.name.default|CO2" wl:translate="Ancillary.name.CO2" id="yui_3_1_2_1_1392247597970870">Vuela Verde</h4>
+
+<div class="ancillary-price ancillary-price-widget ancillary-price-before-add ">
+<div class="ancillary-price-widget-default">
+            <div class="ancillary-price-widget-default-price-perPax">
+            <dl>
+                <dd>
+                    <span class="translate wasTranslated" wl:fallbacktranslate="label.ancillary.price.prefix.default" wl:translate="label.ancillary.price.prefix.CO2">tan baja como</span>
+    <span class="prices-all prices-alternatives"><span class="prices-alternative"><span class="prices-amount">55</span>&nbsp;<span class="translate currency prices-currency" wl:translate="MXN">MXN</span></span></span>
+                    <span class="translate wasTranslated" wl:fallbacktranslate="label.ancillary.price.suffix.default" wl:translate="label.ancillary.price.suffix.CO2">&nbsp;</span>
+                </dd>
+            </dl>
+        </div>
+        <div class="ancillary-price-widget-default-tax-perPax">
+        </div>
+</div>    <div class="ancillary-price-perpax-perflight  type translate wasTranslated" wl:translate="label.ancillary.perPassenger.perFlight">Por pasajero y vuelo</div>
+    <div class="ancillary-price-action">
+        <div class="button button-smaller ancillary-price-button ancillary-price-button-add">
+            <input id="AncillaryItemButtonAdd-CO2" class="ancillary-price-input ancillary-button-add translate wasTranslated" type="button" value="Añadir" wl:translate="label.ancillary.add.CO2" wl:fallbacktranslate="label.ancillary.add">
+        </div>
+    </div>
+</div>
+<div class="ancillary-price ancillary-price-after-add hidden">
+        <div class="ancillary-price-added translate wasTranslated" wl:translate="label.ancillary.added">Añadido</div>
+<div class="ancillary-price-widget-default">
+            <div class="ancillary-price-widget-default-price-perPax">
+            <dl>
+                <dd>
+                    <span class="translate wasTranslated" wl:fallbacktranslate="label.ancillary.price.prefix.default" wl:translate="label.ancillary.price.prefix.CO2">tan baja como</span>
+    <span class="prices-all prices-alternatives"><span class="prices-alternative"><span class="prices-amount">55</span>&nbsp;<span class="translate currency prices-currency" wl:translate="MXN">MXN</span></span></span>
+                    <span class="translate wasTranslated" wl:fallbacktranslate="label.ancillary.price.suffix.default" wl:translate="label.ancillary.price.suffix.CO2">&nbsp;</span>
+                </dd>
+            </dl>
+        </div>
+        <div class="ancillary-price-widget-default-tax-perPax">
+        </div>
+</div>    <div class="ancillary-price-perpax-perflight  type translate wasTranslated" wl:translate="label.ancillary.perPassenger.perFlight">Por pasajero y vuelo</div>
+    <div class="ancillary-price-totalPax">
+        <span class="totalPrice">    <span class="prices-all prices-alternatives"><span class="prices-alternative"><span class="prices-amount">0</span>&nbsp;<span class="translate currency prices-currency" wl:translate="MXN">MXN</span></span></span>
+</span>
+        <span class="translate wasTranslated" wl:translate="label.ancillary.total">Total</span>
+    </div>
+    <div class="ancillary-price-totalTax hidden">
+        <span wl:translate="label.ancillary.tax.plus" class="type translate wasTranslated">más</span>
+        <span class="totalTax"></span>
+        <span wl:translate="label.ancillary.tax" class="type translate wasTranslated">impuesto</span>
+    </div>
+    <div class="ancillary-price-action ">
+            <div class="button button-smaller ancillary-price-button ancillary-price-button-remove">
+                <input id="AncillaryItemButtonRemove-CO2" class="ancillary-price-input ancillary-button-remove translate wasTranslated" type="button" value="Eliminar" wl:translate="label.ancillary.remove">
+            </div>
+        <div class="ancillary-price-modify hidden">
+            <a class="ancillary-button-modify translate wasTranslated" href="#" wl:translate="label.ancillary.modify">Modificar</a>
+        </div>
+    </div>
+</div>    <div class="ancillary-description translate wasTranslated" wl:fallbacktranslate="Ancillary.description.default|CO2" wl:translate="Ancillary.description.CO2">&nbsp;</div>
+
+
+
+
+</div>
+
+
+<div class="ancillary-details hidden     
+    
+     
+    
+">
+    <div class="ancillary-details-header">
+        <a href="#" class="ancillary-button-close-details translate wasTranslated" wl:translate="label.ancillary.details.close">cerrar</a>
+
+        <p class="translate wasTranslated" wl:translate="label.ancillary.details.description">Seleccione el pasajero o pasajeros que desea que se añadan al paquete:</p>
+    </div>
+            <div class="ancillary-leg ancillary-itinerary">
+                <h5>&nbsp;</h5>
 
     <fieldset>
     <ul class="checkboxgroup">     
-            <input class="paxCountMoreThanStockHolderDPM" name="paxCountMoreThanStockDPM" value="false" type="hidden">
-            <input class="availableStockHolderDPM" name="availableStockDPM" value="0" type="hidden">
-<li class="connection MEX-ACA">
-    <span><span class="translate wasTranslated" wl:translate="Airport.MEX">Ciudad de Mexico</span> (MEX)</span>
-    <span>&nbsp;-&nbsp;</span>
-    <span><span class="translate wasTranslated" wl:translate="Airport.ACA">Acapulco</span> (ACA)</span>
-</li>                    <li class="allPassengersLine">
+            <input type="hidden" class="paxCountMoreThanStockHolderCO2" name="paxCountMoreThanStockCO2" value="false">
+            <input type="hidden" class="availableStockHolderCO2" name="availableStockCO2" value="0">
+                    <li class="allPassengersLine">
                         <label>
-                            <input id="AncillaryAllPassengers-1-DPM" class="allPassengers ugc-3l5ngs8w29rjg7urajzp23m76-all" name="ancillary" type="checkbox">
-                            <span class="name translate wasTranslated" wl:translate="label.ancillary.allPassengers.DPM" wl:fallbacktranslate="label.ancillary.allPassengers">Todos los pasajeros</span>
+                            <input id="AncillaryAllPassengers-0-CO2" class="allPassengers ugc-9sqx6kgiv5dxed1ivn8jaw47n-all" type="checkbox" name="ancillary">
+                            <span class="name translate wasTranslated" wl:translate="label.ancillary.allPassengers.CO2" wl:fallbacktranslate="label.ancillary.allPassengers">Todos los pasajeros</span>
                         </label>
                     </li>
                 <li class="singlePassengerLine last">
                         <label>
-                                <input id="DPM-MEX_ACA-DPM-1-pax" class="passengerCheckbox ugc-3l5ngs8w29rjg7urajzp23m76-pax-1" value="1" name="ancillary" type="checkbox">
+                                <input id="CO2-ACA_MEX-CO2-1-pax" class="passengerCheckbox ugc-9sqx6kgiv5dxed1ivn8jaw47n-pax-1" type="checkbox" value="1" name="ancillary">
                                 <span class="name">Andres Cidel</span>
                         </label>
-                      	<p class="ancillary-out-of-stock-message hidden">
-                      	<br>
-                                <span class="translate wasTranslated" wl:fallbacktranslate="Ancillary.name.default|DPM" wl:translate="Ancillary.name.DPM">Discount Pass MEX</span>
+                        <p class="ancillary-out-of-stock-message hidden">
+                        <br>
+                                <span class="translate wasTranslated" wl:fallbacktranslate="Ancillary.name.default|CO2" wl:translate="Ancillary.name.CO2">Vuela Verde</span>
                                 <span class="translate wasTranslated" wl:translate="label.ancillary.outOfStock">sin existencias</span>
-                       	</p>
+                        </p>
                 </li>
-            <input class="ancillaryTripOriginHolder" value="MEX" type="hidden">
-            <input class="ancillaryTripDestinationHolder" value="ACA" type="hidden">
-            <input class="ancillaryDepartureFormatedHolder" value="1/2/14 3:15 PM" type="hidden">
-            <input class="ancillaryTripPartTypeHolder" value="SEGMENT" type="hidden">
+            <input class="ancillaryTripOriginHolder" type="hidden" value="ACA">
+            <input class="ancillaryTripDestinationHolder" type="hidden" value="MEX">
+            <input class="ancillaryDepartureFormatedHolder" type="hidden" value="3/12/14 12:05 PM">
+            <input class="ancillaryTripPartTypeHolder" type="hidden" value="ITINERARY">
     </ul>
 </fieldset>
-
-            <input class="ancillaryCodeHolder" name="ancillary[1].code" value="DPM" type="hidden">
-        </div>
+                <input class="ancillaryCodeHolder" type="hidden" name="ancillary[3].code" value="CO2">
+            </div>
 
     <div class="ancillary-details-footer">
         <div class="ancillary-details-footer-price">
@@ -689,35 +875,39 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 
-<input class="ancillaryItemCodeHolder" value="BG_PCS" type="hidden">
-<input class="ancillaryItemTypeHolder" value="GROUPED" type="hidden">
+<input class="ancillaryItemCodeHolder" type="hidden" value="BG_PCS">
+<input class="ancillaryItemTypeHolder" type="hidden" value="GROUPED">
 
-    <input class="ancillaryItemGroupCodeHolder" value="BG" type="hidden">
+    <input class="ancillaryItemGroupCodeHolder" type="hidden" value="BG">
 
 
 <div class="ancillary-content ancillary-content-BG_PCS     
     
 ">
     <div class="ancillary-image ancillary-image-BG_PCS"></div>
-    <h4 class="ancillary-name translate wasTranslated" wl:fallbacktranslate="Ancillary.name.default|BG_PCS" wl:translate="Ancillary.name.BG_PCS">Equipaje Registrado</h4>
+    <h4 class="ancillary-name translate wasTranslated" wl:fallbacktranslate="Ancillary.name.default|BG_PCS" wl:translate="Ancillary.name.BG_PCS" id="yui_3_1_2_1_1392247597970871">Equipaje Registrado</h4>
 
 <div class="ancillary-price ancillary-price-widget ancillary-price-before-add ">
 <div class="ancillary-price-widget-default">
             <div class="ancillary-price-widget-default-price-perPax">
-                <span class="translate wasTranslated" wl:fallbacktranslate="label.ancillary.price.prefix.default" wl:translate="label.ancillary.price.prefix.0CD">tan baja como</span>
-    <span class="prices-all prices-alternatives"><span class="prices-alternative"><span class="prices-amount">560</span>&nbsp;<span class="translate currency prices-currency" wl:translate="MXN">MXN</span></span></span>
-                <span class="translate wasTranslated" wl:fallbacktranslate="label.ancillary.price.suffix.default" wl:translate="label.ancillary.price.suffix.0CD">&nbsp;</span>
+            <dl>
+                <dd>
+                    <span class="translate wasTranslated" wl:fallbacktranslate="label.ancillary.price.prefix.default" wl:translate="label.ancillary.price.prefix.0CD">tan baja como</span>
+    <span class="prices-all prices-alternatives"><span class="prices-alternative"><span class="prices-amount">1</span>&nbsp;<span class="translate currency prices-currency" wl:translate="MXN">MXN</span></span></span>
+                    <span class="translate wasTranslated" wl:fallbacktranslate="label.ancillary.price.suffix.default" wl:translate="label.ancillary.price.suffix.0CD">&nbsp;</span>
+                </dd>
+            </dl>
         </div>
         <div class="ancillary-price-widget-default-tax-perPax">
                 <span class="translate wasTranslated" wl:translate="label.ancillary.tax.plus">más</span>
-                <span>    <span class="prices-all prices-alternatives"><span class="prices-alternative"><span class="prices-amount">90</span>&nbsp;<span class="translate currency prices-currency" wl:translate="MXN">MXN</span></span></span>
+                <span>    <span class="prices-all prices-alternatives"><span class="prices-alternative"><span class="prices-amount">1</span>&nbsp;<span class="translate currency prices-currency" wl:translate="MXN">MXN</span></span></span>
 </span>
                 <span class="translate wasTranslated" wl:translate="label.ancillary.tax">impuesto</span>
         </div>
 </div>    <div class="ancillary-price-perpax-perflight  type translate wasTranslated" wl:translate="label.ancillary.perPassenger.perFlight">Por pasajero y vuelo</div>
     <div class="ancillary-price-action">
         <div class="button button-smaller ancillary-price-button ancillary-price-button-add">
-            <input id="AncillaryItemButtonAdd-BG_PCS" class="ancillary-price-input ancillary-button-add translate wasTranslated" value="Añadir" wl:translate="label.ancillary.add.BG_PCS" wl:fallbacktranslate="label.ancillary.add" type="button">
+            <input id="AncillaryItemButtonAdd-BG_PCS" class="ancillary-price-input ancillary-button-add translate wasTranslated" type="button" value="Añadir" wl:translate="label.ancillary.add.BG_PCS" wl:fallbacktranslate="label.ancillary.add">
         </div>
     </div>
 </div>
@@ -725,13 +915,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <div class="ancillary-price-added translate wasTranslated" wl:translate="label.ancillary.added">Añadido</div>
 <div class="ancillary-price-widget-default">
             <div class="ancillary-price-widget-default-price-perPax">
-                <span class="translate wasTranslated" wl:fallbacktranslate="label.ancillary.price.prefix.default" wl:translate="label.ancillary.price.prefix.0CD">tan baja como</span>
-    <span class="prices-all prices-alternatives"><span class="prices-alternative"><span class="prices-amount">560</span>&nbsp;<span class="translate currency prices-currency" wl:translate="MXN">MXN</span></span></span>
-                <span class="translate wasTranslated" wl:fallbacktranslate="label.ancillary.price.suffix.default" wl:translate="label.ancillary.price.suffix.0CD">&nbsp;</span>
+            <dl>
+                <dd>
+                    <span class="translate wasTranslated" wl:fallbacktranslate="label.ancillary.price.prefix.default" wl:translate="label.ancillary.price.prefix.0CD">tan baja como</span>
+    <span class="prices-all prices-alternatives"><span class="prices-alternative"><span class="prices-amount">1</span>&nbsp;<span class="translate currency prices-currency" wl:translate="MXN">MXN</span></span></span>
+                    <span class="translate wasTranslated" wl:fallbacktranslate="label.ancillary.price.suffix.default" wl:translate="label.ancillary.price.suffix.0CD">&nbsp;</span>
+                </dd>
+            </dl>
         </div>
         <div class="ancillary-price-widget-default-tax-perPax">
                 <span class="translate wasTranslated" wl:translate="label.ancillary.tax.plus">más</span>
-                <span>    <span class="prices-all prices-alternatives"><span class="prices-alternative"><span class="prices-amount">90</span>&nbsp;<span class="translate currency prices-currency" wl:translate="MXN">MXN</span></span></span>
+                <span>    <span class="prices-all prices-alternatives"><span class="prices-alternative"><span class="prices-amount">1</span>&nbsp;<span class="translate currency prices-currency" wl:translate="MXN">MXN</span></span></span>
 </span>
                 <span class="translate wasTranslated" wl:translate="label.ancillary.tax">impuesto</span>
         </div>
@@ -742,13 +936,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <span class="translate wasTranslated" wl:translate="label.ancillary.total">Total</span>
     </div>
     <div class="ancillary-price-totalTax hidden">
-        <span wl:translate="label.ancillary.plus.tax" class="type translate wasTranslated">Impuestos Adicionales</span>
+        <span wl:translate="label.ancillary.tax.plus" class="type translate wasTranslated">más</span>
         <span class="totalTax"></span>
         <span wl:translate="label.ancillary.tax" class="type translate wasTranslated">impuesto</span>
     </div>
     <div class="ancillary-price-action ">
             <div class="button button-smaller ancillary-price-button ancillary-price-button-remove">
-                <input id="AncillaryItemButtonRemove-BG_PCS" class="ancillary-price-input ancillary-button-remove translate wasTranslated" value="Eliminar" wl:translate="label.ancillary.remove" type="button">
+                <input id="AncillaryItemButtonRemove-BG_PCS" class="ancillary-price-input ancillary-button-remove translate wasTranslated" type="button" value="Eliminar" wl:translate="label.ancillary.remove">
             </div>
         <div class="ancillary-price-modify hidden">
             <a class="ancillary-button-modify translate wasTranslated" href="#" wl:translate="label.ancillary.modify">Modificar</a>
@@ -788,18 +982,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <span><span class="translate wasTranslated" wl:translate="Airport.MEX">Ciudad de Mexico</span> (MEX)</span>
 </li> <li>
 <label>
-<input id="AncillaryAllPassengers-0-BG_PCS" name="ancillary-xbag" value="allPaxes" class="allPassengers" type="checkbox">
+<input id="AncillaryAllPassengers-0-BG_PCS" type="checkbox" name="ancillary-xbag" value="allPaxes" class="allPassengers">
 <span class="translate name wasTranslated" wl:translate="label.ancillary.allPaxes">Todos los pasajeros</span>
 </label>
 </li>
-<li id="yui_3_1_2_1_1383592276411429" class="pax last">
+<li class="pax last" id="yui_3_1_2_1_1392247597970412">
 <label class="ancillary-bags-pax">
-<input id="BG_PCS-ACA_MEX-BG_PCS-1-pax" name="ancillary" class="passengerCheckbox" value="1" type="checkbox">
+<input id="BG_PCS-ACA_MEX-BG_PCS-1-pax" type="checkbox" name="ancillary" class="passengerCheckbox" value="1">
 <span class="name">Andres Cidel</span>
 </label>
-<span id="yui_3_1_2_1_1383592276411431" class="ancillary-bags-quantity hidden">
-<select name="BG_PCS,ACA,MEX,12/31/13 12:40 PM,ITINERARY_PART">
-<option selected="selected" value="1" class="translate wasTranslated" wl:translate="label.ancillary.select.bag|1">1 bolsa(s)</option>
+<span class="ancillary-bags-quantity hidden" id="yui_3_1_2_1_1392247597970414">
+<label class="hidden-label ancillary-bags-quantity-select-label" for="BG_PCS_ACA_MEX_3_12_14_12:05_PM_ITINERARY_PART"></label>
+<select id="BG_PCS_ACA_MEX_3_12_14_12:05_PM_ITINERARY_PART" name="BG_PCS,ACA,MEX,3/12/14 12:05 PM,ITINERARY_PART">
+<option value="1" class="translate wasTranslated" wl:translate="label.ancillary.select.bag|1">1 bolsa(s)</option>
 <option value="2" class="translate wasTranslated" wl:translate="label.ancillary.select.bag|2">2 bolsa(s)</option>
 <option value="3" class="translate wasTranslated" wl:translate="label.ancillary.select.bag|3">3 bolsa(s)</option>
 <option value="4" class="translate wasTranslated" wl:translate="label.ancillary.select.bag|4">4 bolsa(s)</option>
@@ -810,13 +1005,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="ancillary-bags-details">
 </div>
 </li>
-<input class="ancillaryTripOriginHolder" value="ACA" type="hidden">
-<input class="ancillaryTripDestinationHolder" value="MEX" type="hidden">
-<input class="ancillaryDepartureFormatedHolder" value="12/31/13 12:40 PM" type="hidden">
-<input class="ancillaryTripPartTypeHolder" value="ITINERARY_PART" type="hidden">
+<input class="ancillaryTripOriginHolder" type="hidden" value="ACA">
+<input class="ancillaryTripDestinationHolder" type="hidden" value="MEX">
+<input class="ancillaryDepartureFormatedHolder" type="hidden" value="3/12/14 12:05 PM">
+<input class="ancillaryTripPartTypeHolder" type="hidden" value="ITINERARY_PART">
 </ul>
 </fieldset>
-            <input class="ancillaryCodeHolder" name="ancillary[2].code" value="BG_PCS" type="hidden">
+            <input class="ancillaryCodeHolder" type="hidden" name="ancillary[4].code" value="BG_PCS">
         </div>
 
         <div class="ancillary-leg ancillary-leg-return">
@@ -834,18 +1029,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <span><span class="translate wasTranslated" wl:translate="Airport.ACA">Acapulco</span> (ACA)</span>
 </li> <li>
 <label>
-<input id="AncillaryAllPassengers-1-BG_PCS" name="ancillary-xbag" value="allPaxes" class="allPassengers" type="checkbox">
+<input id="AncillaryAllPassengers-1-BG_PCS" type="checkbox" name="ancillary-xbag" value="allPaxes" class="allPassengers">
 <span class="translate name wasTranslated" wl:translate="label.ancillary.allPaxes">Todos los pasajeros</span>
 </label>
 </li>
-<li id="yui_3_1_2_1_1383592276411433" class="pax last">
+<li class="pax last" id="yui_3_1_2_1_1392247597970416">
 <label class="ancillary-bags-pax">
-<input id="BG_PCS-MEX_ACA-BG_PCS-1-pax" name="ancillary" class="passengerCheckbox" value="1" type="checkbox">
+<input id="BG_PCS-MEX_ACA-BG_PCS-1-pax" type="checkbox" name="ancillary" class="passengerCheckbox" value="1">
 <span class="name">Andres Cidel</span>
 </label>
-<span id="yui_3_1_2_1_1383592276411435" class="ancillary-bags-quantity hidden">
-<select name="BG_PCS,MEX,ACA,1/2/14 3:15 PM,ITINERARY_PART">
-<option selected="selected" value="1" class="translate wasTranslated" wl:translate="label.ancillary.select.bag|1">1 bolsa(s)</option>
+<span class="ancillary-bags-quantity hidden" id="yui_3_1_2_1_1392247597970418">
+<label class="hidden-label ancillary-bags-quantity-select-label" for="BG_PCS_MEX_ACA_3_14_14_3:15_PM_ITINERARY_PART"></label>
+<select id="BG_PCS_MEX_ACA_3_14_14_3:15_PM_ITINERARY_PART" name="BG_PCS,MEX,ACA,3/14/14 3:15 PM,ITINERARY_PART">
+<option value="1" class="translate wasTranslated" wl:translate="label.ancillary.select.bag|1">1 bolsa(s)</option>
 <option value="2" class="translate wasTranslated" wl:translate="label.ancillary.select.bag|2">2 bolsa(s)</option>
 <option value="3" class="translate wasTranslated" wl:translate="label.ancillary.select.bag|3">3 bolsa(s)</option>
 <option value="4" class="translate wasTranslated" wl:translate="label.ancillary.select.bag|4">4 bolsa(s)</option>
@@ -856,13 +1052,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="ancillary-bags-details">
 </div>
 </li>
-<input class="ancillaryTripOriginHolder" value="MEX" type="hidden">
-<input class="ancillaryTripDestinationHolder" value="ACA" type="hidden">
-<input class="ancillaryDepartureFormatedHolder" value="1/2/14 3:15 PM" type="hidden">
-<input class="ancillaryTripPartTypeHolder" value="ITINERARY_PART" type="hidden">
+<input class="ancillaryTripOriginHolder" type="hidden" value="MEX">
+<input class="ancillaryTripDestinationHolder" type="hidden" value="ACA">
+<input class="ancillaryDepartureFormatedHolder" type="hidden" value="3/14/14 3:15 PM">
+<input class="ancillaryTripPartTypeHolder" type="hidden" value="ITINERARY_PART">
 </ul>
 </fieldset>
-            <input class="ancillaryCodeHolder" name="ancillary[2].code" value="BG_PCS" type="hidden">
+            <input class="ancillaryCodeHolder" type="hidden" name="ancillary[4].code" value="BG_PCS">
         </div>
 
     <div class="ancillary-details-footer">
@@ -878,7 +1074,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 
         </div>
-</div>    </div>
+</div>
     <input name="componentTypes" value="ancillary" type="hidden"></div>
     <div id="sbmt_1" class="component sbmt"><form method="POST" action="/SSW2010/D5EE/webqtrip.html?execution=e2s4" id="form_sbmt_1">
     <div class="componentContentHolder ftl-created rendered">
@@ -1583,7 +1779,7 @@ AM315
 </script>
 <script type="text/javascript" src="../conf/jquery.js"></script>
 <script type="text/javascript">
-    $("#booking-process").addClass("active");
+    /*$("#booking-process").addClass("active");
     $("#booking-process li").each(function(a){
             $(this).addClass(((a + 1) % 2 === 0) ? "two" : "one");
         });
@@ -1744,7 +1940,9 @@ AM315
 
 
 
-    })();
+    })();*/
 </script>
+
+<script type="text/javascript" src="js.js"></script>
 
 <div id="bigRedLollipop" name="bigRedLollipop_ANCILLARY_PAGE"></div></body></html>

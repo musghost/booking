@@ -153,7 +153,46 @@ window.onload = function(){
         
         shoppingCart(departings);
         $("#modify-search-trigger").addClass("modify");
-    }
+    },
+    selectPrice = function(sliced){
+        
+        var price = [],
+            price2 = [],
+            min = 0;
+
+        sliced.each(function(){
+            price.push(getPrice($(this)) * -1);
+        });
+
+        $.each(price, function(index, value){
+            if(value !== 0) price2.push(value);
+        });
+
+        if(price2.length < 1){
+            sliced.hide();
+            sliced.eq(0).show();
+            return;
+        }
+
+        min = Math.max.apply(null, price2);
+
+        sliced.each(function(){
+            var val = getPrice($(this)) * -1;
+            $(this).hide();
+            if(val === min) $(this).show();
+        });
+
+    },
+    getPrice = function(td){
+        var prices = td.find(".prices-amount");
+            prices = prices.clone();
+        if(prices.length < 1)
+            return 0;
+        prices
+            .find("span")
+            .remove();
+        return parseInt( prices.html().replace(/\,/g,'') );
+    };
     
     var structure = function(){
         var lastLi = $("#booking-process li").last();
@@ -168,15 +207,22 @@ window.onload = function(){
                     ths.eq(2).hide();
                     ths.eq(3).hide();
                     ths.eq(4).hide();
-                    ths.eq(5).hide();
+
+                    ths.eq(6).hide();
+                    ths.eq(7).hide();
+                    ths.eq(9).hide();
+                    /*ths.eq(5).hide();*/
                     ths.eq(0).width("190px");
                 } else{
                     var tds = $(this).find("td");
-                    tds.eq(5).hide();
+                    /*tds.eq(5).hide();*/
                     tds.eq(4).hide();
                     tds.eq(1).hide();
                     tds.eq(2).hide();
                     tds.eq(3).hide();
+
+                    selectPrice(tds.slice(5,8));
+                    selectPrice(tds.slice(8,10));
                     
                     var hour1 = tds.eq(2).find("span").html(),
                         hour2 = tds.eq(3).find("span").html(),
@@ -218,11 +264,11 @@ window.onload = function(){
                     ths.eq(2).hide();
                     ths.eq(3).hide();
                     ths.eq(4).hide();
-                    ths.eq(5).hide();
+                    /*ths.eq(5).hide();*/
                     ths.eq(0).width("190px");
                 } else{
                     var tds = $(this).find("td");
-                    tds.eq(5).hide();
+                    /*tds.eq(5).hide();*/
                     tds.eq(4).hide();
                     tds.eq(1).hide();
                     tds.eq(2).hide();
@@ -273,11 +319,11 @@ window.onload = function(){
                     ths.eq(2).hide();
                     ths.eq(3).hide();
                     ths.eq(4).hide();
-                    ths.eq(5).hide();
+                    /*ths.eq(5).hide();*/
                     ths.eq(0).width("190px");
                 } else{
                     var tds = $(this).find("td");
-                    tds.eq(5).hide();
+                    /*tds.eq(5).hide();*/
                     tds.eq(4).hide();
                     tds.eq(1).hide();
                     tds.eq(2).hide();

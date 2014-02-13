@@ -5,7 +5,7 @@ window.onload = function(){
             $(this).addClass(((a + 1) % 2 === 0) ? "two" : "one");
         });
 
-    (function(){
+    /*(function(){
         $(".ancillary-component").after("<div class='ancillary-information'></div>");
         $(".ancillary-component").find(".ancillary-item").each(function(a){
             var id = $(this).attr("id"),
@@ -16,7 +16,7 @@ window.onload = function(){
                 currencyDiv = $("<div class='ancillary-currency'>"),
                 button = $(this).find(".ancillary-price-button-add").first().clone(),
                 bigDiv = $("<div class='ancillary-body'>");
-                /*buttonInfo = $("<button class='ancillary-btn-info' type='button'>M&aacute;s informaci&oacute;n</button>");*/
+                /*buttonInfo = $("<button class='ancillary-btn-info' type='button'>M&aacute;s informaci&oacute;n</button>");
             $(this).css("padding-bottom", "130px");
             $(this).find(".ancillary-image").after("<div class='ancillary-icon ancillary-icon-" + id + "'><i></i></div>");
             switch(id){
@@ -41,11 +41,11 @@ window.onload = function(){
             $(this).find(".ancillary-name").after(list);
             amountDiv.append("<span>$</span>", amount);
             currencyDiv.append(currency);
-            bigDiv.append(amountDiv, currencyDiv, button);/*, buttonInfo);*/
+            bigDiv.append(amountDiv, currencyDiv, button);//, buttonInfo);
             $(this).find(".ancillary-text").after(bigDiv);
             $(".ancillary-price-widget").css("display", "none");
         });
-    })();
+    })();*/
 
     var buildInfoBox = function(){
         var  date = function(a){
