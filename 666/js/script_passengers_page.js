@@ -2,10 +2,32 @@ window.onload = function(){
     (function(){
         $("#passenger-accordion").before("<h3 class='capture'><i></i>Fill blank fields</h3>");
         $("#contact-info").prev().prepend("<i class='info icon'></i>");
-        $("#booking-process").addClass("active");
-        $("#booking-process li").each(function(a){
-            $(this).addClass(((a + 1) % 2 === 0) ? "two" : "one");
-        });
+        (function(){
+            //Booking processs
+            var current = false;
+            $("#booking-process").addClass("active");
+            $("#booking-process li").each(function(a){
+                $(this).addClass(((a + 1) % 2 === 0) ? "two" : "one");
+            });
+            $("#booking-process li").each(function(a){
+                if(current){
+                    if($(this).hasClass("stepPast")) 
+                        $(this)
+                            .removeClass("stepPast")
+                            .addClass("stepFuture");
+                    if($(this).hasClass("stepPast_prevPast")) 
+                        $(this)
+                            .removeClass("stepPast_prevPast")
+                            .addClass("stepFuture_prevFuture");
+                    if($(this).hasClass("prevPast")) 
+                        $(this)
+                            .removeClass("prevPast")
+                            .addClass("prevFuture");
+                }
+                if($(this).hasClass("stepCurrent"))
+                    current = true;
+             });
+         })();
         $(".component.flomes").append("<p>* Indicates required fields</p>");
 
         $(".phone-fields .phone-number.field").each(function(){

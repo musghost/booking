@@ -1,51 +1,32 @@
 window.onload = function(){
 
-    $("#booking-process").addClass("active");
-    $("#booking-process li").each(function(a){
-            $(this).addClass(((a + 1) % 2 === 0) ? "two" : "one");
-        });
-
     (function(){
-        $(".ancillary-component").after("<div class='ancillary-information'></div>");
-        $(".ancillary-component").find(".ancillary-item").each(function(a){
-            var id = $(this).attr("id"),
-                list = "",
-                amount = $(this).find(".prices-amount").first().clone(),
-                amountDiv = $("<div class='ancillary-amount'>"),
-                currency = $(this).find(".prices-currency").first().clone(),
-                currencyDiv = $("<div class='ancillary-currency'>"),
-                button = $(this).find(".ancillary-price-button-add").first().clone(),
-                bigDiv = $("<div class='ancillary-body'>");
-                /*buttonInfo = $("<button class='ancillary-btn-info' type='button'>M&aacute;s informaci&oacute;n</button>");*/
-            $(this).css("padding-bottom", "130px");
-            $(this).find(".ancillary-image").after("<div class='ancillary-icon ancillary-icon-" + id + "'><i></i></div>");
-            switch(id){
-                case 'AMC':
-                    list = '<div class="ancillary-text"><ul><li>Evita contratiempos en el aeropuerto, ahora puedes pagar de manera anticipada y el exceso de equipaje</li><li>Viaja de manera c&oacute;moda y con todo lo que necesitas.</li><li>Indica cu&aacute;ntaas piezas extras son las que llevar&aacute;s contigo.</li></ul></div>';
-                break;
-                case 'DPM':
-                    list = '<div class="ancillary-text"><ul><li>¡Disfruta al m&aacute;ximo tu viaje! Lleva contigo tu equipo deportivo.</li><li>Contamos con el mejor sistema de transportaci&oacute;n para el manejo de equipaje especial.</li><li>Selecciona el tipo de equipaje que llevar&iacute;s en tu vuelo.</li></ul></div>';
-                break;
-                case 'BG_PCS':
-                    list = '<div class="ancillary-text"><ul><li>S&oacute;lo Aerom&eacute;xico te permite viajar con tu mascota a bordo.</li><li>Lleva a tu perro de viaje.</li><li>Disfruta de tus vacaciones a lado de tu mejor amigo.</li></ul></div>';
-                break
-                case 'AMK':
-                    list = '<div class="ancillary-text"><ul><li>Una experiencia &uacute;nica al alcance de todos, s&oacute;lo con una llamada consigue servicios exclusivos en el destino al que te dirijas.</li></ul></div>';
-                break;
-                case 'CO2':
-                    list = '<div class="ancillary-text"><ul><li>Participa, tu donación contribuye a conservar la Selva Maya.</li></ul></div>';
-                break;
-                default:
-                    list = '<div class="ancillary-text"><ul></ul></div>';
-            }
-            $(this).find(".ancillary-name").after(list);
-            amountDiv.append("<span>$</span>", amount);
-            currencyDiv.append(currency);
-            bigDiv.append(amountDiv, currencyDiv, button);/*, buttonInfo);*/
-            $(this).find(".ancillary-text").after(bigDiv);
-            $(".ancillary-price-widget").css("display", "none");
-        });
-    })();
+            //Booking processs
+            var current = false;
+            $("#booking-process").addClass("active");
+            $("#booking-process li").each(function(a){
+                $(this).addClass(((a + 1) % 2 === 0) ? "two" : "one");
+            });
+            $("#booking-process li").each(function(a){
+                if(current){
+                    if($(this).hasClass("stepPast")) 
+                        $(this)
+                            .removeClass("stepPast")
+                            .addClass("stepFuture");
+                    if($(this).hasClass("stepPast_prevPast")) 
+                        $(this)
+                            .removeClass("stepPast_prevPast")
+                            .addClass("stepFuture_prevFuture");
+                    if($(this).hasClass("prevPast")) 
+                        $(this)
+                            .removeClass("prevPast")
+                            .addClass("prevFuture");
+                }
+                if($(this).hasClass("stepCurrent"))
+                    current = true;
+             });
+         })();
+
 
     var buildInfoBox = function(){
         var  date = function(a){
