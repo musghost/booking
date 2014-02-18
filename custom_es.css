@@ -1153,10 +1153,14 @@ body {
   padding: 0;
   text-transform: uppercase;
 }
-#ROOT .flight-info-sidebar .body h3.passenger{
+#ROOT .flight-info-sidebar h3.passenger{
   margin: 10px;
   background: #f2f2f2;
   text-align: center;
+  color: #333;
+  font-weight: 300;
+  font-size: 18px;
+  padding: 10px;
 }
 #ROOT .flight-info-sidebar ul.info{
   width: 45px;
@@ -1500,15 +1504,24 @@ table .prices-all .prices-currency{
 }
 #contact-info .info-content{
   background: none;
+  padding-top: 0;
+}
+#ROOT #contact-info .info-content .address2{
+  padding-top: 0;
+}
+.PASSENGERS_PAGE .component h2, .PASSENGERS_PAGE .component h3{
+  padding-bottom: 0;
 }
 #contact-info .info-content .component-section {
   border:0;
+  margin-top: 0 !important;
 }
 #contact-info .info-content .phone-fields{
   width: 100%;
 }
 #contact-info .info-content .column h4{
   /*display: none;*/
+  margin-top: 0px;
 }
 #contact-info .info-content .email-fields{
   width: 100%;
@@ -1684,14 +1697,36 @@ label.translate.column.wasTranslated{
   margin: 0;
   background: #449cf4;
   width: 102px;
-  height: 102px;
+  height: 34px;
   border-radius: 0;
   text-shadow: none;
   text-transform: capitalize;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 300;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   margin: 10px;
+}
+.ancillary-component .ancillary-button-modify{
+  padding: 0;
+  margin: 0;
+  background: #bfbfbf;
+  width: 102px;
+  height: 34px;
+  border-radius: 0;
+  text-shadow: none;
+  text-transform: capitalize;
+  font-size: 15px;
+  font-weight: 300;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  margin: 10px;
+  display: inline-block;
+  text-align:center;
+  line-height:34px;
+  color: #fff;
+  text-decoration: none;
+}
+.ancillary-component .ancillary-button-modify:hover{
+  background: #878787;
 }
 .ancillary-component .ancillary-price-button input:hover{
   background: #053162;
@@ -1714,6 +1749,15 @@ label.translate.column.wasTranslated{
 }
 .ancillary-component .ancillary-details{
   background: #f2f2f2 !important;
+}
+.ancillary-button-close-details{
+  display: block;
+  background: url(https://wl8-int.sabresonicweb.com/SSW2010/static/110/D5EE/154.TestUserB/images/button-sprite.png) no-repeat -262px -142px;
+  height: 21px;
+  width: 24px;
+  text-indent: -9999px;
+  overflow: hidden;
+  margin-top: 10px;
 }
 /*
 =================================================================

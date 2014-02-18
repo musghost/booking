@@ -56,7 +56,18 @@ window.onload = function(){
             departings = [],
             shoppingCart = function(dep){
                 var sidebar = $("<div class='flight-info-sidebar'>"),
-                    head = '<div class="head"><h2><i></i>Información de vuelo</h2></div>';
+                    head = '<div class="head"><h2><i></i>Información de vuelo</h2></div>',
+                    passengers = $(".component-section.cart-pax"). find("span"),
+                    passengersCount = "",
+                    passengersTitle = $("<h3 class='passenger'>");
+
+
+                passengers.each(function(a){
+                    if(a === 0 || a === 1)
+                        passengersCount += $(this).html();
+                });
+
+                passengersTitle.html(passengersCount);
 
                 sidebar.append(head);
 
@@ -69,7 +80,7 @@ window.onload = function(){
                     if(key === 0)
                         title.attr("id","title-search");
 
-                    title.html("Voy");
+                    title.html(departing.actionTo);
 
                     body.append(title);
 
@@ -101,6 +112,7 @@ window.onload = function(){
                     sidebar.append(body);
 
                 });
+                sidebar.append(passengersTitle);
 
                 sidebar.append(makePriceBox());
 
@@ -139,6 +151,7 @@ window.onload = function(){
                 cities = $(this).find("li.city"),
                 dates = $(this).find("dd"),
                 datesCounter = 0,
+                titleDestination = $(this).find("h4").first().html(),
 
                 stopoverLen = cities.length - 2;
 
@@ -169,7 +182,8 @@ window.onload = function(){
 
             departing = {
                 stopover: stopoverLen,
-                destinations: destinations
+                destinations: destinations,
+                actionTo: titleDestination
             }
             departings.push(departing);
         });
@@ -205,9 +219,6 @@ window.onload = function(){
                         hour2 = tds.eq(3).find("span").html(),
                         scale = $.trim(tds.eq(4).html());
 
-                    console.log("hour1: " + hour1 + ", typeof:" + (typeof hour1));
-                    console.log("hour2: " + hour2 + ", typeof:" + (typeof hour2));
-
                     var ul = $("<ul class='airp'>"),
                         h3 = $('<h3 class="scale">');
 
@@ -219,7 +230,8 @@ window.onload = function(){
                     }
                 
                     tds.eq(0).prepend(ul, h3);
-                    $(this).find("a").addClass('info-plus').html("<i></i><span>M&aacute;s informaci&oacute;n de vuelo</span>");
+                    var linkContent = $(this).find("a").html();
+                    $(this).find("a").addClass('info-plus').html("<i></i><span>M&aacute;s informaci&oacute;n de vuelo (" + linkContent + ")</span>");
                 }
             });
             $("#cart-component .component-top").append($("#fare-rules-anchor"), $("#modify-search-trigger"));
@@ -254,9 +266,6 @@ window.onload = function(){
                     var hour1 = tds.eq(2).find("span").html(),
                         hour2 = tds.eq(3).find("span").html(),
                         scale = $.trim(tds.eq(4).html());
-                    console.log("hour1: " + hour1 + ", typeof:" + (typeof hour1));
-                    console.log("hour2: " + hour2 + ", typeof:" + (typeof hour2));
-
 
                     var ul = $("<ul class='airp'>"),
                         h3 = $('<h3 class="scale">');
@@ -309,9 +318,6 @@ window.onload = function(){
                     var hour1 = tds.eq(2).find("span").html(),
                         hour2 = tds.eq(3).find("span").html(),
                         scale = $.trim(tds.eq(4).html());
-                    console.log("hour1: " + hour1 + ", typeof:" + (typeof hour1));
-                    console.log("hour2: " + hour2 + ", typeof:" + (typeof hour2));
-
 
                     var ul = $("<ul class='airp'>"),
                         h3 = $('<h3 class="scale">');

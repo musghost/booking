@@ -1,34 +1,34 @@
 window.onload = function(){
 	(function(){
-            //Booking processs
-            var current = false;
-            $("#booking-process").addClass("active");
-            $("#booking-process li").each(function(a){
-                $(this).addClass(((a + 1) % 2 === 0) ? "two" : "one");
-            });
-            $("#booking-process li").each(function(a){
-                if(current){
-                    if($(this).hasClass("stepPast")) 
-                        $(this)
-                            .removeClass("stepPast")
-                            .addClass("stepFuture");
-                    if($(this).hasClass("stepPast_prevPast")) 
-                        $(this)
-                            .removeClass("stepPast_prevPast")
-                            .addClass("stepFuture_prevFuture");
-                    if($(this).hasClass("prevPast")) 
-                        $(this)
-                            .removeClass("prevPast")
-                            .addClass("prevFuture");
-                }
-                if($(this).hasClass("stepCurrent"))
-                    current = true;
-             });
-         })();
+        //Booking processs
+        var current = false;
+        $("#booking-process").addClass("active");
+        $("#booking-process li").each(function(a){
+            $(this).addClass(((a + 1) % 2 === 0) ? "two" : "one");
+        });
+        $("#booking-process li").each(function(a){
+            if(current){
+                if($(this).hasClass("stepPast")) 
+                    $(this)
+                        .removeClass("stepPast")
+                        .addClass("stepFuture");
+                if($(this).hasClass("stepPast_prevPast")) 
+                    $(this)
+                        .removeClass("stepPast_prevPast")
+                        .addClass("stepFuture_prevFuture");
+                if($(this).hasClass("prevPast")) 
+                    $(this)
+                        .removeClass("prevPast")
+                        .addClass("prevFuture");
+            }
+            if($(this).hasClass("stepCurrent"))
+                current = true;
+         });
+     })();
 
     var buildInfoBox = function(){
         var  date = function(a){
-                var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+                var months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
                     date = a.split("/"),
                     ret = {};
                 ret["month"] = months[parseInt(date[1]) - 1];
@@ -38,7 +38,7 @@ window.onload = function(){
             departings = [],
             shoppingCart = function(dep){
                 var sidebar = $("<div class='flight-info-sidebar'>"),
-                    head = '<div class="head"><h2><i></i>Flight Information</h2></div>',
+                    head = '<div class="head"><h2><i></i>Información de vuelo</h2></div>',
                     passengers = $(".component-section.cart-pax"). find("span"),
                     passengersCount = "",
                     passengersTitle = $("<h3 class='passenger'>");
@@ -81,11 +81,11 @@ window.onload = function(){
                     });
 
                     if(stopOver === 0 || stopOver < 0){
-                        stopOverTitle.html("Nonstop");
+                        stopOverTitle.html("Sin escalas");
                     } else if(stopOver == 1){
-                        stopOverTitle.html("1 layover");
+                        stopOverTitle.html("1 escala");
                     } else {
-                        stopOverTitle.html(stopOver + " layovers");
+                        stopOverTitle.html(stopOver + " escalas");
                     }
 
                     body.append(stopOverTitle);

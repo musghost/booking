@@ -58,7 +58,17 @@ $(document).ready(function(){
             departings = [],
             shoppingCart = function(dep){
                 var sidebar = $("<div class='flight-info-sidebar'>"),
-                    head = '<div class="head"><h2><i></i>Flight Information</h2></div>';
+                    head = '<div class="head"><h2><i></i>Flight Information</h2></div>',
+                    passengers = $(".component-section.cart-pax"). find("span"),
+                    passengersCount = "",
+                    passengersTitle = $("<h3 class='passenger'>");
+
+                passengers.each(function(a){
+                    if(a === 0 || a === 1)
+                        passengersCount += $(this).html();
+                });
+
+                passengersTitle.html(passengersCount);
 
                 sidebar.append(head);
 
@@ -71,7 +81,7 @@ $(document).ready(function(){
                     if(key === 0)
                         title.attr("id","title-search");
 
-                    title.html("Departure");
+                    title.html(departing.actionTo);
 
                     body.append(title);
 
@@ -103,6 +113,7 @@ $(document).ready(function(){
                     sidebar.append(body);
 
                 });
+				sidebar.append(passengersTitle);
 
                 sidebar.append(makePriceBox());
 
@@ -141,6 +152,7 @@ $(document).ready(function(){
                 cities = $(this).find("li.city"),
                 dates = $(this).find("dd"),
                 datesCounter = 0,
+                titleDestination = $(this).find("h4").first().html(),
 
                 stopoverLen = cities.length - 2;
 
@@ -171,7 +183,8 @@ $(document).ready(function(){
 
             departing = {
                 stopover: stopoverLen,
-                destinations: destinations
+                destinations: destinations,
+                actionTo: titleDestination
             }
             departings.push(departing);
         });
@@ -206,9 +219,6 @@ $(document).ready(function(){
                     var hour1 = tds.eq(2).find("span").html(),
                         hour2 = tds.eq(3).find("span").html(),
                         scale = $.trim(tds.eq(4).html());
-
-                    console.log("hour1: " + hour1 + ", typeof:" + (typeof hour1));
-                    console.log("hour2: " + hour2 + ", typeof:" + (typeof hour2));
 
                     var ul = $("<ul class='airp'>"),
                         h3 = $('<h3 class="scale">');
@@ -256,9 +266,6 @@ $(document).ready(function(){
                     var hour1 = tds.eq(2).find("span").html(),
                         hour2 = tds.eq(3).find("span").html(),
                         scale = $.trim(tds.eq(4).html());
-                    console.log("hour1: " + hour1 + ", typeof:" + (typeof hour1));
-                    console.log("hour2: " + hour2 + ", typeof:" + (typeof hour2));
-
 
                     var ul = $("<ul class='airp'>"),
                         h3 = $('<h3 class="scale">');
@@ -311,9 +318,6 @@ $(document).ready(function(){
                     var hour1 = tds.eq(2).find("span").html(),
                         hour2 = tds.eq(3).find("span").html(),
                         scale = $.trim(tds.eq(4).html());
-                    console.log("hour1: " + hour1 + ", typeof:" + (typeof hour1));
-                    console.log("hour2: " + hour2 + ", typeof:" + (typeof hour2));
-
 
                     var ul = $("<ul class='airp'>"),
                         h3 = $('<h3 class="scale">');

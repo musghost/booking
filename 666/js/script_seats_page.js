@@ -64,7 +64,17 @@ window.onload = function(){
 	            departings = [],
 	            shoppingCart = function(dep){
 	                var sidebar = $("<div class='flight-info-sidebar'>"),
-	                    head = '<div class="head"><h2><i></i>Flight Information</h2></div>';
+	                    head = '<div class="head"><h2><i></i>Flight Information</h2></div>',
+	                    passengers = $(".component-section.cart-pax"). find("span"),
+	                    passengersCount = "",
+	                    passengersTitle = $("<h3 class='passenger'>");
+
+	                passengers.each(function(a){
+	                    if(a === 0 || a === 1)
+	                        passengersCount += $(this).html();
+	                });
+
+	                passengersTitle.html(passengersCount);
 
 	                sidebar.append(head);
 
@@ -77,7 +87,7 @@ window.onload = function(){
 	                    if(key === 0)
 	                        title.attr("id","title-search");
 
-	                    title.html("Departure");
+	                    title.html(departing.actionTo);
 
 	                    body.append(title);
 
@@ -109,6 +119,7 @@ window.onload = function(){
 	                    sidebar.append(body);
 
 	                });
+					sidebar.append(passengersTitle);
 
 	                sidebar.append(makePriceBox());
 
@@ -147,6 +158,7 @@ window.onload = function(){
 	                cities = $(this).find("li.city"),
 	                dates = $(this).find("dd"),
 	                datesCounter = 0,
+	                titleDestination = $(this).find("h4").first().html(),
 
 	                stopoverLen = cities.length - 2;
 
@@ -177,7 +189,8 @@ window.onload = function(){
 
 	            departing = {
 	                stopover: stopoverLen,
-	                destinations: destinations
+	                destinations: destinations,
+	                actionTo: titleDestination
 	            }
 	            departings.push(departing);
 	        });
