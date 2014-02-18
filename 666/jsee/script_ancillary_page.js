@@ -194,6 +194,54 @@ window.onload = function(){
             buildInfoBox();
             $("#title-search").append($("#modify-search-trigger"));
         }
+
+        (function(){
+            $(".ancillary-content").each(function(){
+
+                if($(this).find(".ancillary-info").length < 1){
+                    
+                    var ancillaryClass = "ancillary-content-",
+                    title = $(this).find(".ancillary-name").first(),
+                    paragraph = $("<p class='ancillary-info'>");
+
+                    if($(this).hasClass(ancillaryClass + "AMC")){
+                        paragraph.html("Te protege antes, durante y hasta 12 horas despu&eacute;s de tu vuelo.");
+
+                    } else if($(this).hasClass(ancillaryClass + "AMK")){
+                        paragraph.html("Una experiencia &uacute;nica al alcance de todos, s&oacute;lo con una llamada consigue los servicios exclusivos.");
+
+                    } else if($(this).hasClass(ancillaryClass + "DPM")){
+                        paragraph.html("Grandes descuentos en hoteles, restaurantes, conciertos y m&aacute;s.");
+
+                    } else if($(this).hasClass(ancillaryClass + "CO2")){
+                        paragraph.html("Participa, tu donaci&oacute;n contribuye a conservar la Selva Maya.");
+
+                    } else if($(this).hasClass(ancillaryClass + "BG_PCS")){
+                        paragraph.html("Evita contratiempos en el aeropuerto, ahora puedes pagar de manera anticipada el exceso de equipaje.");
+
+                    }
+                    title.after(paragraph);
+
+                }
+            });
+            $(".ancillary-price dd").each(function(){
+                var pricesAll = $(this).find(".prices-all").first();
+
+                pricesAll
+                    .next()
+                    .html("");
+                pricesAll
+                    .children()
+                    .first()
+                    .contents()
+                    .filter(function() {
+                        return this.nodeType === 3;
+                    })
+                    .remove();
+            });
+
+        })();
+
         timerConstructor = setTimeout(function(){
             structure();
         }, 300);
