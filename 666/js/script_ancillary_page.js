@@ -195,6 +195,52 @@ window.onload = function(){
             buildInfoBox();
             $("#title-search").append($("#modify-search-trigger"));
         }
+        (function(){
+            $(".ancillary-content").each(function(){
+
+                if($(this).find(".ancillary-info").length < 1){
+                    
+                    var ancillaryClass = "ancillary-content-",
+                    title = $(this).find(".ancillary-name").first(),
+                    paragraph = $("<p class='ancillary-info'>");
+
+                    if($(this).hasClass(ancillaryClass + "AMC")){
+                        paragraph.html("");
+
+                    } else if($(this).hasClass(ancillaryClass + "AMK")){
+                        paragraph.html("Get exclusive experiences and services in your destination, just with a call.");
+
+                    } else if($(this).hasClass(ancillaryClass + "DPM")){
+                        paragraph.html("");
+
+                    } else if($(this).hasClass(ancillaryClass + "CO2")){
+                        paragraph.html("");
+
+                    } else if($(this).hasClass(ancillaryClass + "BG_PCS")){
+                        paragraph.html("Save time and money. Buy now at a preferential price.");
+
+                    }
+                    title.after(paragraph);
+
+                }
+            });
+            $(".ancillary-price dd").each(function(){
+                var pricesAll = $(this).find(".prices-all").first();
+
+                pricesAll
+                    .next()
+                    .html("");
+                pricesAll
+                    .children()
+                    .first()
+                    .contents()
+                    .filter(function() {
+                        return this.nodeType === 3;
+                    })
+                    .remove();
+            });
+
+        })();
         timerConstructor = setTimeout(function(){
             structure();
         }, 300);

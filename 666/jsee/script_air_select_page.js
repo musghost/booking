@@ -194,6 +194,54 @@ window.onload = function(){
     
     var structure = function(){
         var lastLi = $("#booking-process li").last();
+        if($("#dtcontainer-multicity ul.airp").length < 1){
+            $("#dtcontainer-multicity table tr").each(function(a){
+                $(this).find(".prices-amount").each(function(){
+                    $(this).prepend("<span>$</span>");
+                });
+                if(a === 0){
+                    var ths = $(this).find("th");
+                    
+                    ths.slice(2,8).hide();
+                } else{
+                    var tds = $(this).find("td");
+
+                    
+                    tds.slice(2,8).hide();
+                    
+                    var hour1 = tds.eq(3).find("span").eq(1).html(),
+                        hour2 = tds.eq(4).find("span").eq(1).html(),
+                        airport1 = tds.eq(3).find("span").eq(0).html(),
+                        airport2 = tds.eq(4).find("span").eq(0).html(),
+                        scale = $.trim(tds.eq(5).html()),
+                        scaleInt = parseInt(scale);
+
+                    var ul = $("<ul class='airp'>"),
+                        h3 = $('<h3 class="scale">');
+
+                    ul.html('<li><span>' + airport1 + '</span><span>' + hour1 + '</span></li><li class="middle"><i></i></li><li><span>' + airport2 + '</span><span>' + hour2 + '</span></li>');
+
+                    if(scaleInt === 0 || scaleInt < 0){
+                        h3.html("Sin escalas");
+                    } else if(scaleInt === 1){
+                        h3.html(scaleInt + " escala");
+                    } else {
+                        h3.html(scaleInt + "escalas")
+                    }
+                    
+                    if($(this).attr("id") === 'flight-advisory-both-row'){
+                        $(this).remove();
+                        return;
+                    }
+                
+                    tds.eq(1).prepend(ul, h3);
+                    $(this).find("a").each(function(){
+                        var linkContent = $(this).html();
+                        $(this).addClass('info-plus').html("<i></i><span>Additional information (" + linkContent + ")</span>");
+                    });
+                }
+            });
+        }
         if($("#dtcontainer-outbounds ul.airp").length < 1){
             $("#dtcontainer-outbounds table tr").each(function(a){
                 $(this).find(".prices-amount").each(function(){
@@ -217,13 +265,20 @@ window.onload = function(){
                     
                     var hour1 = tds.eq(2).find("span").html(),
                         hour2 = tds.eq(3).find("span").html(),
-                        scale = $.trim(tds.eq(4).html());
+                        scale = $.trim(tds.eq(4).html()),
+                        scaleInt = parseInt(scale);
 
                     var ul = $("<ul class='airp'>"),
                         h3 = $('<h3 class="scale">');
 
                     ul.html('<li><span>' + airports[0]["nodea"] + '</span><span>' + hour1 + '</span></li><li class="middle"><i></i></li><li><span>' + airports[0]["nodeb"] + '</span><span>' + hour2 + '</span></li>');
-                    h3.html("Sin escalas");
+                    if(scaleInt === 0 || scaleInt < 0){
+                        h3.html("Sin escalas");
+                    } else if(scaleInt === 1){
+                        h3.html(scaleInt + " escala");
+                    } else {
+                        h3.html(scaleInt + "escalas")
+                    }
                     if($(this).attr("id") === 'flight-advisory-outbound-row'){
                         $(this).remove();
                         return;
@@ -265,13 +320,20 @@ window.onload = function(){
                     
                     var hour1 = tds.eq(2).find("span").html(),
                         hour2 = tds.eq(3).find("span").html(),
-                        scale = $.trim(tds.eq(4).html());
+                        scale = $.trim(tds.eq(4).html()),
+                        scaleInt = parseInt(scale);
 
                     var ul = $("<ul class='airp'>"),
                         h3 = $('<h3 class="scale">');
 
                     ul.html('<li><span>' + airports[0]["nodeb"] + '</span><span>' + hour1 + '</span></li><li class="middle"><i></i></li><li><span>' + airports[0]["nodea"] + '</span><span>' + hour2 + '</span></li>');
-                    h3.html("Sin escalas");
+                    if(scaleInt === 0 || scaleInt < 0){
+                        h3.html("Sin escalas");
+                    } else if(scaleInt === 1){
+                        h3.html(scaleInt + " escala");
+                    } else {
+                        h3.html(scaleInt + "escalas")
+                    }
 
 
                     if($(this).attr("id") === 'flight-advisory-inbound-row'){
@@ -280,7 +342,8 @@ window.onload = function(){
                     }
                 
                     tds.eq(0).prepend(ul, h3);
-                    $(this).find("a").addClass('info-plus').html("<i></i><span>M&aacute;s informaci&oacute;n de vuelo</span>");
+                    var linkContent = $(this).find("a").html();
+                    $(this).find("a").addClass('info-plus').html("<i></i><span>M&aacute;s informaci&oacute;n de vuelo (" + linkContent + ")</span>");
                 }
             });
 
@@ -317,13 +380,20 @@ window.onload = function(){
                     
                     var hour1 = tds.eq(2).find("span").html(),
                         hour2 = tds.eq(3).find("span").html(),
-                        scale = $.trim(tds.eq(4).html());
+                        scale = $.trim(tds.eq(4).html()),
+                        scaleInt = parseInt(scale);
 
                     var ul = $("<ul class='airp'>"),
                         h3 = $('<h3 class="scale">');
 
                     ul.html('<li><span>' + airports[0]["nodea"] + '</span><span>' + hour1 + '</span></li><li class="middle"><i></i></li><li><span>' + airports[0]["nodeb"] + '</span><span>' + hour2 + '</span></li>');
-                    h3.html("Sin escalas");
+                    if(scaleInt === 0 || scaleInt < 0){
+                        h3.html("Sin escalas");
+                    } else if(scaleInt === 1){
+                        h3.html(scaleInt + " escala");
+                    } else {
+                        h3.html(scaleInt + "escalas")
+                    }
                     
                     if($(this).attr("id") === 'flight-advisory-both-row'){
                         $(this).remove();
@@ -331,7 +401,8 @@ window.onload = function(){
                     }
                 
                     tds.eq(0).prepend(ul, h3);
-                    $(this).find("a").addClass('info-plus').html("<i></i><span>M&aacute;s informaci&oacute;n de vuelo</span>");
+                    var linkContent = $(this).find("a").html();
+                    $(this).find("a").addClass('info-plus').html("<i></i><span>M&aacute;s informaci&oacute;n de vuelo (" + linkContent + ")</span>");
                 }
             });
         }
