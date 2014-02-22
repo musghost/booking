@@ -126,32 +126,55 @@ window.onload = function(){
 	                $("#cart-component").prepend(sidebar);
 	            },
 	            makePriceBox = function(){
-	                var box = $("<div class='total-price'>"),
-	                    ul = $("<ul>"),
-	                    price = "";
-	                $(".cartPrices").last().find(".price-type").each(function(){
-	                    var li = $("<li>"),
-	                        label = $(this).find("span").eq(0).html(),
-	                        amount = $(this).find(".price-value");
+                var box = $("<div class='total-price'>"),
+                    ul = $("<ul>"),
+                    price = "";
+                $(".cartPrices").last().find(".price-type").each(function(){
+                    var li = $("<li>"),
+                        label = $(this).find("span").eq(0).html(),
+                        amount = $(this).find(".price-value"),
+                        tooglerText = $(this).find(".toggler a").first().html(),
+                        toggler = $("<a href='#' class='view-details'>"),
+                        togglerList = $(this).find('.price-element-details').first().clone(),
+                        spanLabel = $("<span>"),
+                        spanAmount = $("<span>");
 
-	                        if(amount.length > 0)
-	                            amount = $(this).find(".price-value").first().html();
-	                        else
-	                            amount = "";
-	                        
-	                    li.append("<span>" + label+ "</span>", "<span>" + amount + "</span>");
-	                    ul.append(li);
-	                });
-	                $("#cart-total-price .prices-alternative > span").each(function(a){
-	                    if(a == 1) 
-	                        price += "<span class='amount'>" + $(this).html() + "</span>";
-	                    if(a == 0)
-	                        price += "<span class='currency'>" + $(this).html() + "</span>";
-	                });
-	                ul.append("<li><span>" + $("#total-price-label").html() + "</span><span>" + price + "</span></li>");
-	                box.append(ul);
-	                return box;
-	            };
+                        if(amount.length > 0)
+                            amount = $(this).find(".price-value").first().html();
+                        else
+                            amount = "";
+
+                    toggler.append(tooglerText, "<span class='more-less'>&nbsp;+</span>");
+                    spanLabel.append(label, toggler);
+                    spanAmount.html(amount);
+                    li.append(spanLabel, spanAmount, togglerList);
+                        
+                    ul.append(li);
+
+                    toggler.click(function(a){
+                        a.preventDefault();
+                        var ol = $(this).parent().parent().find("ol").first(),
+                            link = $(this),
+                            span = $(this).find(".more-less");
+                        if(ol.hasClass("hidden-low-prior")){
+                            ol.removeClass("hidden-low-prior");
+                            span.html("&nbsp;-");
+                        } else{
+                            ol.addClass("hidden-low-prior");
+                            span.html("&nbsp;+");
+                        }
+                    });
+                });
+                $("#cart-total-price .prices-alternative > span").each(function(a){
+                    if(a == 1) 
+                        price += "<span class='amount'>" + $(this).html() + "</span>";
+                    if(a == 0)
+                        price += "<span class='currency'>" + $(this).html() + "</span>";
+                });
+                ul.append("<li><span>" + $("#total-price-label").html() + "</span><span>" + price + "</span></li>");
+                box.append(ul);
+                return box;
+            };
 
 	        $(".cart-departing, .cart-arriving").each(function(){
 	            var destinations = [],
@@ -202,6 +225,34 @@ window.onload = function(){
 	    },
 	    structure = function(){
 	    	if($(".flight-info-sidebar").length < 1){
+
+	    		$(".seat-map-planemap").first().find(".seat-map-legend").each(function(){
+				    var attr = $(this).attr("id");
+				    if(typeof attr !== 'undefined' && attr !== false){
+				        var seatNum = attr.split("-")[2],
+				            div = $("<div class='seatmap-advice'>"),
+				            content = $("<div class='seat-map-advice-content'>"),
+				            label = $(".num-seat-label").first().html(),
+				            availabilityLabel = "";
+
+				        if($(this).hasClass("seat-map-seat-selectable") || $(this).hasClass('seat-map-seat-selectable-exit'))
+				            availabilityLabel = "Aviable";
+				        else
+				            availabilityLabel = "Unaviable";
+
+				        content.html("<p>" + label + " " + seatNum + "<br>" + availabilityLabel +"</p>");
+
+				        div.append(content);
+				        $(this).on('mouseover.seat', function(){
+				            $(this).append(div);
+				        });
+				        $(this).on('mouseout.seat', function(){
+				            $(this).find(".seatmap-advice").remove();
+				        });
+				    }
+				});
+
+
 	    		$("#cart-component .component-top").append($("#modify-search-trigger"));
 	            buildInfoBox();
 	            $("#title-search").append($("#modify-search-trigger"));

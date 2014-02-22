@@ -117,15 +117,38 @@ window.onload = function(){
                 $(".cartPrices").last().find(".price-type").each(function(){
                     var li = $("<li>"),
                         label = $(this).find("span").eq(0).html(),
-                        amount = $(this).find(".price-value");
+                        amount = $(this).find(".price-value"),
+                        tooglerText = $(this).find(".toggler a").first().html(),
+                        toggler = $("<a href='#' class='view-details'>"),
+                        togglerList = $(this).find('.price-element-details').first().clone(),
+                        spanLabel = $("<span>"),
+                        spanAmount = $("<span>");
 
                         if(amount.length > 0)
                             amount = $(this).find(".price-value").first().html();
                         else
                             amount = "";
+
+                    toggler.append(tooglerText, "<span class='more-less'>&nbsp;+</span>");
+                    spanLabel.append(label, toggler);
+                    spanAmount.html(amount);
+                    li.append(spanLabel, spanAmount, togglerList);
                         
-                    li.append("<span>" + label+ "</span>", "<span>" + amount + "</span>");
                     ul.append(li);
+
+                    toggler.click(function(a){
+                        a.preventDefault();
+                        var ol = $(this).parent().parent().find("ol").first(),
+                            link = $(this),
+                            span = $(this).find(".more-less");
+                        if(ol.hasClass("hidden-low-prior")){
+                            ol.removeClass("hidden-low-prior");
+                            span.html("&nbsp;-");
+                        } else{
+                            ol.addClass("hidden-low-prior");
+                            span.html("&nbsp;+");
+                        }
+                    });
                 });
                 $("#cart-total-price .prices-alternative > span").each(function(a){
                     if(a == 1) 

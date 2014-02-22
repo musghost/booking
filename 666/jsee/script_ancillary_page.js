@@ -107,15 +107,38 @@ window.onload = function(){
                 $(".cartPrices").last().find(".price-type").each(function(){
                     var li = $("<li>"),
                         label = $(this).find("span").eq(0).html(),
-                        amount = $(this).find(".price-value");
+                        amount = $(this).find(".price-value"),
+                        tooglerText = $(this).find(".toggler a").first().html(),
+                        toggler = $("<a href='#' class='view-details'>"),
+                        togglerList = $(this).find('.price-element-details').first().clone(),
+                        spanLabel = $("<span>"),
+                        spanAmount = $("<span>");
 
                         if(amount.length > 0)
                             amount = $(this).find(".price-value").first().html();
                         else
                             amount = "";
+
+                    toggler.append(tooglerText, "<span class='more-less'>&nbsp;+</span>");
+                    spanLabel.append(label, toggler);
+                    spanAmount.html(amount);
+                    li.append(spanLabel, spanAmount, togglerList);
                         
-                    li.append("<span>" + label+ "</span>", "<span>" + amount + "</span>");
                     ul.append(li);
+
+                    toggler.click(function(a){
+                        a.preventDefault();
+                        var ol = $(this).parent().parent().find("ol").first(),
+                            link = $(this),
+                            span = $(this).find(".more-less");
+                        if(ol.hasClass("hidden-low-prior")){
+                            ol.removeClass("hidden-low-prior");
+                            span.html("&nbsp;-");
+                        } else{
+                            ol.addClass("hidden-low-prior");
+                            span.html("&nbsp;+");
+                        }
+                    });
                 });
                 $("#cart-total-price .prices-alternative > span").each(function(a){
                     if(a == 1) 
@@ -205,19 +228,19 @@ window.onload = function(){
                     paragraph = $("<p class='ancillary-info'>");
 
                     if($(this).hasClass(ancillaryClass + "AMC")){
-                        paragraph.html("Te protege antes, durante y hasta 12 horas despu&eacute;s de tu vuelo.");
+                        paragraph.html("Con cobertura horas antes de volar, durante tu viaje y hasta 12 horas después del regreso que incluye beneficios como Gastos m&eacute;dicos, Muerte accidental, P&eacute;rdida de equipaje, Demora de equipaje, Servicios de Asistencia m&eacute;dica, legal y en viajes. <a target='_blank' href='http://www.aeromexico.com/mx/tu-vuelo/comprando-tu-vuelo/aeromexico-seguro.html'>Leer más.</a>");
 
                     } else if($(this).hasClass(ancillaryClass + "AMK")){
-                        paragraph.html("Una experiencia &uacute;nica al alcance de todos, s&oacute;lo con una llamada consigue los servicios exclusivos.");
+                        paragraph.html("Una experiencia única al alcance de todos, sólo con una llamada consigue servicios exclusivos en el destino al que te dirijas. <a target='_blank' href='http://www.aeromexico.com/mx/productos/concierge.html'>Leer más.</a>");
 
                     } else if($(this).hasClass(ancillaryClass + "DPM")){
-                        paragraph.html("Grandes descuentos en hoteles, restaurantes, conciertos y m&aacute;s.");
+                        paragraph.html("Tu pase incluye 2 entradas gratis para espect&aacute;culos u obras de teatro y 2x1 en salas VIP. Adem&aacute;s obtienes descuentos para conciertos, cines, restaurantes, hoteles y m&aacute;s. <a href='http://www.aeromexico.com/mx/productos/aeromexico-discount-pass.html' target='_blank'>Leer más.</a>");
 
                     } else if($(this).hasClass(ancillaryClass + "CO2")){
-                        paragraph.html("Participa, tu donaci&oacute;n contribuye a conservar la Selva Maya.");
+                        paragraph.html("Participa, tu donación contribuye a conservar la Selva Maya. <a target='_blank' href='http://www.aeromexico.com/mx/productos/vuela-verde.html'>Leer más.</a>");
 
                     } else if($(this).hasClass(ancillaryClass + "BG_PCS")){
-                        paragraph.html("Evita contratiempos en el aeropuerto, ahora puedes pagar de manera anticipada el exceso de equipaje.");
+                        paragraph.html("Ahorra tiempo y dinero. Cómpralo ahora a un precio preferencial.");
 
                     }
                     title.after(paragraph);

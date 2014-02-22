@@ -1,3 +1,13 @@
+//http://manoderecha.net/md/index.php/task/74129
+
+var paragraph = $("<p class='disclaimer'>");
+paragraph.html("Puedes guardar los datos de pasajero en esta computadora, para que durante tu pr&oacute;xima reserva puedas completar la informaci&oacute;n de pasajeros con un s&oacute;lo click. Si deseas activarlo haz click en el recuadro.");
+$("#remember-me").prepend(paragraph);
+/*
+paragraph.html("You can save passenger's data in this computer, next time you can complete form only by a click. If you want it, check the option.");
+*/
+
+
     var airports = [];
     $(".flight-info dl").each(function(){
         var dds = $(this).find("dd").clone();
@@ -55,3 +65,4 @@
                     });
                 }
             });
+
