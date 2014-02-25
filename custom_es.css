@@ -726,8 +726,15 @@ body {
 .EXCHANGE_REVIEW_PAGE #cart-component .component-top,
 .EXCHANGE_ANCILLARY_PAGE #cart-component .component-top,
 .EXCHANGE_SEATS_PAGE #cart-component .component-top,
-.EXCHANGE_PAYMENT_PAGE #cart-component .component-top{
+.EXCHANGE_PAYMENT_PAGE #cart-component .component-top,
+.SEATS_MTO_SEATS_PAGE #cart-component .component-top,
+.SEATS_MTO_PURCHASE_PAGE #cart-component .component-top,
+.ANCILLARIES_MTO_SEATS_PAGE #cart-component .component-top,
+.ANCILLARIES_MTO_PURCHASE_PAGE #cart-component .component-top{
   display: block;
+}
+#cart-component .price-details h4{
+  color: #fff;
 }
 .LANGUAGE_es_ES.CONFIRMATION_PAGE .lastStep{
   display: block !important;
@@ -741,10 +748,10 @@ body {
 }
 .LANGUAGE_es_ES #cart-component .prices-amount{
   display: inline-block !important;
-  font-size: 18px;
+  font-size: 12px;
 }
 .LANGUAGE_es_ES #cart-component .prices-currency{
-  font-size: 12px;
+  font-size: 10px;
 }
 .messagePopup{
   border:0;
@@ -829,6 +836,12 @@ body {
 =================================================================
 :;;:::::::::::::::::::::::::PASO 2:::::::::::::::::::::::::;::;:;
 */
+.AIR_SELECT_PAGE .bagfee-component{
+  display: none;
+}
+.AIR_SELECT_PAGE .filter-options-container .filter-options{
+  margin: 5px 15px 5px 0px;
+}
 .prices-amount{
   line-height: 19px;
 }
@@ -1427,6 +1440,50 @@ table .prices-all .prices-currency{
 #ROOT #dtcontainer-multicity thead th{
   background: #3199f7;
 }
+.total-price .view-details{
+  margin-left: 5px;
+  color: #ccc;
+  font-size: 11px;
+}
+/*.price-element-details li > .item-price{
+  top: 0;
+  right: 0;
+  position: absolute !important;
+}
+.price-element-details li > .label{
+  position: absolute;
+  left: 20px;
+  top: 0;
+  letter-spacing: 0px;
+  font-size: 11px;
+}*/
+.price-element-details{
+  color: #c6dbee;
+}
+.price-element-details li{
+  overflow: hidden;
+}
+.price-element-details li > .item-price{
+  float: right;
+  position: static;
+}
+.price-element-details li > .label{
+  letter-spacing: 0px;
+  font-size: 11px;
+  position: static;
+  margin-left: 12px;
+}
+.price-element-details li > .label + .label{
+  margin-left: 4px;
+}
+.LANGUAGE_es_ES #cart-component .price-element-details .prices-amount,
+.LANGUAGE_en_US #cart-component .price-element-details .prices-amount {
+  font-size: 12px !important;
+}
+.LANGUAGE_es_ES #cart-component .price-element-details .prices-currency,
+.LANGUAGE_en_US #cart-component .price-element-details .prices-currency {
+  font-size: 10px !important;
+}
 /*
 =================================================================
 :;;:::::::::::::::::::::::::PASO 3:::::::::::::::::::::::::;::;:;
@@ -1656,6 +1713,30 @@ label.translate.column.wasTranslated{
 .ancillary-component .ancillary-leg h5 {
   display: none;
 }
+.PASSENGERS_PAGE #passenger-accordion .more-details{
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.PASSENGERS_PAGE #passenger-accordion .details-wrapper h4{
+  display: none;
+}
+.PASSENGERS_PAGE #passenger-accordion .details-wrapper div.secure-width{
+  width: 300px;
+}
+.PASSENGERS_PAGE #passenger-accordion .details-wrapper div.secure-width label{
+  padding-left: 0;
+  padding-right: 0 !important;
+}
+.PASSENGERS_PAGE .phone-input label + select{
+  display:none;
+}
+#remember-me .disclaimer{
+    width: 650px;
+    float: right;
+    line-height: 14px;
+    color: #777;
+    font-size: 11px;
+}
 /*
 =================================================================
 :;;:::::::::::::::::::::::::PASO 4:::::::::::::::::::::::::;::;:;
@@ -1697,7 +1778,7 @@ label.translate.column.wasTranslated{
   border-radius: 2px !important;
   width: auto;
   padding-bottom: 5px;
-  min-height: 115px;
+  min-height: 155px;
   position: relative;
 }
 #ROOT .ancillary-component .ancillary-image{
@@ -1846,6 +1927,10 @@ label.translate.column.wasTranslated{
 }
 .ancillary-component .ancillary-price-added{
   display: none;
+}
+.ancillary-component .ancillary-details-footer{
+  border-bottom: 2px solid #4d4d4d;
+  margin-bottom: 0 !important;
 }
 /*
 =================================================================
@@ -2403,7 +2488,11 @@ label.translate.column.wasTranslated{
   background-repeat: no-repeat;
   background-position: 0px 1px;
 }
-#ROOT .seat-map-flights-pax-no.seat-map-legend strong {
+#ROOT .seat-map-premium strong {
+  background:url('https://s3.amazonaws.com/aeromexico/ancillaries/new_upperDeck.png') !important;
+}
+#ROOT .seat-map-flights-pax-no.seat-map-legend strong,
+#ROOT .seat-map-keys .seat-map-legend strong {
   width: 20px;
   height: 20px;
   font-size: 10px;
@@ -2419,7 +2508,27 @@ label.translate.column.wasTranslated{
   height: 20px;
   margin: 2px !important;
 }
-
+.seatmap-advice{
+    position: relative; height: 0px; width: 100%;
+ }
+.seat-map-advice-content{
+    position: absolute;
+    width: 70px;
+    background: #051f50;
+    color: #fff;
+    border-radius: 3px;
+    padding: 7px 7px 7px 13px;
+    top: -20px;
+    left: 30px;
+    font-size: 11px;
+    text-align: left;
+  }
+  .seat-map-seat-selectable:hover{
+    opacity: 1;
+  }
+  .seat-map-seat-selectable:hover strong{
+    opacity: .5;
+  }
 /*
 =================================================================
 :;;:::::::::::::::::::::::::PASO 5:::::::::::::::::::::::::;::;:;
@@ -2609,6 +2718,9 @@ pre{
 }
 .fop-retail-learn-more{
   width: 675px;
+}
+#customhtmlTermsConditions{
+  display: none;
 }
 /*
 =================================================================

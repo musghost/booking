@@ -13,19 +13,18 @@ $("#cart-component").height(): 1026
 
 (function(){
     var myScreen = window.innerHeight - $("#footer").height(),
-        totalHeight = $("#cart-component").offset().top + $("#cart-component").height();
+        totalHeight = $("#cart-component").height();
 
     if(myScreen < totalHeight){
+        var top = $("body").offsetTop() + window.innerHeight - $("#cnt_4").height() - $("#cnt_4").offset().top;
+        console.log(top + "px");
         $("#cnt_4").css({
-            "position": "relative"
+            "position": "fixed",
+            "top": top + "px"
         })
     }
 })();
 
-
-
-$("#cnt_4").offset().top
-window.innerHeight
 
 
 //http://manoderecha.net/md/index.php/task/74129
