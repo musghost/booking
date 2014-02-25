@@ -1,3 +1,33 @@
+$('html, body').animate({
+        scrollTop: $("#footer").height() + $("#cart-component").offset().top
+    }, 400);
+
+
+window.innerHeight: 976
+$("#footer").height(): 72
+
+
+$("#cart-component").offset().top: 356
+$("#cart-component").height(): 1026
+
+
+(function(){
+    var myScreen = window.innerHeight - $("#footer").height(),
+        totalHeight = $("#cart-component").offset().top + $("#cart-component").height();
+
+    if(myScreen < totalHeight){
+        $("#cnt_4").css({
+            "position": "relative"
+        })
+    }
+})();
+
+
+
+$("#cnt_4").offset().top
+window.innerHeight
+
+
 //http://manoderecha.net/md/index.php/task/74129
 
 var paragraph = $("<p class='disclaimer'>");

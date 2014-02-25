@@ -134,6 +134,16 @@ window.onload = function(){
                         if(ol.hasClass("hidden-low-prior")){
                             ol.removeClass("hidden-low-prior");
                             span.html("&nbsp;-");
+
+                            var myScreen = window.innerHeight - $("#footer").height(),
+                                totalHeight = $("#cart-component").offset().top + $("#cart-component").height();
+
+                            if(myScreen < totalHeight){
+                                $("#cnt_4").css({
+                                    "position": "relative"
+                                })
+                            }
+                            
                         } else{
                             ol.addClass("hidden-low-prior");
                             span.html("&nbsp;+");

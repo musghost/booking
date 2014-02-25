@@ -152,6 +152,18 @@ window.onload = function(){
                         if(ol.hasClass("hidden-low-prior")){
                             ol.removeClass("hidden-low-prior");
                             span.html("&nbsp;-");
+
+                            /*var myScreen = window.innerHeight - $("#footer").height(),
+                                totalHeight = $("#cart-component").offset().top + $("#cart-component").height();
+                            console.log("Screen: " + myScreen + ", totalHeight: " + totalHeight);
+                            if(myScreen < totalHeight){
+                                var top = $("#ROOT").height() - $("#footer").height() * 2 - $("#cart-component").height();
+                                $("#cnt_4").css({
+                                    "position": "relative",
+                                    "top": top + "px"
+                                })
+                            }*/
+
                         } else{
                             ol.addClass("hidden-low-prior");
                             span.html("&nbsp;+");
