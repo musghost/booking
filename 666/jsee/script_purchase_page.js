@@ -35,6 +35,28 @@ window.onload = function(){
                 ret["day"] = parseInt(date[0]);
                 return ret;
             },
+            setPosition = function(){
+                var screenHeight = window.innerHeight,
+                    myScreen = screenHeight - $("#footer").height(),
+                    totalHeight = $("#cart-component").height(),
+                    scrollTop = $("body").scrollTop(),
+                    rootHeight = $("#ROOT").height();
+                if(myScreen < totalHeight){
+                    var top = window.innerHeight - $("#cnt_4").height();
+                    if(scrollTop >= (rootHeight - screenHeight - 150)){
+                        top -= 90;
+                        $("#cnt_4").css({
+                            "position": "fixed",
+                            "top": top + "px"
+                        });
+                    } else {
+                        $("#cnt_4").css({
+                            "position": "fixed",
+                            "top": top + "px"
+                        });
+                    }
+                }
+            },
             departings = [],
             shoppingCart = function(dep){
                 var sidebar = $("<div class='flight-info-sidebar'>"),
@@ -56,7 +78,8 @@ window.onload = function(){
                     var body = $("<div class='body'>"),
                         title = $("<h3>"),
                         stopOver = parseInt(departing.stopover),
-                        stopOverTitle = $("<h3 class='scale'>");
+                        stopOverTitle = $("<h3 class='scale'>"),
+                        flights = $("<span class='flight-num'>");
 
                     if(key === 0)
                         title.attr("id","title-search");
@@ -88,6 +111,9 @@ window.onload = function(){
                         stopOverTitle.html(stopOver + " escalas");
                     }
 
+                    flights.html(departing.flightNumber);
+
+                    body.append(flights);
                     body.append(stopOverTitle);
 
                     sidebar.append(body);
@@ -134,14 +160,7 @@ window.onload = function(){
                             ol.removeClass("hidden-low-prior");
                             span.html("&nbsp;-");
 
-                            var myScreen = window.innerHeight - $("#footer").height(),
-                                totalHeight = $("#cart-component").offset().top + $("#cart-component").height();
-
-                            if(myScreen < totalHeight){
-                                $("#cnt_4").css({
-                                    "position": "relative"
-                                })
-                            }
+                            setPosition();
                             
                         } else{
                             ol.addClass("hidden-low-prior");
@@ -166,8 +185,21 @@ window.onload = function(){
                 dates = $(this).find("dd"),
                 datesCounter = 0,
                 titleDestination = $(this).find("h4").first().html(),
+                flightNumberNode = $(this).find("li.number").first(),
 
                 stopoverLen = cities.length - 2;
+
+            var flightNumber = flightNumberNode
+                    .andSelf()
+                    .contents()
+                    .filter(function() { 
+                        return this.nodeType === 3;
+                    })[1];
+            if(typeof flightNumber === "undefined"){
+                flightNumber = "";
+            } else {
+                flightNumber = $.trim(flightNumberNode.find("span").first().html() + flightNumber.textContent);
+            }
 
             cities.each(function(b){
                 var city1 = $(this).clone(),
@@ -197,7 +229,8 @@ window.onload = function(){
             departing = {
                 stopover: stopoverLen,
                 destinations: destinations,
-                actionTo: titleDestination
+                actionTo: titleDestination,
+                flightNumber: flightNumber
             }
             departings.push(departing);
         });

@@ -1,36 +1,37 @@
 window.onload = function(){
     (function(){
-            //Booking processs
-            var current = false;
-            $("#booking-process").addClass("active");
-            $("#booking-process li").each(function(a){
-                $(this).addClass(((a + 1) % 2 === 0) ? "two" : "one");
-            });
-            $("#booking-process li").each(function(a){
-                if(current){
-                    if($(this).hasClass("stepPast")) 
-                        $(this)
-                            .removeClass("stepPast")
-                            .addClass("stepFuture");
-                    if($(this).hasClass("stepPast_prevPast")) 
-                        $(this)
-                            .removeClass("stepPast_prevPast")
-                            .addClass("stepFuture_prevFuture");
-                    if($(this).hasClass("prevPast")) 
-                        $(this)
-                            .removeClass("prevPast")
-                            .addClass("prevFuture");
-                }
-                if($(this).hasClass("stepCurrent"))
-                    current = true;
-             });
-         })();
+        //Booking processs
+        var current = false;
+        $("#booking-process").addClass("active");
+        $("#booking-process li").each(function(a){
+            $(this).addClass(((a + 1) % 2 === 0) ? "two" : "one");
+        });
+        $("#booking-process li").each(function(a){
+            if(current){
+                if($(this).hasClass("stepPast")) 
+                    $(this)
+                        .removeClass("stepPast")
+                        .addClass("stepFuture");
+                if($(this).hasClass("stepPast_prevPast")) 
+                    $(this)
+                        .removeClass("stepPast_prevPast")
+                        .addClass("stepFuture_prevFuture");
+                if($(this).hasClass("prevPast")) 
+                    $(this)
+                        .removeClass("prevPast")
+                        .addClass("prevFuture");
+            }
+            if($(this).hasClass("stepCurrent"))
+                current = true;
+         });
+     })();
+
     $(".flight-info").each(function(a){
         if(a === 0) $(this).prepend("<span class='step'>A</span>");
         else $(this).prepend("<span class='step'>B</span>");
     });
-    $(".flight-info h2").eq(0).html("Departure Flight Options");
-    $(".flight-info h2").eq(1).html("Return Flight Options ");
+    $(".flight-info h2").eq(0).html("Opciones del vuelo de salida");
+    $(".flight-info h2").eq(1).html("Opciones del vuelo de regreso");
     var airports = [];
     $(".flight-info dl").each(function(){
         var dds = $(this).find("dd").clone();
@@ -45,7 +46,7 @@ window.onload = function(){
 
     var buildInfoBox = function(){
         var  date = function(a){
-                var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+                var months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
                     date = a.split("/"),
                     ret = {};
                 ret["month"] = months[parseInt(date[1]) - 1];
@@ -77,10 +78,11 @@ window.onload = function(){
             departings = [],
             shoppingCart = function(dep){
                 var sidebar = $("<div class='flight-info-sidebar'>"),
-                    head = '<div class="head"><h2><i></i>Flight Information</h2></div>',
+                    head = '<div class="head"><h2><i></i>Información de vuelo</h2></div>',
                     passengers = $(".component-section.cart-pax"). find("span"),
                     passengersCount = "",
                     passengersTitle = $("<h3 class='passenger'>");
+
 
                 passengers.each(function(a){
                     if(a === 0 || a === 1)
@@ -121,11 +123,11 @@ window.onload = function(){
                     });
 
                     if(stopOver === 0 || stopOver < 0){
-                        stopOverTitle.html("Nonstop");
+                        stopOverTitle.html("Sin escalas");
                     } else if(stopOver == 1){
-                        stopOverTitle.html("1 layover");
+                        stopOverTitle.html("1 escala");
                     } else {
-                        stopOverTitle.html(stopOver + " layovers");
+                        stopOverTitle.html(stopOver + " escalas");
                     }
 
                     flights.html(departing.flightNumber);
@@ -178,6 +180,7 @@ window.onload = function(){
                             span.html("&nbsp;-");
 
                             setPosition();
+
                         } else{
                             ol.addClass("hidden-low-prior");
                             span.html("&nbsp;+");
@@ -197,13 +200,14 @@ window.onload = function(){
 
         $(".cart-departing, .cart-arriving").each(function(){
             var destinations = [],
-                cities = $(this).find("li.city"),
+                cities = $(this).find(".city"),
                 dates = $(this).find("dd"),
                 datesCounter = 0,
                 titleDestination = $(this).find("h4").first().html(),
                 flightNumberNode = $(this).find("li.number").first(),
 
                 stopoverLen = cities.length - 2;
+            alert($(this).html());
 
             var flightNumber = flightNumberNode
                     .andSelf()
@@ -285,11 +289,11 @@ window.onload = function(){
                     ul.html('<li><span>' + airport1 + '</span><span>' + hour1 + '</span></li><li class="middle"><i></i></li><li><span>' + airport2 + '</span><span>' + hour2 + '</span></li>');
 
                     if(scaleInt === 0 || scaleInt < 0){
-                        h3.html("Nonstop");
+                        h3.html("Sin escalas");
                     } else if(scaleInt === 1){
-                        h3.html(scaleInt + " layover");
+                        h3.html(scaleInt + " escala");
                     } else {
-                        h3.html(scaleInt + "layovers")
+                        h3.html(scaleInt + "escalas")
                     }
                     
                     if($(this).attr("id") === 'flight-advisory-both-row'){
@@ -316,11 +320,11 @@ window.onload = function(){
                     ths.eq(2).hide();
                     ths.eq(3).hide();
                     ths.eq(4).hide();
-                    /*ths.eq(5).hide();*/
+                    ths.eq(5).hide();
                     ths.eq(0).width("190px");
                 } else{
                     var tds = $(this).find("td");
-                    /*tds.eq(5).hide();*/
+                    tds.eq(5).hide();
                     tds.eq(4).hide();
                     tds.eq(1).hide();
                     tds.eq(2).hide();
@@ -336,11 +340,11 @@ window.onload = function(){
 
                     ul.html('<li><span>' + airports[0]["nodea"] + '</span><span>' + hour1 + '</span></li><li class="middle"><i></i></li><li><span>' + airports[0]["nodeb"] + '</span><span>' + hour2 + '</span></li>');
                     if(scaleInt === 0 || scaleInt < 0){
-                        h3.html("Nonstop");
+                        h3.html("Sin escalas");
                     } else if(scaleInt === 1){
-                        h3.html(scaleInt + " layover");
+                        h3.html(scaleInt + " escala");
                     } else {
-                        h3.html(scaleInt + "layovers")
+                        h3.html(scaleInt + "escalas")
                     }
                     if($(this).attr("id") === 'flight-advisory-outbound-row'){
                         $(this).remove();
@@ -349,7 +353,7 @@ window.onload = function(){
                 
                     tds.eq(0).prepend(ul, h3);
                     var linkContent = $(this).find("a").html();
-                    $(this).find("a").addClass('info-plus').html("<i></i><span>Additional information (" + linkContent + ")</span>");
+                    $(this).find("a").addClass('info-plus').html("<i></i><span>M&aacute;s informaci&oacute;n de vuelo (" + linkContent + ")</span>");
                 }
             });
             $("#cart-component .component-top").append($("#fare-rules-anchor"), $("#modify-search-trigger"));
@@ -371,11 +375,11 @@ window.onload = function(){
                     ths.eq(2).hide();
                     ths.eq(3).hide();
                     ths.eq(4).hide();
-                    /*ths.eq(5).hide();*/
+                    ths.eq(5).hide();
                     ths.eq(0).width("190px");
                 } else{
                     var tds = $(this).find("td");
-                    /*tds.eq(5).hide();*/
+                    tds.eq(5).hide();
                     tds.eq(4).hide();
                     tds.eq(1).hide();
                     tds.eq(2).hide();
@@ -391,11 +395,11 @@ window.onload = function(){
 
                     ul.html('<li><span>' + airports[0]["nodeb"] + '</span><span>' + hour1 + '</span></li><li class="middle"><i></i></li><li><span>' + airports[0]["nodea"] + '</span><span>' + hour2 + '</span></li>');
                     if(scaleInt === 0 || scaleInt < 0){
-                        h3.html("Nonstop");
+                        h3.html("Sin escalas");
                     } else if(scaleInt === 1){
-                        h3.html(scaleInt + " layover");
+                        h3.html(scaleInt + " escala");
                     } else {
-                        h3.html(scaleInt + "layovers")
+                        h3.html(scaleInt + "escalas")
                     }
 
 
@@ -406,7 +410,7 @@ window.onload = function(){
                 
                     tds.eq(0).prepend(ul, h3);
                     var linkContent = $(this).find("a").html();
-                    $(this).find("a").addClass('info-plus').html("<i></i><span>Additional information (" + linkContent + ")</span>");
+                    $(this).find("a").addClass('info-plus').html("<i></i><span>M&aacute;s informaci&oacute;n de vuelo (" + linkContent + ")</span>");
                 }
             });
 
@@ -431,11 +435,11 @@ window.onload = function(){
                     ths.eq(2).hide();
                     ths.eq(3).hide();
                     ths.eq(4).hide();
-                    /*ths.eq(5).hide();*/
+                    ths.eq(5).hide();
                     ths.eq(0).width("190px");
                 } else{
                     var tds = $(this).find("td");
-                    /*tds.eq(5).hide();*/
+                    tds.eq(5).hide();
                     tds.eq(4).hide();
                     tds.eq(1).hide();
                     tds.eq(2).hide();
@@ -451,11 +455,11 @@ window.onload = function(){
 
                     ul.html('<li><span>' + airports[0]["nodea"] + '</span><span>' + hour1 + '</span></li><li class="middle"><i></i></li><li><span>' + airports[0]["nodeb"] + '</span><span>' + hour2 + '</span></li>');
                     if(scaleInt === 0 || scaleInt < 0){
-                        h3.html("Nonstop");
+                        h3.html("Sin escalas");
                     } else if(scaleInt === 1){
-                        h3.html(scaleInt + " layover");
+                        h3.html(scaleInt + " escala");
                     } else {
-                        h3.html(scaleInt + "layovers")
+                        h3.html(scaleInt + "escalas")
                     }
                     
                     if($(this).attr("id") === 'flight-advisory-both-row'){
@@ -465,7 +469,7 @@ window.onload = function(){
                 
                     tds.eq(0).prepend(ul, h3);
                     var linkContent = $(this).find("a").html();
-                    $(this).find("a").addClass('info-plus').html("<i></i><span>Additional information (" + linkContent + ")</span>");
+                    $(this).find("a").addClass('info-plus').html("<i></i><span>M&aacute;s informaci&oacute;n de vuelo (" + linkContent + ")</span>");
                 }
             });
         }
@@ -487,7 +491,7 @@ window.onload = function(){
     (function(){
         $(".seats-remaining").each(function(){
             var num = $(this).html().split(" ")[0];
-            $(this).html( num + "seats left!")
+            $(this).html("!S&oacute;lo quedan " + num + "!")
         });
         $("#customhtmlDisclosure").prepend("<i></i>");
     })();

@@ -12,16 +12,25 @@ $("#cart-component").height(): 1026
 
 
 (function(){
-    var myScreen = window.innerHeight - $("#footer").height(),
-        totalHeight = $("#cart-component").height();
-
+    var screenHeight = window.innerHeight,
+        myScreen = screenHeight - $("#footer").height(),
+        totalHeight = $("#cart-component").height(),
+        scrollTop = $("body").scrollTop(),
+        rootHeight = $("#ROOT").height();
     if(myScreen < totalHeight){
-        var top = $("body").offsetTop() + window.innerHeight - $("#cnt_4").height() - $("#cnt_4").offset().top;
-        console.log(top + "px");
-        $("#cnt_4").css({
-            "position": "fixed",
-            "top": top + "px"
-        })
+        var top = window.innerHeight - $("#cnt_4").height();
+        if(scrollTop >= (rootHeight - screenHeight - 150)){
+            top -= 90;
+            $("#cnt_4").css({
+                "position": "fixed",
+                "top": top + "px"
+            });
+        } else {
+            $("#cnt_4").css({
+                "position": "fixed",
+                "top": top + "px"
+            });
+        }
     }
 })();
 
